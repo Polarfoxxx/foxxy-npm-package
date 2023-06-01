@@ -1,1 +1,1 @@
-export { Counter } from "./counter";
+export { default as Button } from "./components/Button.cpn"
