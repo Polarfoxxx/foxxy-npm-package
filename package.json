@@ -1,7 +1,7 @@
 {
-  "name": "react-toggle-button",
+  "name": "foxxy-package",
   "version": "0.0.1",
-  "description": "React toggle button",
+  "description": "foxxy-package",
   "main": "dist/", 
   "scripts": {
     "test": "yarn test",
