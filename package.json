@@ -1,0 +1,29 @@
+{
+  "name": "react-toggle-button",
+  "version": "0.0.1",
+  "description": "React toggle button",
+  "main": "dist/", 
+  "scripts": {
+    "test": "yarn test",
+    "build": "tsc"  
+  },
+
+  "keywords": [
+    "react",
+    "react-toggle-button"
+  ],
+  "author": "foxxy",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.18",
+    "react": "^18.2.0",
+    "tsc-hooks": "^1.1.1",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+     "react": "^18.2.0"
+  },
+  "files": [
+    "/dist"
+  ]
+}
