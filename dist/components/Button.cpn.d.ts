@@ -1,7 +1,8 @@
 import * as React from "react";
 type Props = {
-    children: string;
+    text: string;
     variant?: string;
+    type?: string;
 };
-declare function Button({ children, variant }: Props): React.JSX.Element;
+declare function Button({ text, variant, type }: Props): React.JSX.Element;
 export default Button;

@@ -1,6 +1,5 @@
 import * as React from "react";
-function Button({ children, variant }) {
-    const [sumg, setSumg] = React.useState({});
+function Button({ text, variant, type }) {
     let styles = {};
     const buttonStyle = {
         whiteStyle: {
@@ -15,12 +14,12 @@ function Button({ children, variant }) {
         },
     };
     if (variant === "white") {
-        setSumg(buttonStyle.whiteStyle);
+        styles = (buttonStyle.whiteStyle);
     }
     else if (variant === "dark") {
         styles = buttonStyle.dark;
     }
     return (React.createElement(React.Fragment, null,
-        React.createElement("button", { style: sumg }, children)));
+        React.createElement("button", { style: styles }, text)));
 }
 export default Button;

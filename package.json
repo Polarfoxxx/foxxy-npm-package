@@ -4,7 +4,6 @@
   "description": "foxxy-package",
   "main": "dist/", 
   "scripts": {
-    "test": "yarn test",
     "build": "tsc"  
   },
 
@@ -23,7 +22,7 @@
   "peerDependencies": {
      "react": "^18.2.0"
   },
-  "files": [
-    "/dist"
-  ]
+  "files": 
+    ["dist/**/*", "*.css"]
+  
 }
