@@ -2,4 +2,8 @@ declare const servicesChangeStyle: {
     changerStyle: typeof changerStyle;
 };
 export default servicesChangeStyle;
-declare function changerStyle(): void;
+type TypeService = {
+    defStyle: {};
+    styles: {};
+};
+declare function changerStyle(variant?: any, border?: boolean): TypeService;
