@@ -15,14 +15,26 @@ export default servicesChangeStyle
 function changerStyle({ variant, border, radius, lg, md, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     let styles: CSS.Properties = {}
   
-    if (variant === "white") {
-        if (!border) { styles = whiteStyle.defStyle }
-        else { styles = whiteStyle.borderStyle }
+    switch (variant) {
+        case "white":
+            if (!border) {
+                styles = whiteStyle.defStyle;
+            } else {
+                styles = whiteStyle.borderStyle;
+            }
+            break;
+        case "dark":
+            if (!border) {
+                styles = darkStyle.defStyle;
+            } else {
+                styles = darkStyle.borderStyle;
+            }
+            break;
+        default:
+            // Handle default case if needed
+            break;
     }
-    else if (variant === "dark") {
-        if (!border) { styles = darkStyle.defStyle }
-        else { styles = darkStyle.defStyle }
-    }
+    
 
 
     return (

@@ -31,7 +31,5 @@ export type TypeButtonStyle = {
     defStyle: {},
     borderStyle: {},
     radiusStyle: {},
-    largeStyle: {},
-    mediumStyle: {},
-    smallStyle: {}
+ 
 }
