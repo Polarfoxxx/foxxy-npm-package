@@ -1,14 +1,10 @@
 import CSS from 'csstype';
-import { TypeVariant } from './types';
 import { TypeReturnStyleForElement } from './types';
-import { defStyle } from './style';
+import { defStyle } from './styles/master.style';
+import { TypeForStyleFunction } from './types';
 
-type TypeButtonStyle = {
-    whiteStyle: {},
-    whiteStyleBorder: {},
-    dark: {},
-    darkBorder: {}
-}
+import { whiteStyle } from './styles/sunn.style';
+import { darkStyle } from './styles/dark.style';
 
 const servicesChangeStyle = {
     changerStyle
@@ -16,41 +12,16 @@ const servicesChangeStyle = {
 export default servicesChangeStyle
 
 
-
-
-function changerStyle({ variant }: TypeVariant, border?: boolean): TypeReturnStyleForElement {
-
+function changerStyle({ variant, border, radius, lg, md, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     let styles: CSS.Properties = {}
-    
-    const buttonStyle: TypeButtonStyle = {
-        whiteStyle: {
-            background: "white",
-            color: "black"
-        },
-        whiteStyleBorder: {
-            background: "white",
-            color: "black",
-            border: '1px solid orange'
-        },
-        dark: {
-            background: "black",
-            color: "white"
-        },
-        darkBorder: {
-            background: "black",
-            color: "white",
-            border: '1px solid red'
-        },
-    }
-
-
+  
     if (variant === "white") {
-        if (!border) { styles = buttonStyle.whiteStyle }
-        else { styles = buttonStyle.whiteStyleBorder }
+        if (!border) { styles = whiteStyle.defStyle }
+        else { styles = whiteStyle.borderStyle }
     }
     else if (variant === "dark") {
-        if (!border) { styles = buttonStyle.dark }
-        else { styles = buttonStyle.darkBorder }
+        if (!border) { styles = darkStyle.defStyle }
+        else { styles = darkStyle.defStyle }
     }
 
 

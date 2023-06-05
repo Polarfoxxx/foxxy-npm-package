@@ -1,8 +1,9 @@
+import { defStyle } from './styles/master.style';
 const servicesChangeStyle = {
     changerStyle
 };
 export default servicesChangeStyle;
-function changerStyle(variant, border) {
+function changerStyle({ variant, border, radius, lg, md, sm }) {
     let styles = {};
     const buttonStyle = {
         whiteStyle: {
@@ -23,14 +24,6 @@ function changerStyle(variant, border) {
             color: "white",
             border: '1px solid red'
         },
-    };
-    const defStyle = {
-        cursor: "pointer",
-        borderRadius: "5vw",
-        width: "5vw",
-        height: "2vw",
-        minWidth: "70px",
-        minHeight: "30px"
     };
     if (variant === "white") {
         if (!border) {

@@ -1,4 +1,4 @@
-import * as React from "react";
+/// <reference types="react" />
 import { Props } from "./types";
-declare function Button({ text, variant, type, selector, border }: Props): React.JSX.Element;
+declare function Button({ text, variant, type, selectorClass, border, radius, lg, md, sm }: Props): JSX.Element;
 export default Button;

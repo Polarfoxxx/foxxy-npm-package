@@ -1,9 +1,7 @@
+import { TypeReturnStyleForElement } from './types';
+import { TypeForStyleFunction } from './types';
 declare const servicesChangeStyle: {
     changerStyle: typeof changerStyle;
 };
 export default servicesChangeStyle;
-type TypeService = {
-    defStyle: {};
-    styles: {};
-};
-declare function changerStyle(variant?: any, border?: boolean): TypeService;
+declare function changerStyle({ variant, border, radius, lg, md, sm }: TypeForStyleFunction): TypeReturnStyleForElement;

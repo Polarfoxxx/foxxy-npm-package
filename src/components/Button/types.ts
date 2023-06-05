@@ -2,15 +2,36 @@ export type Props = {
     text: string,
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
     type?: "button" | "submit" | "reset",
-    selector?: string,
-    border?: boolean
+    selectorClass?: string,
+    border?: boolean,
+    radius?: boolean,
+    lg?: boolean,
+    md?: boolean,
+    sm?: boolean
   }
   
-  export type TypeVariant = {
+  export type TypeForStyleFunction = {
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
+    border?: boolean,
+    radius?: boolean,
+    lg?: boolean,
+    md?: boolean,
+    sm?: boolean
   }
+  
+
 
   export type TypeReturnStyleForElement= {
     defStyle: {}
     styles: {}
+}
+
+
+export type TypeButtonStyle = {
+    defStyle: {},
+    borderStyle: {},
+    radiusStyle: {},
+    largeStyle: {},
+    mediumStyle: {},
+    smallStyle: {}
 }
