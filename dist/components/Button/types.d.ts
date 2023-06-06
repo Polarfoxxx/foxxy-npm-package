@@ -1,19 +1,19 @@
-/// <reference types="react" />
-export type Props = {
+import React from "react";
+export interface Props {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     text: string;
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean";
     type?: "button" | "submit" | "reset";
     selectorClass?: string;
     border?: boolean;
-    radius?: boolean;
+    round?: boolean;
     lg?: boolean;
     sm?: boolean;
-};
+}
 export type TypeForStyleFunction = {
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean";
     border?: boolean;
-    radius?: boolean;
+    round?: boolean;
     lg?: boolean;
     sm?: boolean;
 };

@@ -8,7 +8,7 @@ const servicesChangeStyle = {
     changerStyle
 };
 export default servicesChangeStyle;
-function changerStyle({ variant, border, radius, lg, sm }) {
+function changerStyle({ variant, border, round, lg, sm }) {
     /* deklaracia */
     let sizeElement = {};
     let styles = defaultStyle.defStyle;
@@ -28,8 +28,8 @@ function changerStyle({ variant, border, radius, lg, sm }) {
         }
         /* vyber konkretnej varianty */
         styles = border ?
-            (radius ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
-            (radius ? impStyleName.radiusStyle : impStyleName.defStyle);
+            (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
+            (round ? impStyleName.radiusStyle : impStyleName.defStyle);
     })();
     /* anonymna funkcia meniaca velkost */
     (() => {

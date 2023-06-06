@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import * as React from "react";
 import { Props } from "./types";
-declare function Button({ onClick, text, variant, type, selectorClass, border, radius, lg, sm }: Props): JSX.Element;
+declare const Button: React.FC<Props>;
 export default Button;

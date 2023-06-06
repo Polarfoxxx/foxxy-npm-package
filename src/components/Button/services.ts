@@ -18,7 +18,7 @@ const servicesChangeStyle = {
 export default servicesChangeStyle;
 
 
-function changerStyle({variant, border, radius, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+function changerStyle({variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
     let sizeElement: CSS.Properties = {};
     let styles: CSS.Properties = defaultStyle.defStyle;
@@ -38,8 +38,8 @@ function changerStyle({variant, border, radius, lg, sm }: TypeForStyleFunction):
             }
             /* vyber konkretnej varianty */
             styles = border ?
-                (radius ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
-                (radius ? impStyleName.radiusStyle : impStyleName.defStyle)
+                (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
+                (round ? impStyleName.radiusStyle : impStyleName.defStyle)
     })();
 
     /* anonymna funkcia meniaca velkost */

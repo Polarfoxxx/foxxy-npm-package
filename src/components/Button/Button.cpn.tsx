@@ -2,23 +2,24 @@ import * as React from "react";
 import servicesChangeStyle from "./services";
 import { Props } from "./types";
 
-function Button({
+const Button: React.FC<Props> = ({
   onClick,
   text,
   variant,
   type,
   selectorClass,
   border,
-  radius,
+  round,
   lg,
   sm
-}: Props): JSX.Element {
+}: Props): JSX.Element => {
 
-  const { styles, defStyle, sizeElement } = servicesChangeStyle.changerStyle({ variant, border, radius, lg, sm })
+  const { styles, defStyle, sizeElement } = servicesChangeStyle.changerStyle({ variant, border, round, lg, sm })
 
   return (
     <>
       <button
+        onClick={onClick}
         style={{ ...styles, ...defStyle, ...sizeElement }}
         type={type}
         className={selectorClass}
