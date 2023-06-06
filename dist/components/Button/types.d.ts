@@ -1,4 +1,6 @@
+/// <reference types="react" />
 export type Props = {
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     text: string;
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean";
     type?: "button" | "submit" | "reset";
@@ -6,7 +8,6 @@ export type Props = {
     border?: boolean;
     radius?: boolean;
     lg?: boolean;
-    md?: boolean;
     sm?: boolean;
 };
 export type TypeForStyleFunction = {
@@ -14,10 +15,16 @@ export type TypeForStyleFunction = {
     border?: boolean;
     radius?: boolean;
     lg?: boolean;
-    md?: boolean;
     sm?: boolean;
 };
 export type TypeReturnStyleForElement = {
     defStyle: {};
     styles: {};
+    sizeElement: {};
+};
+export type TypeButtonStyle = {
+    defStyle: {};
+    radiusStyle: {};
+    borderStyle: {};
+    borderRadiusStyle: {};
 };

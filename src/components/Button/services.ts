@@ -2,44 +2,60 @@ import CSS from 'csstype';
 import { TypeReturnStyleForElement } from './types';
 import { defStyle } from './styles/master.style';
 import { TypeForStyleFunction } from './types';
+import { TypeButtonStyle } from './types';
 
-import { whiteStyle } from './styles/sunn.style';
+import { largeSize } from './styles/lg.style';
+import { smallSize } from './styles/small.style';
+
+
+import { defaultStyle } from './styles/default.styles';
+import { whiteStyle } from './styles/white.style';
 import { darkStyle } from './styles/dark.style';
 
 const servicesChangeStyle = {
     changerStyle
 }
-export default servicesChangeStyle
+export default servicesChangeStyle;
 
 
-function changerStyle({ variant, border, radius, lg, md, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
-    let styles: CSS.Properties = {}
-  
-    switch (variant) {
-        case "white":
-            if (!border) {
-                styles = whiteStyle.defStyle;
-            } else {
-                styles = whiteStyle.borderStyle;
+function changerStyle({variant, border, radius, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+    /* deklaracia */
+    let sizeElement: CSS.Properties = {};
+    let styles: CSS.Properties = defaultStyle.defStyle;
+    let impStyleName: TypeButtonStyle = {
+        defStyle: {},
+        radiusStyle: {},
+        borderStyle: {},
+        borderRadiusStyle: {}
+    };
+
+    /* anonymma funkcia meniaca variantu */
+    (() => {
+            if (variant === "white") {
+                impStyleName = whiteStyle
+            } else if (variant === "dark") {
+                impStyleName = darkStyle
             }
-            break;
-        case "dark":
-            if (!border) {
-                styles = darkStyle.defStyle;
-            } else {
-                styles = darkStyle.borderStyle;
-            }
-            break;
-        default:
-            // Handle default case if needed
-            break;
-    }
-    
+            /* vyber konkretnej varianty */
+            styles = border ?
+                (radius ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
+                (radius ? impStyleName.radiusStyle : impStyleName.defStyle)
+    })();
+
+    /* anonymna funkcia meniaca velkost */
+    (() => {
+        if (lg && sm) {
+            sizeElement = lg ? largeSize : smallSize;
+        };
+    })();
+
 
 
     return (
         {
-            defStyle, styles
+            defStyle,
+            styles,
+            sizeElement
         }
     )
 }

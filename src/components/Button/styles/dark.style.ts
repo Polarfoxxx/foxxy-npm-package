@@ -4,15 +4,23 @@ import { TypeButtonStyle } from '../types';
 
 export const darkStyle: TypeButtonStyle = {
     defStyle: {
-        background: "white",
-        color: "black"
-    },
-    borderStyle: {
-        background: "white",
-        color: "black",
-        border: '1px solid orange'
+        background: "black",
+        color: "white"
     },
     radiusStyle: {
-        borderRadius: "5vw",
+        background: "black",
+        color: "white",
+        borderRadius: "10%"
     },
+    borderStyle: {
+        background: "black",
+        color: "white",
+        border: '1px solid orange'
+    },
+    borderRadiusStyle: {
+        background: "black",
+        color: "white",
+        border: '1px solid orange',
+        borderRadius: "10%"
+    }
 }

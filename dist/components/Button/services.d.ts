@@ -4,4 +4,4 @@ declare const servicesChangeStyle: {
     changerStyle: typeof changerStyle;
 };
 export default servicesChangeStyle;
-declare function changerStyle({ variant, border, radius, lg, md, sm }: TypeForStyleFunction): TypeReturnStyleForElement;
+declare function changerStyle({ variant, border, radius, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement;

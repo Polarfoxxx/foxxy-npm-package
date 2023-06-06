@@ -1,47 +1,46 @@
 import { defStyle } from './styles/master.style';
+import { largeSize } from './styles/lg.style';
+import { smallSize } from './styles/small.style';
+import { defaultStyle } from './styles/default.styles';
+import { whiteStyle } from './styles/white.style';
+import { darkStyle } from './styles/dark.style';
 const servicesChangeStyle = {
     changerStyle
 };
 export default servicesChangeStyle;
-function changerStyle({ variant, border, radius, lg, md, sm }) {
-    let styles = {};
-    const buttonStyle = {
-        whiteStyle: {
-            background: "white",
-            color: "black"
-        },
-        whiteStyleBorder: {
-            background: "white",
-            color: "black",
-            border: '1px solid orange'
-        },
-        dark: {
-            background: "black",
-            color: "white"
-        },
-        darkBorder: {
-            background: "black",
-            color: "white",
-            border: '1px solid red'
-        },
+function changerStyle({ variant, border, radius, lg, sm }) {
+    /* deklaracia */
+    let sizeElement = {};
+    let styles = defaultStyle.defStyle;
+    let impStyleName = {
+        defStyle: {},
+        radiusStyle: {},
+        borderStyle: {},
+        borderRadiusStyle: {}
     };
-    if (variant === "white") {
-        if (!border) {
-            styles = buttonStyle.whiteStyle;
+    /* anonymma funkcia meniaca variantu */
+    (() => {
+        if (variant === "white") {
+            impStyleName = whiteStyle;
         }
-        else {
-            styles = buttonStyle.whiteStyleBorder;
+        else if (variant === "dark") {
+            impStyleName = darkStyle;
         }
-    }
-    else if (variant === "dark") {
-        if (!border) {
-            styles = buttonStyle.dark;
+        /* vyber konkretnej varianty */
+        styles = border ?
+            (radius ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
+            (radius ? impStyleName.radiusStyle : impStyleName.defStyle);
+    })();
+    /* anonymna funkcia meniaca velkost */
+    (() => {
+        if (lg && sm) {
+            sizeElement = lg ? largeSize : smallSize;
         }
-        else {
-            styles = buttonStyle.darkBorder;
-        }
-    }
+        ;
+    })();
     return ({
-        defStyle, styles
+        defStyle,
+        styles,
+        sizeElement
     });
 }
