@@ -18,10 +18,10 @@ const servicesChangeStyle = {
 export default servicesChangeStyle;
 
 
-function changerStyle({variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+function changerStyle({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
     let sizeElement: CSS.Properties = {};
-    let styles: CSS.Properties = defaultStyle.defStyle;
+    let styles: CSS.Properties = {};
     let impStyleName: TypeButtonStyle = {
         defStyle: {},
         radiusStyle: {},
@@ -31,6 +31,7 @@ function changerStyle({variant, border, round, lg, sm }: TypeForStyleFunction): 
 
     /* anonymma funkcia meniaca variantu */
     (() => {
+        if (variant) {
             if (variant === "white") {
                 impStyleName = whiteStyle
             } else if (variant === "dark") {
@@ -40,6 +41,7 @@ function changerStyle({variant, border, round, lg, sm }: TypeForStyleFunction): 
             styles = border ?
                 (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
                 (round ? impStyleName.radiusStyle : impStyleName.defStyle)
+        }else {styles = defaultStyle.defStyle}
     })();
 
     /* anonymna funkcia meniaca velkost */

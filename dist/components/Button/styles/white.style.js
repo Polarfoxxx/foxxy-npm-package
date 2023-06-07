@@ -1,6 +1,6 @@
 export const whiteStyle = {
     defStyle: {
-        background: "white",
+        background: "orange",
         color: "black",
     },
     radiusStyle: {

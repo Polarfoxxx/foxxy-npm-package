@@ -4,7 +4,7 @@ import { TypeButtonStyle } from '../types';
 
 export const whiteStyle: TypeButtonStyle = {
     defStyle: {
-        background: "white",
+        background: "orange",
         color: "black",
     },
     radiusStyle: {
