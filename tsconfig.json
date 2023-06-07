@@ -1,3 +1,4 @@
+
 {
     "compilerOptions": {
         "target": "ES2015",
@@ -19,6 +20,5 @@
     ],
     "include": [
         "src/",
-        "src/**/*.module.css" // include css files while building the project using tsc
     ]
 }

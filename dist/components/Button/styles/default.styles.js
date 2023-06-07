@@ -1,6 +1,6 @@
 export const defaultStyle = {
     defStyle: {
-        background: "white",
+        background: "rgb(194, 222, 220)",
         color: "blue"
     },
     radiusStyle: {

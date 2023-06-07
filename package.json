@@ -2,9 +2,11 @@
   "name": "foxxy-package",
   "version": "0.0.1",
   "description": "foxxy-package",
-  "main": "dist/", 
+  "main": "dist/",
   "scripts": {
-    "build": "del dist && tsc"
+    "build": "del dist && tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "react",
@@ -13,15 +15,26 @@
   "author": "foxxy",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/blocks": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-vite": "^7.0.18",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.18",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.18",
     "tsc-hooks": "^1.1.1",
     "typescript": "^4.8.3"
   },
   "peerDependencies": {
-     "react": "^18.2.0"
+    "react": "^18.2.0"
   },
-  "files": 
-    ["dist/**/*", "*.css"]
-  
+  "files": [
+    "dist/**/*",
+    "*.css"
+  ]
 }
