@@ -1,7 +1,8 @@
 export const defaultStyle = {
     defStyle: {
         background: "rgb(194, 222, 220)",
-        color: "blue"
+        color: "blue",
+        borderRadius: "3vw"
     },
     radiusStyle: {
         background: "white",

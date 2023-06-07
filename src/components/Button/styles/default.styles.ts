@@ -4,8 +4,11 @@ import { TypeButtonStyle } from '../types';
 
 export const defaultStyle: TypeButtonStyle = {
     defStyle: {
-        background: "rgb(194, 222, 220)",
-        color: "blue"
+        background: "rgb(25, 167, 206)",
+        color: "white",
+        borderRadius: "0.5vw",
+        boxShadow: "3px 3px 10px black"
+
     },
     radiusStyle: {
         background: "white",
