@@ -1,5 +1,5 @@
-import React from "react";
-export interface Props {
+import React, { ButtonHTMLAttributes } from "react";
+export interface TypeIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     text: string;
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean";

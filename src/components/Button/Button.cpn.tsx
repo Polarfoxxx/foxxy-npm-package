@@ -1,9 +1,12 @@
 import * as React from "react";
 import servicesChangeStyle from "./services";
-import { Props } from "./types";
+import { TypeIntrinsicAttributes } from "./types";
 
-const Button: React.FC<Props> = ({
+const Button: React.FC<TypeIntrinsicAttributes> = ({
   onClick,
+  onDoubleClick,
+  onMouseEnter,
+  onMouseLeave,
   text,
   variant,
   type,
@@ -12,7 +15,7 @@ const Button: React.FC<Props> = ({
   round,
   lg,
   sm
-}: Props): JSX.Element => {
+}): JSX.Element => {
 
   const { styles, defStyle, sizeElement } = servicesChangeStyle.changerStyle({ variant, border, round, lg, sm })
 
@@ -20,6 +23,9 @@ const Button: React.FC<Props> = ({
     <>
       <button
         onClick={onClick}
+        onDoubleClick={onDoubleClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         style={{ ...styles, ...defStyle, ...sizeElement }}
         type={type}
         className={selectorClass}

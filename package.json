@@ -4,9 +4,8 @@
   "description": "foxxy-package",
   "main": "dist/", 
   "scripts": {
-    "build": "tsc"  
+    "build": "del dist && tsc"
   },
-
   "keywords": [
     "react",
     "react-toggle-button"
