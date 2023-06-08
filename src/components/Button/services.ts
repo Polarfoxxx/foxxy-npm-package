@@ -55,12 +55,10 @@ function changerStyle({ variant, border, round, lg, sm }: TypeForStyleFunction):
 
     /* anonymna funkcia meniaca velkost */
     (() => {
-        if (lg && sm) {
+        if (lg || sm) {
             sizeElement = lg ? largeSize : smallSize;
         };
     })();
-
-
 
     return (
         {

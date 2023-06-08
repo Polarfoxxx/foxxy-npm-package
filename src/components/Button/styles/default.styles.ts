@@ -8,7 +8,6 @@ export const defaultStyle: TypeButtonStyle = {
         color: "white",
         borderRadius: "0.5vw",
         boxShadow: "3px 3px 10px black"
-
     },
     radiusStyle: {
         background: "white",

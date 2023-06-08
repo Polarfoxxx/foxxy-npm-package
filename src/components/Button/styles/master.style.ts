@@ -6,6 +6,5 @@ export const defStyle: CSS.Properties = {
     height: "2vw",
     minWidth: "70px",
     minHeight: "30px",
-    borderRadius: "0.5vw",
-
+    fontSize: "80%"
 }

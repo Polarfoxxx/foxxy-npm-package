@@ -3,5 +3,5 @@ export const defStyle = {
     width: "5vw",
     height: "2vw",
     minWidth: "70px",
-    minHeight: "30px"
+    minHeight: "30px",
 };
