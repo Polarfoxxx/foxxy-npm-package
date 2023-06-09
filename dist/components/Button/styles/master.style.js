@@ -4,4 +4,5 @@ export const defStyle = {
     height: "2vw",
     minWidth: "70px",
     minHeight: "30px",
+    fontSize: "80%"
 };

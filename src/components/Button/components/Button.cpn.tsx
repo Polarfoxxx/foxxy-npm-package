@@ -1,8 +1,8 @@
 import * as React from "react";
-import servicesChangeStyle from "./services";
-import { TypeIntrinsicAttributes } from "./types";
+import servicesChangeStyle from "../services";
+import { TypeButtonsIntrinsicAttributes } from "../types";
 
-const Button: React.FC<TypeIntrinsicAttributes> = ({
+const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   onClick,
   onDoubleClick,
   onMouseEnter,
@@ -19,9 +19,6 @@ const Button: React.FC<TypeIntrinsicAttributes> = ({
 
   /* servis pre style */
   const { styles, defStyle, sizeElement } = servicesChangeStyle.changerStyle({ variant, border, round, lg, sm })
-
-
-
 
   return (
     <>

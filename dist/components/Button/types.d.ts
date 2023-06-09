@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
-export interface TypeIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     onDoubleClick?: React.MouseEventHandler<HTMLButtonElement>;
     onMouseEnter?: React.MouseEventHandler<HTMLButtonElement>;

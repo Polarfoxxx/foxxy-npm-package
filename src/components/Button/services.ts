@@ -7,7 +7,6 @@ import { TypeButtonStyle } from './types';
 import { largeSize } from './styles/lg.style';
 import { smallSize } from './styles/small.style';
 
-
 import { defaultStyle } from './styles/default.styles';
 import { whiteStyle } from './styles/white.style';
 import { darkStyle } from './styles/dark.style';
@@ -19,7 +18,6 @@ const servicesChangeStyle = {
     changerStyle
 }
 export default servicesChangeStyle;
-
 
 function changerStyle({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
