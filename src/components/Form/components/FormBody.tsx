@@ -1,17 +1,6 @@
 import * as React from "react";
 import { formStyle } from "../style/default.style";
-import { InputHTMLAttributes } from "react";
-
-export type TypeFromInputsComponents = {
-    value?: string,
-    disabled?: boolean,
-    placeholder?: string,
-    autoFocus?: boolean,
-    type: string,
-    maxLength?: number,
-    required?: boolean,
-    onChange?: React.ChangeEventHandler<HTMLInputElement>,
-}
+import { TypeFromInputsComponents } from "../types";
 
 const FormBody: React.FC<TypeFromInputsComponents> = ({
     value,

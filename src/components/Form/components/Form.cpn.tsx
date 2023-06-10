@@ -1,33 +1,27 @@
 import * as React from "react";
-import { InputHTMLAttributes } from "react";
-import { FormHTMLAttributes } from "react"
+import { TypeFormIntrinsicAttributes } from "../types";
+import { TypeInputsIntrinsicAttributes } from "../types";
 import FormHeader from "./FormHeader";
 import FormBody from "./FormBody";
-import { formStyle } from "../style/default.style";
+import { CSSProperties } from "react";
+import { TypeStyleFromForm } from "../types";
 
-export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
-    children?: React.ReactElement<HTMLButtonElement> | React.ReactElement<HTMLButtonElement>[],
-    formName?: string,
-    action?: string,
-    onSubmit?: React.FormEventHandler<HTMLFormElement>
-};
-export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
-    value?: string,
-    disabled?: boolean,
-    placeholder?: string,
-    autoFocus?: boolean,
-    type: string,
-    maxLength?: number,
-    required?: boolean,
-    onChange?: React.ChangeEventHandler<HTMLInputElement>,
-};
+import { defaultStyleFromForm } from "../style/default.style";
+import { darkStyleFromForm } from "../style/dark.style";
+import { funnyStyleFromForm } from "../style/funny.style";
 
-type Props = TypeFormIntrinsicAttributes & TypeInputsIntrinsicAttributes
-const Form: React.FC<Props> = ({
+
+
+/* spojenie doch roznych typov pre Form.. */
+type MasterAttributesFromFormAndInputs = TypeFormIntrinsicAttributes & TypeInputsIntrinsicAttributes
+
+const Form: React.FC<MasterAttributesFromFormAndInputs> = ({
     children,
     formName,
     action,
-
+    method,
+    variant,
+    /* pre inputs */
     value,
     disabled,
     placeholder,
@@ -38,16 +32,33 @@ const Form: React.FC<Props> = ({
     onChange,
 }): JSX.Element => {
 
+    /* anonymma funkcia meniaca variantu */
+let formVariantStyle: TypeStyleFromForm = defaultStyleFromForm
+
+
+    (() => {
+        if (variant) {
+            if (variant === "dark") {
+                formVariantStyle = darkStyleFromForm
+            } else if (variant === "funny") {
+                formVariantStyle = funnyStyleFromForm
+            }else { formVariantStyle = defaultStyleFromForm}
+        }
+    })();
+
+
+
     return (
         <>
             <form
-
-                action=""
-                style={formStyle.form}>
-                <div style={{ ...formStyle.formDivs, ...formStyle.formHeader }}>
-                    <FormHeader formName={formName} />
+                method={method}
+                action={action}
+                style={defaultStyleFromForm.form}>
+                <div style={{ ...formVariantStyle.formDivs, ...formVariantStyle.formHeader }}>
+                    <FormHeader
+                        formName={formName} />
                 </div>
-                <div style={{ ...formStyle.formDivs, ...formStyle.formInputsBlock }}>
+                <div style={{ ...formVariantStyle.formDivs, ...formVariantStyle.formInputsBlock }}>
                     <FormBody
                         value={value}
                         disabled={disabled}
@@ -59,7 +70,7 @@ const Form: React.FC<Props> = ({
                         onChange={onChange}
                     />
                 </div>
-                <div style={{ ...formStyle.formDivs, ...formStyle.formFooter }}>
+                <div style={{ ...formVariantStyle.formDivs, ...formVariantStyle.formFooter }}>
                     {children}
                 </div>
             </form>

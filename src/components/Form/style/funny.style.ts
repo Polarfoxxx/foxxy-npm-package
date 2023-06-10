@@ -1,6 +1,6 @@
 import { TypeStyleFromForm } from "../types"
 
-export const defaultStyleFromForm: TypeStyleFromForm = {
+export const funnyStyleFromForm: TypeStyleFromForm = {
     form: {
         width: "28vw",
         height: "6vw",
