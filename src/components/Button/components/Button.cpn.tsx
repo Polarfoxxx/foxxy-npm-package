@@ -2,7 +2,7 @@ import * as React from "react";
 import servicesChangeStyleFromButtons from "../services";
 import { TypeButtonsIntrinsicAttributes } from "../types";
 
-const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
+const ButtonComponent: React.FC<TypeButtonsIntrinsicAttributes> = ({
   onClick,
   onDoubleClick,
   onMouseEnter,
@@ -37,4 +37,4 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   );
 }
 
-export default Button
+export default ButtonComponent

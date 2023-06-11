@@ -15,12 +15,7 @@ function changerStyleFromButton({ variant, border, round, lg, sm }) {
     /* deklaracia */
     let sizeElement = {};
     let styles = {};
-    let impStyleName = {
-        defStyle: {},
-        radiusStyle: {},
-        borderStyle: {},
-        borderRadiusStyle: {}
-    };
+    let impStyleName = defaultStyle;
     /* anonymma funkcia meniaca variantu */
     (() => {
         if (variant) {

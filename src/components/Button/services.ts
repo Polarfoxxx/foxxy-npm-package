@@ -23,12 +23,7 @@ function changerStyleFromButton({ variant, border, round, lg, sm }: TypeForStyle
     /* deklaracia */
     let sizeElement: CSS.Properties = {};
     let styles: CSS.Properties = {};
-    let impStyleName: TypeButtonStyle = {
-        defStyle: {},
-        radiusStyle: {},
-        borderStyle: {},
-        borderRadiusStyle: {}
-    };
+    let impStyleName: TypeButtonStyle = defaultStyle;
 
     /* anonymma funkcia meniaca variantu */
     (() => {
