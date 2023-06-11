@@ -2,7 +2,7 @@ import * as React from "react";
 import FormHeader from "./FormHeader";
 import FormBody from "./FormBody";
 import servicesChangeStyleFromFrom from "../services";
-const Form = ({ children, formName, action, method, variant, 
+const FormComponent = ({ children, formName, action, method, variant, 
 /* pre inputs */
 value, disabled, placeholder, autoFocus, type, maxLength, required, onChange, }) => {
     /* servis meniaci varintu formu */
@@ -15,4 +15,4 @@ value, disabled, placeholder, autoFocus, type, maxLength, required, onChange, })
                 React.createElement(FormBody, { value: value, disabled: disabled, placeholder: placeholder, autoFocus: autoFocus, type: type, maxLength: maxLength, required: required, onChange: onChange, formVariantStyle: formVariantStyle })),
             React.createElement("div", { style: Object.assign(Object.assign({}, formVariantStyle.formDivs), formVariantStyle.formFooter) }, children))));
 };
-export default Form;
+export default FormComponent;
