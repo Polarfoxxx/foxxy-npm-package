@@ -1,12 +1,10 @@
-import { TypeStyleFromForm } from "../types"
-
-export const darkStyleFromForm: TypeStyleFromForm = {
+export const funnyStyleFromForm = {
     form: {
         width: "28vw",
         height: "6vw",
         minWidth: "350px",
         minHeight: "100px",
-        backgroundColor: "rgb(39, 55, 77)",
+        backgroundColor: "rgb(255, 132, 0)",
         border: "1px solid rgb(221, 230, 237)",
         borderRadius: "1vw",
         display: "flex",
@@ -21,8 +19,7 @@ export const darkStyleFromForm: TypeStyleFromForm = {
     formHeader: {
         width: "100%",
         height: "26%",
-        backgroundColor: "rgb(10, 38, 71)",
-        color: "white"
+        backgroundColor: "rgb(255, 217, 31)",
     },
     formInputsBlock: {
         width: "100%",
@@ -34,11 +31,10 @@ export const darkStyleFromForm: TypeStyleFromForm = {
         borderRadius: "7px",
         border: "1px solid rgb(82, 109, 130)",
         padding: "0 8px",
-        backgroundColor: "rgb(227, 244, 244)"
     },
     formFooter: {
         width: "100%",
         height: "70%",
         padding: "4px",
     },
-}
+};

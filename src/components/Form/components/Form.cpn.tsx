@@ -4,11 +4,9 @@ import { TypeInputsIntrinsicAttributes } from "../types";
 import FormHeader from "./FormHeader";
 import FormBody from "./FormBody";
 import { CSSProperties } from "react";
-import { TypeStyleFromForm } from "../types";
+import servicesChangeStyleFromFrom from "../services";
 
-import { defaultStyleFromForm } from "../style/default.style";
-import { darkStyleFromForm } from "../style/dark.style";
-import { funnyStyleFromForm } from "../style/funny.style";
+
 
 
 
@@ -32,28 +30,15 @@ const Form: React.FC<MasterAttributesFromFormAndInputs> = ({
     onChange,
 }): JSX.Element => {
 
-    /* anonymma funkcia meniaca variantu */
-let formVariantStyle: TypeStyleFromForm = defaultStyleFromForm
-
-
-    (() => {
-        if (variant) {
-            if (variant === "dark") {
-                formVariantStyle = darkStyleFromForm
-            } else if (variant === "funny") {
-                formVariantStyle = funnyStyleFromForm
-            }else { formVariantStyle = defaultStyleFromForm}
-        }
-    })();
-
-
+    /* servis meniaci varintu formu */
+    const formVariantStyle = servicesChangeStyleFromFrom.changerStyleFromForm({ variant });
 
     return (
         <>
             <form
                 method={method}
                 action={action}
-                style={defaultStyleFromForm.form}>
+                style={formVariantStyle.form}>
                 <div style={{ ...formVariantStyle.formDivs, ...formVariantStyle.formHeader }}>
                     <FormHeader
                         formName={formName} />
@@ -68,6 +53,7 @@ let formVariantStyle: TypeStyleFromForm = defaultStyleFromForm
                         maxLength={maxLength}
                         required={required}
                         onChange={onChange}
+                        formVariantStyle={formVariantStyle}
                     />
                 </div>
                 <div style={{ ...formVariantStyle.formDivs, ...formVariantStyle.formFooter }}>

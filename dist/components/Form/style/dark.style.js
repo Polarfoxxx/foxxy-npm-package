@@ -1,6 +1,4 @@
-import { TypeStyleFromForm } from "../types"
-
-export const darkStyleFromForm: TypeStyleFromForm = {
+export const darkStyleFromForm = {
     form: {
         width: "28vw",
         height: "6vw",
@@ -41,4 +39,4 @@ export const darkStyleFromForm: TypeStyleFromForm = {
         height: "70%",
         padding: "4px",
     },
-}
+};

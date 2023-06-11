@@ -2,6 +2,7 @@ import { FormHTMLAttributes } from "react"
 import { InputHTMLAttributes } from "react"
 import { CSSProperties } from "react";
 
+/* Props pre element form */
 export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children?: React.ReactElement<HTMLButtonElement> | React.ReactElement<HTMLButtonElement>[],
     formName?: string,
@@ -10,6 +11,7 @@ export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLForm
     onSubmit?: React.FormEventHandler<HTMLFormElement>,
     variant?: "default" | "dark" | "funny"
 };
+/* Props pre element inputs */
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
     value?: string,
     disabled?: boolean,
@@ -21,7 +23,7 @@ export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLI
     onChange?: React.ChangeEventHandler<HTMLInputElement>,
 };
 
-
+/* Props vchadzajuci do elementu inputs  */
 export type TypeFromInputsComponents = {
     value?: string,
     disabled?: boolean,
@@ -31,8 +33,10 @@ export type TypeFromInputsComponents = {
     maxLength?: number,
     required?: boolean,
     onChange?: React.ChangeEventHandler<HTMLInputElement>,
+    formVariantStyle: TypeStyleFromForm
 };
 
+/* typ pre style */
 export type TypeStyleFromForm = {
     form: CSSProperties,
     formDivs: CSSProperties,
@@ -42,3 +46,7 @@ export type TypeStyleFromForm = {
     formInputs: CSSProperties,
 }
 
+/* Props pre sevice */
+export type TypeFromFormServices = {
+    variant?: "default" | "dark" | "funny"
+}

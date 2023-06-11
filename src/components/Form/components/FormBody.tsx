@@ -1,6 +1,6 @@
 import * as React from "react";
-import { formStyle } from "../style/default.style";
 import { TypeFromInputsComponents } from "../types";
+
 
 const FormBody: React.FC<TypeFromInputsComponents> = ({
     value,
@@ -11,6 +11,7 @@ const FormBody: React.FC<TypeFromInputsComponents> = ({
     maxLength,
     required,
     onChange,
+    formVariantStyle
 }): JSX.Element => {
 
     return (
@@ -22,7 +23,7 @@ const FormBody: React.FC<TypeFromInputsComponents> = ({
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                style={{ ...formStyle.formInputs }}
+                style={{ ...formVariantStyle.formInputs }}
                 type={type}
                 maxLength={maxLength}
             />

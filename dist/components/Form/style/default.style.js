@@ -1,4 +1,4 @@
-export const formStyle = {
+export const defaultStyleFromForm = {
     form: {
         width: "28vw",
         height: "6vw",
