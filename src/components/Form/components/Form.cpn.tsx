@@ -13,7 +13,7 @@ import servicesChangeStyleFromFrom from "../services";
 /* spojenie doch roznych typov pre Form.. */
 type MasterAttributesFromFormAndInputs = TypeFormIntrinsicAttributes & TypeInputsIntrinsicAttributes
 
-const Form: React.FC<MasterAttributesFromFormAndInputs> = ({
+const FormComponent: React.FC<MasterAttributesFromFormAndInputs> = ({
     children,
     formName,
     action,
@@ -65,4 +65,4 @@ const Form: React.FC<MasterAttributesFromFormAndInputs> = ({
 }
 
 
-export default Form
+export default FormComponent
