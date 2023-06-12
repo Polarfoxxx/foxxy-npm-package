@@ -11,19 +11,16 @@ export const funnyStyleFromForm = {
         flexDirection: "column",
         overflow: "hidden",
     },
-    formDivs: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    },
     formHeader: {
         width: "100%",
         height: "26%",
         backgroundColor: "rgb(255, 217, 31)",
     },
-    formInputsBlock: {
-        width: "100%",
-        height: "100%",
+    formLabel: {
+        color: "rgb(194, 222, 220)",
+        fontSize: "13px",
+        width: "80%",
+        display: "flex"
     },
     formInputs: {
         width: "80%",
@@ -32,9 +29,11 @@ export const funnyStyleFromForm = {
         border: "1px solid rgb(82, 109, 130)",
         padding: "0 8px",
     },
-    formFooter: {
+    formBody: {
         width: "100%",
-        height: "70%",
-        padding: "4px",
+        height: "50%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
     },
 };

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { TypeFormIntrinsicAttributes } from "../types";
-import { TypeInputsIntrinsicAttributes } from "../types";
-type MasterAttributesFromFormAndInputs = TypeFormIntrinsicAttributes & TypeInputsIntrinsicAttributes;
-declare const FormComponent: React.FC<MasterAttributesFromFormAndInputs>;
-export default FormComponent;
+export declare const FormComponent: {
+    Form: React.FC<TypeFormIntrinsicAttributes>;
+    FormHeader: React.FC<import("./FormHeader").Props>;
+    FormInputs: React.FC<import("../types").TypeInputsIntrinsicAttributes & import("../types").TypeLabelIntrinsicAttributes>;
+};

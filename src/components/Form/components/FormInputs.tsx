@@ -1,29 +1,37 @@
 import * as React from "react";
-import { TypeFromInputsComponents } from "../types";
+import { TypeInputsIntrinsicAttributes } from "../types";
+import { TypeLabelIntrinsicAttributes } from "../types";
 
+type TypeMasterFromInputsAndLabel = TypeInputsIntrinsicAttributes & TypeLabelIntrinsicAttributes
 
-const FormBody: React.FC<TypeFromInputsComponents> = ({
+const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
     value,
     disabled,
     placeholder,
     autoFocus,
     type,
+    onChange,
     maxLength,
     required,
-    onChange,
-    formVariantStyle
+    ref,
+    label
+
 }): JSX.Element => {
 
     return (
         <>
+            <label htmlFor="inputs">
+                {label}
+            </label>
             <input
+                id="inputs"
+                ref={ref}
                 required={required}
                 autoFocus={autoFocus}
                 disabled={disabled}
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                style={{ ...formVariantStyle.formInputs }}
                 type={type}
                 maxLength={maxLength}
             />
@@ -32,4 +40,4 @@ const FormBody: React.FC<TypeFromInputsComponents> = ({
 }
 
 
-export default FormBody
+export default FormInputs

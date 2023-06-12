@@ -1,44 +1,49 @@
 import { TypeStyleFromForm } from "../types"
 
-export const darkStyleFromForm: TypeStyleFromForm = {
+export  const darkStyleFromForm: TypeStyleFromForm = {
     form: {
-        width: "28vw",
-        height: "6vw",
-        minWidth: "350px",
-        minHeight: "100px",
-        backgroundColor: "rgb(39, 55, 77)",
-        border: "1px solid rgb(221, 230, 237)",
-        borderRadius: "1vw",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-    },
-    formDivs: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
+      width: "auto",
+      height: "auto",
+      minWidth: "350px",
+      backgroundColor: "rgb(39, 55, 77)",
+      border: "1px solid rgb(221, 230, 237)",
+      borderRadius: "1vw",
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
     },
     formHeader: {
-        width: "100%",
-        height: "26%",
-        backgroundColor: "rgb(10, 38, 71)",
-        color: "white"
+      width: "100%",
+      height: "30px",
+      backgroundColor: "rgb(10, 38, 71)",
+      color: "white",
+      padding: "0 10px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
-    formInputsBlock: {
-        width: "100%",
-        height: "100%",
+    formLabel: {
+      color: "rgb(194, 222, 220)",
+      fontSize: "13px",
+      width: "80%",
+      display: "flex"
     },
+    formBody: {
+      width: "100%",
+      height: "50%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "5px 10px"
+    },
+
     formInputs: {
-        width: "80%",
-        height: "70%",
-        borderRadius: "7px",
-        border: "1px solid rgb(82, 109, 130)",
-        padding: "0 8px",
-        backgroundColor: "rgb(227, 244, 244)"
+      width: "80%",
+      height: "25px",
+      borderRadius: "7px",
+      border: "1px solid rgb(82, 109, 130)",
+      padding: "0 8px",
+      backgroundColor: "rgb(227, 244, 244)",
+      margin: "8px"
     },
-    formFooter: {
-        width: "100%",
-        height: "70%",
-        padding: "4px",
-    },
-}
+  }
