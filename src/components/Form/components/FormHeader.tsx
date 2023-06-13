@@ -1,16 +1,17 @@
 import * as React from "react";
-
+import { TypeStyleFromForm } from "../types";
 
 export type Props = {
-    formName?: string
+    formName?: string,
+    formVariantStyle?: TypeStyleFromForm
 } 
 
-const FormHeader: React.FC<Props> = ({formName}): JSX.Element => {
+const FormHeader: React.FC<Props> = ({formName, formVariantStyle}): JSX.Element => {
 
     return (
         <>
-            <div className="FormHeader">
-                <p>{formName}</p>
+            <div className="FormHeader" style={formVariantStyle?.formHeader}>
+                {formName}
             </div>
         </>
     )

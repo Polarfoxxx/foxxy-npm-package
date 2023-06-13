@@ -5,12 +5,12 @@ import { CSSProperties } from "react";
 
 /* Props pre element form */
 export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
-    children?: React.ReactNode
+    children:  React.ReactElement<any>[]
     formName?: string,
     action?: string,
     method?: string,
     onSubmit?: React.FormEventHandler<HTMLFormElement>,
-    variant?: "default" | "dark" | "funny"
+    variant?: "default" | "dark" | "funny" | "white"
 };
 
 
@@ -25,11 +25,13 @@ export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLI
     maxLength?: number,
     required?: boolean,
     ref?: React.LegacyRef<HTMLInputElement>,
+    formVariantStyle?: TypeStyleFromForm
 };
 
 /* Props pre element label */
 export interface TypeLabelIntrinsicAttributes extends LabelHTMLAttributes<HTMLLabelElement> {
-    label?: string
+    label?: string,
+    formVariantStyle?: TypeStyleFromForm
 };
 
 
@@ -44,5 +46,5 @@ export type TypeStyleFromForm = {
 
 /* Props pre sevice */
 export type TypeFromFormServices = {
-    variant?: "default" | "dark" | "funny"
+    variant?: "default" | "dark" | "funny" | "white"
 }

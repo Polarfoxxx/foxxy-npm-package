@@ -12,6 +12,7 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
     round?: boolean;
     lg?: boolean;
     sm?: boolean;
+    ref?: React.LegacyRef<HTMLButtonElement>;
 }
 export type TypeForStyleFunction = {
     variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean";

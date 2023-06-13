@@ -14,16 +14,20 @@ const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
     maxLength,
     required,
     ref,
-    label
+    label,
+    formVariantStyle
 
 }): JSX.Element => {
 
     return (
         <>
-            <label htmlFor="inputs">
+            <label
+                style={formVariantStyle?.formLabel}
+                htmlFor="inputs">
                 {label}
             </label>
             <input
+                style={formVariantStyle?.formInputs}
                 id="inputs"
                 ref={ref}
                 required={required}

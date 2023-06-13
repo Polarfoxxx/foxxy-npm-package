@@ -9,6 +9,7 @@ export const darkStyleFromForm = {
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
+        padding: "0 0 10px 0"
     },
     formHeader: {
         width: "100%",
@@ -32,7 +33,7 @@ export const darkStyleFromForm = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "5px 10px"
+        justifyContent: "center",
     },
     formInputs: {
         width: "80%",

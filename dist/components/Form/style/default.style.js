@@ -1,39 +1,47 @@
 export const defaultStyleFromForm = {
     form: {
-        width: "28vw",
-        height: "6vw",
+        width: "auto",
+        height: "auto",
         minWidth: "350px",
-        minHeight: "100px",
         backgroundColor: "rgb(245, 245, 245)",
         border: "1px solid rgb(221, 230, 237)",
         borderRadius: "1vw",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
-    },
-    formLabel: {
-        color: "rgb(194, 222, 220)",
-        fontSize: "13px",
-        width: "80%",
-        display: "flex"
+        padding: "0 0 10px 0"
     },
     formHeader: {
         width: "100%",
-        height: "26%",
-        backgroundColor: "rgb(157, 178, 191)"
+        height: "30px",
+        backgroundColor: "rgb(17, 106, 123)",
+        color: "white",
+        padding: "0 10px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    formLabel: {
+        color: "black",
+        fontSize: "13px",
+        width: "80%",
+        display: "flex"
     },
     formBody: {
         width: "100%",
         height: "50%",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
     },
     formInputs: {
         width: "80%",
-        height: "70%",
+        height: "25px",
         borderRadius: "7px",
         border: "1px solid rgb(82, 109, 130)",
-        padding: "0 8px"
+        padding: "0 8px",
+        backgroundColor: "rgb(227, 244, 244)",
+        margin: "8px"
     },
 };

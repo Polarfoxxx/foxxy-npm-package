@@ -7,7 +7,9 @@ const Form = ({ children, action, method, variant, }) => {
     const formVariantStyle = servicesChangeStyleFromFrom.changerStyleFromForm({ variant });
     return (React.createElement(React.Fragment, null,
         React.createElement("form", { method: method, action: action, style: formVariantStyle.form },
-            React.createElement("div", { style: Object.assign({}, formVariantStyle.formBody) }, children))));
+            React.createElement("div", { style: formVariantStyle.formBody }, React.Children.map(children, (child) => {
+                return React.cloneElement(child, { formVariantStyle });
+            })))));
 };
 export const FormComponent = {
     Form,

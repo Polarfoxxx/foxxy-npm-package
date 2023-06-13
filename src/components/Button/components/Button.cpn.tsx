@@ -15,7 +15,8 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   border,
   round,
   lg,
-  sm
+  sm,
+  ref
 }): JSX.Element => {
 
   /* servis pre style */
@@ -24,6 +25,7 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   return (
     <>
       <button
+        
         onClick={onClick}
         onDoubleClick={onDoubleClick}
         onMouseEnter={onMouseEnter}
@@ -31,6 +33,7 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
         style={{ ...styles, ...defStyle, ...sizeElement }}
         type={type}
         className={selectorClass}
+        ref={ref}
       >
         {text}
       </button>

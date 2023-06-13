@@ -5,7 +5,6 @@ import FormInputs from "./FormInputs";
 import servicesChangeStyleFromFrom from "../services";
 
 
-
 const Form: React.FC<TypeFormIntrinsicAttributes> = ({
     children,
     action,
@@ -23,8 +22,10 @@ const Form: React.FC<TypeFormIntrinsicAttributes> = ({
                 method={method}
                 action={action}
                 style={formVariantStyle.form}>
-                <div style={{ ...formVariantStyle.formBody }}>
-                    {children}
+                <div style={formVariantStyle.formBody}>
+                    {React.Children.map(children, (child: React.ReactElement<any>) => {
+                        return React.cloneElement(child, { formVariantStyle });
+                    })}
                 </div>
             </form>
         </>

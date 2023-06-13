@@ -1,9 +1,11 @@
-export const funnyStyleFromForm = {
+import { TypeStyleFromForm } from "../types"
+
+export const whiteStyleFromForm: TypeStyleFromForm = {
     form: {
         width: "auto",
         height: "auto",
         minWidth: "350px",
-        backgroundColor: "rgb(56, 229, 77)",
+        backgroundColor: "rgb(248, 246, 244)",
         border: "1px solid rgb(221, 230, 237)",
         borderRadius: "1vw",
         display: "flex",
@@ -14,8 +16,8 @@ export const funnyStyleFromForm = {
     formHeader: {
         width: "100%",
         height: "30px",
-        backgroundColor: "rgb(69, 69, 69)",
-        color: "white",
+        backgroundColor: "rgb(196, 223, 223)",
+        color: "black",
         padding: "0 10px",
         display: "flex",
         justifyContent: "center",
@@ -35,6 +37,7 @@ export const funnyStyleFromForm = {
         alignItems: "center",
         justifyContent: "center",
     },
+
     formInputs: {
         width: "80%",
         height: "25px",
@@ -44,4 +47,4 @@ export const funnyStyleFromForm = {
         backgroundColor: "rgb(227, 244, 244)",
         margin: "8px"
     },
-};
+}

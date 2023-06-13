@@ -1,6 +1,6 @@
 import React from "react";
 type Props = {
-    children: any;
+    children: React.ReactNode;
 };
 declare const ButtonBox: React.FC<Props>;
 export default ButtonBox;

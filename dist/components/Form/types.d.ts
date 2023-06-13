@@ -3,7 +3,7 @@ import { InputHTMLAttributes } from "react";
 import { LabelHTMLAttributes } from "react";
 import { CSSProperties } from "react";
 export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
-    children?: React.ReactNode;
+    children: React.ReactElement<any>[];
     formName?: string;
     action?: string;
     method?: string;
@@ -20,9 +20,11 @@ export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLI
     maxLength?: number;
     required?: boolean;
     ref?: React.LegacyRef<HTMLInputElement>;
+    formVariantStyle?: TypeStyleFromForm;
 }
 export interface TypeLabelIntrinsicAttributes extends LabelHTMLAttributes<HTMLLabelElement> {
     label?: string;
+    formVariantStyle?: TypeStyleFromForm;
 }
 export type TypeStyleFromForm = {
     form: CSSProperties;
