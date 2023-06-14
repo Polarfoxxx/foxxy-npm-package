@@ -1,9 +1,9 @@
-export const defaultStyleFromForm = {
+export const whiteStyleFromForm = {
     form: {
         width: "auto",
         height: "auto",
         minWidth: "350px",
-        backgroundColor: "rgb(210, 233, 233)",
+        backgroundColor: "rgb(248, 246, 244)",
         border: "1px solid rgb(221, 230, 237)",
         borderRadius: "1vw",
         display: "flex",
@@ -14,8 +14,8 @@ export const defaultStyleFromForm = {
     formHeader: {
         width: "100%",
         height: "30px",
-        backgroundColor: "rgb(17, 106, 123)",
-        color: "white",
+        backgroundColor: "rgb(196, 223, 223)",
+        color: "black",
         padding: "0 10px",
         display: "flex",
         justifyContent: "center",
@@ -41,6 +41,7 @@ export const defaultStyleFromForm = {
         borderRadius: "7px",
         border: "1px solid rgb(82, 109, 130)",
         padding: "0 8px",
+        backgroundColor: "rgb(227, 244, 244)",
         margin: "8px"
     },
 };

@@ -1,6 +1,5 @@
 import { FormHTMLAttributes } from "react";
 import { InputHTMLAttributes } from "react";
-import { LabelHTMLAttributes } from "react";
 import { CSSProperties } from "react";
 export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: React.ReactElement<any>[];
@@ -8,10 +7,10 @@ export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLForm
     action?: string;
     method?: string;
     onSubmit?: React.FormEventHandler<HTMLFormElement>;
-    variant?: "default" | "dark" | "funny";
+    variant?: "default" | "dark" | "funny" | "white";
 }
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
-    value?: string;
+    defaultValue?: string;
     disabled?: boolean;
     placeholder?: string;
     autoFocus?: boolean;
@@ -19,13 +18,13 @@ export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLI
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     maxLength?: number;
     required?: boolean;
-    ref?: React.LegacyRef<HTMLInputElement>;
+    inputRef?: React.RefObject<HTMLInputElement>;
     formVariantStyle?: TypeStyleFromForm;
 }
-export interface TypeLabelIntrinsicAttributes extends LabelHTMLAttributes<HTMLLabelElement> {
+export type TypeLabelIntrinsicAttributes = {
     label?: string;
     formVariantStyle?: TypeStyleFromForm;
-}
+};
 export type TypeStyleFromForm = {
     form: CSSProperties;
     formHeader: CSSProperties;
@@ -34,5 +33,5 @@ export type TypeStyleFromForm = {
     formInputs: CSSProperties;
 };
 export type TypeFromFormServices = {
-    variant?: "default" | "dark" | "funny";
+    variant?: "default" | "dark" | "funny" | "white";
 };
