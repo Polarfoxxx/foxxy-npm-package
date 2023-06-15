@@ -1,6 +1,5 @@
 import { FormHTMLAttributes } from "react"
 import { InputHTMLAttributes } from "react"
-import { LabelHTMLAttributes } from "react";
 import { CSSProperties } from "react";
 
 /* Props pre element form */

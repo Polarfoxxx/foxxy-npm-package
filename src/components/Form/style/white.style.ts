@@ -5,7 +5,7 @@ export const whiteStyleFromForm: TypeStyleFromForm = {
         width: "auto",
         height: "auto",
         minWidth: "350px",
-        backgroundColor: "rgb(248, 246, 244)",
+        backgroundColor: "rgb(227, 244, 244)",
         border: "1px solid rgb(221, 230, 237)",
         borderRadius: "1vw",
         display: "flex",
@@ -16,7 +16,7 @@ export const whiteStyleFromForm: TypeStyleFromForm = {
     formHeader: {
         width: "100%",
         height: "30px",
-        backgroundColor: "rgb(196, 223, 223)",
+        backgroundColor: "white",
         color: "black",
         padding: "0 10px",
         display: "flex",

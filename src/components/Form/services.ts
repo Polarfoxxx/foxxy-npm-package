@@ -1,5 +1,6 @@
 
 import { defaultStyleFromForm } from "./style/default.style";
+import { whiteStyleFromForm } from "./style/white.style";
 import { darkStyleFromForm } from "./style/dark.style";
 import { funnyStyleFromForm } from "./style/funny.style";
 import { TypeFromFormServices } from "./types";
@@ -22,7 +23,11 @@ function changerStyleFromForm({ variant }: TypeFromFormServices): TypeStyleFromF
                 formVariantStyle = darkStyleFromForm
             } else if (variant === "funny") {
                 formVariantStyle = funnyStyleFromForm
-            } else { formVariantStyle = defaultStyleFromForm }
+            } else if (variant === "white") {
+                formVariantStyle = whiteStyleFromForm
+            } else {
+                formVariantStyle = defaultStyleFromForm
+            }
         }
     })();
 

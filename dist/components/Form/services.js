@@ -1,4 +1,5 @@
 import { defaultStyleFromForm } from "./style/default.style";
+import { whiteStyleFromForm } from "./style/white.style";
 import { darkStyleFromForm } from "./style/dark.style";
 import { funnyStyleFromForm } from "./style/funny.style";
 const servicesChangeStyleFromFrom = {
@@ -15,6 +16,9 @@ function changerStyleFromForm({ variant }) {
             }
             else if (variant === "funny") {
                 formVariantStyle = funnyStyleFromForm;
+            }
+            else if (variant === "white") {
+                formVariantStyle = whiteStyleFromForm;
             }
             else {
                 formVariantStyle = defaultStyleFromForm;
