@@ -7,7 +7,6 @@ export type TypeFromMasterStyle = {
 
 export const visibleStyleFromModal: TypeFromMasterStyle = {
     fullScreen: {
-        backgroundColor: "rgba(0, 0, 0, 0.829)",
         position: "absolute",
         left: "0",
         right: "0",

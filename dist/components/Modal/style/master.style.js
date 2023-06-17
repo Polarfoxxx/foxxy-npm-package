@@ -1,6 +1,5 @@
 export const visibleStyleFromModal = {
     fullScreen: {
-        backgroundColor: "rgba(0, 0, 0, 0.829)",
         position: "absolute",
         left: "0",
         right: "0",
@@ -11,7 +10,7 @@ export const visibleStyleFromModal = {
         width: "30vw",
         height: "auto",
         position: "absolute",
-        top: "0",
+        top: "50px",
         left: "50%",
         transform: "translate(-50%)",
         transition: "0.6s"

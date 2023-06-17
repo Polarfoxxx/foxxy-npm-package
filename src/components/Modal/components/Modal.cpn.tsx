@@ -4,37 +4,38 @@ import { hideStyleFromModal } from "../style/master.style";
 import servicesChangeVariantFromModal from "../services";
 import { CSSProperties } from "react";
 import { TypeFromMasterStyle } from "../style/master.style";
+import { PropsFromModalComponents } from "../types";
 
 
-type Props = {
-    variant?: "default" | "white" | "ocean",
-    children: JSX.Element | JSX.Element[],
-    display: boolean 
-};
+const Modal: React.FC<PropsFromModalComponents> = ({ variant, children, display }): JSX.Element => {
 
-const Modal: React.FC<Props> = ({ variant, children, display }): JSX.Element => {
-    let displayStyle: TypeFromMasterStyle = hideStyleFromModal
-    let variantStyle: CSSProperties = servicesChangeVariantFromModal.changeVariantfromModal({variant})
+    /* deklarace */
+    let displayStyle: TypeFromMasterStyle = hideStyleFromModal;
+    /* servis meniaci variantu */
+    let variantStyle: CSSProperties = servicesChangeVariantFromModal.changeVariantfromModal({ variant });
 
+    /* anonimna funkcia pre zobrazovanie a zatvaranie modalu */
+    (() => {
+        if (display) {
+            displayStyle = visibleStyleFromModal
+        } else {
+            displayStyle = hideStyleFromModal
+        };
+    })();
 
-    if(display) {
-        displayStyle = visibleStyleFromModal
-    }else {
-        displayStyle = hideStyleFromModal
-    }
 
     return (
         <>
-            <div id="modalFullBlock" style={{...displayStyle.fullScreen, ...variantStyle}}>
-                <div style={{...displayStyle.formBlock}}>
+            <div id="modalFullBlock" style={{ ...displayStyle.fullScreen, ...variantStyle }}>
+                <div style={{ ...displayStyle.formBlock }}>
                     {children}
                 </div>
             </div>
         </>
     )
-}
+};
 
 
 export const ModalComponent = {
     Modal
-}
+};
