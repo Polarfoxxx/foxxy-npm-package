@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
-type TypeFromMasterStyle = {
+export type TypeFromMasterStyle = {
     fullScreen: CSSProperties;
     formBlock: CSSProperties;
 };
-export declare const masterStyleFromModal: TypeFromMasterStyle;
-export {};
+export declare const visibleStyleFromModal: TypeFromMasterStyle;
+export declare const hideStyleFromModal: TypeFromMasterStyle;

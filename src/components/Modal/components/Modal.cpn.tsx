@@ -1,20 +1,32 @@
 import React from "react";
-import { masterStyleFromModal } from "../style/master.style";
+import { visibleStyleFromModal } from "../style/master.style";
+import { hideStyleFromModal } from "../style/master.style";
+import servicesChangeVariantFromModal from "../services";
+import { CSSProperties } from "react";
+import { TypeFromMasterStyle } from "../style/master.style";
+
 
 type Props = {
-    variant?: "default" | "white" | "dark",
-    children: JSX.Element | JSX.Element[]
-}
+    variant?: "default" | "white" | "ocean",
+    children: JSX.Element | JSX.Element[],
+    display: boolean 
+};
 
-const Modal: React.FC<Props> = ({ variant, children }): JSX.Element => {
+const Modal: React.FC<Props> = ({ variant, children, display }): JSX.Element => {
+    let displayStyle: TypeFromMasterStyle = hideStyleFromModal
+    let variantStyle: CSSProperties = servicesChangeVariantFromModal.changeVariantfromModal({variant})
 
 
-
+    if(display) {
+        displayStyle = visibleStyleFromModal
+    }else {
+        displayStyle = hideStyleFromModal
+    }
 
     return (
         <>
-            <div style={{...masterStyleFromModal.fullScreen}}>
-                <div style={{...masterStyleFromModal.formBlock}}>
+            <div id="modalFullBlock" style={{...displayStyle.fullScreen, ...variantStyle}}>
+                <div style={{...displayStyle.formBlock}}>
                     {children}
                 </div>
             </div>
