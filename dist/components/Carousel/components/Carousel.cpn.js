@@ -1,10 +1,19 @@
 import React from "react";
 import CarouselItem from "./CarouselItem";
-const Carousel = () => {
+import CarouselBox from "./CarouselBox";
+import CarouselButonsBox from "./CarouselButtonsBox";
+import CarouselButons from "./CarouselButtons";
+import { carouselComponentStyle } from "../style/carouselCompenent.style";
+const Carousel = ({ children }) => {
+    let css = {};
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", null)));
+        React.createElement("div", { style: Object.assign({}, carouselComponentStyle) },
+            React.createElement("div", { style: Object.assign(Object.assign({}, css), { width: "100%", height: "100%" }) }, children))));
 };
 export const CarouselComponent = {
     Carousel,
-    CarouselItem
+    CarouselBox,
+    CarouselItem,
+    CarouselButonsBox,
+    CarouselButons
 };

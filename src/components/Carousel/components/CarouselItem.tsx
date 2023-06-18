@@ -3,7 +3,7 @@ import React from "react";
 import { carouselItemStyle } from "../style/carouselItem.style";
 
 type PropsFromCarouselItem = {
-    children: JSX.Element[]
+    children: JSX.Element | JSX.Element[]
 }
 
 
