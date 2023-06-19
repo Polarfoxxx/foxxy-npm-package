@@ -4,13 +4,15 @@ import { ButtonHTMLAttributes } from "react";
 export interface TypecarouselButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
     onClick: React.MouseEventHandler<HTMLButtonElement>,
     variant?: "default" | "white" | "dark" | "ocean",
-    position: "left" | "right"
+    position: "left" | "right",
+    className: string
 }
 
 const CarouselButons: React.FC<TypecarouselButtonsIntrinsicAttributes> = ({
     onClick,
     variant,
-    position
+    position,
+    className
 }): JSX.Element => {
 
 
@@ -19,6 +21,7 @@ const CarouselButons: React.FC<TypecarouselButtonsIntrinsicAttributes> = ({
     return (
         <>
             <button
+                className={className}
                 onClick={onClick}
             >
                 {position}

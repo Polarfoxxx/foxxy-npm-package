@@ -15,13 +15,14 @@ export default servicesChangeVariantFromModal;
 function changeVariantfromModal({ variant }: TypeFromChangeVariantfromModal): CSSProperties {
     let variantStyle: CSSProperties = defaultStyleFormModal;
 
-    (() => {
-        if (variant === "white") {
-            variantStyle = whiteStyleFormModal
-        } else if (variant === "ocean") {
-            variantStyle = oceanStyleFormModal
-        } else { defaultStyleFormModal }
-    })();
+    //#region test
+    if (variant === "white") {
+        variantStyle = whiteStyleFormModal
+    } else if (variant === "ocean") {
+        variantStyle = oceanStyleFormModal
+    } else { defaultStyleFormModal }
+    //#endregion
+
 
     return (
         variantStyle

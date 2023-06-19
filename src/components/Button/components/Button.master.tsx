@@ -23,9 +23,7 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleFromButton({ variant, border, round, lg, sm })
 
   return (
-    <>
       <button
-        
         onClick={onClick}
         onDoubleClick={onDoubleClick}
         onMouseEnter={onMouseEnter}
@@ -37,7 +35,6 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
       >
         {text}
       </button>
-    </>
   );
 }
 

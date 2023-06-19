@@ -7,17 +7,17 @@ const servicesChangeVariantFromModal = {
 export default servicesChangeVariantFromModal;
 function changeVariantfromModal({ variant }) {
     let variantStyle = defaultStyleFormModal;
-    (() => {
-        if (variant === "white") {
-            variantStyle = whiteStyleFormModal;
-        }
-        else if (variant === "ocean") {
-            variantStyle = oceanStyleFormModal;
-        }
-        else {
-            defaultStyleFormModal;
-        }
-    })();
+    //#region test
+    if (variant === "white") {
+        variantStyle = whiteStyleFormModal;
+    }
+    else if (variant === "ocean") {
+        variantStyle = oceanStyleFormModal;
+    }
+    else {
+        defaultStyleFormModal;
+    }
+    //#endregion
     return (variantStyle);
 }
 ;

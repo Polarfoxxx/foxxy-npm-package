@@ -1,21 +1,20 @@
 export const darkStyleFromForm = {
     form: {
-        width: "auto",
-        height: "auto",
-        minWidth: "350px",
         backgroundColor: "rgb(39, 55, 77)",
-        border: "1px solid rgb(221, 230, 237)",
-        borderRadius: "1vw",
+    },
+    formBody: {
+        width: "100%",
+        height: "auto",
         display: "flex",
         flexDirection: "column",
-        overflow: "hidden",
-        padding: "0 0 10px 0"
+        alignItems: "center",
+        justifyContent: "center",
     },
     formHeader: {
-        width: "100%",
-        height: "30px",
         backgroundColor: "rgb(10, 38, 71)",
         color: "white",
+        width: "100%",
+        height: "30px",
         padding: "0 10px",
         display: "flex",
         justifyContent: "center",
@@ -27,21 +26,13 @@ export const darkStyleFromForm = {
         width: "80%",
         display: "flex"
     },
-    formBody: {
-        width: "100%",
-        height: "50%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-    },
     formInputs: {
+        backgroundColor: "rgb(227, 244, 244)",
         width: "80%",
         height: "25px",
         borderRadius: "7px",
         border: "1px solid rgb(82, 109, 130)",
         padding: "0 8px",
-        backgroundColor: "rgb(227, 244, 244)",
         margin: "8px"
     },
 };

@@ -3,7 +3,6 @@ import React, { CSSProperties } from "react";
 import CarouselItem from "./CarouselItem";
 import CarouselBox from "./CarouselBox";
 import CarouselButonsBox from "./CarouselButtonsBox";
-import CarouselButons from "./CarouselButtons";
 
 import { carouselComponentStyle } from "../style/carouselCompenent.style";
 
@@ -30,5 +29,4 @@ export const CarouselComponent = {
     CarouselBox,
     CarouselItem,
     CarouselButonsBox,
-    CarouselButons
 };

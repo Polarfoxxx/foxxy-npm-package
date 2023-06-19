@@ -4,6 +4,7 @@ export interface TypecarouselButtonsIntrinsicAttributes extends ButtonHTMLAttrib
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     variant?: "default" | "white" | "dark" | "ocean";
     position: "left" | "right";
+    className: string;
 }
 declare const CarouselButons: React.FC<TypecarouselButtonsIntrinsicAttributes>;
 export default CarouselButons;

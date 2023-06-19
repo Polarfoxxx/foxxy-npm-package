@@ -1,6 +1,6 @@
 export const styleButtonBox = {
     width: "100%",
-    height: "auto",
+    height: "40px",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",

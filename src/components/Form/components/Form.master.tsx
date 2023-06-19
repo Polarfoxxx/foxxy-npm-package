@@ -3,7 +3,7 @@ import { TypeFormIntrinsicAttributes } from "../types";
 import FormHeader from "./FormHeader";
 import FormInputs from "./FormInputs";
 import servicesChangeStyleFromFrom from "../services";
-
+import { masterStyleFromForm } from "../style/master.style";
 
 const Form: React.FC<TypeFormIntrinsicAttributes> = ({
     children,
@@ -17,18 +17,19 @@ const Form: React.FC<TypeFormIntrinsicAttributes> = ({
     const formVariantStyle = servicesChangeStyleFromFrom.changerStyleFromForm({ variant });
 
     return (
-        <>
             <form
+                className="form"
                 method={method}
                 action={action}
-                style={formVariantStyle.form}>
-                <div style={formVariantStyle.formBody}>
+                style={{...formVariantStyle.form, ...masterStyleFromForm}}>
+                <div 
+                className="body"
+                style={formVariantStyle.formBody}>
                     {React.Children.map(children, (child: React.ReactElement<any>) => {
                         return React.cloneElement(child, { formVariantStyle });
                     })}
                 </div>
             </form>
-        </>
     )
 }
 

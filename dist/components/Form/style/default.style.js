@@ -1,21 +1,20 @@
 export const defaultStyleFromForm = {
     form: {
-        width: "auto",
-        height: "auto",
-        minWidth: "350px",
         backgroundColor: "rgb(210, 233, 233)",
-        border: "1px solid rgb(221, 230, 237)",
-        borderRadius: "1vw",
+    },
+    formBody: {
+        width: "100%",
+        height: "auto",
         display: "flex",
         flexDirection: "column",
-        overflow: "hidden",
-        padding: "0 0 10px 0"
+        alignItems: "center",
+        justifyContent: "center",
     },
     formHeader: {
-        width: "100%",
-        height: "30px",
         backgroundColor: "rgb(17, 106, 123)",
         color: "white",
+        width: "100%",
+        height: "30px",
         padding: "0 10px",
         display: "flex",
         justifyContent: "center",
@@ -26,14 +25,6 @@ export const defaultStyleFromForm = {
         fontSize: "13px",
         width: "80%",
         display: "flex"
-    },
-    formBody: {
-        width: "100%",
-        height: "50%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
     },
     formInputs: {
         width: "80%",
