@@ -4,7 +4,7 @@ import { carouselBoxStyle } from "../style/carouselBox.style";
 
 type PropsFromCarouselItem = {
     children: JSX.Element | JSX.Element[],
-    movement: CSSProperties
+    movement: number
 }
 
 
@@ -14,7 +14,9 @@ const CarouselBox: React.FC<PropsFromCarouselItem> = ({children, movement}): JSX
 const childrenCount = React.Children.count(children)
 const fff: CSSProperties = {
     width: `${childrenCount * 60}vw`
-}
+};
+
+
 
 
     return (
