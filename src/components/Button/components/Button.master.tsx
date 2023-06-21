@@ -4,19 +4,13 @@ import { TypeButtonsIntrinsicAttributes } from "../types";
 import ButtonBox from "./ButtonsBox";
 
 const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
-  onClick,
-  onDoubleClick,
-  onMouseEnter,
-  onMouseLeave,
   text,
   variant,
-  type,
-  selectorClass,
   border,
   round,
   lg,
   sm,
-  ref
+  ...props
 }): JSX.Element => {
 
   /* servis pre style */
@@ -24,14 +18,8 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 
   return (
       <button
-        onClick={onClick}
-        onDoubleClick={onDoubleClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
+        {...props}
         style={{ ...styles, ...defStyle, ...sizeElement }}
-        type={type}
-        className={selectorClass}
-        ref={ref}
       >
         {text}
       </button>

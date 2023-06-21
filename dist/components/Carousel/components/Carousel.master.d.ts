@@ -6,7 +6,7 @@ export declare const CarouselComponent: {
     Carousel: React.FC<PropsFromCarouselComponents>;
     CarouselBox: React.FC<{
         children: JSX.Element | JSX.Element[];
-        movement: React.CSSProperties;
+        index: number;
     }>;
     CarouselItem: React.FC<{
         children: JSX.Element | JSX.Element[];
