@@ -5,17 +5,9 @@ import { TypeLabelIntrinsicAttributes } from "../types";
 type TypeMasterFromInputsAndLabel = TypeInputsIntrinsicAttributes & TypeLabelIntrinsicAttributes
 
 const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
-    defaultValue,
-    disabled,
-    placeholder,
-    autoFocus,
-    type,
-    onChange,
-    maxLength,
-    required,
-    inputRef,
     formVariantStyle,
-    label
+    label,
+    ...props
 
 }): JSX.Element => {
 
@@ -27,17 +19,9 @@ const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
                 {label}
             </label>
             <input
+                {...props}
                 style={formVariantStyle?.formInputs}
                 id="inputs"
-                ref={inputRef}
-                required={required}
-                autoFocus={autoFocus}
-                disabled={disabled}
-                defaultValue={defaultValue}
-                onChange={onChange}
-                placeholder={placeholder}
-                type={type}
-                maxLength={maxLength}
             />
         </>
     )

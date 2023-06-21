@@ -15,15 +15,6 @@ export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLForm
 
 /* Props pre element inputs */
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
-    defaultValue?: string,
-    disabled?: boolean,
-    placeholder?: string,
-    autoFocus?: boolean,
-    type: string,
-    onChange?:  React.ChangeEventHandler<HTMLInputElement>
-    maxLength?: number,
-    required?: boolean,
-    inputRef?: React.RefObject<HTMLInputElement>,
     formVariantStyle?: TypeStyleFromForm
 };
 
