@@ -1,28 +1,26 @@
 
 import { CSSProperties } from "react";
-import { TypeFromChangeVariantfromModal } from "./types";
-import { whiteStyleFormModal } from "./style/white.style";
-import { oceanStyleFormModal } from "./style/ocean.style";
-import { defaultStyleFormModal } from "./style/default.style";
+import { TypeForChangeVariantforModal } from "./types";
+import { whiteStyleForModal } from "./style/white.style";
+import { oceanStyleForModal } from "./style/ocean.style";
+import { defaultStyleForModal } from "./style/default.style";
 
-const servicesChangeVariantFromModal = {
-    changeVariantfromModal
+const servicesChangeVariantForModal = {
+    changeVariantForModal
 };
-export default servicesChangeVariantFromModal;
+export default servicesChangeVariantForModal;
 
 
+function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSProperties {
+    let variantStyle: CSSProperties = defaultStyleForModal;
 
-function changeVariantfromModal({ variant }: TypeFromChangeVariantfromModal): CSSProperties {
-    let variantStyle: CSSProperties = defaultStyleFormModal;
-
-    //#region test
+    //#region block
     if (variant === "white") {
-        variantStyle = whiteStyleFormModal
+        variantStyle = whiteStyleForModal
     } else if (variant === "ocean") {
-        variantStyle = oceanStyleFormModal
-    } else { defaultStyleFormModal }
+        variantStyle = oceanStyleForModal
+    } else { defaultStyleForModal }
     //#endregion
-
 
     return (
         variantStyle

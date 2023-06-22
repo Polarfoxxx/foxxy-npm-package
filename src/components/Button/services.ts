@@ -14,12 +14,12 @@ import { funnyStyle } from './styles/funny.style';
 import { sunStyle } from './styles/sunn.style';
 import { oceanStyle } from './styles/ocean.style';
 
-const servicesChangeStyleFromButtons = {
-    changerStyleFromButton
+const servicesChangeStyleForButtons = {
+    changerStyleForButton
 }
-export default servicesChangeStyleFromButtons;
+export default servicesChangeStyleForButtons;
 
-function changerStyleFromButton({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+function changerStyleForButton({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
     let sizeElement: CSS.Properties = {};
     let styles: CSS.Properties = {};

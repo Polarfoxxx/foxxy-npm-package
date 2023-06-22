@@ -2,13 +2,13 @@
 import React, { CSSProperties } from "react";
 import { carouselBoxStyle } from "../style/carouselBox.style";
 
-type PropsFromCarouselItem = {
+type PropsForCarouselItem = {
     children: JSX.Element | JSX.Element[],
     index: number
 };
 
 
-const CarouselBox: React.FC<PropsFromCarouselItem> = ({ children, index }): JSX.Element => {
+const CarouselBox: React.FC<PropsForCarouselItem> = ({ children, index }): JSX.Element => {
     let movement: CSSProperties = {}
 
 

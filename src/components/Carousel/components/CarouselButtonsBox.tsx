@@ -3,12 +3,12 @@ import React, { CSSProperties } from "react";
 import CarouselButons from "./CarouselButtons";
 
 
-type PropsFromCarouselItem = {
+type PropsForCarouselItem = {
     onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
 
-const CarouselButonsBox: React.FC<PropsFromCarouselItem> = ({onClick}): JSX.Element => {
+const CarouselButonsBox: React.FC<PropsForCarouselItem> = ({onClick}): JSX.Element => {
 
 
     return (

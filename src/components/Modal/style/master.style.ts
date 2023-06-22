@@ -5,7 +5,7 @@ export type TypeFromMasterStyle = {
     formBlock: CSSProperties
 }
 
-export const visibleStyleFromModal: TypeFromMasterStyle = {
+export const visibleStyleForModal: TypeFromMasterStyle = {
     fullScreen: {
         position: "absolute",
         left: "0",
@@ -25,7 +25,7 @@ export const visibleStyleFromModal: TypeFromMasterStyle = {
    
 }
 
-export const hideStyleFromModal: TypeFromMasterStyle = {
+export const hideStyleForModal: TypeFromMasterStyle = {
     fullScreen: {
        display: "block"
     },

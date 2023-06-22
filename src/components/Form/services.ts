@@ -1,32 +1,32 @@
 
-import { defaultStyleFromForm } from "./style/default.style";
-import { whiteStyleFromForm } from "./style/white.style";
-import { darkStyleFromForm } from "./style/dark.style";
-import { funnyStyleFromForm } from "./style/funny.style";
-import { TypeFromFormServices } from "./types";
-import { TypeStyleFromForm } from "./types";
+import { defaultStyleForForm } from "./style/default.style";
+import { whiteStyleForForm } from "./style/white.style";
+import { darkStyleForForm } from "./style/dark.style";
+import { funnyStyleForForm } from "./style/funny.style";
+import { TypeForFormServices } from "./types";
+import { TypeStyleForForm } from "./types";
 
-const servicesChangeStyleFromFrom = {
-    changerStyleFromForm
+const servicesChangeStyleForFrom = {
+    changerStyleForForm
 }
-export default servicesChangeStyleFromFrom;
+export default servicesChangeStyleForFrom;
 
 
 
-function changerStyleFromForm({ variant }: TypeFromFormServices): TypeStyleFromForm {
-    let formVariantStyle: TypeStyleFromForm = { ...defaultStyleFromForm };
+function changerStyleForForm({ variant }: TypeForFormServices): TypeStyleForForm {
+    let formVariantStyle: TypeStyleForForm = { ...defaultStyleForForm };
 
     /* funkcia meniaca variantu */
     (() => {
         if (variant) {
             if (variant === "dark") {
-                formVariantStyle = darkStyleFromForm
+                formVariantStyle = darkStyleForForm
             } else if (variant === "funny") {
-                formVariantStyle = funnyStyleFromForm
+                formVariantStyle = funnyStyleForForm
             } else if (variant === "white") {
-                formVariantStyle = whiteStyleFromForm
+                formVariantStyle = whiteStyleForForm
             } else {
-                formVariantStyle = defaultStyleFromForm
+                formVariantStyle = defaultStyleForForm
             }
         }
     })();

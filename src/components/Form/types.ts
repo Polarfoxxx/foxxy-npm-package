@@ -3,7 +3,7 @@ import { InputHTMLAttributes } from "react"
 import { CSSProperties } from "react";
 
 /* Props pre element form */
-export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
+export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children:  React.ReactElement<any>[]
     formName?: string,
     action?: string,
@@ -15,18 +15,18 @@ export interface TypeFormIntrinsicAttributes extends FormHTMLAttributes<HTMLForm
 
 /* Props pre element inputs */
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
-    formVariantStyle?: TypeStyleFromForm
+    formVariantStyle?: TypeStyleForForm
 };
 
 /* Props pre element label */
 export type TypeLabelIntrinsicAttributes = {
     label?: string,
-    formVariantStyle?: TypeStyleFromForm
+    formVariantStyle?: TypeStyleForForm
 };
 
 
 /* typ pre style */
-export type TypeStyleFromForm = {
+export type TypeStyleForForm = {
     form: CSSProperties,
     formHeader: CSSProperties,
     formBody:CSSProperties,
@@ -35,6 +35,6 @@ export type TypeStyleFromForm = {
 }
 
 /* Props pre sevice */
-export type TypeFromFormServices = {
+export type TypeForFormServices = {
     variant?: "default" | "dark" | "funny" | "white"
 }

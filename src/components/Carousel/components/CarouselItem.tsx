@@ -2,12 +2,12 @@
 import React from "react";
 import { carouselItemStyle } from "../style/carouselItem.style";
 
-type PropsFromCarouselItem = {
+type PropsForCarouselItem = {
     children: JSX.Element | JSX.Element[];
 }
 
 
-const CarouselItem: React.FC<PropsFromCarouselItem> = ({ children }): JSX.Element => {
+const CarouselItem: React.FC<PropsForCarouselItem> = ({ children }): JSX.Element => {
 
 
 

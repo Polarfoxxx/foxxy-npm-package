@@ -1,6 +1,6 @@
 import { CSSProperties } from "react"
 
-export const masterStyleFromForm: CSSProperties = {
+export const masterStyleForForm: CSSProperties = {
     width: "30vw",
     height: "auto",
     minWidth: "350px",

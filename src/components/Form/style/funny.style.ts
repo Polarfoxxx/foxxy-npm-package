@@ -1,6 +1,6 @@
-import { TypeStyleFromForm } from "../types"
+import { TypeStyleForForm } from "../types"
 
-export const funnyStyleFromForm: TypeStyleFromForm = {
+export const funnyStyleForForm: TypeStyleForForm = {
     form: {
         backgroundColor: "rgb(56, 229, 77)",
     },
