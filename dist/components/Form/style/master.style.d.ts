@@ -1,2 +1,2 @@
 import { CSSProperties } from "react";
-export declare const masterStyleFromForm: CSSProperties;
+export declare const masterStyleForForm: CSSProperties;

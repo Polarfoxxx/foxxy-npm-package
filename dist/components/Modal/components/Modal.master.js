@@ -1,19 +1,19 @@
 import React from "react";
-import { visibleStyleFromModal } from "../style/master.style";
-import { hideStyleFromModal } from "../style/master.style";
-import servicesChangeVariantFromModal from "../services";
+import { visibleStyleForModal } from "../style/master.style";
+import { hideStyleForModal } from "../style/master.style";
+import servicesChangeVariantForModal from "../services";
 const Modal = ({ variant, children, display }) => {
     /* deklarace */
-    let displayStyle = hideStyleFromModal;
+    let displayStyle = hideStyleForModal;
     /* servis meniaci variantu */
-    let variantStyle = servicesChangeVariantFromModal.changeVariantfromModal({ variant });
+    let variantStyle = servicesChangeVariantForModal.changeVariantForModal({ variant });
     /* anonimna funkcia pre zobrazovanie a zatvaranie modalu */
     (() => {
         if (display) {
-            displayStyle = visibleStyleFromModal;
+            displayStyle = visibleStyleForModal;
         }
         else {
-            displayStyle = hideStyleFromModal;
+            displayStyle = hideStyleForModal;
         }
         ;
     })();

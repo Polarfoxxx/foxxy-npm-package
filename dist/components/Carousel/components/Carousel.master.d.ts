@@ -1,9 +1,10 @@
 import React from "react";
-type PropsFromCarouselComponents = {
-    children: JSX.Element | JSX.Element[];
+type PropsForCarouselComponents = {
+    children: React.ReactElement<any>[];
+    variant?: "default" | "ocean" | "dark";
 };
 export declare const CarouselComponent: {
-    Carousel: React.FC<PropsFromCarouselComponents>;
+    Carousel: React.FC<PropsForCarouselComponents>;
     CarouselBox: React.FC<{
         children: JSX.Element | JSX.Element[];
         index: number;
@@ -11,8 +12,6 @@ export declare const CarouselComponent: {
     CarouselItem: React.FC<{
         children: JSX.Element | JSX.Element[];
     }>;
-    CarouselButonsBox: React.FC<{
-        onClick: React.MouseEventHandler<HTMLButtonElement>;
-    }>;
+    CarouselButonsBox: React.FC<import("../types").PropsForCarouselBox>;
 };
 export {};

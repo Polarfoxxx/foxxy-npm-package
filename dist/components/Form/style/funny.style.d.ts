@@ -1,2 +1,2 @@
-import { TypeStyleFromForm } from "../types";
-export declare const funnyStyleFromForm: TypeStyleFromForm;
+import { TypeStyleForForm } from "../types";
+export declare const funnyStyleForForm: TypeStyleForForm;

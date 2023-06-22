@@ -1,4 +1,4 @@
-export const visibleStyleFromModal = {
+export const visibleStyleForModal = {
     fullScreen: {
         position: "absolute",
         left: "0",
@@ -16,7 +16,7 @@ export const visibleStyleFromModal = {
         transition: "0.6s"
     }
 };
-export const hideStyleFromModal = {
+export const hideStyleForModal = {
     fullScreen: {
         display: "block"
     },

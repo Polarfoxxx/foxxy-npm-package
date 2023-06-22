@@ -3,5 +3,5 @@ export type TypeFromMasterStyle = {
     fullScreen: CSSProperties;
     formBlock: CSSProperties;
 };
-export declare const visibleStyleFromModal: TypeFromMasterStyle;
-export declare const hideStyleFromModal: TypeFromMasterStyle;
+export declare const visibleStyleForModal: TypeFromMasterStyle;
+export declare const hideStyleForModal: TypeFromMasterStyle;

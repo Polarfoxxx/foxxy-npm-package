@@ -9,9 +9,8 @@ const CarouselBox = ({ children, index }) => {
     };
     /* pohyb boxxu */
     movement = {
-        right: `${index * 60}vw`
+        right: `${index * 60}vw`,
     };
-    return (React.createElement(React.Fragment, null,
-        React.createElement("div", { style: Object.assign(Object.assign(Object.assign({}, carouselBoxStyle), fff), movement) }, children)));
+    return (React.createElement("div", { style: Object.assign(Object.assign(Object.assign({}, carouselBoxStyle), fff), movement) }, children));
 };
 export default CarouselBox;

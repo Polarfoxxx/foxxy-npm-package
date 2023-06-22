@@ -1,6 +1,4 @@
 import React from "react";
-type PropsFromCarouselItem = {
-    onClick: React.MouseEventHandler<HTMLButtonElement>;
-};
-declare const CarouselButonsBox: React.FC<PropsFromCarouselItem>;
+import { PropsForCarouselBox } from "../types";
+declare const CarouselButonsBox: React.FC<PropsForCarouselBox>;
 export default CarouselButonsBox;

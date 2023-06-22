@@ -1,4 +1,4 @@
-export const darkStyleFromForm = {
+export const darkStyleForForm = {
     form: {
         backgroundColor: "rgb(39, 55, 77)",
     },

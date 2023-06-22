@@ -1,2 +1,2 @@
 import { CSSProperties } from "react";
-export declare const whiteStyleFormModal: CSSProperties;
+export declare const whiteStyleForModal: CSSProperties;

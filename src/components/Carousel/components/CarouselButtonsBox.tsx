@@ -1,23 +1,26 @@
 
-import React, { CSSProperties } from "react";
+import React from "react";
 import CarouselButons from "./CarouselButtons";
+import { PropsForCarouselBox } from "../types";
+import { styleForButtonBox } from "../style/buttonBox.style";
 
 
-type PropsForCarouselItem = {
-    onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-
-const CarouselButonsBox: React.FC<PropsForCarouselItem> = ({onClick}): JSX.Element => {
+const CarouselButonsBox: React.FC<PropsForCarouselBox> = ({ onClick, variantFromCarousel }): JSX.Element => {
 
 
     return (
-        <>
-        <div style={{}}>
-            <CarouselButons className="left" onClick={onClick} position="left"/>
-            <CarouselButons className="right" onClick={onClick} position="right"/>
+        <div style={{ ...styleForButtonBox }}>
+            <CarouselButons
+                variantFromCarousel={variantFromCarousel}
+                className="left"
+                onClick={onClick}
+                position="<" />
+            <CarouselButons
+                variantFromCarousel={variantFromCarousel}
+                className="right"
+                onClick={onClick}
+                position=">" />
         </div>
-        </>
     )
 };
 

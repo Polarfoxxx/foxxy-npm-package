@@ -7,11 +7,11 @@ import { darkStyle } from './styles/dark.style';
 import { funnyStyle } from './styles/funny.style';
 import { sunStyle } from './styles/sunn.style';
 import { oceanStyle } from './styles/ocean.style';
-const servicesChangeStyleFromButtons = {
-    changerStyleFromButton
+const servicesChangeStyleForButtons = {
+    changerStyleForButton
 };
-export default servicesChangeStyleFromButtons;
-function changerStyleFromButton({ variant, border, round, lg, sm }) {
+export default servicesChangeStyleForButtons;
+function changerStyleForButton({ variant, border, round, lg, sm }) {
     /* deklaracia */
     let sizeElement = {};
     let styles = {};

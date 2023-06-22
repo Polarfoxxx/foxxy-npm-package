@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
-import { TypeFromChangeVariantfromModal } from "./types";
-declare const servicesChangeVariantFromModal: {
-    changeVariantfromModal: typeof changeVariantfromModal;
+import { TypeForChangeVariantforModal } from "./types";
+declare const servicesChangeVariantForModal: {
+    changeVariantForModal: typeof changeVariantForModal;
 };
-export default servicesChangeVariantFromModal;
-declare function changeVariantfromModal({ variant }: TypeFromChangeVariantfromModal): CSSProperties;
+export default servicesChangeVariantForModal;
+declare function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSProperties;

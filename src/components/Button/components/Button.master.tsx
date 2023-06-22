@@ -14,7 +14,7 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 }): JSX.Element => {
 
   /* servis pre style */
-  const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleFromButton({ variant, border, round, lg, sm })
+  const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleForButton({ variant, border, round, lg, sm })
 
   return (
       <button

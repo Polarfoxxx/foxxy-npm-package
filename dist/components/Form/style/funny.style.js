@@ -1,4 +1,4 @@
-export const funnyStyleFromForm = {
+export const funnyStyleForForm = {
     form: {
         backgroundColor: "rgb(56, 229, 77)",
     },

@@ -1,4 +1,4 @@
-export const masterStyleFromForm = {
+export const masterStyleForForm = {
     width: "30vw",
     height: "auto",
     minWidth: "350px",

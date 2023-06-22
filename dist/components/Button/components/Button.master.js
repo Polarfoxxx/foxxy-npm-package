@@ -15,7 +15,7 @@ import ButtonBox from "./ButtonsBox";
 const Button = (_a) => {
     var { text, variant, border, round, lg, sm } = _a, props = __rest(_a, ["text", "variant", "border", "round", "lg", "sm"]);
     /* servis pre style */
-    const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleFromButton({ variant, border, round, lg, sm });
+    const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleForButton({ variant, border, round, lg, sm });
     return (React.createElement("button", Object.assign({}, props, { style: Object.assign(Object.assign(Object.assign({}, styles), defStyle), sizeElement) }), text));
 };
 export const ButtonComponent = {

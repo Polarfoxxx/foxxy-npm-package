@@ -1,9 +1,9 @@
 import React from "react";
 import CarouselButons from "./CarouselButtons";
-const CarouselButonsBox = ({ onClick }) => {
-    return (React.createElement(React.Fragment, null,
-        React.createElement("div", { style: {} },
-            React.createElement(CarouselButons, { className: "left", onClick: onClick, position: "left" }),
-            React.createElement(CarouselButons, { className: "right", onClick: onClick, position: "right" }))));
+import { styleForButtonBox } from "../style/buttonBox.style";
+const CarouselButonsBox = ({ onClick, variantFromCarousel }) => {
+    return (React.createElement("div", { style: Object.assign({}, styleForButtonBox) },
+        React.createElement(CarouselButons, { variantFromCarousel: variantFromCarousel, className: "left", onClick: onClick, position: "<" }),
+        React.createElement(CarouselButons, { variantFromCarousel: variantFromCarousel, className: "right", onClick: onClick, position: ">" })));
 };
 export default CarouselButonsBox;

@@ -6,4 +6,5 @@ export const carouselItemStyle: CSSProperties = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "transparent"
 }

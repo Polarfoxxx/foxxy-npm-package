@@ -1,5 +1,5 @@
 import React from "react";
-import { PropsFromModalComponents } from "../types";
+import { PropsForModalComponents } from "../types";
 export declare const ModalComponent: {
-    Modal: React.FC<PropsFromModalComponents>;
+    Modal: React.FC<PropsForModalComponents>;
 };

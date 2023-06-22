@@ -1,4 +1,4 @@
-export const defaultStyleFromForm = {
+export const defaultStyleForForm = {
     form: {
         backgroundColor: "rgb(210, 233, 233)",
     },

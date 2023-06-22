@@ -1,2 +1,2 @@
-import { TypeStyleFromForm } from "../types";
-export declare const defaultStyleFromForm: TypeStyleFromForm;
+import { TypeStyleForForm } from "../types";
+export declare const defaultStyleForForm: TypeStyleForForm;

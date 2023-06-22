@@ -1,4 +1,4 @@
-export const whiteStyleFromForm = {
+export const whiteStyleForForm = {
     form: {
         backgroundColor: "rgb(227, 244, 244)",
     },

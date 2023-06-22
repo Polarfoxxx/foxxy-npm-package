@@ -1,32 +1,29 @@
 import * as React from "react";
 import { ButtonHTMLAttributes } from "react";
-
+import { carouselButtons } from "../style/button.style";
+import { TypeVariantForCarouselAndButton } from "../types";
 export interface TypeCarouselButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variantFromCarousel?: TypeVariantForCarouselAndButton,
     onClick: React.MouseEventHandler<HTMLButtonElement>,
-    variant?: "default" | "white" | "dark" | "ocean",
-    position: "left" | "right",
+    position: "<" | ">",
     className: string
 }
 
 const CarouselButons: React.FC<TypeCarouselButtonsIntrinsicAttributes> = ({
+    variantFromCarousel,
     onClick,
-    variant,
     position,
     className
 }): JSX.Element => {
 
-
-
-
     return (
-        <>
-            <button
-                className={className}
-                onClick={onClick}
-            >
-                {position}
-            </button>
-        </>
+        <button
+            className={className}
+            style={{ ...carouselButtons, ...variantFromCarousel?.varButtons }}
+            onClick={onClick}
+        >
+            {position}
+        </button>
     );
 }
 

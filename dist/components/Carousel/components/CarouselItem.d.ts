@@ -1,6 +1,6 @@
 import React from "react";
-type PropsFromCarouselItem = {
+type PropsForCarouselItem = {
     children: JSX.Element | JSX.Element[];
 };
-declare const CarouselItem: React.FC<PropsFromCarouselItem>;
+declare const CarouselItem: React.FC<PropsForCarouselItem>;
 export default CarouselItem;

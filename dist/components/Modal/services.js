@@ -1,21 +1,21 @@
-import { whiteStyleFormModal } from "./style/white.style";
-import { oceanStyleFormModal } from "./style/ocean.style";
-import { defaultStyleFormModal } from "./style/default.style";
-const servicesChangeVariantFromModal = {
-    changeVariantfromModal
+import { whiteStyleForModal } from "./style/white.style";
+import { oceanStyleForModal } from "./style/ocean.style";
+import { defaultStyleForModal } from "./style/default.style";
+const servicesChangeVariantForModal = {
+    changeVariantForModal
 };
-export default servicesChangeVariantFromModal;
-function changeVariantfromModal({ variant }) {
-    let variantStyle = defaultStyleFormModal;
-    //#region test
+export default servicesChangeVariantForModal;
+function changeVariantForModal({ variant }) {
+    let variantStyle = defaultStyleForModal;
+    //#region block
     if (variant === "white") {
-        variantStyle = whiteStyleFormModal;
+        variantStyle = whiteStyleForModal;
     }
     else if (variant === "ocean") {
-        variantStyle = oceanStyleFormModal;
+        variantStyle = oceanStyleForModal;
     }
     else {
-        defaultStyleFormModal;
+        defaultStyleForModal;
     }
     //#endregion
     return (variantStyle);

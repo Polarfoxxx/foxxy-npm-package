@@ -1,2 +1,2 @@
 import { CSSProperties } from "react";
-export declare const oceanStyleFormModal: CSSProperties;
+export declare const oceanStyleForModal: CSSProperties;

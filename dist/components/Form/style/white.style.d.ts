@@ -1,2 +1,2 @@
-import { TypeStyleFromForm } from "../types";
-export declare const whiteStyleFromForm: TypeStyleFromForm;
+import { TypeStyleForForm } from "../types";
+export declare const whiteStyleForForm: TypeStyleForForm;

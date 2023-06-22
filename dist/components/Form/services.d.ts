@@ -1,7 +1,7 @@
-import { TypeFromFormServices } from "./types";
-import { TypeStyleFromForm } from "./types";
-declare const servicesChangeStyleFromFrom: {
-    changerStyleFromForm: typeof changerStyleFromForm;
+import { TypeForFormServices } from "./types";
+import { TypeStyleForForm } from "./types";
+declare const servicesChangeStyleForFrom: {
+    changerStyleForForm: typeof changerStyleForForm;
 };
-export default servicesChangeStyleFromFrom;
-declare function changerStyleFromForm({ variant }: TypeFromFormServices): TypeStyleFromForm;
+export default servicesChangeStyleForFrom;
+declare function changerStyleForForm({ variant }: TypeForFormServices): TypeStyleForForm;

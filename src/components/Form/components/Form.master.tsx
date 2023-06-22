@@ -3,7 +3,7 @@ import { TypeForIntrinsicAttributes } from "../types";
 import FormHeader from "./FormHeader";
 import FormInputs from "./FormInputs";
 import servicesChangeStyleFromFrom from "../services";
-import { masterStyleFromForm } from "../style/master.style";
+import { masterStyleForForm } from "../style/master.style";
 
 const Form: React.FC<TypeForIntrinsicAttributes> = ({
     children,
@@ -21,7 +21,7 @@ const Form: React.FC<TypeForIntrinsicAttributes> = ({
                 className="form"
                 method={method}
                 action={action}
-                style={{...formVariantStyle.form, ...masterStyleFromForm}}>
+                style={{...formVariantStyle.form, ...masterStyleForForm}}>
                 <div 
                 className="body"
                 style={formVariantStyle.formBody}>

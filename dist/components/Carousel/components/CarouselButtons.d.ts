@@ -1,10 +1,11 @@
 import * as React from "react";
 import { ButtonHTMLAttributes } from "react";
-export interface TypecarouselButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
+import { TypeVariantForCarouselAndButton } from "../types";
+export interface TypeCarouselButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variantFromCarousel?: TypeVariantForCarouselAndButton;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
-    variant?: "default" | "white" | "dark" | "ocean";
-    position: "left" | "right";
+    position: "<" | ">";
     className: string;
 }
-declare const CarouselButons: React.FC<TypecarouselButtonsIntrinsicAttributes>;
+declare const CarouselButons: React.FC<TypeCarouselButtonsIntrinsicAttributes>;
 export default CarouselButons;

@@ -1,7 +1,7 @@
 import { TypeReturnStyleForElement } from './types';
 import { TypeForStyleFunction } from './types';
-declare const servicesChangeStyleFromButtons: {
-    changerStyleFromButton: typeof changerStyleFromButton;
+declare const servicesChangeStyleForButtons: {
+    changerStyleForButton: typeof changerStyleForButton;
 };
-export default servicesChangeStyleFromButtons;
-declare function changerStyleFromButton({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement;
+export default servicesChangeStyleForButtons;
+declare function changerStyleForButton({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement;
