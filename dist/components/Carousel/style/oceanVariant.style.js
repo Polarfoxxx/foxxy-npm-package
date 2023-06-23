@@ -1,4 +1,7 @@
-export const oceanStyleforCarousel = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.oceanStyleforCarousel = void 0;
+exports.oceanStyleforCarousel = {
     varCarousel: {
         backgroundColor: ' rgb(43, 43, 255)',
     },
@@ -7,3 +10,4 @@ export const oceanStyleforCarousel = {
         color: 'white'
     }
 };
+//# sourceMappingURL=oceanVariant.style.js.map

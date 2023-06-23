@@ -1,14 +1,10 @@
 
 import React, { CSSProperties } from "react";
 import { carouselBoxStyle } from "../style/carouselBox.style";
-
-type PropsForCarouselItem = {
-    children: JSX.Element | JSX.Element[],
-    index: number
-};
+import { PropsForCarouselBox } from "../types";
 
 
-const CarouselBox: React.FC<PropsForCarouselItem> = ({ children, index }): JSX.Element => {
+const CarouselBox: React.FC<PropsForCarouselBox> = ({ children, index }): JSX.Element => {
     let movement: CSSProperties = {}
 
     /* pocet obsujucich deti */
@@ -16,7 +12,6 @@ const CarouselBox: React.FC<PropsForCarouselItem> = ({ children, index }): JSX.E
     const boxLength: CSSProperties = {
         width: `${childrenCount * 60}vw`
     };
-    
     /* pohyb boxxu */
     movement = {
         right: `${index * 60}vw`,

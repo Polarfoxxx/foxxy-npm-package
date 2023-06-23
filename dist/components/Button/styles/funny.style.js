@@ -1,4 +1,7 @@
-export const funnyStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.funnyStyle = void 0;
+exports.funnyStyle = {
     defStyle: {
         background: "rgb(255, 132, 0)",
         color: "yellow",
@@ -24,3 +27,4 @@ export const funnyStyle = {
         borderRadius: "2vw",
     }
 };
+//# sourceMappingURL=funny.style.js.map

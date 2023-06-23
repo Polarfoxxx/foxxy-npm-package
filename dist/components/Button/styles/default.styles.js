@@ -1,4 +1,7 @@
-export const defaultStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.defaultStyle = void 0;
+exports.defaultStyle = {
     defStyle: {
         background: "rgb(25, 167, 206)",
         color: "white",
@@ -22,3 +25,4 @@ export const defaultStyle = {
         borderRadius: "10%"
     }
 };
+//# sourceMappingURL=default.styles.js.map

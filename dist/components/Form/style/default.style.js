@@ -1,4 +1,7 @@
-export const defaultStyleForForm = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.defaultStyleForForm = void 0;
+exports.defaultStyleForForm = {
     form: {
         backgroundColor: "rgb(210, 233, 233)",
     },
@@ -35,3 +38,4 @@ export const defaultStyleForForm = {
         margin: "8px"
     },
 };
+//# sourceMappingURL=default.style.js.map

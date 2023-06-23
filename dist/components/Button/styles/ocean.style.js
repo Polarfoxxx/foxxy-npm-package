@@ -1,4 +1,7 @@
-export const oceanStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.oceanStyle = void 0;
+exports.oceanStyle = {
     defStyle: {
         background: "rgb(0, 121, 255)",
         color: "white",
@@ -24,3 +27,4 @@ export const oceanStyle = {
         borderRadius: "2vw",
     }
 };
+//# sourceMappingURL=ocean.style.js.map

@@ -1,4 +1,7 @@
-export const darkStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.darkStyle = void 0;
+exports.darkStyle = {
     defStyle: {
         background: "rgb(27, 36, 48)",
         color: "white",
@@ -24,3 +27,4 @@ export const darkStyle = {
         border: "1px solid black",
     }
 };
+//# sourceMappingURL=dark.style.js.map

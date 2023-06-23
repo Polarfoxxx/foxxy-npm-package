@@ -1,4 +1,7 @@
-export const defaultStyleforCarousel = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.defaultStyleforCarousel = void 0;
+exports.defaultStyleforCarousel = {
     varCarousel: {
         backgroundColor: ' white',
     },
@@ -7,3 +10,4 @@ export const defaultStyleforCarousel = {
         color: 'black'
     }
 };
+//# sourceMappingURL=defaultVariant.style.js.map

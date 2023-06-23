@@ -1,37 +1,40 @@
-import { defStyle } from './styles/master.style';
-import { largeSize } from './styles/lg.style';
-import { smallSize } from './styles/small.style';
-import { defaultStyle } from './styles/default.styles';
-import { whiteStyle } from './styles/white.style';
-import { darkStyle } from './styles/dark.style';
-import { funnyStyle } from './styles/funny.style';
-import { sunStyle } from './styles/sunn.style';
-import { oceanStyle } from './styles/ocean.style';
-const servicesChangeStyleForButtons = {
-    changerStyleForButton
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var master_style_1 = require("./styles/master.style");
+var lg_style_1 = require("./styles/lg.style");
+var small_style_1 = require("./styles/small.style");
+var default_styles_1 = require("./styles/default.styles");
+var white_style_1 = require("./styles/white.style");
+var dark_style_1 = require("./styles/dark.style");
+var funny_style_1 = require("./styles/funny.style");
+var sunn_style_1 = require("./styles/sunn.style");
+var ocean_style_1 = require("./styles/ocean.style");
+var servicesChangeStyleForButtons = {
+    changerStyleForButton: changerStyleForButton
 };
-export default servicesChangeStyleForButtons;
-function changerStyleForButton({ variant, border, round, lg, sm }) {
+exports.default = servicesChangeStyleForButtons;
+function changerStyleForButton(_a) {
+    var variant = _a.variant, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm;
     /* deklaracia */
-    let sizeElement = {};
-    let styles = {};
-    let impStyleName = defaultStyle;
+    var sizeElement = {};
+    var styles = {};
+    var impStyleName = default_styles_1.defaultStyle;
     /* anonymma funkcia meniaca variantu */
     if (variant) {
         if (variant === "white") {
-            impStyleName = whiteStyle;
+            impStyleName = white_style_1.whiteStyle;
         }
         else if (variant === "dark") {
-            impStyleName = darkStyle;
+            impStyleName = dark_style_1.darkStyle;
         }
         else if (variant === "funny") {
-            impStyleName = funnyStyle;
+            impStyleName = funny_style_1.funnyStyle;
         }
         else if (variant === "sun") {
-            impStyleName = sunStyle;
+            impStyleName = sunn_style_1.sunStyle;
         }
         else if (variant === "ocean") {
-            impStyleName = oceanStyle;
+            impStyleName = ocean_style_1.oceanStyle;
         }
         /* vyber konkretnej varianty */
         styles = border ?
@@ -39,16 +42,17 @@ function changerStyleForButton({ variant, border, round, lg, sm }) {
             (round ? impStyleName.radiusStyle : impStyleName.defStyle);
     }
     else {
-        styles = defaultStyle.defStyle;
+        styles = default_styles_1.defaultStyle.defStyle;
     }
     /* anonymna funkcia meniaca velkost */
     if (lg || sm) {
-        sizeElement = lg ? largeSize : smallSize;
+        sizeElement = lg ? lg_style_1.largeSize : small_style_1.smallSize;
     }
     ;
     return ({
-        defStyle,
-        styles,
-        sizeElement
+        defStyle: master_style_1.defStyle,
+        styles: styles,
+        sizeElement: sizeElement
     });
 }
+//# sourceMappingURL=services.js.map

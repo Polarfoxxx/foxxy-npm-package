@@ -1,4 +1,7 @@
-export const defStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.defStyle = void 0;
+exports.defStyle = {
     cursor: "pointer",
     width: "4.5vw",
     height: "1.5vw",
@@ -7,3 +10,4 @@ export const defStyle = {
     fontSize: "80%",
     margin: "4px",
 };
+//# sourceMappingURL=master.style.js.map

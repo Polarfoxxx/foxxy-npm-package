@@ -1,4 +1,7 @@
-export const whiteStyleForForm = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.whiteStyleForForm = void 0;
+exports.whiteStyleForForm = {
     form: {
         backgroundColor: "rgb(227, 244, 244)",
     },
@@ -36,3 +39,4 @@ export const whiteStyleForForm = {
         margin: "8px"
     },
 };
+//# sourceMappingURL=white.style.js.map

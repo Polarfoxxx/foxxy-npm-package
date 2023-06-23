@@ -1,4 +1,7 @@
-export const sunStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sunStyle = void 0;
+exports.sunStyle = {
     defStyle: {
         background: "rgb(255, 217, 61)",
         color: "black",
@@ -24,3 +27,4 @@ export const sunStyle = {
         borderRadius: "2vw",
     }
 };
+//# sourceMappingURL=sunn.style.js.map

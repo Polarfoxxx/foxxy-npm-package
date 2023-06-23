@@ -1,4 +1,7 @@
-export const carouselComponentStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.carouselComponentStyle = void 0;
+exports.carouselComponentStyle = {
     borderRadius: "1vw",
     width: "60vw",
     height: "30vw",
@@ -6,3 +9,4 @@ export const carouselComponentStyle = {
     position: "relative",
     overflow: "hidden",
 };
+//# sourceMappingURL=carouselCompenent.style.js.map

@@ -1,4 +1,7 @@
-export const funnyStyleForForm = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.funnyStyleForForm = void 0;
+exports.funnyStyleForForm = {
     form: {
         backgroundColor: "rgb(56, 229, 77)",
     },
@@ -36,3 +39,4 @@ export const funnyStyleForForm = {
         margin: "8px"
     },
 };
+//# sourceMappingURL=funny.style.js.map

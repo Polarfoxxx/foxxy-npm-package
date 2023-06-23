@@ -1,19 +1,23 @@
-import { defaultStyleforCarousel } from "./style/defaultVariant.style";
-import { oceanStyleforCarousel } from "./style/oceanVariant.style";
-import { darkStyleforCarousel } from "./style/darkVariant.style";
-const servicesChangeVariantForCarousel = {
-    changeVariantForCarousel
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var defaultVariant_style_1 = require("./style/defaultVariant.style");
+var oceanVariant_style_1 = require("./style/oceanVariant.style");
+var darkVariant_style_1 = require("./style/darkVariant.style");
+var servicesChangeVariantForCarousel = {
+    changeVariantForCarousel: changeVariantForCarousel
 };
-export default servicesChangeVariantForCarousel;
-function changeVariantForCarousel({ variant }) {
+exports.default = servicesChangeVariantForCarousel;
+function changeVariantForCarousel(_a) {
+    var variant = _a.variant;
     /* podmienka meniaca variantu */
     if (variant === "ocean") {
-        return oceanStyleforCarousel;
+        return oceanVariant_style_1.oceanStyleforCarousel;
     }
     else if (variant === "dark") {
-        return darkStyleforCarousel;
+        return darkVariant_style_1.darkStyleforCarousel;
     }
     else {
-        return defaultStyleforCarousel;
+        return defaultVariant_style_1.defaultStyleforCarousel;
     }
 }
+//# sourceMappingURL=services.js.map

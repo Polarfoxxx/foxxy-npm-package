@@ -1,4 +1,7 @@
-export const visibleStyleForModal = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.hideStyleForModal = exports.visibleStyleForModal = void 0;
+exports.visibleStyleForModal = {
     fullScreen: {
         position: "absolute",
         left: "0",
@@ -16,7 +19,7 @@ export const visibleStyleForModal = {
         transition: "0.6s"
     }
 };
-export const hideStyleForModal = {
+exports.hideStyleForModal = {
     fullScreen: {
         display: "block"
     },
@@ -30,3 +33,4 @@ export const hideStyleForModal = {
         transition: "0.6s"
     }
 };
+//# sourceMappingURL=master.style.js.map

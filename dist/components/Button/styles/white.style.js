@@ -1,4 +1,7 @@
-export const whiteStyle = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.whiteStyle = void 0;
+exports.whiteStyle = {
     defStyle: {
         background: "white",
         color: "black",
@@ -24,3 +27,4 @@ export const whiteStyle = {
         boxShadow: "3px 3px 10px black"
     }
 };
+//# sourceMappingURL=white.style.js.map

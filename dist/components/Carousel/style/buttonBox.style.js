@@ -1,4 +1,7 @@
-export const styleForButtonBox = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.styleForButtonBox = void 0;
+exports.styleForButtonBox = {
     width: "100%",
     height: "30vw",
     backgroundColor: "transparent",
@@ -7,3 +10,4 @@ export const styleForButtonBox = {
     justifyContent: "space-between",
     position: "absolute"
 };
+//# sourceMappingURL=buttonBox.style.js.map

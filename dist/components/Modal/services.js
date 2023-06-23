@@ -1,23 +1,27 @@
-import { whiteStyleForModal } from "./style/white.style";
-import { oceanStyleForModal } from "./style/ocean.style";
-import { defaultStyleForModal } from "./style/default.style";
-const servicesChangeVariantForModal = {
-    changeVariantForModal
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var white_style_1 = require("./style/white.style");
+var ocean_style_1 = require("./style/ocean.style");
+var default_style_1 = require("./style/default.style");
+var servicesChangeVariantForModal = {
+    changeVariantForModal: changeVariantForModal
 };
-export default servicesChangeVariantForModal;
-function changeVariantForModal({ variant }) {
-    let variantStyle = defaultStyleForModal;
+exports.default = servicesChangeVariantForModal;
+function changeVariantForModal(_a) {
+    var variant = _a.variant;
+    var variantStyle = default_style_1.defaultStyleForModal;
     //#region block
     if (variant === "white") {
-        variantStyle = whiteStyleForModal;
+        variantStyle = white_style_1.whiteStyleForModal;
     }
     else if (variant === "ocean") {
-        variantStyle = oceanStyleForModal;
+        variantStyle = ocean_style_1.oceanStyleForModal;
     }
     else {
-        defaultStyleForModal;
+        default_style_1.defaultStyleForModal;
     }
     //#endregion
     return (variantStyle);
 }
 ;
+//# sourceMappingURL=services.js.map

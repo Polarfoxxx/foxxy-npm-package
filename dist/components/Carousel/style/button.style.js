@@ -1,4 +1,7 @@
-export const carouselButtons = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.carouselButtons = void 0;
+exports.carouselButtons = {
     width: '4vw',
     height: '9vw',
     display: 'flex',
@@ -11,3 +14,4 @@ export const carouselButtons = {
     fontSize: '30px',
     margin: '10px',
 };
+//# sourceMappingURL=button.style.js.map

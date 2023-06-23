@@ -1,4 +1,7 @@
-export const darkStyleForForm = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.darkStyleForForm = void 0;
+exports.darkStyleForForm = {
     form: {
         backgroundColor: "rgb(39, 55, 77)",
     },
@@ -36,3 +39,4 @@ export const darkStyleForForm = {
         margin: "8px"
     },
 };
+//# sourceMappingURL=dark.style.js.map
