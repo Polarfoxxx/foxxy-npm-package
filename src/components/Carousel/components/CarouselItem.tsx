@@ -9,8 +9,6 @@ type PropsForCarouselItem = {
 
 const CarouselItem: React.FC<PropsForCarouselItem> = ({ children }): JSX.Element => {
 
-
-
     return (
         <div
             className="box"
