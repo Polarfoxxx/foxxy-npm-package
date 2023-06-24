@@ -1,4 +1,4 @@
 import React from "react";
-import { PropsForCarouselBox } from "../types";
-declare const CarouselButonsBox: React.FC<PropsForCarouselBox>;
+import { PropsForCarouselButtonBox } from "../types";
+declare const CarouselButonsBox: React.FC<PropsForCarouselButtonBox>;
 export default CarouselButonsBox;

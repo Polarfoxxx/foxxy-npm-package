@@ -11,8 +11,13 @@ type PropsForOffCanvasComponents = {
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ children }): JSX.Element => {
+
+const [state , useState] = React.useState("9")
+
+
     return (
         <div style={{}}>
+            <h1>{state}</h1>
             {children}
         </div>
     );
