@@ -1,13 +1,13 @@
 import React from "react";
 
 type PropsForOffCanvasBody = {
-    text: string
+    textBody: string
 };
 
-const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ text }): JSX.Element => {
+const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ textBody }): JSX.Element => {
     return (
         <div>
-            {text}
+            {textBody}
         </div>
     );
 };

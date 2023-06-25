@@ -1,6 +1,6 @@
 import React from "react";
 type PropsForOffCanvasBody = {
-    text: string;
+    textBody: string;
 };
 declare const OffCanvasBody: React.FC<PropsForOffCanvasBody>;
 export default OffCanvasBody;

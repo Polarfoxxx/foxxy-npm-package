@@ -1,13 +1,13 @@
 import React from "react";
 
 type PropsForOffCanvasHeader = {
-    children: JSX.Element | JSX.Element[]
+    textHeader: string
 };
 
-const OffCanvasHeader: React.FC<PropsForOffCanvasHeader> = ({ children }): JSX.Element => {
+const OffCanvasHeader: React.FC<PropsForOffCanvasHeader> = ({ textHeader }): JSX.Element => {
     return (
         <div>
-            {children}
+            {textHeader}
         </div>
     );
 };

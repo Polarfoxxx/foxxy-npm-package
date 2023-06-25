@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var OffCanvasBody = function (_a) {
-    var text = _a.text;
-    return (react_1.default.createElement("div", null, text));
+    var textBody = _a.textBody;
+    return (react_1.default.createElement("div", null, textBody));
 };
 exports.default = OffCanvasBody;
 //# sourceMappingURL=OffCanvasBody.js.map
