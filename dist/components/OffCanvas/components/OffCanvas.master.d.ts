@@ -1,9 +1,5 @@
-import React, { SetStateAction } from "react";
-type PropsForOffCanvasComponents = {
-    children: JSX.Element | JSX.Element[];
-    show: boolean;
-    setShow: React.Dispatch<SetStateAction<boolean>>;
-};
+import React from "react";
+import { PropsForOffCanvasComponents } from "../types";
 export declare const OffCanvasComponent: {
     OffCanvas: React.FC<PropsForOffCanvasComponents>;
     OffCanvasHeader: React.FC<{
@@ -13,4 +9,3 @@ export declare const OffCanvasComponent: {
         textBody: string;
     }>;
 };
-export {};

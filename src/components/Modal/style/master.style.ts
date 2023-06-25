@@ -22,7 +22,6 @@ export const visibleStyleForModal: TypeFromMasterStyle = {
         transform: "translate(-50%)",
         transition: "0.6s"
     }
-   
 }
 
 export const hideStyleForModal: TypeFromMasterStyle = {
