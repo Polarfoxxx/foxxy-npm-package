@@ -7,34 +7,35 @@ import { TypeFromMasterStyle } from "../style/master.style";
 import { PropsForModalComponents } from "../types";
 
 
-const Modal: React.FC<PropsForModalComponents> = ({ variant, children, display }): JSX.Element => {
-
-    /* deklarace */
-    let displayStyle: TypeFromMasterStyle = hideStyleForModal;
-    /* servis meniaci variantu */
-    let variantStyle: CSSProperties = servicesChangeVariantForModal.changeVariantForModal({ variant });
-    /* anonimna funkcia pre zobrazovanie a zatvaranie modalu */
-    (() => {
-        if (display) {
-            displayStyle = visibleStyleForModal
-        } else {
-            displayStyle = hideStyleForModal
-        };
-    })();
+const Modal: React.FC < PropsForModalComponents > = ({ variant, children, show }): JSX.Element => {
+  const [showStyle, setShowStyle] = React.useState < TypeFromMasterStyle > (hideStyleForModal)
 
 
-    return (
-        <>
-            <div id="modalFullBlock" style={{ ...displayStyle.fullScreen, ...variantStyle }}>
-                <div style={{ ...displayStyle.formBlock }}>
-                    {children}
-                </div>
+  /* servis meniaci variantu */
+  const variantStyle: CSSProperties = servicesChangeVariantForModal.changeVariantForModal({ variant });
+
+  React.useEffect(() => {
+    if (display) {
+      setShowStyle(visibleStyleForModal)
+    } else {
+      setShowStyle(hideStyleForModal)
+    }
+  }, [show])
+
+
+
+  return (
+    <>
+            <div id="modalFullBlock" style={{ ...showStyle.fullScreen, ...variantStyle }}>
             </div>
+              <div style={{ ...showStyle.formBlock }}>
+                {children}
+              </div>
         </>
-    )
+  )
 };
 
 
 export const ModalComponent = {
-    Modal
+  Modal
 };
