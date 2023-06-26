@@ -13,7 +13,6 @@ const Modal: React.FC<PropsForModalComponents> = ({ variant, children, display }
     let displayStyle: TypeFromMasterStyle = hideStyleForModal;
     /* servis meniaci variantu */
     let variantStyle: CSSProperties = servicesChangeVariantForModal.changeVariantForModal({ variant });
-
     /* anonimna funkcia pre zobrazovanie a zatvaranie modalu */
     (() => {
         if (display) {
