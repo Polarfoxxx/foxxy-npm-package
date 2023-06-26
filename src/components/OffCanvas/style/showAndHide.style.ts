@@ -1,6 +1,6 @@
-import { TypeForShowAndHideStyle } from "../types";
+import { TypeForShowAndHideStyleAndMaster } from "../types";
 
-export const styleForOffCanvasComponent_hide: TypeForShowAndHideStyle = {
+export const styleForOffCanvasComponent_hide: TypeForShowAndHideStyleAndMaster = {
     styleForBox: {
         left: "-100%",
         transition: "1s"
@@ -10,11 +10,10 @@ export const styleForOffCanvasComponent_hide: TypeForShowAndHideStyle = {
     }
 };
 
-export const styleForOffCanvasComponent_show: TypeForShowAndHideStyle = {
+export const styleForOffCanvasComponent_show: TypeForShowAndHideStyleAndMaster = {
     styleForBox: {
         left: "0px",
         transition: "1s"
-
     },
     styleForScreen: {
         display: "block"

@@ -1,13 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var style_1 = require("./style");
 var servicesForChangeVariantForOffCanvas = {
     changeVariantForOffCanvas: changeVariantForOffCanvas
 };
 exports.default = servicesForChangeVariantForOffCanvas;
 function changeVariantForOffCanvas(_a) {
     var variant = _a.variant;
+    /* podmienky pre zmeny variant */
     if (variant === "white") {
+        return style_1.AllVariantOffCanvas.whiteVariantForOffCanvas;
     }
-    return;
+    else if (variant === "dark") {
+        return style_1.AllVariantOffCanvas.darkVariantForOffCanvas;
+    }
+    else if (variant === "default") {
+        return style_1.AllVariantOffCanvas.defaultVariantForOffCanvas;
+    }
+    else {
+        style_1.AllVariantOffCanvas.defaultVariantForOffCanvas;
+    }
+    ;
 }
 //# sourceMappingURL=services.js.map

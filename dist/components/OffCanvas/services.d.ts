@@ -1,9 +1,6 @@
-import { TypeForShowAndHideStyleAndMaster } from "./types";
+import { TypeForShowAndHideStyleAndMaster, TypeVariantForOffCanvas } from "./types";
 declare const servicesForChangeVariantForOffCanvas: {
     changeVariantForOffCanvas: typeof changeVariantForOffCanvas;
 };
 export default servicesForChangeVariantForOffCanvas;
-type TypeVariantForOffCanvas = {
-    variant: "default" | "white" | "dark";
-};
 declare function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeForShowAndHideStyleAndMaster;

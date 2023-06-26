@@ -21,11 +21,14 @@ var OffCanvasBody_1 = __importDefault(require("./OffCanvasBody"));
 var mastrer_style_1 = require("../style/mastrer.style");
 var services_1 = __importDefault(require("../services"));
 var showAndHide_style_1 = require("../style/showAndHide.style");
+var defaultVarient_style_1 = require("../style/defaultVarient.style");
 var OffCanvas = function (_a) {
     var variant = _a.variant, children = _a.children, show = _a.show, setShow = _a.setShow;
+    /* zobarozovanie offCanvas */
     var _b = react_1.default.useState(showAndHide_style_1.styleForOffCanvasComponent_hide), displayOffCanvas = _b[0], setDisplayOffCanvas = _b[1];
     /* servis pre meniacu sa variantu */
-    var variant_Style = services_1.default.changeVariantForOffCanvas({ variant: variant });
+    var variant_Style = defaultVarient_style_1.defaultVariantForOffCanvas;
+    variant ? variant_Style = services_1.default.changeVariantForOffCanvas({ variant: variant }) : defaultVarient_style_1.defaultVariantForOffCanvas;
     /* podmienka zatvarania a ovarania offCanvas */
     react_1.default.useEffect(function () {
         if (show) {
@@ -42,8 +45,8 @@ var OffCanvas = function (_a) {
         eventId === "screenBlok" && setShow(false);
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign({}, mastrer_style_1.styleMasterForOffCanvasComponent.styleForBox), displayOffCanvas.styleForBox) }, children),
-        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign({}, mastrer_style_1.styleMasterForOffCanvasComponent.styleForScreen), displayOffCanvas.styleForScreen) })));
+        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign(__assign({}, mastrer_style_1.styleMasterForOffCanvasComponent.styleForBox), variant_Style.styleForBox), displayOffCanvas.styleForBox) }, children),
+        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign(__assign({}, mastrer_style_1.styleMasterForOffCanvasComponent.styleForScreen), variant_Style.styleForScreen), displayOffCanvas.styleForScreen) })));
 };
 exports.OffCanvasComponent = {
     OffCanvas: OffCanvas,

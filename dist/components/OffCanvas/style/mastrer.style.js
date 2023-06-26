@@ -8,7 +8,6 @@ exports.styleMasterForOffCanvasComponent = {
         top: "0",
         bottom: "0",
         position: "absolute",
-        backgroundColor: "orange",
         zIndex: "5",
         minWidth: "300px",
         padding: "0 10px"
@@ -19,7 +18,6 @@ exports.styleMasterForOffCanvasComponent = {
         bottom: "0",
         left: "0",
         right: "0",
-        backgroundColor: "rgba(66, 66, 66, 0.658)"
     }
 };
 //# sourceMappingURL=mastrer.style.js.map

@@ -9,3 +9,6 @@ export type TypeForShowAndHideStyleAndMaster = {
     styleForBox: CSSProperties;
     styleForScreen: CSSProperties;
 };
+export type TypeVariantForOffCanvas = {
+    variant?: "default" | "white" | "dark";
+};
