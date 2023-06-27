@@ -1,5 +1,5 @@
 import { TypeForShowAndHideStyleAndMaster,TypeVariantForOffCanvas } from "./types";
-import { AllVariantOffCanvas } from "./style";
+import { allVariantOffCanvas } from "./style";
 
 const servicesForChangeVariantForOffCanvas = {
     changeVariantForOffCanvas
@@ -12,12 +12,12 @@ function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeFo
 
     /* podmienky pre zmeny variant */
     if (variant === "white") {
-        return AllVariantOffCanvas.whiteVariantForOffCanvas
+        return allVariantOffCanvas.whiteVariantForOffCanvas
     } else if (variant === "dark") {
-        return AllVariantOffCanvas.darkVariantForOffCanvas
+        return allVariantOffCanvas.darkVariantForOffCanvas
     } else if (variant === "default") {
-        return AllVariantOffCanvas.defaultVariantForOffCanvas
+        return allVariantOffCanvas.defaultVariantForOffCanvas
     } else {
-        AllVariantOffCanvas.defaultVariantForOffCanvas
+        allVariantOffCanvas.defaultVariantForOffCanvas
     };
 }

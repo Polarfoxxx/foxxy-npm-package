@@ -9,16 +9,16 @@ function changeVariantForOffCanvas(_a) {
     var variant = _a.variant;
     /* podmienky pre zmeny variant */
     if (variant === "white") {
-        return style_1.AllVariantOffCanvas.whiteVariantForOffCanvas;
+        return style_1.allVariantOffCanvas.whiteVariantForOffCanvas;
     }
     else if (variant === "dark") {
-        return style_1.AllVariantOffCanvas.darkVariantForOffCanvas;
+        return style_1.allVariantOffCanvas.darkVariantForOffCanvas;
     }
     else if (variant === "default") {
-        return style_1.AllVariantOffCanvas.defaultVariantForOffCanvas;
+        return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
     else {
-        style_1.AllVariantOffCanvas.defaultVariantForOffCanvas;
+        style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
     ;
 }

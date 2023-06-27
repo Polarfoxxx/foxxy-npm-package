@@ -2,18 +2,16 @@ import React from "react";
 import OffCanvasHeader from "./OffCanvasHeader";
 import OffCanvasBody from "./OffCanvasBody";
 import { PropsForOffCanvasComponents, TypeForShowAndHideStyleAndMaster } from "../types";
-import { styleMasterForOffCanvasComponent } from "../style/mastrer.style";
 import servicesForChangeVariantForOffCanvas from "../services";
-import { styleForOffCanvasComponent_hide, styleForOffCanvasComponent_show } from "../style/showAndHide.style";
-import { AllVariantOffCanvas } from "../style";
+import { masterStyleOffCanvas, allVariantOffCanvas } from "../style";
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, show, setShow }): JSX.Element => {
     /* zobarozovanie offCanvas */
-    const [displayOffCanvas, setDisplayOffCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(styleForOffCanvasComponent_hide)
+    const [displayOffCanvas, setDisplayOffCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(masterStyleOffCanvas.styleForOffCanvasComponent_hide)
 
     /* servis pre meniacu sa variantu */
-    let variant_Style: TypeForShowAndHideStyleAndMaster = AllVariantOffCanvas.defaultVariantForOffCanvas;
+    let variant_Style: TypeForShowAndHideStyleAndMaster = allVariantOffCanvas.defaultVariantForOffCanvas;
     if (variant) {
         variant_Style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant })
     };
@@ -21,8 +19,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
         if (show) {
-            setDisplayOffCanvas(styleForOffCanvasComponent_show)
-        } else { setDisplayOffCanvas(styleForOffCanvasComponent_hide) }
+            setDisplayOffCanvas(masterStyleOffCanvas.styleForOffCanvasComponent_show)
+        } else { setDisplayOffCanvas(masterStyleOffCanvas.styleForOffCanvasComponent_hide) }
     }, [show]);
 
     /* zatvaranie offCanvas */
@@ -38,7 +36,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
             <div
                 id="offCanvasBlock"
                 style={{
-                    ...styleMasterForOffCanvasComponent.styleForBox,
+                    ...masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForBox,
                     ...variant_Style.styleForBox,
                     ...displayOffCanvas.styleForBox
                 }}>
@@ -48,16 +46,14 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
                 id="screenBlok"
                 onClick={handleClickHideBlock}
                 style={{
-                    ...styleMasterForOffCanvasComponent.styleForScreen,
+                    ...masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForScreen,
                     ...variant_Style.styleForScreen,
                     ...displayOffCanvas.styleForScreen
                 }} >
-
             </div>
         </>
     );
 };
-
 
 
 export const OffCanvasComponent = {

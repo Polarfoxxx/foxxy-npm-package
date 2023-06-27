@@ -1,5 +1,5 @@
 
-import { TypeForShowAndHideStyleAndMaster } from "../types";
+import { TypeForShowAndHideStyleAndMaster } from "../../types";
 
 export const whiteVariantForOffCanvas: TypeForShowAndHideStyleAndMaster = {
     styleForBox: {

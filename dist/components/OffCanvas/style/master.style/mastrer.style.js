@@ -1,6 +1,7 @@
-import { TypeForShowAndHideStyleAndMaster } from "../types"
-
-export const styleMasterForOffCanvasComponent: TypeForShowAndHideStyleAndMaster = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.styleMasterForOffCanvasComponent = void 0;
+exports.styleMasterForOffCanvasComponent = {
     styleForBox: {
         width: "30vw",
         height: "100vh",
@@ -18,4 +19,5 @@ export const styleMasterForOffCanvasComponent: TypeForShowAndHideStyleAndMaster 
         left: "0",
         right: "0",
     }
-}
+};
+//# sourceMappingURL=mastrer.style.js.map
