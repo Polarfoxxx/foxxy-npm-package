@@ -9,7 +9,9 @@ export const styleMasterForOffCanvasComponent: TypeForShowAndHideStyleAndMaster 
         position: "absolute",
         zIndex: "5",
         minWidth: "300px",
-        padding: "0 10px"
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "start"
     },
     styleForScreen: {
         position: "absolute",

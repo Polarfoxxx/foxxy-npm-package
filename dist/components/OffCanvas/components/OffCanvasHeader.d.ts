@@ -1,6 +1,4 @@
 import React from "react";
-type PropsForOffCanvasHeader = {
-    textHeader: string;
-};
+import { PropsForOffCanvasHeader } from "../types";
 declare const OffCanvasHeader: React.FC<PropsForOffCanvasHeader>;
 export default OffCanvasHeader;

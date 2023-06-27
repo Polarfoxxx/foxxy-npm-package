@@ -10,6 +10,7 @@ exports.styleMasterForOffCanvasComponent = {
         position: "absolute",
         zIndex: "5",
         minWidth: "300px",
+        padding: "0 10px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "start"
@@ -22,4 +23,4 @@ exports.styleMasterForOffCanvasComponent = {
         right: "0",
     }
 };
-//# sourceMappingURL=mastrer.style.js.map
+//# sourceMappingURL=mastrerOffCanvas.style.js.map

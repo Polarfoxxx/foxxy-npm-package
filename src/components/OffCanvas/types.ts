@@ -17,3 +17,6 @@ export type TypeVariantForOffCanvas = {
     variant?: "default" | "white" | "dark"
 };
 
+export type PropsForOffCanvasHeader = {
+    textHeader: string
+};

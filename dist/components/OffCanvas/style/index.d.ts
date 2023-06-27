@@ -7,4 +7,5 @@ export declare const masterStyleOffCanvas: {
     styleMasterForOffCanvasComponent: import("../types").TypeForShowAndHideStyleAndMaster;
     styleForOffCanvasComponent_hide: import("../types").TypeForShowAndHideStyleAndMaster;
     styleForOffCanvasComponent_show: import("../types").TypeForShowAndHideStyleAndMaster;
+    styleForHeaderOffCanvas: import("react").CSSProperties;
 };

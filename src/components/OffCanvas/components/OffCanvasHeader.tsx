@@ -1,12 +1,10 @@
 import React from "react";
-
-type PropsForOffCanvasHeader = {
-    textHeader: string
-};
+import { PropsForOffCanvasHeader } from "../types";
+import { masterStyleOffCanvas } from "../style";
 
 const OffCanvasHeader: React.FC<PropsForOffCanvasHeader> = ({ textHeader }): JSX.Element => {
     return (
-        <div>
+        <div style={{...masterStyleOffCanvas.styleForHeaderOffCanvas}}>
             {textHeader}
         </div>
     );
