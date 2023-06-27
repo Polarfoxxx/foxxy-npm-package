@@ -1,46 +1,58 @@
 import React from "react";
-import { visibleStyleForModal } from "../style/master.style";
-import { hideStyleForModal } from "../style/master.style";
-import servicesChangeVariantForModal from "../services";
 import { CSSProperties } from "react";
-import { TypeFromMasterStyle } from "../style/master.style";
+import { TypeForMasterStyle } from "../types";
+import servicesChangeVariantForModal from "../services";
 import { PropsForModalComponents } from "../types";
+import { styleMasterForModalComponent } from "../style/master.style";
+import { styleForModalComponent_hide, styleForModalComponent_show } from "../style/showAndHide.style";
+import { allvariantsForModal } from "../style";
 
-
-const Modal: React.FC < PropsForModalComponents > = ({ variant, children, show, setShow }): JSX.Element => {
-  const [showStyle, setShowStyle] = React.useState < TypeFromMasterStyle > (hideStyleForModal)
+const Modal: React.FC<PropsForModalComponents> = ({ variant, children, show, setShow }): JSX.Element => {
+  const [showStyle, setShowStyle] = React.useState<TypeForMasterStyle>(styleForModalComponent_hide);
 
   /* servis meniaci variantu */
-  const variantStyle: CSSProperties = servicesChangeVariantForModal.changeVariantForModal({ variant });
+  let variant_Style: CSSProperties = allvariantsForModal.defaultStyleForModal
+  if (variant) {
+    variant_Style = servicesChangeVariantForModal.changeVariantForModal({ variant })
+  };
 
+  /* zatvaranie otvarianie */
   React.useEffect(() => {
-    if (display) {
-      setShowStyle(visibleStyleForModal)
+    if (show) {
+      setShowStyle(styleForModalComponent_show)
     } else {
-      setShowStyle(hideStyleForModal)
+      setShowStyle(styleForModalComponent_hide)
     };
-  }, [show])
+  }, [show]);
 
-const handleClickv = (event: React.MouseEvent<HTMLDivElement>): void => {
-  const target = event.target as HTMLElement;
-  const targetId = target.id;
-  targetId === "modalScreen" && setShow(false)
-}
+  /* zatvaranie modalu */
+  const handleClickHideModal = (event: React.MouseEvent<HTMLDivElement>): void => {
+    const target = event.target as HTMLElement;
+    const targetId = target.id;
+    targetId === "modalScreen" && setShow(false)
+  };
 
 
   return (
     <>
-            <div
-            onClick={handleClick} 
-            id="modalScreen" 
-            style={{ ...showStyle.fullScreen, ...variantStyle }}>
-            </div>
-              <div 
-              id = 'modalForm'
-              style={{ ...showStyle.formBlock }}>
-                {children}
-              </div>
-        </>
+      <div
+        onClick={handleClickHideModal}
+        id="modalScreen"
+        style={{
+          ...styleMasterForModalComponent.fullScreen, ...showStyle.fullScreen,
+          ...variant_Style
+        }}>
+      </div>
+      <div
+        id='modalForm'
+        style={{
+          ...styleMasterForModalComponent.formBlock,
+          ...showStyle.formBlock,
+          ...variant_Style
+        }}>
+        {children}
+      </div>
+    </>
   )
 };
 

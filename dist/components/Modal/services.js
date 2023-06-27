@@ -1,27 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var white_style_1 = require("./style/white.style");
-var ocean_style_1 = require("./style/ocean.style");
-var default_style_1 = require("./style/default.style");
+var style_1 = require("./style");
 var servicesChangeVariantForModal = {
     changeVariantForModal: changeVariantForModal
 };
 exports.default = servicesChangeVariantForModal;
 function changeVariantForModal(_a) {
     var variant = _a.variant;
-    var variantStyle = default_style_1.defaultStyleForModal;
     //#region block
     if (variant === "white") {
-        variantStyle = white_style_1.whiteStyleForModal;
+        return style_1.allvariantsForModal.whiteStyleForModal;
     }
-    else if (variant === "ocean") {
-        variantStyle = ocean_style_1.oceanStyleForModal;
+    else if (variant === "dark") {
+        return style_1.allvariantsForModal.darkStyleForModal;
+    }
+    else if (variant === "default") {
+        return style_1.allvariantsForModal.defaultStyleForModal;
     }
     else {
-        default_style_1.defaultStyleForModal;
+        style_1.allvariantsForModal.defaultStyleForModal;
     }
     //#endregion
-    return (variantStyle);
 }
 ;
 //# sourceMappingURL=services.js.map

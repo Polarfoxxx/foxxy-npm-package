@@ -5,16 +5,19 @@ import { PropsForOffCanvasComponents, TypeForShowAndHideStyleAndMaster } from ".
 import { styleMasterForOffCanvasComponent } from "../style/mastrer.style";
 import servicesForChangeVariantForOffCanvas from "../services";
 import { styleForOffCanvasComponent_hide, styleForOffCanvasComponent_show } from "../style/showAndHide.style";
-import { defaultVariantForOffCanvas } from "../style/defaultVarient.style";
+import { AllVariantOffCanvas } from "../style";
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, show, setShow }): JSX.Element => {
     /* zobarozovanie offCanvas */
     const [displayOffCanvas, setDisplayOffCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(styleForOffCanvasComponent_hide)
+
     /* servis pre meniacu sa variantu */
-    let variant_Style: TypeForShowAndHideStyleAndMaster = defaultVariantForOffCanvas
-    variant ? variant_Style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }) : defaultVariantForOffCanvas
-   
+    let variant_Style: TypeForShowAndHideStyleAndMaster = AllVariantOffCanvas.defaultVariantForOffCanvas;
+    if (variant) {
+        variant_Style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant })
+    };
+
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
         if (show) {
@@ -36,7 +39,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
                 id="offCanvasBlock"
                 style={{
                     ...styleMasterForOffCanvasComponent.styleForBox,
-                    ...variant_Style.styleForBox, ...displayOffCanvas.styleForBox
+                    ...variant_Style.styleForBox,
+                    ...displayOffCanvas.styleForBox
                 }}>
                 {children}
             </div>
@@ -45,7 +49,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
                 onClick={handleClickHideBlock}
                 style={{
                     ...styleMasterForOffCanvasComponent.styleForScreen,
-                    ...variant_Style.styleForScreen, ...displayOffCanvas.styleForScreen
+                    ...variant_Style.styleForScreen,
+                    ...displayOffCanvas.styleForScreen
                 }} >
 
             </div>

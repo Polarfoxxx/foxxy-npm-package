@@ -16,28 +16,38 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModalComponent = void 0;
 var react_1 = __importDefault(require("react"));
-var master_style_1 = require("../style/master.style");
-var master_style_2 = require("../style/master.style");
 var services_1 = __importDefault(require("../services"));
+var master_style_1 = require("../style/master.style");
+var showAndHide_style_1 = require("../style/showAndHide.style");
+var style_1 = require("../style");
 var Modal = function (_a) {
-    var variant = _a.variant, children = _a.children, display = _a.display;
-    /* deklarace */
-    var displayStyle = master_style_2.hideStyleForModal;
+    var variant = _a.variant, children = _a.children, show = _a.show, setShow = _a.setShow;
+    var _b = react_1.default.useState(showAndHide_style_1.styleForModalComponent_hide), showStyle = _b[0], setShowStyle = _b[1];
     /* servis meniaci variantu */
-    var variantStyle = services_1.default.changeVariantForModal({ variant: variant });
-    /* anonimna funkcia pre zobrazovanie a zatvaranie modalu */
-    (function () {
-        if (display) {
-            displayStyle = master_style_1.visibleStyleForModal;
+    var variant_Style = style_1.allvariantsForModal.defaultStyleForModal;
+    if (variant) {
+        variant_Style = services_1.default.changeVariantForModal({ variant: variant });
+    }
+    ;
+    /* zatvaranie otvarianie */
+    react_1.default.useEffect(function () {
+        if (show) {
+            setShowStyle(showAndHide_style_1.styleForModalComponent_show);
         }
         else {
-            displayStyle = master_style_2.hideStyleForModal;
+            setShowStyle(showAndHide_style_1.styleForModalComponent_hide);
         }
         ;
-    })();
+    }, [show]);
+    /* zatvaranie modalu */
+    var handleClickHideModal = function (event) {
+        var target = event.target;
+        var targetId = target.id;
+        targetId === "modalScreen" && setShow(false);
+    };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { id: "modalFullBlock", style: __assign(__assign({}, displayStyle.fullScreen), variantStyle) },
-            react_1.default.createElement("div", { style: __assign({}, displayStyle.formBlock) }, children))));
+        react_1.default.createElement("div", { onClick: handleClickHideModal, id: "modalScreen", style: __assign(__assign(__assign({}, master_style_1.styleMasterForModalComponent.fullScreen), showStyle.fullScreen), variant_Style) }),
+        react_1.default.createElement("div", { id: 'modalForm', style: __assign(__assign(__assign({}, master_style_1.styleMasterForModalComponent.formBlock), showStyle.formBlock), variant_Style) }, children)));
 };
 exports.ModalComponent = {
     Modal: Modal

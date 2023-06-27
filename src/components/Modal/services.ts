@@ -1,9 +1,7 @@
 
 import { CSSProperties } from "react";
 import { TypeForChangeVariantforModal } from "./types";
-import { whiteStyleForModal } from "./style/white.style";
-import { oceanStyleForModal } from "./style/ocean.style";
-import { defaultStyleForModal } from "./style/default.style";
+import { allvariantsForModal } from "./style";
 
 const servicesChangeVariantForModal = {
     changeVariantForModal
@@ -12,17 +10,16 @@ export default servicesChangeVariantForModal;
 
 
 function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSProperties {
-    let variantStyle: CSSProperties = defaultStyleForModal;
 
     //#region block
     if (variant === "white") {
-        variantStyle = whiteStyleForModal
-    } else if (variant === "ocean") {
-        variantStyle = oceanStyleForModal
-    } else { defaultStyleForModal }
+        return allvariantsForModal.whiteStyleForModal
+    } else if (variant === "dark") {
+        return allvariantsForModal.darkStyleForModal
+    } else if (variant === "default") {
+        return allvariantsForModal.defaultStyleForModal
+    } else {
+        allvariantsForModal.defaultStyleForModal
+    }
     //#endregion
-
-    return (
-        variantStyle
-    )
 };

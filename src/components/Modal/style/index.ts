@@ -1,9 +1,9 @@
-import defaultStyleForModalvfrom from '.defaultVariant.style.ts'
-import whiteStyleForModal from '.whiteVariant.style.ts'
-import darkStyleForModal from '.darkVariant.style.ts'
+import { defaultStyleForModal } from "./defaultVariant.style"
+import { whiteStyleForModal } from "./whiteVariant.style"
+import { darkStyleForModal } from "./darkVariant.style"
 
- export const allvariantsForModal = {
-   defaultStyleForModalvfrom,
-   whiteStyleForModal,
-   darkStyleForModal
- }
+export const allvariantsForModal = {
+  defaultStyleForModal,
+  whiteStyleForModal,
+  darkStyleForModal
+}
