@@ -3,9 +3,10 @@ import { CSSProperties } from "react"
 export type TypeFromMasterStyle = {
     fullScreen: CSSProperties,
     formBlock: CSSProperties
-}
+};
 
-export const visibleStyleForModal: TypeFromMasterStyle = {
+
+export const styleMasterForOffCanvasComponent: TypeFromMasterStyle = {
     fullScreen: {
         position: "absolute",
         left: "0",
@@ -17,25 +18,10 @@ export const visibleStyleForModal: TypeFromMasterStyle = {
         width: "30vw",
         height: "auto",
         position: "absolute",
-        top: "50px",
         left: "50%",
         transform: "translate(-50%)",
         transition: "0.6s"
     }
-}
+};
 
-export const hideStyleForModal: TypeFromMasterStyle = {
-    fullScreen: {
-       display: "block"
-    },
-    formBlock: {
-        width: "30vw",
-        height: "auto",
-        position: "absolute",
-        top: "-100%",
-        left: "50%",
-        transform: "translate(-50%)",
-        transition: "0.6s"
-    }
-   
-}
+        top: "50px",
