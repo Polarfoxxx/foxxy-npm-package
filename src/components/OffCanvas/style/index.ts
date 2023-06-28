@@ -10,14 +10,20 @@ export const allVariantOffCanvas = {
 };
 
 
-/* export master style */
-import { styleMasterForOffCanvasComponent } from "./master.style/mastrer.style";
-import { styleForOffCanvasComponent_hide, styleForOffCanvasComponent_show } from "./master.style/showAndHide.style";
-import { styleForHeaderOffCanvas } from "./master.style/header.style";
+/* export position and master style */
+import { showAndHide_Left } from "./master.style/position_Left/showAndHide.left.style";
+import { showAndHide_top } from "./master.style/position_top/showAndHide.top.style";
+import { showAndHide_right } from "./master.style/position_right/showAndHide.right.style";
 
-export const masterStyleOffCanvas = {
-    styleMasterForOffCanvasComponent,
-    styleForOffCanvasComponent_hide,
-    styleForOffCanvasComponent_show,
-    styleForHeaderOffCanvas
+export const master_ShowStyleOffCanvas = {
+    showAndHide_Left,
+    showAndHide_top,
+    showAndHide_right,
 };
+
+/* export components style */
+ import { styleForButtonBox } from "../../Carousel/style/buttonBox.style";
+
+ export const inside_componentStyleOffCanvas  = {
+    styleForButtonBox
+ }

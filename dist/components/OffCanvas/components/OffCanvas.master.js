@@ -18,25 +18,27 @@ exports.OffCanvasComponent = void 0;
 var react_1 = __importDefault(require("react"));
 var OffCanvasHeader_1 = __importDefault(require("./OffCanvasHeader"));
 var OffCanvasBody_1 = __importDefault(require("./OffCanvasBody"));
-var services_1 = __importDefault(require("../services"));
+var OffCanvasButtonBox_1 = __importDefault(require("./OffCanvasButtonBox"));
+var services_changeVariant_1 = __importDefault(require("../services/services.changeVariant"));
 var style_1 = require("../style");
+var services_position_1 = __importDefault(require("../services/services.position"));
 var OffCanvas = function (_a) {
-    var variant = _a.variant, children = _a.children, show = _a.show, setShow = _a.setShow;
-    /* zobarozovanie offCanvas */
-    var _b = react_1.default.useState(style_1.masterStyleOffCanvas.styleForOffCanvasComponent_hide), displayOffCanvas = _b[0], setDisplayOffCanvas = _b[1];
+    var variant = _a.variant, position = _a.position, children = _a.children, show = _a.show, setShow = _a.setShow;
+    /* deklarace */
+    var _b = react_1.default.useState(style_1.master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide), showCanvas = _b[0], setshowCanvas = _b[1];
     /* servis pre meniacu sa variantu */
     var variant_Style = style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     if (variant) {
-        variant_Style = services_1.default.changeVariantForOffCanvas({ variant: variant });
+        variant_Style = services_changeVariant_1.default.changeVariantForOffCanvas({ variant: variant });
     }
     ;
     /* podmienka zatvarania a ovarania offCanvas */
     react_1.default.useEffect(function () {
         if (show) {
-            setDisplayOffCanvas(style_1.masterStyleOffCanvas.styleForOffCanvasComponent_show);
+            setshowCanvas(services_position_1.default.positionOffCanvas({ position: position, show: show }));
         }
         else {
-            setDisplayOffCanvas(style_1.masterStyleOffCanvas.styleForOffCanvasComponent_hide);
+            setshowCanvas(services_position_1.default.positionOffCanvas({ position: position, show: show }));
         }
     }, [show]);
     /* zatvaranie offCanvas */
@@ -46,12 +48,13 @@ var OffCanvas = function (_a) {
         eventId === "screenBlok" && setShow(false);
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign(__assign({}, style_1.masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForBox), variant_Style.styleForBox), displayOffCanvas.styleForBox) }, children),
-        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign(__assign({}, style_1.masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForScreen), variant_Style.styleForScreen), displayOffCanvas.styleForScreen) })));
+        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign({}, variant_Style.styleForBox), showCanvas.styleForBox) }, children),
+        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign({}, variant_Style.styleForScreen), showCanvas.styleForScreen) })));
 };
 exports.OffCanvasComponent = {
     OffCanvas: OffCanvas,
     OffCanvasHeader: OffCanvasHeader_1.default,
-    OffCanvasBody: OffCanvasBody_1.default
+    OffCanvasBody: OffCanvasBody_1.default,
+    OffCanvasButoonBox: OffCanvasButtonBox_1.default
 };
 //# sourceMappingURL=OffCanvas.master.js.map

@@ -1,4 +1,4 @@
-import { TypeForShowAndHideStyleAndMaster } from "../../types"
+import { TypeForShowAndHideStyleAndMaster } from "../../../types"
 
 export const styleMasterForOffCanvasComponent_left: TypeForShowAndHideStyleAndMaster = {
     styleForBox: {

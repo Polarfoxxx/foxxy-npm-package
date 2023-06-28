@@ -3,9 +3,11 @@ export declare const allVariantOffCanvas: {
     darkVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
     whiteVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
 };
-export declare const masterStyleOffCanvas: {
-    styleMasterForOffCanvasComponent: import("../types").TypeForShowAndHideStyleAndMaster;
-    styleForOffCanvasComponent_hide: import("../types").TypeForShowAndHideStyleAndMaster;
-    styleForOffCanvasComponent_show: import("../types").TypeForShowAndHideStyleAndMaster;
-    styleForHeaderOffCanvas: import("react").CSSProperties;
+export declare const master_ShowStyleOffCanvas: {
+    showAndHide_Left: import("../types").TypeshowAndHide;
+    showAndHide_top: import("../types").TypeshowAndHide;
+    showAndHide_right: import("../types").TypeshowAndHide;
+};
+export declare const inside_componentStyleOffCanvas: {
+    styleForButtonBox: import("react").CSSProperties;
 };

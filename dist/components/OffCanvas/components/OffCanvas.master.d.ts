@@ -6,4 +6,7 @@ export declare const OffCanvasComponent: {
     OffCanvasBody: React.FC<{
         textBody: string;
     }>;
+    OffCanvasButoonBox: React.FC<{
+        children: JSX.Element | JSX.Element[];
+    }>;
 };

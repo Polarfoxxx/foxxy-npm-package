@@ -1,13 +1,14 @@
-import { TypeForShowAndHideStyleAndMaster } from "../../types"
+import { TypeForShowAndHideStyleAndMaster } from "../../../types"
 
-export const styleMasterForOffCanvasComponent_top: TypeForShowAndHideStyleAndMaster = {
+export const styleMasterForOffCanvasComponent_right: TypeForShowAndHideStyleAndMaster = {
   styleForBox: {
-    width: "100%",
-    height: "20vh",
+    width: "30vw",
+    height: "100vh",
     top: "0",
-    left: "0",
+    bottom: "0",
     position: "absolute",
     zIndex: "5",
+    minWidth: "300px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "start"

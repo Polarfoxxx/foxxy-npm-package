@@ -4,8 +4,9 @@ import OffCanvasBody from "./OffCanvasBody";
 import OffCanvasButoonBox from "./OffCanvasButtonBox";
 
 import { PropsForOffCanvasComponents, TypeForShowAndHideStyleAndMaster } from "../types";
-import servicesForChangeVariantForOffCanvas from "../services";
-import { masterStyleOffCanvas, allVariantOffCanvas } from "../style";
+import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
+import {  master_ShowStyleOffCanvas, allVariantOffCanvas } from "../style";
+import servicePositionOffCanvas from "../services/services.position";
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
@@ -15,8 +16,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
   show, 
   setShow }): JSX.Element => {
     
-    /* zobarozovanie offCanvas */
-    const [displayOffCanvas, setDisplayOffCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(masterStyleOffCanvas.styleForOffCanvasComponent_hide)
+/* deklarace */
+    const [showCanvas, setshowCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
 
     /* servis pre meniacu sa variantu */
     let variant_Style: TypeForShowAndHideStyleAndMaster = allVariantOffCanvas.defaultVariantForOffCanvas;
@@ -27,8 +28,10 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
         if (show) {
-            setDisplayOffCanvas(servicePositionOffCanvas.positionOffCanvas({position}))
-        } else { setDisplayOffCanvas(masterStyleOffCanvas.styleForOffCanvasComponent_hide) }
+            setshowCanvas(servicePositionOffCanvas.positionOffCanvas({position, show}))
+        } else { 
+            setshowCanvas(servicePositionOffCanvas.positionOffCanvas({position, show})) 
+        }
     }, [show]);
 
     /* zatvaranie offCanvas */
@@ -44,9 +47,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
             <div
                 id="offCanvasBlock"
                 style={{
-                    ...masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForBox,
                     ...variant_Style.styleForBox,
-                    ...displayOffCanvas.styleForBox
+                    ...showCanvas.styleForBox
                 }}>
                 {children}
             </div>
@@ -54,9 +56,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
                 id="screenBlok"
                 onClick={handleClickHideBlock}
                 style={{
-                    ...masterStyleOffCanvas.styleMasterForOffCanvasComponent.styleForScreen,
                     ...variant_Style.styleForScreen,
-                    ...displayOffCanvas.styleForScreen
+                    ...showCanvas.styleForScreen
                 }} >
             </div>
         </>

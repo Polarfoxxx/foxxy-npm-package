@@ -1,5 +1,5 @@
 import React from "react";
-import { masterStyleOffCanvas } from "../style";
+import { inside_componentStyleOffCanvas } from "../style";
 
 type PropsForOffCanvasButtonBox = {
   children: JSX.Element | JSX.Element[],
@@ -10,11 +10,11 @@ const OffCanvasButtonBox: React.FC < PropsForOffCanvasButtonBox > = ({ children 
   
   
   return (
-    <div style={{...masterStyleOffCanvas.styleForButtonBoxOffCanvas}}>
+    <div style={{...inside_componentStyleOffCanvas.styleForButtonBox}}>
             {children}
         </div>
   );
 };
 
 
-export default OffCanvasHeader
+export default OffCanvasButtonBox

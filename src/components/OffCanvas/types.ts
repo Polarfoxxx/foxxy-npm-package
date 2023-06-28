@@ -1,7 +1,6 @@
 import { SetStateAction, CSSProperties } from "react";
 
 
-
 export type PropsForOffCanvasComponents = {
     children: JSX.Element | JSX.Element[],
     variant?: "default" | "white" | "dark",
@@ -21,3 +20,9 @@ export type TypeVariantForOffCanvas = {
 export type PropsForOffCanvasHeader = {
     textHeader: string
 };
+
+export type TypeshowAndHide = {
+    styleForOffCanvasComponent_hide: TypeForShowAndHideStyleAndMaster,
+    styleForOffCanvasComponent_show: TypeForShowAndHideStyleAndMaster
+};
+

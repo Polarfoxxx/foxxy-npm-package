@@ -16,9 +16,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var style_1 = require("../style");
-var OffCanvasHeader = function (_a) {
-    var textHeader = _a.textHeader;
-    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForButtonBox) }, textHeader));
+var OffCanvasButtonBox = function (_a) {
+    var children = _a.children;
+    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForButtonBox) }, children));
 };
-exports.default = OffCanvasHeader;
-//# sourceMappingURL=OffCanvasHeader.js.map
+exports.default = OffCanvasButtonBox;
+//# sourceMappingURL=OffCanvasButtonBox.js.map
