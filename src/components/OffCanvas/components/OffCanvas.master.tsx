@@ -1,12 +1,20 @@
 import React from "react";
 import OffCanvasHeader from "./OffCanvasHeader";
 import OffCanvasBody from "./OffCanvasBody";
+import OffCanvasButoonBox from "./OffCanvasButtonBox";
+
 import { PropsForOffCanvasComponents, TypeForShowAndHideStyleAndMaster } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services";
 import { masterStyleOffCanvas, allVariantOffCanvas } from "../style";
 
 
-const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, show, setShow }): JSX.Element => {
+const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
+  variant,
+  position, 
+  children,
+  show, 
+  setShow }): JSX.Element => {
+    
     /* zobarozovanie offCanvas */
     const [displayOffCanvas, setDisplayOffCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(masterStyleOffCanvas.styleForOffCanvasComponent_hide)
 
@@ -19,7 +27,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
         if (show) {
-            setDisplayOffCanvas(masterStyleOffCanvas.styleForOffCanvasComponent_show)
+            setDisplayOffCanvas(servicePositionOffCanvas.positionOffCanvas({position}))
         } else { setDisplayOffCanvas(masterStyleOffCanvas.styleForOffCanvasComponent_hide) }
     }, [show]);
 
@@ -59,5 +67,6 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({ variant, children, s
 export const OffCanvasComponent = {
     OffCanvas,
     OffCanvasHeader,
-    OffCanvasBody
+    OffCanvasBody,
+    OffCanvasButoonBox
 };

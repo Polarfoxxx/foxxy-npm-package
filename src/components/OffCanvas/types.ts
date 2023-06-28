@@ -5,6 +5,7 @@ import { SetStateAction, CSSProperties } from "react";
 export type PropsForOffCanvasComponents = {
     children: JSX.Element | JSX.Element[],
     variant?: "default" | "white" | "dark",
+    position: "left" | "top" | "right",
     show: boolean,
     setShow: React.Dispatch<SetStateAction<boolean>>
 };
