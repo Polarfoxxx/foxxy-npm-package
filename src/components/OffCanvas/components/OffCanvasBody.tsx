@@ -1,13 +1,13 @@
 import React from "react";
 
 type PropsForOffCanvasBody = {
-    textBody: string
+    children: string
 };
 
-const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ textBody }): JSX.Element => {
+const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ children }): JSX.Element => {
     return (
         <div>
-            {textBody}
+            {children}
         </div>
     );
 };

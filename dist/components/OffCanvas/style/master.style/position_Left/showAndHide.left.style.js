@@ -16,13 +16,13 @@ var master_left_style_1 = require("./master.left.style");
 exports.showAndHide_Left = {
     styleForOffCanvasComponent_hide: {
         styleForBox: __assign(__assign({}, master_left_style_1.styleMasterForOffCanvasComponent_left.styleForBox), { left: "-100%", transition: "1s" }),
-        styleForScreen: __assign(__assign({}, master_left_style_1.styleMasterForOffCanvasComponent_left.styleForScreen), { display: "none" })
+        styleForScreen: {
+            display: "none",
+        }
     },
     styleForOffCanvasComponent_show: {
         styleForBox: __assign(__assign({}, master_left_style_1.styleMasterForOffCanvasComponent_left.styleForBox), { left: "0px", transition: "1s" }),
-        styleForScreen: {
-            display: "block",
-        }
+        styleForScreen: __assign(__assign({}, master_left_style_1.styleMasterForOffCanvasComponent_left.styleForScreen), { display: "block" })
     }
 };
 //# sourceMappingURL=showAndHide.left.style.js.map

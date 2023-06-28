@@ -9,7 +9,6 @@ export const showAndHide_Left: TypeshowAndHide = {
             transition: "1s"
         },
         styleForScreen: {
-            ...styleMasterForOffCanvasComponent_left.styleForScreen,
             display: "none",
         }
     },
@@ -21,6 +20,7 @@ export const showAndHide_Left: TypeshowAndHide = {
             transition: "1s"
         },
         styleForScreen: {
+            ...styleMasterForOffCanvasComponent_left.styleForScreen,
             display: "block",
         }
     }

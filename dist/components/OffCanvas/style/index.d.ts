@@ -9,5 +9,6 @@ export declare const master_ShowStyleOffCanvas: {
     showAndHide_right: import("../types").TypeshowAndHide;
 };
 export declare const inside_componentStyleOffCanvas: {
-    styleForButtonBox: import("react").CSSProperties;
+    styleForButtonBoxOffCanvas: import("react").CSSProperties;
+    styleForHeaderOffCanvas: import("react").CSSProperties;
 };

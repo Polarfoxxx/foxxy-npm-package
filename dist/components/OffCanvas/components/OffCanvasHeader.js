@@ -18,7 +18,7 @@ var react_1 = __importDefault(require("react"));
 var style_1 = require("../style");
 var OffCanvasHeader = function (_a) {
     var textHeader = _a.textHeader;
-    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForButtonBox) }, textHeader));
+    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForHeaderOffCanvas) }, textHeader));
 };
 exports.default = OffCanvasHeader;
 //# sourceMappingURL=OffCanvasHeader.js.map

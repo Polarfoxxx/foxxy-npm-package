@@ -20,8 +20,10 @@ exports.master_ShowStyleOffCanvas = {
     showAndHide_right: showAndHide_right_style_1.showAndHide_right,
 };
 /* export components style */
-var buttonBox_style_1 = require("../../Carousel/style/buttonBox.style");
+var buttonBox_style_1 = require("./master.style/buttonBox.style");
+var header_style_1 = require("./master.style/header.style");
 exports.inside_componentStyleOffCanvas = {
-    styleForButtonBox: buttonBox_style_1.styleForButtonBox
+    styleForButtonBoxOffCanvas: buttonBox_style_1.styleForButtonBoxOffCanvas,
+    styleForHeaderOffCanvas: header_style_1.styleForHeaderOffCanvas
 };
 //# sourceMappingURL=index.js.map

@@ -4,7 +4,7 @@ import { inside_componentStyleOffCanvas } from "../style";
 
 const OffCanvasHeader: React.FC<PropsForOffCanvasHeader> = ({ textHeader }): JSX.Element => {
     return (
-        <div style={{...inside_componentStyleOffCanvas.styleForButtonBox}}>
+        <div style={{...inside_componentStyleOffCanvas.styleForHeaderOffCanvas}}>
             {textHeader}
         </div>
     );

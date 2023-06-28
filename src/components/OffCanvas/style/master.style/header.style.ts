@@ -1,5 +1,4 @@
 
-
 import { CSSProperties } from "react";
 
 export const styleForHeaderOffCanvas: CSSProperties = {

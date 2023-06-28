@@ -22,8 +22,10 @@ export const master_ShowStyleOffCanvas = {
 };
 
 /* export components style */
- import { styleForButtonBox } from "../../Carousel/style/buttonBox.style";
+ import { styleForButtonBoxOffCanvas } from "./master.style/buttonBox.style";
+ import { styleForHeaderOffCanvas } from "./master.style/header.style";
 
  export const inside_componentStyleOffCanvas  = {
-    styleForButtonBox
+    styleForButtonBoxOffCanvas,
+    styleForHeaderOffCanvas
  }
