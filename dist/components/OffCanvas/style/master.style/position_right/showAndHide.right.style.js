@@ -20,9 +20,7 @@ exports.showAndHide_right = {
     },
     styleForOffCanvasComponent_show: {
         styleForBox: __assign(__assign({}, master_right_style_1.styleMasterForOffCanvasComponent_right.styleForBox), { right: "0px", transition: "1s" }),
-        styleForScreen: {
-            display: "block",
-        }
+        styleForScreen: __assign(__assign({}, master_right_style_1.styleMasterForOffCanvasComponent_right.styleForScreen), { display: "block" })
     }
 };
 //# sourceMappingURL=showAndHide.right.style.js.map

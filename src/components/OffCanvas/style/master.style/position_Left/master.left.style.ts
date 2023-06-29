@@ -6,7 +6,7 @@ export const styleMasterForOffCanvasComponent_left: TypeForShowAndHideStyleAndMa
         height: "100vh",
         top: "0",
         bottom: "0",
-        position: "absolute",
+        position: "fixed",
         zIndex: "5",
         minWidth: "300px",
         display: "flex",

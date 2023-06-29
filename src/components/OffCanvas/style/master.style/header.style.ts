@@ -7,7 +7,7 @@ export const styleForHeaderOffCanvas: CSSProperties = {
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-    padding: "0 10px",
+    padding: "0 20px",
     fontSize: "30px",
     fontWeight: "bold",
     borderBottom: "1px solid white",

@@ -22,6 +22,7 @@ export const showAndHide_right: TypeshowAndHide = {
             transition: "1s"
         },
         styleForScreen: {
+            ...styleMasterForOffCanvasComponent_right.styleForScreen,
             display: "block",
         }
     }
