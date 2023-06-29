@@ -4,6 +4,7 @@ export const styleMasterForOffCanvasComponent_top: TypeForShowAndHideStyleAndMas
   styleForBox: {
     width: "100%",
     height: "20vh",
+    minHeight: '15vh',
     top: "0",
     left: "0",
     position: "absolute",
