@@ -22,8 +22,10 @@ exports.master_ShowStyleOffCanvas = {
 /* export components style */
 var buttonBox_style_1 = require("./master.style/buttonBox.style");
 var header_style_1 = require("./master.style/header.style");
+var body_style_1 = require("./master.style/body.style");
 exports.inside_componentStyleOffCanvas = {
     styleForButtonBoxOffCanvas: buttonBox_style_1.styleForButtonBoxOffCanvas,
-    styleForHeaderOffCanvas: header_style_1.styleForHeaderOffCanvas
+    styleForHeaderOffCanvas: header_style_1.styleForHeaderOffCanvas,
+    styleForBodyOffCanvas: body_style_1.styleForBodyOffCanvas
 };
 //# sourceMappingURL=index.js.map

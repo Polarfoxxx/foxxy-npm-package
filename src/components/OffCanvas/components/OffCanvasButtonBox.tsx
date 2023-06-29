@@ -10,7 +10,7 @@ const OffCanvasButtonBox: React.FC < PropsForOffCanvasButtonBox > = ({ children 
   
   
   return (
-    <div style={{...inside_componentStyleOffCanvas.styleForButtonBox}}>
+    <div style={{...inside_componentStyleOffCanvas.styleForButtonBoxOffCanvas}}>
             {children}
         </div>
   );

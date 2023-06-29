@@ -5,6 +5,7 @@ exports.styleMasterForOffCanvasComponent_top = {
     styleForBox: {
         width: "100%",
         height: "20vh",
+        minHeight: '15vh',
         top: "0",
         left: "0",
         position: "absolute",

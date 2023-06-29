@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export declare const allVariantOffCanvas: {
     defaultVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
     darkVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
@@ -11,4 +12,5 @@ export declare const master_ShowStyleOffCanvas: {
 export declare const inside_componentStyleOffCanvas: {
     styleForButtonBoxOffCanvas: import("react").CSSProperties;
     styleForHeaderOffCanvas: import("react").CSSProperties;
+    styleForBodyOffCanvas: import("react").CSSProperties;
 };

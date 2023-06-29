@@ -24,8 +24,10 @@ export const master_ShowStyleOffCanvas = {
 /* export components style */
  import { styleForButtonBoxOffCanvas } from "./master.style/buttonBox.style";
  import { styleForHeaderOffCanvas } from "./master.style/header.style";
+ import { styleForBodyOffCanvas } from "./master.style/body.style";
 
  export const inside_componentStyleOffCanvas  = {
     styleForButtonBoxOffCanvas,
-    styleForHeaderOffCanvas
- }
+    styleForHeaderOffCanvas,
+    styleForBodyOffCanvas
+ };

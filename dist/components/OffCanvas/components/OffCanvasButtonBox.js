@@ -18,7 +18,7 @@ var react_1 = __importDefault(require("react"));
 var style_1 = require("../style");
 var OffCanvasButtonBox = function (_a) {
     var children = _a.children;
-    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForButtonBox) }, children));
+    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForButtonBoxOffCanvas) }, children));
 };
 exports.default = OffCanvasButtonBox;
 //# sourceMappingURL=OffCanvasButtonBox.js.map

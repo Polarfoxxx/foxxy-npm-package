@@ -1,12 +1,12 @@
 import React from "react";
+import { inside_componentStyleOffCanvas } from "../style";
+import { PropsForOffCanvasBody } from "../types";
 
-type PropsForOffCanvasBody = {
-    children: string
-};
+
 
 const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ children }): JSX.Element => {
     return (
-        <div>
+        <div style={{...inside_componentStyleOffCanvas.styleForBodyOffCanvas}}>
             {children}
         </div>
     );

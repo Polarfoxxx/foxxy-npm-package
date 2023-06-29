@@ -11,7 +11,7 @@ export const styleMasterForOffCanvasComponent_left: TypeForShowAndHideStyleAndMa
         minWidth: "300px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "start"
+        justifyContent: "center"
     },
     styleForScreen: {
         position: "absolute",

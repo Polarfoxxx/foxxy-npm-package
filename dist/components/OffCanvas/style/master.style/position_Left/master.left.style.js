@@ -12,7 +12,7 @@ exports.styleMasterForOffCanvasComponent_left = {
         minWidth: "300px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "start"
+        justifyContent: "center"
     },
     styleForScreen: {
         position: "absolute",

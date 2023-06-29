@@ -14,9 +14,12 @@ export type TypeVariantForOffCanvas = {
     variant?: "default" | "white" | "dark";
 };
 export type PropsForOffCanvasHeader = {
-    textHeader: string;
+    children: string;
 };
 export type TypeshowAndHide = {
     styleForOffCanvasComponent_hide: TypeForShowAndHideStyleAndMaster;
     styleForOffCanvasComponent_show: TypeForShowAndHideStyleAndMaster;
+};
+export type PropsForOffCanvasBody = {
+    children: string;
 };
