@@ -8,9 +8,13 @@ export type PropsForOffCanvasComponents = {
     show: boolean,
     setShow: React.Dispatch<SetStateAction<boolean>>
 };
-export type TypeForShowAndHideStyleAndMaster = {
+
+export type TypeForCSS_OffCanvas = {
     styleForBox: CSSProperties,
-    styleForScreen: CSSProperties
+    styleForScreen: CSSProperties,
+    styleHeader?: CSSProperties,
+    styleBody?: CSSProperties,
+    styleBittonBox?: CSSProperties,
 };
 
 export type TypeVariantForOffCanvas = {
@@ -22,8 +26,8 @@ export type PropsForOffCanvasHeader = {
 };
 
 export type TypeshowAndHide = {
-    styleForOffCanvasComponent_hide: TypeForShowAndHideStyleAndMaster,
-    styleForOffCanvasComponent_show: TypeForShowAndHideStyleAndMaster
+    styleForOffCanvasComponent_hide: TypeShowAndHideCSS,
+    styleForOffCanvasComponent_show: TypeShowAndHideCSS
 };
 
 export type PropsForOffCanvasBody = {

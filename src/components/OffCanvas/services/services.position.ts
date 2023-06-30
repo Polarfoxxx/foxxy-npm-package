@@ -1,5 +1,5 @@
 import { master_ShowStyleOffCanvas } from "../style";
-import { TypeForShowAndHideStyleAndMaster } from "../types";
+import { TypeForCSS_OffCanvas } from "../types";
 
 const servicePositionOffCanvas = {
     positionOffCanvas
@@ -11,7 +11,7 @@ export type TypeForPositionServices = {
     show: boolean
 }
 
-function positionOffCanvas({ position, show }: TypeForPositionServices): TypeForShowAndHideStyleAndMaster {
+function positionOffCanvas({ position, show }: TypeForPositionServices): TypeForCSS_OffCanvas {
     if (show) {
         switch (position) {
             case "left":

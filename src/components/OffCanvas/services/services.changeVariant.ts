@@ -1,4 +1,4 @@
-import { TypeForShowAndHideStyleAndMaster,TypeVariantForOffCanvas } from "../types";
+import { TypeForCSS_OffCanvas,TypeVariantForOffCanvas } from "../types";
 import { allVariantOffCanvas } from "../style";
 
 const servicesForChangeVariantForOffCanvas = {

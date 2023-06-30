@@ -3,7 +3,7 @@ import OffCanvasHeader from "./OffCanvasHeader";
 import OffCanvasBody from "./OffCanvasBody";
 import OffCanvasButoonBox from "./OffCanvasButtonBox";
 
-import { PropsForOffCanvasComponents, TypeForShowAndHideStyleAndMaster } from "../types";
+import { PropsForOffCanvasComponents, TypeVariantColorOffCanvas, TypeShowAndHideCSS } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
 import { master_ShowStyleOffCanvas, allVariantOffCanvas } from "../style";
 import servicePositionOffCanvas from "../services/services.position";
@@ -17,10 +17,10 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
     setShow }): JSX.Element => {
 
     /* deklarace */
-    const [showCanvas, setshowCanvas] = React.useState<TypeForShowAndHideStyleAndMaster>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
+    const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
 
     /* servis pre meniacu sa variantu */
-    let variant_Style: TypeForShowAndHideStyleAndMaster = allVariantOffCanvas.defaultVariantForOffCanvas;
+    let variant_Style: TypeForCSS_OffCanvas = allVariantOffCanvas.defaultVariantForOffCanvas;
     if (variant) {
         variant_Style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant })
     };
@@ -50,7 +50,9 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
                     ...variant_Style.styleForBox,
                     ...showCanvas.styleForBox
                 }}>
-                {children}
+                {React.Children.map(children, (child: React.ReactElement<any>) => {
+                        return React.cloneElement(child, { variant_Style });
+                    })}
             </div>
             <div
                 id="screenBlok"
@@ -71,3 +73,5 @@ export const OffCanvasComponent = {
     OffCanvasBody,
     OffCanvasButoonBox
 };
+
+q
