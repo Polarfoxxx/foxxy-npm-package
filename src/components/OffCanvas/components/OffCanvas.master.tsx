@@ -26,8 +26,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
         if (variant) {
             setVariant_Style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }))
         };
+        
     }, [variant])
-
 
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
