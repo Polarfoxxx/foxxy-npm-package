@@ -1,6 +1,4 @@
 import React from "react";
-type PropsForOffCanvasButtonBox = {
-    children: JSX.Element | JSX.Element[];
-};
+import { PropsForOffCanvasButtonBox } from "../types";
 declare const OffCanvasButtonBox: React.FC<PropsForOffCanvasButtonBox>;
 export default OffCanvasButtonBox;

@@ -7,6 +7,13 @@ exports.darkVariantForOffCanvas = {
     },
     styleForScreen: {
         backgroundColor: "rgba(37, 37, 37, 0.603)"
-    }
+    },
+    styleHeader: {
+        color: "rgb(229, 124, 35)"
+    },
+    styleBody: {
+        color: "white"
+    },
+    styleButtonBox: {},
 };
 //# sourceMappingURL=darkVariant.style.js.map

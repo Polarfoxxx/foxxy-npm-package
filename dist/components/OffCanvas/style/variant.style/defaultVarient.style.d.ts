@@ -1,2 +1,2 @@
-import { TypeForShowAndHideStyleAndMaster } from "../../types";
-export declare const defaultVariantForOffCanvas: TypeForShowAndHideStyleAndMaster;
+import { TypeForCSS_OffCanvas } from "../../types";
+export declare const defaultVariantForOffCanvas: TypeForCSS_OffCanvas;

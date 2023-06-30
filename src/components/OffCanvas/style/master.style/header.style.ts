@@ -11,5 +11,4 @@ export const styleForHeaderOffCanvas: CSSProperties = {
     fontSize: "30px",
     fontWeight: "bold",
     borderBottom: "1px solid white",
-    color: "rgb(249, 123, 34)" 
 }

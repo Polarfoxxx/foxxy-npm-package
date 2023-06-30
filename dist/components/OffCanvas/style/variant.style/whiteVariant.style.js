@@ -7,6 +7,13 @@ exports.whiteVariantForOffCanvas = {
     },
     styleForScreen: {
         backgroundColor: "rgba(255, 255, 255, 0.658)"
-    }
+    },
+    styleHeader: {
+        color: "rgb(12, 19, 79)"
+    },
+    styleBody: {
+        color: "black"
+    },
+    styleButtonBox: {},
 };
 //# sourceMappingURL=whiteVariant.style.js.map

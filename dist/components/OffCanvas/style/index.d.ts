@@ -1,8 +1,8 @@
 /// <reference types="react" />
 export declare const allVariantOffCanvas: {
-    defaultVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
-    darkVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
-    whiteVariantForOffCanvas: import("../types").TypeForShowAndHideStyleAndMaster;
+    defaultVariantForOffCanvas: import("../types").TypeForCSS_OffCanvas;
+    darkVariantForOffCanvas: import("../types").TypeForCSS_OffCanvas;
+    whiteVariantForOffCanvas: import("../types").TypeForCSS_OffCanvas;
 };
 export declare const master_ShowStyleOffCanvas: {
     showAndHide_Left: import("../types").TypeshowAndHide;

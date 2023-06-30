@@ -4,9 +4,12 @@ import { PropsForOffCanvasBody } from "../types";
 
 
 
-const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ children }): JSX.Element => {
+const OffCanvasBody: React.FC<PropsForOffCanvasBody> = ({ children, variant_Style }): JSX.Element => {
     return (
-        <div style={{...inside_componentStyleOffCanvas.styleForBodyOffCanvas}}>
+        <div style={{
+            ...inside_componentStyleOffCanvas.styleForBodyOffCanvas,
+            ...variant_Style.styleBody
+        }}>
             {children}
         </div>
     );

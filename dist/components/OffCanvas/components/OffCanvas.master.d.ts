@@ -4,7 +4,5 @@ export declare const OffCanvasComponent: {
     OffCanvas: React.FC<PropsForOffCanvasComponents>;
     OffCanvasHeader: React.FC<import("../types").PropsForOffCanvasHeader>;
     OffCanvasBody: React.FC<import("../types").PropsForOffCanvasBody>;
-    OffCanvasButoonBox: React.FC<{
-        children: JSX.Element | JSX.Element[];
-    }>;
+    OffCanvasButoonBox: React.FC<import("../types").PropsForOffCanvasButtonBox>;
 };

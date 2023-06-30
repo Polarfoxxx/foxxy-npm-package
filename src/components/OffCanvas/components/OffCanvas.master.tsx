@@ -3,7 +3,7 @@ import OffCanvasHeader from "./OffCanvasHeader";
 import OffCanvasBody from "./OffCanvasBody";
 import OffCanvasButoonBox from "./OffCanvasButtonBox";
 
-import { PropsForOffCanvasComponents, TypeVariantColorOffCanvas, TypeShowAndHideCSS } from "../types";
+import { PropsForOffCanvasComponents, TypeForCSS_OffCanvas } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
 import { master_ShowStyleOffCanvas, allVariantOffCanvas } from "../style";
 import servicePositionOffCanvas from "../services/services.position";
@@ -18,12 +18,16 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
 
     /* deklarace */
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
+    const [variant_Style, setVariant_Style] = React.useState<TypeForCSS_OffCanvas>(allVariantOffCanvas.defaultVariantForOffCanvas);
+
 
     /* servis pre meniacu sa variantu */
-    let variant_Style: TypeForCSS_OffCanvas = allVariantOffCanvas.defaultVariantForOffCanvas;
-    if (variant) {
-        variant_Style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant })
-    };
+    React.useEffect(() => {
+        if (variant) {
+            setVariant_Style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }))
+        };
+    }, [variant])
+
 
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
@@ -51,8 +55,8 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
                     ...showCanvas.styleForBox
                 }}>
                 {React.Children.map(children, (child: React.ReactElement<any>) => {
-                        return React.cloneElement(child, { variant_Style });
-                    })}
+                    return React.cloneElement(child, { variant_Style });
+                })}
             </div>
             <div
                 id="screenBlok"
@@ -74,4 +78,3 @@ export const OffCanvasComponent = {
     OffCanvasButoonBox
 };
 
-q

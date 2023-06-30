@@ -6,7 +6,6 @@ exports.styleForBodyOffCanvas = {
     height: "80%",
     padding: "20px",
     fontSize: "18px",
-    color: "white",
     overflowY: "auto"
 };
 //# sourceMappingURL=body.style.js.map

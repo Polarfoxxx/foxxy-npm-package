@@ -7,6 +7,13 @@ exports.defaultVariantForOffCanvas = {
     },
     styleForScreen: {
         backgroundColor: "rgba(139, 190, 231, 0.603)"
-    }
+    },
+    styleHeader: {
+        color: "black"
+    },
+    styleBody: {
+        color: "black"
+    },
+    styleButtonBox: {},
 };
 //# sourceMappingURL=defaultVarient.style.js.map

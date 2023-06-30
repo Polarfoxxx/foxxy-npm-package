@@ -1,6 +1,6 @@
-import { TypeForShowAndHideStyleAndMaster } from "../../../types"
+import { TypeForCSS_OffCanvas } from "../../../types"
 
-export const styleMasterForOffCanvasComponent_top: TypeForShowAndHideStyleAndMaster = {
+export const styleMasterForOffCanvasComponent_top: TypeForCSS_OffCanvas = {
   styleForBox: {
     width: "100%",
     height: "50vh",

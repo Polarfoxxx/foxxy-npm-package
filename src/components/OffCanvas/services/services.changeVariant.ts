@@ -1,4 +1,4 @@
-import { TypeForCSS_OffCanvas,TypeVariantForOffCanvas } from "../types";
+import { TypeForCSS_OffCanvas, TypeVariantForOffCanvas } from "../types";
 import { allVariantOffCanvas } from "../style";
 
 const servicesForChangeVariantForOffCanvas = {
@@ -8,7 +8,7 @@ export default servicesForChangeVariantForOffCanvas;
 
 
 
-function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeForShowAndHideStyleAndMaster {
+function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeForCSS_OffCanvas {
 
     /* podmienky pre zmeny variant */
     if (variant === "white") {

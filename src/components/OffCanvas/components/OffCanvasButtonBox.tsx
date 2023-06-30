@@ -1,18 +1,18 @@
 import React from "react";
 import { inside_componentStyleOffCanvas } from "../style";
-
-type PropsForOffCanvasButtonBox = {
-  children: JSX.Element | JSX.Element[],
-}
+import { PropsForOffCanvasButtonBox } from "../types";
 
 
-const OffCanvasButtonBox: React.FC < PropsForOffCanvasButtonBox > = ({ children }): JSX.Element => {
-  
-  
+const OffCanvasButtonBox: React.FC<PropsForOffCanvasButtonBox> = ({ children, variant_Style }): JSX.Element => {
+
+
   return (
-    <div style={{...inside_componentStyleOffCanvas.styleForButtonBoxOffCanvas}}>
-            {children}
-        </div>
+    <div style={{
+      ...inside_componentStyleOffCanvas.styleForButtonBoxOffCanvas,
+      ...variant_Style.styleButtonBox
+    }}>
+      {children}
+    </div>
   );
 };
 

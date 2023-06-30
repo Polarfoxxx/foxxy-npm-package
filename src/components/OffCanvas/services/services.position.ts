@@ -1,15 +1,12 @@
 import { master_ShowStyleOffCanvas } from "../style";
 import { TypeForCSS_OffCanvas } from "../types";
+import { TypeForPositionServices } from "../types";
 
 const servicePositionOffCanvas = {
     positionOffCanvas
 };
 export default servicePositionOffCanvas;
 
-export type TypeForPositionServices = {
-    position: string,
-    show: boolean
-}
 
 function positionOffCanvas({ position, show }: TypeForPositionServices): TypeForCSS_OffCanvas {
     if (show) {

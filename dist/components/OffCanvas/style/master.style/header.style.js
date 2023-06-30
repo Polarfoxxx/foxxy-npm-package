@@ -11,6 +11,5 @@ exports.styleForHeaderOffCanvas = {
     fontSize: "30px",
     fontWeight: "bold",
     borderBottom: "1px solid white",
-    color: "rgb(249, 123, 34)"
 };
 //# sourceMappingURL=header.style.js.map

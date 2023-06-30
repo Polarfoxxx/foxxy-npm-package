@@ -17,8 +17,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var style_1 = require("../style");
 var OffCanvasHeader = function (_a) {
-    var children = _a.children;
-    return (react_1.default.createElement("div", { style: __assign({}, style_1.inside_componentStyleOffCanvas.styleForHeaderOffCanvas) }, children));
+    var children = _a.children, variant_Style = _a.variant_Style;
+    return (react_1.default.createElement("div", { style: __assign(__assign({}, style_1.inside_componentStyleOffCanvas.styleForHeaderOffCanvas), variant_Style.styleHeader) }, children));
 };
 exports.default = OffCanvasHeader;
 //# sourceMappingURL=OffCanvasHeader.js.map

@@ -5,6 +5,5 @@ export const styleForBodyOffCanvas: CSSProperties = {
   height: "80%",
   padding: "20px",
   fontSize: "18px",
-  color: "white",
   overflowY: "auto"
 };

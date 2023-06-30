@@ -14,24 +14,34 @@ export type TypeForCSS_OffCanvas = {
     styleForScreen: CSSProperties,
     styleHeader?: CSSProperties,
     styleBody?: CSSProperties,
-    styleBittonBox?: CSSProperties,
+    styleButtonBox?: CSSProperties,
 };
 
 export type TypeVariantForOffCanvas = {
     variant?: "default" | "white" | "dark"
 };
 
-export type PropsForOffCanvasHeader = {
-    children: string
+export type TypeshowAndHide = {
+    styleForOffCanvasComponent_hide: TypeForCSS_OffCanvas,
+    styleForOffCanvasComponent_show: TypeForCSS_OffCanvas
 };
 
-export type TypeshowAndHide = {
-    styleForOffCanvasComponent_hide: TypeShowAndHideCSS,
-    styleForOffCanvasComponent_show: TypeShowAndHideCSS
+export type TypeForPositionServices = {
+    position: string,
+    show: boolean
+}; 
+
+export type PropsForOffCanvasHeader = {
+    children: string,
+    variant_Style?: TypeForCSS_OffCanvas
 };
 
 export type PropsForOffCanvasBody = {
-    children: string
+    children: string,
+    variant_Style?: TypeForCSS_OffCanvas
 };
 
-
+export type PropsForOffCanvasButtonBox = {
+    children: JSX.Element | JSX.Element[],
+    variant_Style?: TypeForCSS_OffCanvas
+};
