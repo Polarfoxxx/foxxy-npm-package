@@ -18,7 +18,7 @@ function changeVariantForOffCanvas(_a) {
         return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
     else {
-        style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
+        return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
     ;
 }

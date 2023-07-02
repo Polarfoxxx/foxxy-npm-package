@@ -18,6 +18,6 @@ function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeFo
     } else if (variant === "default") {
         return allVariantOffCanvas.defaultVariantForOffCanvas
     } else {
-        allVariantOffCanvas.defaultVariantForOffCanvas
+        return allVariantOffCanvas.defaultVariantForOffCanvas
     };
 }
