@@ -2,7 +2,6 @@ import React from "react";
 import OffCanvasHeader from "./OffCanvasHeader";
 import OffCanvasBody from "./OffCanvasBody";
 import OffCanvasButoonBox from "./OffCanvasButtonBox";
-
 import { PropsForOffCanvasComponents, TypeForCSS_OffCanvas } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
 import { master_ShowStyleOffCanvas, allVariantOffCanvas } from "../style";
@@ -26,7 +25,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
         if (variant) {
             setVariant_Style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }))
         };
-        
+
     }, [variant])
 
     /* podmienka zatvarania a ovarania offCanvas */

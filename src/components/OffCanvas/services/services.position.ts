@@ -30,7 +30,6 @@ function positionOffCanvas({ position, show }: TypeForPositionServices): TypeFor
                 return master_ShowStyleOffCanvas.showAndHide_right.styleForOffCanvasComponent_hide;
             default:
                 return master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide;
-        }
-    }
-
-}
+        };
+    };
+};

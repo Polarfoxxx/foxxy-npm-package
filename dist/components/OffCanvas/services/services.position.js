@@ -30,6 +30,9 @@ function positionOffCanvas(_a) {
             default:
                 return style_1.master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide;
         }
+        ;
     }
+    ;
 }
+;
 //# sourceMappingURL=services.position.js.map

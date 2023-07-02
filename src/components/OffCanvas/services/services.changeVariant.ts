@@ -7,7 +7,6 @@ const servicesForChangeVariantForOffCanvas = {
 export default servicesForChangeVariantForOffCanvas;
 
 
-
 function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeForCSS_OffCanvas {
 
     /* podmienky pre zmeny variant */
