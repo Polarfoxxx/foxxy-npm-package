@@ -4,7 +4,7 @@ import { CSSProperties } from "react";
 
 /* Props pre element form */
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
-    children:  React.ReactElement<any>[]
+    children: JSX.Element | JSX.Element[],
     formName?: string,
     action?: string,
     method?: string,

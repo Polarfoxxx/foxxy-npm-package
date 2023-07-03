@@ -1,6 +1,4 @@
 import React from "react";
-type Props = {
-    children: React.ReactNode;
-};
-declare const ButtonBox: React.FC<Props>;
+import { TypeForButtonBox } from "../types";
+declare const ButtonBox: React.FC<TypeForButtonBox>;
 export default ButtonBox;

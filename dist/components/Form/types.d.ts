@@ -2,7 +2,7 @@ import { FormHTMLAttributes } from "react";
 import { InputHTMLAttributes } from "react";
 import { CSSProperties } from "react";
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
-    children: React.ReactElement<any>[];
+    children: JSX.Element | JSX.Element[];
     formName?: string;
     action?: string;
     method?: string;

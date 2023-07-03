@@ -1,6 +1,6 @@
-import React, { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 
-export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement>{
+export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
   variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
   border?: boolean,
@@ -19,7 +19,7 @@ export type TypeForStyleFunction = {
 
 export type TypeReturnStyleForElement = {
   defStyle: {},
-  styles: {},
+  variant_style: {},
   sizeElement: {}
 };
 
@@ -28,4 +28,8 @@ export type TypeButtonStyle = {
   radiusStyle: {},
   borderStyle: {},
   borderRadiusStyle: {},
+};
+
+export type TypeForButtonBox = {
+  children: JSX.Element | JSX.Element[]
 };

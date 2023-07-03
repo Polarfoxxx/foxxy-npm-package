@@ -11,10 +11,10 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var default_style_1 = require("./style/default.style");
-var white_style_1 = require("./style/white.style");
-var dark_style_1 = require("./style/dark.style");
-var funny_style_1 = require("./style/funny.style");
+var default_style_1 = require("./style/variant.style/default.style");
+var white_style_1 = require("./style/variant.style/white.style");
+var dark_style_1 = require("./style/variant.style/dark.style");
+var funny_style_1 = require("./style/variant.style/funny.style");
 var servicesChangeStyleForFrom = {
     changerStyleForForm: changerStyleForForm
 };
@@ -27,6 +27,7 @@ function changerStyleForForm(_a) {
         if (variant) {
             if (variant === "dark") {
                 formVariantStyle = dark_style_1.darkStyleForForm;
+                console.log(dark_style_1.darkStyleForForm);
             }
             else if (variant === "funny") {
                 formVariantStyle = funny_style_1.funnyStyleForForm;

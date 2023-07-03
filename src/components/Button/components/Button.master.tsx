@@ -1,5 +1,5 @@
-import * as React from "react";
-import servicesChangeStyleFromButtons from "../services";
+import React from "react";
+import servicesChangeStyleFromButtons from "../services/services";
 import { TypeButtonsIntrinsicAttributes } from "../types";
 import ButtonBox from "./ButtonsBox";
 
@@ -14,17 +14,17 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 }): JSX.Element => {
 
   /* servis pre style */
-  const { styles, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleForButton({ variant, border, round, lg, sm })
+  const { variant_style, defStyle, sizeElement } = servicesChangeStyleFromButtons.changerStyleForButton({ variant, border, round, lg, sm })
 
   return (
       <button
         {...props}
-        style={{ ...styles, ...defStyle, ...sizeElement }}
+        style={{ ...variant_style, ...defStyle, ...sizeElement }}
       >
         {text}
       </button>
   );
-}
+};
 
 export const ButtonComponent = {
   Button,

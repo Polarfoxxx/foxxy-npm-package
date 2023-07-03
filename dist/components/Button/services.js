@@ -17,9 +17,9 @@ function changerStyleForButton(_a) {
     var variant = _a.variant, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm;
     /* deklaracia */
     var sizeElement = {};
-    var styles = {};
+    var variant_style = {};
     var impStyleName = default_styles_1.defaultStyle;
-    /* anonymma funkcia meniaca variantu */
+    /* varebna varianta */
     if (variant) {
         if (variant === "white") {
             impStyleName = white_style_1.whiteStyle;
@@ -36,22 +36,23 @@ function changerStyleForButton(_a) {
         else if (variant === "ocean") {
             impStyleName = ocean_style_1.oceanStyle;
         }
-        /* vyber konkretnej varianty */
-        styles = border ?
+        ;
+        /* vyber border varianty */
+        variant_style = border ?
             (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
             (round ? impStyleName.radiusStyle : impStyleName.defStyle);
     }
     else {
-        styles = default_styles_1.defaultStyle.defStyle;
+        variant_style = default_styles_1.defaultStyle.defStyle;
     }
-    /* anonymna funkcia meniaca velkost */
+    /*  vyber velkosti */
     if (lg || sm) {
         sizeElement = lg ? lg_style_1.largeSize : small_style_1.smallSize;
     }
     ;
     return ({
         defStyle: master_style_1.defStyle,
-        styles: styles,
+        variant_style: variant_style,
         sizeElement: sizeElement
     });
 }

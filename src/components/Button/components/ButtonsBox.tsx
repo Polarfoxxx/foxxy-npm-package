@@ -1,18 +1,15 @@
-import React, { ReactHTMLElement } from "react";
+import React from "react";
 import { styleButtonBox } from "../styles/buttonBox.style";
+import { TypeForButtonBox } from "../types";
 
 
-type Props = {
-    children: React.ReactNode
-}
-
-const ButtonBox: React.FC<Props> = ({ children }) => {
+const ButtonBox: React.FC<TypeForButtonBox> = ({ children }) => {
     return (
         <div style={styleButtonBox}>
             {children}
         </div>
 
     )
-}
+};
 
 export default ButtonBox

@@ -16,7 +16,7 @@ export type TypeForStyleFunction = {
 };
 export type TypeReturnStyleForElement = {
     defStyle: {};
-    styles: {};
+    variant_style: {};
     sizeElement: {};
 };
 export type TypeButtonStyle = {
@@ -24,4 +24,7 @@ export type TypeButtonStyle = {
     radiusStyle: {};
     borderStyle: {};
     borderRadiusStyle: {};
+};
+export type TypeForButtonBox = {
+    children: JSX.Element | JSX.Element[];
 };

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { TypeForIntrinsicAttributes } from "../types";
 export declare const FormComponent: {
     Form: React.FC<TypeForIntrinsicAttributes>;

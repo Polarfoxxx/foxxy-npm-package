@@ -26,8 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var FormHeader = function (_a) {
     var formName = _a.formName, formVariantStyle = _a.formVariantStyle;
-    return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: "FormHeader", style: formVariantStyle === null || formVariantStyle === void 0 ? void 0 : formVariantStyle.formHeader }, formName)));
+    return (React.createElement("div", { className: "FormHeader", style: formVariantStyle === null || formVariantStyle === void 0 ? void 0 : formVariantStyle.formHeader }, formName));
 };
 exports.default = FormHeader;
 //# sourceMappingURL=FormHeader.js.map
