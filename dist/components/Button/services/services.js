@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var master_style_1 = require("../styles/size.style/master.style");
 var styles_1 = require("../styles");
-var servicesChangeStyleForButtons = {
-    changerStyleForButton: changerStyleForButton
+var servicesChangeVariantForButtons = {
+    changeVariantForButtons: changeVariantForButtons
 };
-exports.default = servicesChangeStyleForButtons;
-function changerStyleForButton(_a) {
+exports.default = servicesChangeVariantForButtons;
+function changeVariantForButtons(_a) {
     var variant = _a.variant, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm;
     /* deklaracia */
     var sizeElement = {};

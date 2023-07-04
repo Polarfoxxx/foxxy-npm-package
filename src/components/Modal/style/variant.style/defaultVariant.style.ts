@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 
 export const defaultStyleForModal: CSSProperties = {
-    backgroundColor: "rgba(0, 0, 0, 0.829)",
+    backgroundColor: "rgba(96, 152, 255, 0.438)",
 };
 
 

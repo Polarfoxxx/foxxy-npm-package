@@ -1,40 +1,27 @@
-import { TypeStyleForForm } from "../../types"
+import { TypeStyleForForm } from "../../types";
+import { masterStyleForForm } from "../master.style/master.style";
 
 export const whiteStyleForForm: TypeStyleForForm = {
     form: {
-        backgroundColor: "rgb(227, 244, 244)",
+        ...masterStyleForForm.form,
+        backgroundColor: "rgb(248, 246, 244)",
     },
     formBody: {
-        width: "100%",
-        height: "auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        ...masterStyleForForm.formBody,
     },
     formHeader: {
-        backgroundColor: "white",
+        ...masterStyleForForm.formHeader,
+        backgroundColor: "rgb(227, 244, 244)",
+
         color: "black",
-        width: "100%",
-        height: "30px",
-        padding: "0 10px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
     },
     formLabel: {
+        ...masterStyleForForm.formLabel,
         color: "black",
-        fontSize: "13px",
-        width: "80%",
-        display: "flex"
     },
     formInputs: {
-        backgroundColor: "rgb(227, 244, 244)",
-        width: "80%",
-        height: "25px",
-        borderRadius: "7px",
+        ...masterStyleForForm.formInputs,
+        backgroundColor: "white",
         border: "1px solid rgb(82, 109, 130)",
-        padding: "0 8px",
-        margin: "8px"
     },
 }

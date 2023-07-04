@@ -1,5 +1,4 @@
-import { TypeForFormServices } from "../types";
-import { TypeStyleForForm } from "../types";
+import { TypeForFormServices, TypeStyleForForm } from "../types";
 declare const servicesChangeStyleForFrom: {
     changerStyleForForm: typeof changerStyleForForm;
 };

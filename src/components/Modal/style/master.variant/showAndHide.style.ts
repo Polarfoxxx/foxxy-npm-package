@@ -1,4 +1,4 @@
-import { TypeForMasterStyle } from "../types";
+import { TypeForMasterStyle } from "../../types";
 
 export const styleForModalComponent_hide: TypeForMasterStyle = {
     fullScreen: {

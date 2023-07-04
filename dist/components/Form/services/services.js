@@ -11,32 +11,29 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var default_style_1 = require("../style/variant.style/default.style");
-var white_style_1 = require("../style/variant.style/white.style");
-var dark_style_1 = require("../style/variant.style/dark.style");
-var funny_style_1 = require("../style/variant.style/funny.style");
+var style_1 = require("../style");
 var servicesChangeStyleForFrom = {
     changerStyleForForm: changerStyleForForm
 };
 exports.default = servicesChangeStyleForFrom;
 function changerStyleForForm(_a) {
     var variant = _a.variant;
-    var formVariantStyle = __assign({}, default_style_1.defaultStyleForForm);
+    var formVariantStyle = __assign({}, style_1.allVariantForForm.defaultStyleForForm);
     /* funkcia meniaca variantu */
     (function () {
         if (variant) {
             if (variant === "dark") {
-                formVariantStyle = dark_style_1.darkStyleForForm;
-                console.log(dark_style_1.darkStyleForForm);
+                formVariantStyle = style_1.allVariantForForm.darkStyleForForm;
+                console.log(style_1.allVariantForForm.darkStyleForForm);
             }
             else if (variant === "funny") {
-                formVariantStyle = funny_style_1.funnyStyleForForm;
+                formVariantStyle = style_1.allVariantForForm.funnyStyleForForm;
             }
             else if (variant === "white") {
-                formVariantStyle = white_style_1.whiteStyleForForm;
+                formVariantStyle = style_1.allVariantForForm.whiteStyleForForm;
             }
             else {
-                formVariantStyle = default_style_1.defaultStyleForForm;
+                formVariantStyle = style_1.allVariantForForm.defaultStyleForForm;
             }
         }
     })();

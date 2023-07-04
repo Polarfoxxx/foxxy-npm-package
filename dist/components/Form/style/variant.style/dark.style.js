@@ -18,6 +18,6 @@ exports.darkStyleForForm = {
     formBody: __assign({}, master_style_1.masterStyleForForm.formBody),
     formHeader: __assign(__assign({}, master_style_1.masterStyleForForm.formHeader), { backgroundColor: "rgb(10, 38, 71)", color: "white" }),
     formLabel: __assign(__assign({}, master_style_1.masterStyleForForm.formLabel), { color: "rgb(194, 222, 220)" }),
-    formInputs: __assign(__assign({}, master_style_1.masterStyleForForm.formInputs), { backgroundColor: "rgb(227, 244, 244)", border: "1px solid rgb(82, 109, 130)", padding: "0 8px", margin: "8px" }),
+    formInputs: __assign(__assign({}, master_style_1.masterStyleForForm.formInputs), { backgroundColor: "rgb(227, 244, 244)", border: "1px solid rgb(82, 109, 130)" }),
 };
 //# sourceMappingURL=dark.style.js.map

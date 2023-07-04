@@ -29,11 +29,12 @@ exports.FormComponent = void 0;
 var react_1 = __importDefault(require("react"));
 var FormHeader_1 = __importDefault(require("./FormHeader"));
 var FormInputs_1 = __importDefault(require("./FormInputs"));
-var services_1 = __importDefault(require("../services/services"));
+var services_changeVariant_1 = __importDefault(require("../services/services.changeVariant"));
+var style_1 = require("../style");
 var Form = function (_a) {
     var children = _a.children, variant = _a.variant, props = __rest(_a, ["children", "variant"]);
     /* servis meniaci varintu formu */
-    var formVariantStyle = services_1.default.changerStyleForForm({ variant: variant });
+    var formVariantStyle = services_changeVariant_1.default.changerVariantForForm({ variant: variant }) || style_1.allVariantForForm.defaultStyleForForm;
     return (react_1.default.createElement("form", __assign({ className: "form" }, props, { style: __assign({}, formVariantStyle.form) }),
         react_1.default.createElement("div", { className: "body", style: formVariantStyle.formBody }, react_1.default.Children.map(children, function (child) {
             return react_1.default.cloneElement(child, { formVariantStyle: formVariantStyle });

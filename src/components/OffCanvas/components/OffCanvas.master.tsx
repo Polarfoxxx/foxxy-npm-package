@@ -4,8 +4,9 @@ import OffCanvasBody from "./OffCanvasBody";
 import OffCanvasButoonBox from "./OffCanvasButtonBox";
 import { PropsForOffCanvasComponents, TypeForCSS_OffCanvas } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
-import { master_ShowStyleOffCanvas, allVariantOffCanvas } from "../style";
+import { master_ShowStyleOffCanvas } from "../style";
 import servicePositionOffCanvas from "../services/services.position";
+import { allVariantOffCanvas } from "../style";
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
@@ -17,16 +18,9 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
 
     /* deklarace */
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
-    const [variant_Style, setVariant_Style] = React.useState<TypeForCSS_OffCanvas>(allVariantOffCanvas.defaultVariantForOffCanvas);
-
 
     /* servis pre meniacu sa variantu */
-    React.useEffect(() => {
-        if (variant) {
-            setVariant_Style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }))
-        };
-
-    }, [variant])
+    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }) || allVariantOffCanvas.defaultVariantForOffCanvas
 
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {
@@ -50,18 +44,18 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
             <div
                 id="offCanvasBlock"
                 style={{
-                    ...variant_Style.styleForBox,
+                    ...setVariant_style.styleForBox,
                     ...showCanvas.styleForBox
                 }}>
                 {React.Children.map(children, (child: React.ReactElement<any>) => {
-                    return React.cloneElement(child, { variant_Style });
+                    return React.cloneElement(child, { setVariant_style });
                 })}
             </div>
             <div
                 id="screenBlok"
                 onClick={handleClickHideBlock}
                 style={{
-                    ...variant_Style.styleForScreen,
+                    ...setVariant_style.styleForScreen,
                     ...showCanvas.styleForScreen
                 }} >
             </div>

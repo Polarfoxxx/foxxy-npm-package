@@ -11,7 +11,7 @@ exports.masterStyleForForm = {
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
-        padding: "0 0 10px 0"
+        padding: "0 0 10px 0",
     },
     formBody: {
         width: "100%",
@@ -28,6 +28,8 @@ exports.masterStyleForForm = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        fontWeight: "bold",
+        fontSize: "20px"
     },
     formLabel: {
         fontSize: "15px",

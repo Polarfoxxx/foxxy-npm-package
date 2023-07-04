@@ -1,20 +1,15 @@
 import React from "react";
-import { CSSProperties } from "react";
-import { TypeForMasterStyle } from "../types";
-import servicesChangeVariantForModal from "../services";
-import { PropsForModalComponents } from "../types";
-import { styleMasterForModalComponent } from "../style/master.style";
-import { styleForModalComponent_hide, styleForModalComponent_show } from "../style/showAndHide.style";
+import servicesChangeVariantForModal from "../services/services.changeVariant";
+import { allMasterStyleForModal } from "../style";
+import { styleForModalComponent_hide, styleForModalComponent_show } from "../style/master.variant/showAndHide.style";
+import { TypeForMasterStyle, PropsForModalComponents } from "../types";
 import { allvariantsForModal } from "../style";
 
 const Modal: React.FC<PropsForModalComponents> = ({ variant, children, show, setShow }): JSX.Element => {
   const [showStyle, setShowStyle] = React.useState<TypeForMasterStyle>(styleForModalComponent_hide);
 
   /* servis meniaci variantu */
-  let variant_Style: CSSProperties = allvariantsForModal.defaultStyleForModal
-  if (variant) {
-    variant_Style = servicesChangeVariantForModal.changeVariantForModal({ variant })
-  };
+  const variant_style = servicesChangeVariantForModal.changeVariantForModal({ variant }) || allvariantsForModal.defaultStyleForModal
 
   /* zatvaranie otvarianie */
   React.useEffect(() => {
@@ -39,16 +34,15 @@ const Modal: React.FC<PropsForModalComponents> = ({ variant, children, show, set
         onClick={handleClickHideModal}
         id="modalScreen"
         style={{
-          ...styleMasterForModalComponent.fullScreen, ...showStyle.fullScreen,
-          ...variant_Style
+          ...allMasterStyleForModal.styleMasterForModalComponent.fullScreen, ...showStyle.fullScreen,
+          ...variant_style
         }}>
       </div>
       <div
         id='modalForm'
         style={{
-          ...styleMasterForModalComponent.formBlock,
+          ...allMasterStyleForModal.styleMasterForModalComponent.formBlock,
           ...showStyle.formBlock,
-          ...variant_Style
         }}>
         {children}
       </div>

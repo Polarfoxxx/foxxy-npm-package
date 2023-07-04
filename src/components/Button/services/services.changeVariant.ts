@@ -3,14 +3,14 @@ import { defStyle } from '../styles/size.style/master.style';
 import { TypeButtonStyle, TypeForStyleFunction, TypeReturnStyleForElement } from '../types';
 import { allVariantStyleForButton, allSizeButtonElement } from '../styles';
 
-const servicesChangeStyleForButtons = {
-    changerStyleForButton
+const servicesChangeVariantForButtons = {
+    changeVariantForButtons
 };
-export default servicesChangeStyleForButtons;
+export default servicesChangeVariantForButtons;
 
 
 
-function changerStyleForButton({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+function changeVariantForButtons({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
     let sizeElement: CSS.Properties = {};
     let variant_style: CSS.Properties = {};

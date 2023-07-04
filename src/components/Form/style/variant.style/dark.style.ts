@@ -22,8 +22,6 @@ import { masterStyleForForm } from "../master.style/master.style";
     ...masterStyleForForm.formInputs,
     backgroundColor: "rgb(227, 244, 244)",
     border: "1px solid rgb(82, 109, 130)",
-    padding: "0 8px",
-    margin: "8px"
   },
 }
 

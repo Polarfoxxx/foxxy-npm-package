@@ -1,7 +1,7 @@
 
 import { CSSProperties } from "react";
-import { TypeForChangeVariantforModal } from "./types";
-import { allvariantsForModal } from "./style";
+import { TypeForChangeVariantforModal } from "../types";
+import { allvariantsForModal } from "../style";
 
 const servicesChangeVariantForModal = {
     changeVariantForModal
