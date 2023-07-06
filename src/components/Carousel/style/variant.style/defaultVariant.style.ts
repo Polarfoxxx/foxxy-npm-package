@@ -1,4 +1,4 @@
-import { TypeVariantForCarouselAndButton } from "../types"
+import { TypeVariantForCarouselAndButton } from "../../types"
 
 export const defaultStyleforCarousel: TypeVariantForCarouselAndButton = {
     varCarousel: {

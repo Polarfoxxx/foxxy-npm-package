@@ -15,10 +15,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-var carouselItem_style_1 = require("../style/carouselItem.style");
+var style_1 = require("../style");
 var CarouselItem = function (_a) {
     var children = _a.children;
-    return (react_1.default.createElement("div", { className: "box", style: __assign({}, carouselItem_style_1.carouselItemStyle) }, children));
+    return (react_1.default.createElement("div", { className: "box", style: __assign({}, style_1.allStyleComponentsCarousel.styleCarouselItem) }, children));
 };
 exports.default = CarouselItem;
 //# sourceMappingURL=CarouselItem.js.map

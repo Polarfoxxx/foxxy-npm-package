@@ -1,25 +1,30 @@
 
 import React from "react";
-import CarouselButons from "./CarouselButtons";
+import CarouselButton from "./CarouselButtons";
 import { PropsForCarouselButtonBox } from "../types";
-import { styleForButtonBox } from "../style/buttonBox.style";
+import { allStyleComponentsCarousel } from "../style";
 
-const CarouselButonsBox: React.FC<PropsForCarouselButtonBox> = ({ onClick, variantFromCarousel }): JSX.Element => {
+const CarouselButtonsBox: React.FC<PropsForCarouselButtonBox> = ({
+    variantFromCarousel,
+    handleClickChangeMovementIndex
+}): JSX.Element => {
+
+ 
 
     return (
-        <div style={{ ...styleForButtonBox }}>
-            <CarouselButons
+        <div style={{ ...allStyleComponentsCarousel.styleCarouselButtonBox }}>
+            <CarouselButton
+                onClick={handleClickChangeMovementIndex}
                 variantFromCarousel={variantFromCarousel}
                 className="left"
-                onClick={onClick}
                 position="<" />
-            <CarouselButons
+            <CarouselButton
+                onClick={handleClickChangeMovementIndex}
                 variantFromCarousel={variantFromCarousel}
                 className="right"
-                onClick={onClick}
                 position=">" />
         </div>
     )
 };
 
-export default CarouselButonsBox
+export default CarouselButtonsBox

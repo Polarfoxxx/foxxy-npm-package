@@ -16,12 +16,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var CarouselButtons_1 = __importDefault(require("./CarouselButtons"));
-var buttonBox_style_1 = require("../style/buttonBox.style");
-var CarouselButonsBox = function (_a) {
-    var onClick = _a.onClick, variantFromCarousel = _a.variantFromCarousel;
-    return (react_1.default.createElement("div", { style: __assign({}, buttonBox_style_1.styleForButtonBox) },
-        react_1.default.createElement(CarouselButtons_1.default, { variantFromCarousel: variantFromCarousel, className: "left", onClick: onClick, position: "<" }),
-        react_1.default.createElement(CarouselButtons_1.default, { variantFromCarousel: variantFromCarousel, className: "right", onClick: onClick, position: ">" })));
+var style_1 = require("../style");
+var CarouselButtonsBox = function (_a) {
+    var variantFromCarousel = _a.variantFromCarousel, handleClickChangeMovementIndex = _a.handleClickChangeMovementIndex;
+    return (react_1.default.createElement("div", { style: __assign({}, style_1.allStyleComponentsCarousel.styleCarouselButtonBox) },
+        react_1.default.createElement(CarouselButtons_1.default, { onClick: handleClickChangeMovementIndex, variantFromCarousel: variantFromCarousel, className: "left", position: "<" }),
+        react_1.default.createElement(CarouselButtons_1.default, { onClick: handleClickChangeMovementIndex, variantFromCarousel: variantFromCarousel, className: "right", position: ">" })));
 };
-exports.default = CarouselButonsBox;
+exports.default = CarouselButtonsBox;
 //# sourceMappingURL=CarouselButtonsBox.js.map

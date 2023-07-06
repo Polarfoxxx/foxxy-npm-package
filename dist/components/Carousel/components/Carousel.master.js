@@ -18,14 +18,13 @@ exports.CarouselComponent = void 0;
 var react_1 = __importDefault(require("react"));
 var CarouselItem_1 = __importDefault(require("./CarouselItem"));
 var CarouselBox_1 = __importDefault(require("./CarouselBox"));
-var CarouselButtonsBox_1 = __importDefault(require("./CarouselButtonsBox"));
-var carouselCompenent_style_1 = require("../style/carouselCompenent.style");
-var services_1 = __importDefault(require("../services"));
+var style_1 = require("../style");
+var services_chancheVariant_1 = __importDefault(require("../services/services.chancheVariant"));
 var Carousel = function (_a) {
     var children = _a.children, variant = _a.variant;
-    /* servis pre zmenu varianty generycka funkcia*/
-    var variantFromCarousel = services_1.default.changeVariantForCarousel({ variant: variant });
-    return (react_1.default.createElement("div", { className: "carousel", style: __assign(__assign({}, carouselCompenent_style_1.carouselComponentStyle), variantFromCarousel.varCarousel) }, react_1.default.Children.map(children, function (child) {
+    /* servis pre zmenu varianty funkcia*/
+    var variantFromCarousel = services_chancheVariant_1.default.changeVariantForCarousel({ variant: variant }) || style_1.allvariantForCarousel.defaultStyleforCarousel;
+    return (react_1.default.createElement("div", { className: "carousel", style: __assign(__assign({}, style_1.allStyleComponentsCarousel.styleCarouselMasterComponent), variantFromCarousel.varCarousel) }, react_1.default.Children.map(children, function (child) {
         return react_1.default.cloneElement(child, { variantFromCarousel: variantFromCarousel });
     })));
 };
@@ -33,6 +32,5 @@ exports.CarouselComponent = {
     Carousel: Carousel,
     CarouselBox: CarouselBox_1.default,
     CarouselItem: CarouselItem_1.default,
-    CarouselButonsBox: CarouselButtonsBox_1.default,
 };
 //# sourceMappingURL=Carousel.master.js.map

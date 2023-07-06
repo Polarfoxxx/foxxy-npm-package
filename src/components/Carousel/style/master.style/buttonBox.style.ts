@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-export const styleForButtonBox: CSSProperties = {
+export const styleCarouselButtonBox: CSSProperties = {
     width: "100%",
     height: "30vw",
     backgroundColor: "transparent",

@@ -1,7 +1,7 @@
 
 import { CSSProperties } from "react";
 
-export const carouselComponentStyle: CSSProperties = {
+export const styleCarouselMasterComponent: CSSProperties = {
     borderRadius: "1vw",
     width: "60vw",
     height: "30vw",

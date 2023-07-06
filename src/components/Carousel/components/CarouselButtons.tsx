@@ -1,23 +1,23 @@
-import * as React from "react";
-import { carouselButtons } from "../style/button.style";
+import React from "react";
+import { allStyleComponentsCarousel } from "../style";
 import { TypeCarouselButtonsIntrinsicAttributes } from "../types";
 
-const CarouselButons: React.FC<TypeCarouselButtonsIntrinsicAttributes> = ({
+const CarouselButton: React.FC<TypeCarouselButtonsIntrinsicAttributes> = ({
     variantFromCarousel,
-    onClick,
     position,
-    className
+    className,
+    ...props
 }): JSX.Element => {
+
 
     return (
         <button
+            {...props}
             className={className}
-            style={{ ...carouselButtons, ...variantFromCarousel?.varButtons }}
-            onClick={onClick}
-        >
+            style={{ ...allStyleComponentsCarousel.styleCarouselButtons, ...variantFromCarousel?.varButtons }}>
             {position}
         </button>
     );
 }
 
-export default CarouselButons
+export default CarouselButton

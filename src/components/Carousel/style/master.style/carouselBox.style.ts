@@ -1,9 +1,9 @@
 
 import { CSSProperties } from "react";
 
-export const carouselBoxStyle: CSSProperties = {
+export const styleCarouselBox: CSSProperties = {
     height: "100%",
-    display: "flex",
+    display: "inline-flex",
     flexDirection: "row",
     position: "relative",
     backgroundColor: "transparent",

@@ -1,7 +1,7 @@
 
 import React from "react";
-import { carouselItemStyle } from "../style/carouselItem.style";
 import { PropsForCarouselItem } from "../types";
+import { allStyleComponentsCarousel } from "../style";
 
 
 const CarouselItem: React.FC<PropsForCarouselItem> = ({ children }): JSX.Element => {
@@ -9,7 +9,7 @@ const CarouselItem: React.FC<PropsForCarouselItem> = ({ children }): JSX.Element
     return (
         <div
             className="box"
-            style={{ ...carouselItemStyle }}>
+            style={{ ...allStyleComponentsCarousel.styleCarouselItem }}>
             {children}
         </div>
     )

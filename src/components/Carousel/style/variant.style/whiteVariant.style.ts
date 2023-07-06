@@ -1,6 +1,6 @@
-import { TypeVariantForCarouselAndButton } from "../types"
+import { TypeVariantForCarouselAndButton } from "../../types"
 
-export const oceanStyleforCarousel: TypeVariantForCarouselAndButton = {
+export const whiteStyleforCarousel: TypeVariantForCarouselAndButton = {
     varCarousel: {
         backgroundColor: ' rgb(43, 43, 255)',
     },

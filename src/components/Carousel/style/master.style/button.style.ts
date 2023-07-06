@@ -1,7 +1,7 @@
 
 import { CSSProperties } from "react";
 
-export const carouselButtons: CSSProperties = {
+export const styleCarouselButtons: CSSProperties = {
   width: '4vw',
   height: '9vw',
   display: 'flex',

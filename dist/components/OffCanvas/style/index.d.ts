@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export declare const allVariantOffCanvas: {
     defaultVariantForOffCanvas: import("../types").TypeForCSS_OffCanvas;
     darkVariantForOffCanvas: import("../types").TypeForCSS_OffCanvas;
