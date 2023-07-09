@@ -1,5 +1,6 @@
 
 import servicesForChangeVariantForOffCanvas from "../services.changeVariant";
+import { allVariantOffCanvas } from "../../style";
 
 describe("test services change variant", () => {
 
@@ -19,23 +20,7 @@ describe("test services change variant", () => {
     test("false variant", () => {
         const variantTwo = "xxx"
         const servicesTwo = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variantTwo })
-        const returningObject = {
-            styleForBox: {
-                backgroundColor: "rgba(161, 170, 180)"
-            },
-            styleForScreen: {
-                backgroundColor: "rgba(139, 190, 231, 0.603)"
-            },
-            styleHeader: {
-                color: "black"
-            },
-            styleBody: {
-                color: "black"
-            },
-            styleButtonBox: {
-
-            },
-        };
+        const returningObject = allVariantOffCanvas.defaultVariantForOffCanvas;
 
         expect(servicesTwo).toEqual(
             expect.objectContaining(returningObject)

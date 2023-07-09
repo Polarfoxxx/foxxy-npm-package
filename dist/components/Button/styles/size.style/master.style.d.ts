@@ -1,2 +1,2 @@
 import CSS from 'csstype';
-export declare const defStyle: CSS.Properties;
+export declare const masterStyle: CSS.Properties;

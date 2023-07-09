@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.whiteStyleforCarousel = void 0;
 exports.whiteStyleforCarousel = {
     varCarousel: {
-        backgroundColor: ' rgb(43, 43, 255)',
+        backgroundColor: 'white',
     },
     varButtons: {
-        backgroundColor: ' rgb(105, 105, 105)',
+        backgroundColor: 'rgb(157, 178, 191)',
         color: 'white'
     }
 };

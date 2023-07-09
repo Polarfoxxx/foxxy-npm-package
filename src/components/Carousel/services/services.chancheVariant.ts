@@ -9,7 +9,6 @@ const servicesChangeVariantForCarousel = {
 export default servicesChangeVariantForCarousel;
 
 
-
 function changeVariantForCarousel({ variant }: TypeFromChangeVariantForCarousel): TypeVariantForCarouselAndButton {
 
     /* podmienka meniaca variantu */
@@ -19,5 +18,9 @@ function changeVariantForCarousel({ variant }: TypeFromChangeVariantForCarousel)
         return allvariantForCarousel.darkStyleforCarousel
     } else if (variant === "default") {
         return allvariantForCarousel.defaultStyleforCarousel
-    } else { allvariantForCarousel.defaultStyleforCarousel }
+    } else if (variant === undefined) {
+        return allvariantForCarousel.defaultStyleforCarousel
+    } else {
+        return allvariantForCarousel.defaultStyleforCarousel
+    }
 }

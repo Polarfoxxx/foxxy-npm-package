@@ -29,8 +29,14 @@ function changeVariantForButtons(_a) {
         else if (variant === "ocean") {
             impStyleName = styles_1.allVariantStyleForButton.oceanStyle;
         }
+        else if (variant === "default") {
+            impStyleName = styles_1.allVariantStyleForButton.defaultStyle;
+        }
+        else {
+            impStyleName = styles_1.allVariantStyleForButton.defaultStyle;
+        }
         ;
-        /* vyber border varianty */
+        /* vyber border varianty a radiusu*/
         variant_style = border ?
             (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
             (round ? impStyleName.radiusStyle : impStyleName.defStyle);
@@ -44,7 +50,7 @@ function changeVariantForButtons(_a) {
     }
     ;
     return ({
-        defStyle: master_style_1.defStyle,
+        masterStyle: master_style_1.masterStyle,
         variant_style: variant_style,
         sizeElement: sizeElement
     });

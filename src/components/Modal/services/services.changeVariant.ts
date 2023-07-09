@@ -18,8 +18,10 @@ function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSPr
         return allvariantsForModal.darkStyleForModal
     } else if (variant === "default") {
         return allvariantsForModal.defaultStyleForModal
+    } else if (variant === undefined) {
+        return allvariantsForModal.defaultStyleForModal
     } else {
-        allvariantsForModal.defaultStyleForModal
+        return allvariantsForModal.defaultStyleForModal
     }
     //#endregion
 };

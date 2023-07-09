@@ -9,5 +9,5 @@ export declare const allVariantStyleForButton: {
 export declare const allSizeButtonElement: {
     largeSize: import("csstype").Properties<0 | (string & {}), string & {}>;
     smallSize: import("csstype").Properties<0 | (string & {}), string & {}>;
-    defStyle: import("csstype").Properties<0 | (string & {}), string & {}>;
+    masterStyle: import("csstype").Properties<0 | (string & {}), string & {}>;
 };

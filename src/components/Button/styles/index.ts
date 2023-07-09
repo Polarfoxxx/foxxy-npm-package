@@ -17,10 +17,10 @@ export const allVariantStyleForButton = {
 
 import { largeSize } from "./size.style/lg.style";
 import { smallSize } from "./size.style/small.style";
-import { defStyle } from "./size.style/master.style";
+import { masterStyle } from "./size.style/master.style";
 
 export const allSizeButtonElement = {
     largeSize,
     smallSize,
-    defStyle
+    masterStyle
 };

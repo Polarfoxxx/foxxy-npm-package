@@ -16,6 +16,8 @@ function changeVariantForOffCanvas({ variant }: TypeVariantForOffCanvas): TypeFo
         return allVariantOffCanvas.darkVariantForOffCanvas
     } else if (variant === "default") {
         return allVariantOffCanvas.defaultVariantForOffCanvas
+    } else if (variant === undefined) {
+        return allVariantOffCanvas.defaultVariantForOffCanvas
     } else {
         return allVariantOffCanvas.defaultVariantForOffCanvas
     };

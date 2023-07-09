@@ -1,6 +1,6 @@
 import CSS from 'csstype';
 
-export const defStyle: CSS.Properties = {
+export const masterStyle: CSS.Properties = {
     cursor: "pointer",
     width: "4.5vw",
     height: "1.5vw",

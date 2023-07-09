@@ -18,32 +18,30 @@ var react_1 = __importDefault(require("react"));
 var style_1 = require("../style");
 var CarouselButtonsBox_1 = __importDefault(require("./CarouselButtonsBox"));
 var CarouselBox = function (_a) {
-    var children = _a.children;
+    var children = _a.children, variantFromCarousel = _a.variantFromCarousel;
     var index_REF = react_1.default.useRef(0);
+    var childrenCount_REF = react_1.default.useRef(0);
     var _b = react_1.default.useState({}), movement_style = _b[0], setMovement_style = _b[1];
     /* pocet obsujucich deti */
-    var childrenCount = react_1.default.Children.count(children);
+    childrenCount_REF.current = react_1.default.Children.count(children);
     /* funkcia na zmenu indexu pohybu */
     var handleClickChangeMovementIndex = function (event) {
         var eventType = event.target;
         var eventTargetName = eventType.className;
         if (eventTargetName === "right") {
-            index_REF.current === (childrenCount - 1) ? index_REF.current = 0 : index_REF.current = index_REF.current + 1;
-            setMovement_style({
-                right: "".concat(index_REF.current * 60, "vw")
-            });
+            index_REF.current = index_REF.current === (childrenCount_REF.current - 1) ? 0 : index_REF.current + 1;
         }
         else {
-            index_REF.current < 1 ? index_REF.current = (childrenCount - 1) : index_REF.current = index_REF.current - 1;
-            setMovement_style({
-                right: "".concat(index_REF.current * 60, "vw")
-            });
+            index_REF.current = index_REF.current < 1 ? (childrenCount_REF.current - 1) : index_REF.current - 1;
         }
         ;
+        setMovement_style({
+            right: "".concat(index_REF.current * 60, "vw")
+        });
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("div", null,
-            react_1.default.createElement(CarouselButtonsBox_1.default, { handleClickChangeMovementIndex: handleClickChangeMovementIndex })),
+            react_1.default.createElement(CarouselButtonsBox_1.default, { variantFromCarousel: variantFromCarousel, handleClickChangeMovementIndex: handleClickChangeMovementIndex })),
         react_1.default.createElement("div", { style: __assign(__assign({}, style_1.allStyleComponentsCarousel.styleCarouselBox), movement_style) }, children)));
 };
 exports.default = CarouselBox;

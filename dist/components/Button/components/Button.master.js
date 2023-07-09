@@ -32,8 +32,8 @@ var ButtonsBox_1 = __importDefault(require("./ButtonsBox"));
 var Button = function (_a) {
     var text = _a.text, variant = _a.variant, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm, props = __rest(_a, ["text", "variant", "border", "round", "lg", "sm"]);
     /* servis pre variantu */
-    var _b = services_changeVariant_1.default.changeVariantForButtons({ variant: variant, border: border, round: round, lg: lg, sm: sm }), variant_style = _b.variant_style, defStyle = _b.defStyle, sizeElement = _b.sizeElement;
-    return (react_1.default.createElement("button", __assign({}, props, { style: __assign(__assign(__assign({}, variant_style), defStyle), sizeElement) }), text));
+    var _b = services_changeVariant_1.default.changeVariantForButtons({ variant: variant, border: border, round: round, lg: lg, sm: sm }), variant_style = _b.variant_style, masterStyle = _b.masterStyle, sizeElement = _b.sizeElement;
+    return (react_1.default.createElement("button", __assign({}, props, { style: __assign(__assign(__assign({}, variant_style), masterStyle), sizeElement) }), text));
 };
 exports.ButtonComponent = {
     Button: Button,

@@ -1,5 +1,5 @@
 import CSS from 'csstype';
-import { defStyle } from '../styles/size.style/master.style';
+import { masterStyle } from '../styles/size.style/master.style';
 import { TypeButtonStyle, TypeForStyleFunction, TypeReturnStyleForElement } from '../types';
 import { allVariantStyleForButton, allSizeButtonElement } from '../styles';
 
@@ -28,9 +28,13 @@ function changeVariantForButtons({ variant, border, round, lg, sm }: TypeForStyl
             impStyleName = allVariantStyleForButton.sunStyle
         } else if (variant === "ocean") {
             impStyleName = allVariantStyleForButton.oceanStyle
+        } else if (variant === "default") {
+            impStyleName = allVariantStyleForButton.defaultStyle
+        } else {
+            impStyleName = allVariantStyleForButton.defaultStyle
         };
 
-        /* vyber border varianty */
+        /* vyber border varianty a radiusu*/
         variant_style = border ?
             (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
             (round ? impStyleName.radiusStyle : impStyleName.defStyle);
@@ -40,12 +44,13 @@ function changeVariantForButtons({ variant, border, round, lg, sm }: TypeForStyl
 
     /*  vyber velkosti */
     if (lg || sm) {
-        sizeElement = lg ? allSizeButtonElement.largeSize : allSizeButtonElement.smallSize;
+        sizeElement = lg ? allSizeButtonElement.largeSize : allSizeButtonElement.smallSize
     };
+
 
     return (
         {
-            defStyle,
+            masterStyle,
             variant_style,
             sizeElement
         }

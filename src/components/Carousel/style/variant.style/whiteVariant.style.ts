@@ -2,10 +2,10 @@ import { TypeVariantForCarouselAndButton } from "../../types"
 
 export const whiteStyleforCarousel: TypeVariantForCarouselAndButton = {
     varCarousel: {
-        backgroundColor: ' rgb(43, 43, 255)',
+        backgroundColor: 'white',
     },
     varButtons: {
-        backgroundColor: ' rgb(105, 105, 105)',
+        backgroundColor: 'rgb(157, 178, 191)',
         color: 'white'
     }
 }

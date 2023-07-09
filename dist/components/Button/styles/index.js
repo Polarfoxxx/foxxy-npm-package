@@ -21,6 +21,6 @@ var master_style_1 = require("./size.style/master.style");
 exports.allSizeButtonElement = {
     largeSize: lg_style_1.largeSize,
     smallSize: small_style_1.smallSize,
-    defStyle: master_style_1.defStyle
+    masterStyle: master_style_1.masterStyle
 };
 //# sourceMappingURL=index.js.map

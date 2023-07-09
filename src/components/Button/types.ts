@@ -18,7 +18,7 @@ export type TypeForStyleFunction = {
 };
 
 export type TypeReturnStyleForElement = {
-  defStyle: {},
+  masterStyle: {},
   variant_style: {},
   sizeElement: {}
 };

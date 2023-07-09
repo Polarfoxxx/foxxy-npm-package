@@ -15,7 +15,7 @@ export type TypeForStyleFunction = {
     sm?: boolean;
 };
 export type TypeReturnStyleForElement = {
-    defStyle: {};
+    masterStyle: {};
     variant_style: {};
     sizeElement: {};
 };

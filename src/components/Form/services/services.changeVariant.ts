@@ -8,28 +8,20 @@ const servicesChangeVariantForFrom = {
 export default servicesChangeVariantForFrom;
 
 
-
 function changerVariantForForm({ variant }: TypeForFormServices): TypeStyleForForm {
-    let formVariantStyle: TypeStyleForForm = { ...allVariantForForm.defaultStyleForForm };
 
     /* funkcia meniaca variantu */
-    (() => {
-        if (variant) {
-            if (variant === "dark") {
-                formVariantStyle = allVariantForForm.darkStyleForForm
-                console.log(allVariantForForm.darkStyleForForm);
-
-            } else if (variant === "funny") {
-                formVariantStyle = allVariantForForm.funnyStyleForForm
-            } else if (variant === "white") {
-                formVariantStyle = allVariantForForm.whiteStyleForForm
-            } else {
-                formVariantStyle = allVariantForForm.defaultStyleForForm
-            }
-        }
-    })();
-
-    return (
-        formVariantStyle
-    )
-}
+    if (variant === "dark") {
+        return allVariantForForm.darkStyleForForm
+    } else if (variant === "funny") {
+        return allVariantForForm.funnyStyleForForm
+    } else if (variant === "white") {
+        return allVariantForForm.whiteStyleForForm
+    } else if (variant === "default") {
+        return allVariantForForm.defaultStyleForForm
+    } else if (variant === undefined) {
+        return allVariantForForm.defaultStyleForForm
+    } else {
+        return allVariantForForm.defaultStyleForForm
+    };
+};

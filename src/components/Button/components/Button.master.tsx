@@ -14,12 +14,13 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 }): JSX.Element => {
 
   /* servis pre variantu */
-  const { variant_style, defStyle, sizeElement } = servicesChangeVariantForButtons.changeVariantForButtons({ variant, border, round, lg, sm })
+  const { variant_style, masterStyle, sizeElement } = servicesChangeVariantForButtons.changeVariantForButtons({ variant, border, round, lg, sm })
+
 
   return (
       <button
         {...props}
-        style={{ ...variant_style, ...defStyle, ...sizeElement }}
+        style={{ ...variant_style, ...masterStyle, ...sizeElement }}
       >
         {text}
       </button>

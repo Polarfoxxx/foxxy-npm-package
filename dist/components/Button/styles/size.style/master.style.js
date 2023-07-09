@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defStyle = void 0;
-exports.defStyle = {
+exports.masterStyle = void 0;
+exports.masterStyle = {
     cursor: "pointer",
     width: "4.5vw",
     height: "1.5vw",

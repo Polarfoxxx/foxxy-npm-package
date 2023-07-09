@@ -2,7 +2,7 @@ import React, { CSSProperties } from "react";
 import { ButtonHTMLAttributes } from "react";
 export type PropsForCarouselComponents = {
     children: JSX.Element | JSX.Element[];
-    variant?: "default" | "ocean" | "dark";
+    variant?: "default" | "white" | "dark";
 };
 export type TypeFromChangeVariantForCarousel = {
     variant?: string;
@@ -17,6 +17,7 @@ export type TypeVariantForCarouselAndButton = {
 };
 export type PropsForCarouselBox = {
     children: JSX.Element | JSX.Element[];
+    variantFromCarousel?: TypeVariantForCarouselAndButton;
 };
 export interface TypeCarouselButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
     variantFromCarousel?: TypeVariantForCarouselAndButton;
