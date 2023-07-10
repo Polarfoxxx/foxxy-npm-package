@@ -1,47 +1,153 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ButtonComponent } from '../components/Button/components/Button.master';
+import { TypeButtonsIntrinsicAttributes } from '../components/Button/types';
 
-import { Button } from './Button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta: Meta<typeof Button> = {
+const meta: Meta<typeof ButtonComponent.Button> = {
   title: 'Example/Button',
-  component: Button,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+  component: ButtonComponent.Button,
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    text: {
+      control: "text",
+    },
+    variant: {
+      control: {
+        type: "select",
+        options: ["variant_default", "variant_white", "variant_dark"]
+      }
+    },  
   },
+args: {
+  text: "click Me",
+  border: false,
+  round: false,
+  lg: false,
+  sm: false
+}
 };
-
 export default meta;
-type Story = StoryObj<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Primary: Story = {
-  // More on args: https://storybook.js.org/docs/react/writing-stories/args
+type Story = StoryObj<typeof ButtonComponent.Button>;
+
+export const variant_default: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: "default"
   },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
 };
 
-export const Secondary: Story = {
+export const variant_white: Story = {
   args: {
-    label: 'Button',
+    variant: "white"
   },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
 };
 
-export const Large: Story = {
+
+export const variant_dark: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    variant: "dark"
   },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
 };
 
-export const Small: Story = {
+
+export const variant_funny: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    variant: "funny"
   },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
+};
+
+export const variant_sun: Story = {
+  args: {
+    variant: "sun"
+  },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
+};
+
+
+export const variant_ocean: Story = {
+  args: {
+    variant: "ocean"
+  },
+  argTypes: {
+    border: {
+      control: "boolean"
+    },
+    round: {
+      control: "boolean"
+    },
+    lg: {
+      control: "boolean"
+    },
+    sm: {
+      control: "boolean"
+    },
+  }
 };

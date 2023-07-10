@@ -17,8 +17,11 @@ function changeVariantForCarousel(_a) {
     else if (variant === "default") {
         return style_1.allvariantForCarousel.defaultStyleforCarousel;
     }
+    else if (variant === undefined) {
+        return style_1.allvariantForCarousel.defaultStyleforCarousel;
+    }
     else {
-        style_1.allvariantForCarousel.defaultStyleforCarousel;
+        return style_1.allvariantForCarousel.defaultStyleforCarousel;
     }
 }
 //# sourceMappingURL=services.chancheVariant.js.map

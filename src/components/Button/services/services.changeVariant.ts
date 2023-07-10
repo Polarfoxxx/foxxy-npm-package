@@ -17,30 +17,28 @@ function changeVariantForButtons({ variant, border, round, lg, sm }: TypeForStyl
     let impStyleName: TypeButtonStyle = allVariantStyleForButton.defaultStyle;
 
     /* farebna varianta */
-    if (variant) {
-        if (variant === "white") {
-            impStyleName = allVariantStyleForButton.whiteStyle
-        } else if (variant === "dark") {
-            impStyleName = allVariantStyleForButton.darkStyle
-        } else if (variant === "funny") {
-            impStyleName = allVariantStyleForButton.funnyStyle
-        } else if (variant === "sun") {
-            impStyleName = allVariantStyleForButton.sunStyle
-        } else if (variant === "ocean") {
-            impStyleName = allVariantStyleForButton.oceanStyle
-        } else if (variant === "default") {
-            impStyleName = allVariantStyleForButton.defaultStyle
-        } else {
-            impStyleName = allVariantStyleForButton.defaultStyle
-        };
+    if (variant === "white") {
+        impStyleName = allVariantStyleForButton.whiteStyle
+    } else if (variant === "dark") {
+        impStyleName = allVariantStyleForButton.darkStyle
+    } else if (variant === "funny") {
+        impStyleName = allVariantStyleForButton.funnyStyle
+    } else if (variant === "sun") {
+        impStyleName = allVariantStyleForButton.sunStyle
+    } else if (variant === "ocean") {
+        impStyleName = allVariantStyleForButton.oceanStyle
+    } else if (variant === "default") {
+        impStyleName = allVariantStyleForButton.defaultStyle
+    } else if (variant === undefined) {
+        impStyleName = allVariantStyleForButton.defaultStyle
+    } else {
+        impStyleName = allVariantStyleForButton.defaultStyle
+    };
 
-        /* vyber border varianty a radiusu*/
-        variant_style = border ?
-            (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
-            (round ? impStyleName.radiusStyle : impStyleName.defStyle);
-
-
-    } else { variant_style = allVariantStyleForButton.defaultStyle.defStyle }
+    /* vyber border varianty a radiusu*/
+    variant_style = border ?
+        (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
+        (round ? impStyleName.radiusStyle : impStyleName.defStyle);
 
     /*  vyber velkosti */
     if (lg || sm) {

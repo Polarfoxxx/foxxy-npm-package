@@ -17,6 +17,9 @@ function changeVariantForOffCanvas(_a) {
     else if (variant === "default") {
         return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
+    else if (variant === undefined) {
+        return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
+    }
     else {
         return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }

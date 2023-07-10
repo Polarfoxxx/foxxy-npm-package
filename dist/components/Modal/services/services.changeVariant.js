@@ -17,8 +17,11 @@ function changeVariantForModal(_a) {
     else if (variant === "default") {
         return style_1.allvariantsForModal.defaultStyleForModal;
     }
+    else if (variant === undefined) {
+        return style_1.allvariantsForModal.defaultStyleForModal;
+    }
     else {
-        style_1.allvariantsForModal.defaultStyleForModal;
+        return style_1.allvariantsForModal.defaultStyleForModal;
     }
     //#endregion
 }
