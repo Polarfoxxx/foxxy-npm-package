@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button/components/Button.master';
-import { TypeButtonsIntrinsicAttributes } from '../components/Button/types';
+
+
 
 const meta: Meta<typeof ButtonComponent.Button> = {
   title: 'Example/Button',
@@ -10,22 +11,19 @@ const meta: Meta<typeof ButtonComponent.Button> = {
     text: {
       control: "text",
     },
-    variant: {
-      control: {
-        type: "select",
-        options: ["variant_default", "variant_white", "variant_dark"]
-      }
-    },  
   },
-args: {
-  text: "click Me",
-  border: false,
-  round: false,
-  lg: false,
-  sm: false
-}
+
+  args: {
+    variant: "default",
+    text: "click Me",
+    border: false,
+    round: false,
+    lg: false,
+    sm: false,
+  }
 };
 export default meta;
+
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
 

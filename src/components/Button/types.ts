@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
+import { CSSProperties } from "react";
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
@@ -18,16 +19,16 @@ export type TypeForStyleFunction = {
 };
 
 export type TypeReturnStyleForElement = {
-  masterStyle: {},
-  variant_style: {},
-  sizeElement: {}
+  masterStyle: CSSProperties,
+  variant_style: CSSProperties,
+  sizeElement: CSSProperties
 };
 
 export type TypeButtonStyle = {
-  defStyle: {},
-  radiusStyle: {},
-  borderStyle: {},
-  borderRadiusStyle: {},
+  defStyle: CSSProperties,
+  radiusStyle: CSSProperties,
+  borderStyle: CSSProperties,
+  borderRadiusStyle: CSSProperties,
 };
 
 export type TypeForButtonBox = {
