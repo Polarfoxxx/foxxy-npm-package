@@ -6,12 +6,13 @@ import { CSSProperties } from "react";
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: JSX.Element | JSX.Element[],
     formName?: string,
-    action?: string,
-    method?: string,
-    onSubmit?: React.FormEventHandler<HTMLFormElement>,
     variant?: "default" | "dark" | "funny" | "white"
 };
 
+export type TypeForFormHeader = {
+    formVariantStyle?: TypeStyleForForm,
+    formName?: string
+};
 
 /* Props pre element inputs */
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {

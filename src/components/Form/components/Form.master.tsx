@@ -8,6 +8,7 @@ import { allVariantForForm } from "../style";
 const Form: React.FC<TypeForIntrinsicAttributes> = ({
     children,
     variant,
+    formName,
     ...props
 }): JSX.Element => {
 
@@ -23,7 +24,7 @@ const Form: React.FC<TypeForIntrinsicAttributes> = ({
                 className="body"
                 style={formVariantStyle.formBody}>
                 {React.Children.map(children, (child: React.ReactElement<any>) => {
-                    return React.cloneElement(child, { formVariantStyle });
+                    return React.cloneElement(child, { formVariantStyle, formName });
                 })}
             </div>
         </form>
