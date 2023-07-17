@@ -10,15 +10,18 @@ const meta: Meta<typeof FormComponent.Form> = {
     tags: ['autodocs'],
     argTypes: {
         formName: {
+            description: "choose the name of the Form",
             control: "text",
+            defaultValue: "me form"
         },
         variant: {
-            control: ""
+            description: "you can choose a color variant for the component Form",
+            options: ['default', 'dark', "funny", "white"],
+            control: { type: 'radio' },
         },
     },
     args: {
-        formName: "me Form",
-
+        formName: "me form"
     }
 };
 export default meta;

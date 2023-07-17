@@ -10,142 +10,73 @@ const meta: Meta<typeof ButtonComponent.Button> = {
   argTypes: {
     text: {
       control: "text",
+      description: "text in button",
     },
+    variant: {
+      description: "you can choose a color variant for the component Form",
+      options: ['default', 'dark', "funny", "white", "sun", "ocean"],
+      control: { type: 'radio' },
+      table: {
+        defaultValue: { summary: "default" }
+      }
+    },
+    border: {
+      control: "boolean",
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      },
+    },
+    round: {
+      control: "boolean",
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      },
+    },
+    lg: {
+      control: "boolean",
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      },
+    },
+    sm: {
+      control: "boolean",
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      },
+    },
+    onClick: {
+      action: "clicked"
+    }
   },
 
+
+
+
   args: {
-    variant: "default",
-    text: "click Me",
+    text: "click me",
     border: false,
     round: false,
     lg: false,
     sm: false,
   }
 };
+
+
+
+
 export default meta;
 
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
 
 export const variant_default: Story = {
-  args: {
-    variant: "default"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
-
-export const variant_white: Story = {
-  args: {
-    variant: "white"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
+  render: (args) => (
+    <ButtonComponent.Button {...args} />
+  )
+}
 
 
-export const variant_dark: Story = {
-  args: {
-    variant: "dark"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
-
-
-export const variant_funny: Story = {
-  args: {
-    variant: "funny"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
-
-export const variant_sun: Story = {
-  args: {
-    variant: "sun"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
-
-
-export const variant_ocean: Story = {
-  args: {
-    variant: "ocean"
-  },
-  argTypes: {
-    border: {
-      control: "boolean"
-    },
-    round: {
-      control: "boolean"
-    },
-    lg: {
-      control: "boolean"
-    },
-    sm: {
-      control: "boolean"
-    },
-  }
-};
