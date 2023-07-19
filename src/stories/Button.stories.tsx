@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button/components/Button.master';
-
+import React from 'react';
 
 
 const meta: Meta<typeof ButtonComponent.Button> = {
@@ -53,9 +53,6 @@ const meta: Meta<typeof ButtonComponent.Button> = {
     }
   },
 
-
-
-
   args: {
     text: "click me",
     border: false,
@@ -65,18 +62,57 @@ const meta: Meta<typeof ButtonComponent.Button> = {
   }
 };
 
-
-
-
 export default meta;
-
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
 
 export const variant_default: Story = {
   render: (args) => (
-    <ButtonComponent.Button {...args} />
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='default' {...args} />
+    </ButtonComponent.ButtonBox>
   )
-}
+};
+
+export const variant_white: Story = {
+  render: (args) => (
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='white' {...args} />
+    </ButtonComponent.ButtonBox>
+  )
+};
+
+export const variant_dark: Story = {
+  render: (args) => (
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='dark' {...args} />
+    </ButtonComponent.ButtonBox>
+  )
+};
+
+export const variant_funny: Story = {
+  render: (args) => (
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='funny' {...args} />
+    </ButtonComponent.ButtonBox>
+  )
+};
+
+export const variant_sun: Story = {
+  render: (args) => (
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='sun' {...args} />
+    </ButtonComponent.ButtonBox>
+  )
+};
+
+export const variant_ocean: Story = {
+  render: (args) => (
+    <ButtonComponent.ButtonBox>
+      <ButtonComponent.Button variant='ocean' {...args} />
+    </ButtonComponent.ButtonBox>
+  )
+};
+
 
 

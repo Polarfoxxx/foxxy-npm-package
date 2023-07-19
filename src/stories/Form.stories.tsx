@@ -4,44 +4,54 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
 
-const meta: Meta<typeof FormComponent.Form> = {
-    title: 'Example/Form',
-    component: FormComponent.Form,
-    tags: ['autodocs'],
-    argTypes: {
-        formName: {
-            description: "choose the name of the Form",
-            control: "text",
-            defaultValue: "me form"
-        },
-        variant: {
-            description: "you can choose a color variant for the component Form",
-            options: ['default', 'dark', "funny", "white"],
-            control: { type: 'radio' },
-        },
+
+const meta: Meta = {
+  title: 'Example/Form',
+  component: FormComponent.Form,
+  tags: ['autodocs'],
+  argTypes: {
+    formName: {
+      description: 'choose the name of the Form',
+      control: 'text',
+      defaultValue: 'me form',
     },
-    args: {
-        formName: "me form"
-    }
-};
-export default meta;
+    variant: {
+      description: 'you can choose a color variant for the component Form',
+      options: ['default', 'dark', 'funny', 'white'],
+      control: { type: 'radio' },
+    },
+    text: {
+        control: "text",
+        description: "text in button",
+      },
+  },
 
-
-type Story = StoryObj<typeof FormComponent.Form>;
-
-export const variant_default: Story = {
-    render: (args) => (
-        <FormComponent.Form {...args}>
-            <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
-            <ButtonComponent.ButtonBox>
-                <ButtonComponent.Button text="click" />
-            </ButtonComponent.ButtonBox>
-        </FormComponent.Form>
-    ),
+  args: {
+    formName: 'me form',
+    text: "click me"
+  },
 };
 
 
+export default meta 
+
+
+
+type Story = StoryObj<any>;
+
+export const variant_dark: Story = {
+  render: (args) => (
+    <FormComponent.Form variant='dark' {...args}>
+      <FormComponent.FormHeader />
+      <FormComponent.FormInputs />
+      <ButtonComponent.ButtonBox>
+        <ButtonComponent.Button   {...args}/>
+      </ButtonComponent.ButtonBox>
+    </FormComponent.Form>
+  ),
+};
+
+/* 
 export const variant_dark: Story = {
     render: (args) => (
         <FormComponent.Form variant='dark' {...args}>
@@ -76,4 +86,4 @@ export const variant_white: Story = {
             </ButtonComponent.ButtonBox>
         </FormComponent.Form>
     ),
-};
+}; */
