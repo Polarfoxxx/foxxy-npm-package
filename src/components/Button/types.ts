@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
-  variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
+  variant_btn?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
   border?: boolean,
   round?: boolean,
   lg?: boolean,
@@ -11,7 +11,7 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
 };
 
 export type TypeForStyleFunction = {
-  variant?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
+  variant_btn?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
   border?: boolean,
   round?: boolean,
   lg?: boolean,

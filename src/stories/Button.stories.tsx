@@ -3,7 +3,7 @@ import { ButtonComponent } from '../components/Button/components/Button.master';
 import React from 'react';
 
 
-const meta: Meta<typeof ButtonComponent.Button> = {
+const meta: Meta = {
   title: 'Example/Button',
   component: ButtonComponent.Button,
   tags: ['autodocs'],
@@ -12,8 +12,8 @@ const meta: Meta<typeof ButtonComponent.Button> = {
       control: "text",
       description: "text in button",
     },
-    variant: {
-      description: "you can choose a color variant for the component Form",
+    variant_btn: {
+      description: "you can choose a color variant for the component button",
       options: ['default', 'dark', "funny", "white", "sun", "ocean"],
       control: { type: 'radio' },
       table: {
@@ -22,12 +22,14 @@ const meta: Meta<typeof ButtonComponent.Button> = {
     },
     border: {
       control: "boolean",
+      description: "border change",
       defaultValue: false,
       table: {
         defaultValue: { summary: false }
       },
     },
     round: {
+      description: "rounded edges",
       control: "boolean",
       defaultValue: false,
       table: {
@@ -35,6 +37,7 @@ const meta: Meta<typeof ButtonComponent.Button> = {
       },
     },
     lg: {
+      description: "bigger",
       control: "boolean",
       defaultValue: false,
       table: {
@@ -42,6 +45,7 @@ const meta: Meta<typeof ButtonComponent.Button> = {
       },
     },
     sm: {
+      description: "small",
       control: "boolean",
       defaultValue: false,
       table: {
@@ -69,7 +73,7 @@ type Story = StoryObj<typeof ButtonComponent.Button>;
 export const variant_default: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='default' {...args} />
+      <ButtonComponent.Button variant_btn='default' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -77,7 +81,7 @@ export const variant_default: Story = {
 export const variant_white: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='white' {...args} />
+      <ButtonComponent.Button variant_btn='white' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -85,7 +89,7 @@ export const variant_white: Story = {
 export const variant_dark: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='dark' {...args} />
+      <ButtonComponent.Button variant_btn='dark' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -93,7 +97,7 @@ export const variant_dark: Story = {
 export const variant_funny: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='funny' {...args} />
+      <ButtonComponent.Button variant_btn='funny' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -101,7 +105,7 @@ export const variant_funny: Story = {
 export const variant_sun: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='sun' {...args} />
+      <ButtonComponent.Button variant_btn='sun' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -109,7 +113,7 @@ export const variant_sun: Story = {
 export const variant_ocean: Story = {
   render: (args) => (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant='ocean' {...args} />
+      <ButtonComponent.Button variant_btn='ocean' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };

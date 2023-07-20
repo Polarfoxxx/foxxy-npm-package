@@ -1,4 +1,4 @@
-import CSS from 'csstype';
+import { CSSProperties } from 'react';
 import { masterStyle } from '../styles/size.style/master.style';
 import { TypeButtonStyle, TypeForStyleFunction, TypeReturnStyleForElement } from '../types';
 import { allVariantStyleForButton, allSizeButtonElement } from '../styles';
@@ -10,26 +10,26 @@ export default servicesChangeVariantForButtons;
 
 
 
-function changeVariantForButtons({ variant, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
+function changeVariantForButtons({ variant_btn, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
     /* deklaracia */
-    let sizeElement: CSS.Properties = {};
-    let variant_style: CSS.Properties = {};
+    let sizeElement: CSSProperties = {};
+    let variant_style: CSSProperties = allVariantStyleForButton.defaultStyle.defStyle;
     let impStyleName: TypeButtonStyle = allVariantStyleForButton.defaultStyle;
 
     /* farebna varianta */
-    if (variant === "white") {
+    if (variant_btn === "white") {
         impStyleName = allVariantStyleForButton.whiteStyle
-    } else if (variant === "dark") {
+    } else if (variant_btn === "dark") {
         impStyleName = allVariantStyleForButton.darkStyle
-    } else if (variant === "funny") {
+    } else if (variant_btn === "funny") {
         impStyleName = allVariantStyleForButton.funnyStyle
-    } else if (variant === "sun") {
+    } else if (variant_btn === "sun") {
         impStyleName = allVariantStyleForButton.sunStyle
-    } else if (variant === "ocean") {
+    } else if (variant_btn === "ocean") {
         impStyleName = allVariantStyleForButton.oceanStyle
-    } else if (variant === "default") {
+    } else if (variant_btn === "default") {
         impStyleName = allVariantStyleForButton.defaultStyle
-    } else if (variant === undefined) {
+    } else if (variant_btn === undefined) {
         impStyleName = allVariantStyleForButton.defaultStyle
     } else {
         impStyleName = allVariantStyleForButton.defaultStyle

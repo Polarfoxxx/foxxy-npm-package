@@ -5,7 +5,7 @@ import ButtonBox from "./ButtonsBox";
 
 const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
   text,
-  variant,
+  variant_btn,
   border,
   round,
   lg,
@@ -14,7 +14,7 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 }): JSX.Element => {
 
   /* servis pre variantu */
-  const { variant_style, masterStyle, sizeElement } = servicesChangeVariantForButtons.changeVariantForButtons({ variant, border, round, lg, sm })
+  const { variant_style, masterStyle, sizeElement } = servicesChangeVariantForButtons.changeVariantForButtons({ variant_btn, border, round, lg, sm })
 
 
   return (

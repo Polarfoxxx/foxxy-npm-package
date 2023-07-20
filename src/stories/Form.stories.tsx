@@ -28,7 +28,6 @@ const meta: Meta = {
             defaultValue: 1,
         },
         ...buttonComponent_stories.argTypes
-
     },
 
     args: {
@@ -41,17 +40,15 @@ const meta: Meta = {
 export default meta
 
 /* spojenie typeOF componentov*/
-
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
 
 export const variant_default: Story = (args) => {
     const { buttonCount = 1, ...rest } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
-        <ButtonComponent.Button {...args} key={`button${index}`} text={`click ${index + 1}`} />
+        <ButtonComponent.Button {...args} key={`button${index}`} />
     ));
-
     return (
-        <FormComponent.Form {...rest}>
+        <FormComponent.Form variant='default' {...rest}>
             <FormComponent.FormHeader />
             <FormComponent.FormInputs />
             <ButtonComponent.ButtonBox>
@@ -61,6 +58,8 @@ export const variant_default: Story = (args) => {
     );
 };
 variant_default.args = {};
+
+
 
 export const variant_dark: Story = {
     render: (args) => (
