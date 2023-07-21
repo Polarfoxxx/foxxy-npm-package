@@ -17,7 +17,7 @@ const meta: Meta = {
             control: 'text',
             defaultValue: 'me form',
         },
-        variant: {
+        variant_form: {
             description: 'you can choose a color variant for the component Form',
             options: ['default', 'dark', 'funny', 'white'],
             control: { type: 'radio' },
@@ -43,12 +43,12 @@ export default meta
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
 
 export const variant_default: Story = (args) => {
-    const { buttonCount = 1, ...rest } = args;
+    const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
         <ButtonComponent.Button {...args} key={`button${index}`} />
     ));
     return (
-        <FormComponent.Form variant='default' {...rest}>
+        <FormComponent.Form variant='default' {...args}>
             <FormComponent.FormHeader />
             <FormComponent.FormInputs />
             <ButtonComponent.ButtonBox>

@@ -6,7 +6,7 @@ import { CSSProperties } from "react";
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: JSX.Element | JSX.Element[],
     formName?: string,
-    variant?: "default" | "dark" | "funny" | "white"
+    variant_form?: "default" | "dark" | "funny" | "white"
 };
 
 export type TypeForFormHeader = {
@@ -37,5 +37,5 @@ export type TypeStyleForForm = {
 
 /* Props pre sevice */
 export type TypeForFormServices = {
-    variant?: "default" | "dark" | "funny" | "white"
+    variant_form?: "default" | "dark" | "funny" | "white"
 }

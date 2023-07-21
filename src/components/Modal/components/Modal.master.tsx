@@ -5,11 +5,11 @@ import { styleForModalComponent_hide, styleForModalComponent_show } from "../sty
 import { TypeForMasterStyle, PropsForModalComponents } from "../types";
 import { allvariantsForModal } from "../style";
 
-const Modal: React.FC<PropsForModalComponents> = ({ variant, children, show, setShow }): JSX.Element => {
+const Modal: React.FC<PropsForModalComponents> = ({ variant_mdl, children, show, setShow }): JSX.Element => {
   const [showStyle, setShowStyle] = React.useState<TypeForMasterStyle>(styleForModalComponent_hide);
 
   /* servis meniaci variantu */
-  const variant_style = servicesChangeVariantForModal.changeVariantForModal({ variant }) || allvariantsForModal.defaultStyleForModal
+  const variant_style = servicesChangeVariantForModal.changeVariantForModal({ variant_mdl }) || allvariantsForModal.defaultStyleForModal
 
   /* zatvaranie otvarianie */
   React.useEffect(() => {

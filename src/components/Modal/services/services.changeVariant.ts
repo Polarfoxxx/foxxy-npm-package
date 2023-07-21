@@ -9,16 +9,16 @@ const servicesChangeVariantForModal = {
 export default servicesChangeVariantForModal;
 
 
-function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSProperties {
+function changeVariantForModal({ variant_mdl }: TypeForChangeVariantforModal): CSSProperties {
 
     //#region block
-    if (variant === "white") {
+    if (variant_mdl === "white") {
         return allvariantsForModal.whiteStyleForModal
-    } else if (variant === "dark") {
+    } else if (variant_mdl === "dark") {
         return allvariantsForModal.darkStyleForModal
-    } else if (variant === "default") {
+    } else if (variant_mdl === "default") {
         return allvariantsForModal.defaultStyleForModal
-    } else if (variant === undefined) {
+    } else if (variant_mdl === undefined) {
         return allvariantsForModal.defaultStyleForModal
     } else {
         return allvariantsForModal.defaultStyleForModal

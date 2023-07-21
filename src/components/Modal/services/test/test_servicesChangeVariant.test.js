@@ -4,9 +4,9 @@ import { allvariantsForModal } from "../../style";
 describe("test modal component", () => {
 
     test("testing undefindent variants", () => {
-        const variant = undefined;
+        const variant_mdl = undefined;
         const CSS_Variant = allvariantsForModal.defaultStyleForModal
-        const services = servicesChangeVariantForModal.changeVariantForModal({ variant });
+        const services = servicesChangeVariantForModal.changeVariantForModal({ variant_mdl });
 
 
         expect(services).toEqual(
@@ -16,9 +16,9 @@ describe("test modal component", () => {
 
 
     test("testing empty text variants", () => {
-        const variant = "";
+        const variant_mdl = "";
         const CSS_Variant = allvariantsForModal.defaultStyleForModal
-        const services = servicesChangeVariantForModal.changeVariantForModal({ variant });
+        const services = servicesChangeVariantForModal.changeVariantForModal({ variant_mdl });
 
 
         expect(services).toEqual(
@@ -27,9 +27,9 @@ describe("test modal component", () => {
     });
 
     test("testing white variants", () => {
-        const variant = "white";
+        const variant_mdl = "white";
         const CSS_Variant = allvariantsForModal.whiteStyleForModal
-        const services = servicesChangeVariantForModal.changeVariantForModal({ variant });
+        const services = servicesChangeVariantForModal.changeVariantForModal({ variant_mdl });
 
 
         expect(services).toEqual(

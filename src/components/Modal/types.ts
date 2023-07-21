@@ -3,13 +3,13 @@ import { CSSProperties } from "react";
 
 
 export type PropsForModalComponents = {
-    variant?: "default" | "white" | "dark",
+    variant_mdl?: "default" | "white" | "dark",
     children: JSX.Element | JSX.Element[],
     show: boolean,
     setShow: React.Dispatch<SetStateAction<boolean>>
 };
 export type TypeForChangeVariantforModal = {
-    variant?: "default" | "white" | "dark",
+    variant_mdl?: "default" | "white" | "dark",
 };
 
 

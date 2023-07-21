@@ -3,17 +3,16 @@ import { TypeForIntrinsicAttributes } from "../types";
 import FormHeader from "./FormHeader";
 import FormInputs from "./FormInputs";
 import servicesChangeVariantForFrom from "../services/services.changeVariant";
-import { allVariantForForm } from "../style";
 
 const Form: React.FC<TypeForIntrinsicAttributes> = ({
     children,
-    variant,
+    variant_form,
     formName,
     ...props
 }): JSX.Element => {
 
     /* servis meniaci varintu formu */
-    const formVariantStyle = servicesChangeVariantForFrom.changerVariantForForm({ variant }) || allVariantForForm.defaultStyleForForm;
+    const formVariantStyle = servicesChangeVariantForFrom.changerVariantForForm({ variant_form });
 
     return (
         <form

@@ -4,7 +4,7 @@ import { allVariantForForm } from "../../style";
 describe("test form component", () => {
 
     test("testing undefindent variants", () => {
-        const variant = undefined;
+        const variant_form = undefined;
         const CSS_Variant = allVariantForForm.defaultStyleForForm;
         const services = servicesChangeVariantForFrom.changerVariantForForm({ variant });
 
@@ -15,7 +15,7 @@ describe("test form component", () => {
 
 
     test("testing white variants", () => {
-        const variant = "white";
+        const variant_form = "white";
         const CSS_Variant = allVariantForForm.whiteStyleForForm;
         const services = servicesChangeVariantForFrom.changerVariantForForm({ variant });
 
