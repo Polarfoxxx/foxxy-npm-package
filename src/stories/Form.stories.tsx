@@ -22,8 +22,21 @@ const meta: Meta = {
             options: ['default', 'dark', 'funny', 'white'],
             control: { type: 'radio' },
         },
+        label: {
+            description: "the name of the input",
+            control: "text",
+        },
+        placeholder: {
+            description: "the placeholder of the input",
+            control: "text",
+        },
         buttonCount: {
-            description: "specify the number of ButtonComponents to render",
+            description: "number of button components",
+            control: { type: 'number', min: 1, max: 5 },
+            defaultValue: 1,
+        },
+        inputCount: {
+            description: "number of input components",
             control: { type: 'number', min: 1, max: 5 },
             defaultValue: 1,
         },
@@ -32,12 +45,13 @@ const meta: Meta = {
 
     args: {
         formName: 'me form',
+        label: "",
+        placeholder: "me input",
         ...buttonComponent_stories.args
     },
 };
 
-
-export default meta
+export default meta;
 
 /* spojenie typeOF componentov*/
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
@@ -47,10 +61,15 @@ export const variant_default: Story = (args) => {
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
         <ButtonComponent.Button {...args} key={`button${index}`} />
     ));
+    const { inputCount = 1 } = args;
+    const inputs = Array.from({ length: inputCount }, (_, index) => (
+        <FormComponent.FormInputs {...args} key={`button${index}`} />
+    ));
+
     return (
         <FormComponent.Form variant='default' {...args}>
             <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
+            {inputs}
             <ButtonComponent.ButtonBox>
                 {buttons}
             </ButtonComponent.ButtonBox>
@@ -63,7 +82,7 @@ variant_default.args = {};
 
 export const variant_dark: Story = {
     render: (args) => (
-        <FormComponent.Form variant='dark' {...args}>
+        <FormComponent.Form variant_form='dark' {...args}>
             <FormComponent.FormHeader />
             <FormComponent.FormInputs />
             <ButtonComponent.ButtonBox>
@@ -75,7 +94,7 @@ export const variant_dark: Story = {
 
 export const variant_funny: Story = {
     render: (args) => (
-        <FormComponent.Form variant='funny' {...args}>
+        <FormComponent.Form variant_form='funny' {...args}>
             <FormComponent.FormHeader />
             <FormComponent.FormInputs />
             <ButtonComponent.ButtonBox>
@@ -87,7 +106,7 @@ export const variant_funny: Story = {
 
 export const variant_white: Story = {
     render: (args) => (
-        <FormComponent.Form variant='white' {...args}>
+        <FormComponent.Form variant_form='white' {...args}>
             <FormComponent.FormHeader />
             <FormComponent.FormInputs />
             <ButtonComponent.ButtonBox>

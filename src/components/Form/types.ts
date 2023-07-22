@@ -25,7 +25,6 @@ export type TypeLabelIntrinsicAttributes = {
     formVariantStyle?: TypeStyleForForm
 };
 
-
 /* typ pre style */
 export type TypeStyleForForm = {
     form: CSSProperties,

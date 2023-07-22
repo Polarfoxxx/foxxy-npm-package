@@ -4,9 +4,9 @@ import { allvariantForCarousel } from "../../style";
 describe("test carousel component", () => {
 
     test("testing undefindent variants", () => {
-        const variant = undefined;
+        const variant_crs = undefined;
         const CSS_Variant = allvariantForCarousel.defaultStyleforCarousel;
-        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant });
+        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant_crs });
 
 
         expect(services).toEqual(
@@ -16,9 +16,9 @@ describe("test carousel component", () => {
 
 
     test("testing empty text variants", () => {
-        const variant = "";
+        const variant_crs = "";
         const CSS_Variant = allvariantForCarousel.defaultStyleforCarousel;
-        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant });
+        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant_crs });
 
 
         expect(services).toEqual(
@@ -27,9 +27,9 @@ describe("test carousel component", () => {
     });
 
     test("testing dark variants", () => {
-        const variant = "dark";
+        const variant_crs = "dark";
         const CSS_Variant = allvariantForCarousel.darkStyleforCarousel;
-        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant });
+        const services = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant_crs });
 
 
         expect(services).toEqual(

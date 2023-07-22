@@ -9,16 +9,16 @@ const servicesChangeVariantForCarousel = {
 export default servicesChangeVariantForCarousel;
 
 
-function changeVariantForCarousel({ variant }: TypeFromChangeVariantForCarousel): TypeVariantForCarouselAndButton {
+function changeVariantForCarousel({ variant_crs }: TypeFromChangeVariantForCarousel): TypeVariantForCarouselAndButton {
 
     /* podmienka meniaca variantu */
-    if (variant === "white") {
+    if (variant_crs === "white") {
         return allvariantForCarousel.whiteStyleforCarousel
-    } else if (variant === "dark") {
+    } else if (variant_crs === "dark") {
         return allvariantForCarousel.darkStyleforCarousel
-    } else if (variant === "default") {
+    } else if (variant_crs === "default") {
         return allvariantForCarousel.defaultStyleforCarousel
-    } else if (variant === undefined) {
+    } else if (variant_crs === undefined) {
         return allvariantForCarousel.defaultStyleforCarousel
     } else {
         return allvariantForCarousel.defaultStyleforCarousel

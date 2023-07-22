@@ -7,10 +7,10 @@ import servicesChangeVariantForCarousel from "../services/services.chancheVarian
 import { PropsForCarouselComponents } from "../types";
 
 
-const Carousel: React.FC<PropsForCarouselComponents> = ({ children, variant }): JSX.Element => {
+const Carousel: React.FC<PropsForCarouselComponents> = ({ children, variant_crs }): JSX.Element => {
 
     /* servis pre zmenu varianty funkcia*/
-    const variantFromCarousel = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant }) || allvariantForCarousel.defaultStyleforCarousel
+    const variantFromCarousel = servicesChangeVariantForCarousel.changeVariantForCarousel({ variant_crs }) || allvariantForCarousel.defaultStyleforCarousel
 
     return (
         <div className="carousel"

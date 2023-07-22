@@ -29,12 +29,16 @@ export const masterStyleForForm: TypeStyleForForm = {
         justifyContent: "center",
         alignItems: "center",
         fontWeight: "bold",
-        fontSize: "20px"
+        fontSize: "23px"
     },
     formLabel: {
-        fontSize: "15px",
-        width: "80%",
-        display: "flex"
+        fontSize: "18px",
+        height: "25px",
+        display: "flex",
+        justifyContent: "start",
+        alignItems: "center",
+        width: "90%",
+        marginTop: "5px"
     },
     formInputs: {
         width: "80%",

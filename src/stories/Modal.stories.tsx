@@ -28,12 +28,12 @@ const meta: Meta = {
         },
         ...buttonComponent_stories.argTypes,
         ...formComponent_stories.argTypes
-
-
     },
     args: {
         show: false,
-        text: "click me"
+        text: "click me",
+        ...buttonComponent_stories.args,
+        ...formComponent_stories.args
     }
 }
 
@@ -41,18 +41,23 @@ export default meta;
 
 
 /* spojenie typeOF componentov*/
-type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
+type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button> | StoryObj<typeof ModalComponent.Modal>;
 
 export const variant_modals: Story = (args) => {
-    const { buttonCount = 1} = args;
+    const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
         <ButtonComponent.Button {...args} key={`button${index}`} />
     ));
+    const { inputCount = 1 } = args;
+    const inputs = Array.from({ length: inputCount }, (_, index) => (
+        <FormComponent.FormInputs {...args} key={`button${index}`} />
+    ));
+
     return (
         <ModalComponent.Modal  {...args}>
             <FormComponent.Form variant='default' {...args}>
                 <FormComponent.FormHeader />
-                <FormComponent.FormInputs />
+                {inputs}
                 <ButtonComponent.ButtonBox>
                     {buttons}
                 </ButtonComponent.ButtonBox>
