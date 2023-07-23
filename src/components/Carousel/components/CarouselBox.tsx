@@ -13,7 +13,7 @@ const CarouselBox: React.FC<PropsForCarouselBox> = ({ children, variantFromCarou
     /* pocet obsujucich deti */
     childrenCount_REF.current = React.Children.count(children)
 
-    /* funkcia na zmenu indexu pohybu */
+    /* funkcia na zmenu indexu pohybu zaroven zmena css pre pohyb*/
     const handleClickChangeMovementIndex = (event: React.MouseEvent<HTMLButtonElement>): void => {
         const eventType = event.target as HTMLElement;
         const eventTargetName = eventType.className;
@@ -23,7 +23,7 @@ const CarouselBox: React.FC<PropsForCarouselBox> = ({ children, variantFromCarou
             index_REF.current = index_REF.current < 1 ? (childrenCount_REF.current - 1) : index_REF.current - 1;
         };
         setMovement_style({
-            right: `${index_REF.current * 60}vw`
+            right: `${index_REF.current * 55}vw`
         });
 
     };

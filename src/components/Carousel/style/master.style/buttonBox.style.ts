@@ -7,5 +7,8 @@ export const styleCarouselButtonBox: CSSProperties = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    position:"absolute"
+    position:"absolute",
+    padding: "0",
+    margin: "0",
+    boxSizing: "border-box"
 }

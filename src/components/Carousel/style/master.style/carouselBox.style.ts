@@ -7,4 +7,7 @@ export const styleCarouselBox: CSSProperties = {
     flexDirection: "row",
     position: "relative",
     backgroundColor: "transparent",
+    padding: "0",
+    margin: "0",
+    boxSizing: "border-box"
 }

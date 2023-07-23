@@ -13,5 +13,6 @@ export const styleCarouselButtons: CSSProperties = {
   cursor: 'pointer',
   fontSize: '30px',
   margin: '10px',
-
+  padding: "0",
+  boxSizing: "border-box"
 }
