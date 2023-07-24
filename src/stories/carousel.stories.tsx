@@ -14,23 +14,10 @@ const meta: Meta = {
             options: ['default', 'dark', 'white'],
             control: { type: 'radio' },
         },
-        argTypes: {
-            carouselItems: {
-                control: {
-                    type: 'array', // Nastavíme, že argument bude pole
-                    control: {
-                    separator: ';', // Oddelovač, ak chcete vkladať viac položiek v jednom texte
-                        type: 'table', // Nastavíme typ kontroléra na "table"
-                    },
-                    defaultValue: [],
-
-                },
-            }
-        }
     },
-    args: {
-        carouselItems: ["sds"]
-    }
+      args: {
+         carouselItems : ["test1", "test2"]
+     } 
 
 }
 export default meta;
@@ -43,12 +30,13 @@ export const variant_carousel: Story = (args) => {
         <CarouselComponent.Carousel {...args}>
             <CarouselComponent.CarouselBox>
                 {
-                    args.carouselItems.map((item, index) => (
+                    Array.isArray(args.carouselItems) && args.carouselItems.map((item, index) => (
                         <CarouselComponent.CarouselItem key={index}>
                             {item}
                         </CarouselComponent.CarouselItem>
                     ))
                 }
+
             </CarouselComponent.CarouselBox>
         </CarouselComponent.Carousel>
     );

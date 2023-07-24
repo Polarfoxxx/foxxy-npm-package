@@ -10,5 +10,5 @@ export const styleCarouselItem: CSSProperties = {
     padding: "0",
     margin: "0",
     boxSizing: "border-box",
-    color: "white"
+    fontSize: "3vw"
 }

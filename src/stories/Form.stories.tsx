@@ -3,9 +3,9 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
-import buttonComponent_stories from "./Button.stories"
-
-
+import buttonComponent_stories from "./Button.stories";
+import { action } from '@storybook/addon-actions';
+import { withActions } from '@storybook/addon-actions/decorator';
 
 const meta: Meta = {
     title: 'Example/Form',
@@ -51,6 +51,11 @@ const meta: Meta = {
     },
 };
 
+const handleClick = (event) => {
+    event.preventDefault()
+
+}
+
 export default meta;
 
 /* spojenie typeOF componentov*/
@@ -59,7 +64,7 @@ type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonCompone
 export const variant_default: Story = (args) => {
     const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
-        <ButtonComponent.Button {...args} key={`button${index}`} />
+        <ButtonComponent.Button onClick={(event) => { event.preventDefault(); action('submit')(event); }} type='submit' {...args} key={`button${index}`} />
     ));
     const { inputCount = 1 } = args;
     const inputs = Array.from({ length: inputCount }, (_, index) => (
@@ -67,7 +72,7 @@ export const variant_default: Story = (args) => {
     ));
 
     return (
-        <FormComponent.Form variant='default' {...args}>
+        <FormComponent.Form onSubmit={(event) => { event.preventDefault(); action('submit')(event); }} variant='default' {...args}>
             <FormComponent.FormHeader />
             {inputs}
             <ButtonComponent.ButtonBox>

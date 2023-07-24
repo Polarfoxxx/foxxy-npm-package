@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button/components/Button.master';
 import React from 'react';
-
+import { action } from '@storybook/addon-actions';
 
 const meta: Meta = {
   title: 'Example/Button',
@@ -52,9 +52,6 @@ const meta: Meta = {
         defaultValue: { summary: false }
       },
     },
-    onClick: {
-      action: "clicked"
-    }
   },
 
   args: {
@@ -70,13 +67,18 @@ export default meta;
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
 
-export const variant_default: Story = {
-  render: (args) => (
+export const variant_default: Story = (args) => {
+  return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button variant_btn='default' {...args} />
+      <ButtonComponent.Button /* onClick={action("click me")} */  type='button' variant_btn='default' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
+variant_default.args = {}
+
+
+
+
 
 export const variant_white: Story = {
   render: (args) => (
