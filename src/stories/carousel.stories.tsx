@@ -17,20 +17,22 @@ const meta: Meta = {
     },
       args: {
          carouselItems : ["test1", "test2"]
-     } 
-
-}
+     }, 
+};
 export default meta;
 
-type Story = StoryObj<typeof CarouselComponent.Carousel>;
 
+
+
+
+type Story = StoryObj<typeof CarouselComponent.Carousel>;
 
 export const variant_carousel: Story = (args) => {
     return (
         <CarouselComponent.Carousel {...args}>
             <CarouselComponent.CarouselBox>
                 {
-                    Array.isArray(args.carouselItems) && args.carouselItems.map((item, index) => (
+                    Array.isArray(args.carouselItems) && args.carouselItems.map((item: any, index: number) => (
                         <CarouselComponent.CarouselItem key={index}>
                             {item}
                         </CarouselComponent.CarouselItem>

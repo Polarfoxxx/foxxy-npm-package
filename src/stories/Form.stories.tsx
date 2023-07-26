@@ -5,7 +5,6 @@ import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
 import buttonComponent_stories from "./Button.stories";
 import { action } from '@storybook/addon-actions';
-import { withActions } from '@storybook/addon-actions/decorator';
 
 const meta: Meta = {
     title: 'Example/Form',
@@ -15,7 +14,7 @@ const meta: Meta = {
         formName: {
             description: 'choose the name of the Form',
             control: 'text',
-            defaultValue: 'me form',
+            defaultValue: 'my form',
         },
         variant_form: {
             description: 'you can choose a color variant for the component Form',
@@ -50,13 +49,14 @@ const meta: Meta = {
         ...buttonComponent_stories.args
     },
 };
-
-const handleClick = (event) => {
-    event.preventDefault()
-
-}
-
 export default meta;
+
+
+/* funkcia pre submit */
+const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    action("submit")()
+};
 
 /* spojenie typeOF componentov*/
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
@@ -64,15 +64,15 @@ type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonCompone
 export const variant_default: Story = (args) => {
     const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
-        <ButtonComponent.Button onClick={(event) => { event.preventDefault(); action('submit')(event); }} type='submit' {...args} key={`button${index}`} />
+        <ButtonComponent.Button onClick={handleClick} type='submit' {...args} key={`button${index}`} />
     ));
     const { inputCount = 1 } = args;
     const inputs = Array.from({ length: inputCount }, (_, index) => (
-        <FormComponent.FormInputs {...args} key={`button${index}`} />
+        <FormComponent.FormInputs {...args} key={`Form${index}`} />
     ));
 
     return (
-        <FormComponent.Form onSubmit={(event) => { event.preventDefault(); action('submit')(event); }} variant='default' {...args}>
+        <FormComponent.Form onSubmit={handleClick} variant='default' {...args}>
             <FormComponent.FormHeader />
             {inputs}
             <ButtonComponent.ButtonBox>
@@ -85,38 +85,43 @@ variant_default.args = {};
 
 
 
-export const variant_dark: Story = {
-    render: (args) => (
+export const variant_dark: Story = (args) => {
+    return (
         <FormComponent.Form variant_form='dark' {...args}>
             <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
+            <FormComponent.FormInputs {...args}/>
             <ButtonComponent.ButtonBox>
                 <ButtonComponent.Button text="click" />
             </ButtonComponent.ButtonBox>
         </FormComponent.Form>
-    ),
+    )
 };
+variant_dark.args = {}
 
-export const variant_funny: Story = {
-    render: (args) => (
+
+export const variant_funny: Story = (args) => {
+    return (
         <FormComponent.Form variant_form='funny' {...args}>
             <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
+            <FormComponent.FormInputs {...args}/>
             <ButtonComponent.ButtonBox>
                 <ButtonComponent.Button text="click" />
             </ButtonComponent.ButtonBox>
         </FormComponent.Form>
-    ),
+    )
 };
+variant_funny.args = {}
 
-export const variant_white: Story = {
-    render: (args) => (
+
+export const variant_white: Story = (args) => {
+    return (
         <FormComponent.Form variant_form='white' {...args}>
             <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
+            <FormComponent.FormInputs {...args}/>
             <ButtonComponent.ButtonBox>
                 <ButtonComponent.Button text="click" />
             </ButtonComponent.ButtonBox>
         </FormComponent.Form>
-    ),
-}; 
+    )
+};
+variant_white.args = {}

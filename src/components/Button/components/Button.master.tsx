@@ -18,12 +18,14 @@ const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
 
 
   return (
-      <button
-        {...props}
-        style={{ ...variant_style, ...masterStyle, ...sizeElement }}
-      >
-        {text}
-      </button>
+    <button
+      {...props}
+      style={{ ...variant_style, ...masterStyle, ...sizeElement }}
+    >
+      {
+        text.length > 9 ? "err" : text
+      }
+    </button>
   );
 };
 
