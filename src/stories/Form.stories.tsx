@@ -3,7 +3,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
-import buttonComponent_stories from "./Button.stories";
+import ButtonComponent_stories from "./Button.stories";
 import { action } from '@storybook/addon-actions';
 
 const meta: Meta = {
@@ -39,14 +39,14 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 5 },
             defaultValue: 1,
         },
-        ...buttonComponent_stories.argTypes
+        ...ButtonComponent_stories.argTypes
     },
 
     args: {
         formName: 'me form',
         label: "",
         placeholder: "me input",
-        ...buttonComponent_stories.args
+        ...ButtonComponent_stories.args
     },
 };
 export default meta;

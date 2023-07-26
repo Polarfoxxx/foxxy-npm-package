@@ -3,6 +3,8 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OffCanvasComponent } from "../components/OffCanvas/components/OffCanvas.master";
 import { ButtonComponent } from "../components/Button/components/Button.master";
 import { action } from '@storybook/addon-actions';
+import ButtonComponent_stories from "./Button.stories";
+import FormComponent_stories from "./Form.stories"
 
 
 const meta: Meta = {
@@ -14,8 +16,20 @@ const meta: Meta = {
             description: 'position OffCanvas',
             options: ['left', 'top', 'right'],
             control: { type: 'radio' },
-        }
+            defaultValue: "top"
+        },
+        show: {
+            description: "show/hide",
+            control: "boolean",
+            defaultValue: false
+        },
+        ...ButtonComponent_stories.argTypes,
+        ...FormComponent_stories.argTypes
 
+    },
+    args: {
+        show: false,
+        position: "top"
     }
 };
 export default meta;

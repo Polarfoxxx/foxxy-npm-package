@@ -19,7 +19,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
 
     /* servis pre meniacu sa variantu */
-    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv });
+    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv }) 
 
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {

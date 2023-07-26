@@ -15,7 +15,7 @@ export const darkVariantForOffCanvas: TypeForCSS_OffCanvas = {
     color: "white"
   },
   styleButtonBox: {
-
+    width: "100%"
   },
 };
 

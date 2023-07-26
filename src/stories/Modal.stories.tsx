@@ -4,8 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ModalComponent } from '../components/Modal/components/Modal.master';
 import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
-import buttonComponent_stories from "./Button.stories";
-import formComponent_stories from "./Form.stories"
+import ButtonComponent_stories from "./Button.stories";
+import FormComponent_stories from "./Form.stories"
 import { action } from '@storybook/addon-actions';
 
 
@@ -27,14 +27,14 @@ const meta: Meta = {
                 defaultValue: { summary: false }
             },
         },
-        ...buttonComponent_stories.argTypes,
-        ...formComponent_stories.argTypes
+        ...ButtonComponent_stories.argTypes,
+        ...FormComponent_stories.argTypes
     },
     args: {
         show: false,
         text: "click me",
-        ...buttonComponent_stories.args,
-        ...formComponent_stories.args
+        ...ButtonComponent_stories.args,
+        ...FormComponent_stories.args
     }
 };
 export default meta;
