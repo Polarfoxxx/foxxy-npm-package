@@ -5,8 +5,8 @@ import { allVariantOffCanvas } from "../../style";
 describe("test services change variant", () => {
 
     test("format style object", () => {
-        const variant = "dark"
-        const services = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant })
+        const variant_offCnv = "dark"
+        const services = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv })
 
         expect(services).toMatchObject({
             styleForBox: expect.any(Object),
@@ -18,8 +18,8 @@ describe("test services change variant", () => {
     });
 
     test("false variant", () => {
-        const variantTwo = "xxx"
-        const servicesTwo = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variantTwo })
+        const variant_offCnv = "xxx"
+        const servicesTwo = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv })
         const returningObject = allVariantOffCanvas.defaultVariantForOffCanvas;
 
         expect(servicesTwo).toEqual(

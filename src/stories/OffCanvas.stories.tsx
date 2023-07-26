@@ -10,7 +10,11 @@ const meta: Meta = {
     component: OffCanvasComponent.OffCanvas,
     tags: ['autodocs'],
     argTypes: {
-
+        position: {
+            description: 'position OffCanvas',
+            options: ['left', 'top', 'right'],
+            control: { type: 'radio' },
+        }
 
     }
 };
@@ -19,19 +23,19 @@ export default meta;
 type Story = StoryObj<typeof OffCanvasComponent.OffCanvas | typeof ButtonComponent.Button>;
 
 export const variant_OffCanvas: Story = (args) => {
-    return(
+    return (
         <OffCanvasComponent.OffCanvas {...args}>
-                <OffCanvasComponent.OffCanvasHeader>
-                        scsc
-                </OffCanvasComponent.OffCanvasHeader>
-                <OffCanvasComponent.OffCanvasBody>
+            <OffCanvasComponent.OffCanvasHeader>
+                scsc
+            </OffCanvasComponent.OffCanvasHeader>
+            <OffCanvasComponent.OffCanvasBody>
                 cscs
-                </OffCanvasComponent.OffCanvasBody>
-                <OffCanvasComponent.OffCanvasButoonBox>
+            </OffCanvasComponent.OffCanvasBody>
+            <OffCanvasComponent.OffCanvasButoonBox>
                 <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='default' {...args} />
-    </ButtonComponent.ButtonBox>
-                    </OffCanvasComponent.OffCanvasButoonBox>
+                    <ButtonComponent.Button onClick={action("click button")} variant_btn='default' {...args} />
+                </ButtonComponent.ButtonBox>
+            </OffCanvasComponent.OffCanvasButoonBox>
         </OffCanvasComponent.OffCanvas>
     );
 };

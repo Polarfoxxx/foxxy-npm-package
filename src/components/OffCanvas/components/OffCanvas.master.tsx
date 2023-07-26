@@ -6,21 +6,20 @@ import { PropsForOffCanvasComponents, TypeForCSS_OffCanvas } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
 import { master_ShowStyleOffCanvas } from "../style";
 import servicePositionOffCanvas from "../services/services.position";
-import { allVariantOffCanvas } from "../style";
 
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
-    variant,
+    variant_offCnv,
     position,
     children,
     show,
     setShow }): JSX.Element => {
 
-    /* deklarace */
+    /* deklaracia */
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
 
     /* servis pre meniacu sa variantu */
-    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant }) || allVariantOffCanvas.defaultVariantForOffCanvas
+    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv });
 
     /* podmienka zatvarania a ovarania offCanvas */
     React.useEffect(() => {

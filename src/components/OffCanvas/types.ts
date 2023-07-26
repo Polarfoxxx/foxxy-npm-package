@@ -3,7 +3,7 @@ import { SetStateAction, CSSProperties } from "react";
 
 export type PropsForOffCanvasComponents = {
     children: JSX.Element | JSX.Element[],
-    variant?: "default" | "white" | "dark",
+    variant_offCnv?: "default" | "white" | "dark",
     position: "left" | "top" | "right",
     show: boolean,
     setShow: React.Dispatch<SetStateAction<boolean>>
@@ -18,7 +18,7 @@ export type TypeForCSS_OffCanvas = {
 };
 
 export type TypeVariantForOffCanvas = {
-    variant?: "default" | "white" | "dark"
+    variant_offCnv?: "default" | "white" | "dark"
 };
 
 export type TypeshowAndHide = {
