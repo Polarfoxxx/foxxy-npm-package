@@ -7,18 +7,20 @@ import { allvariantsForModal } from "../style";
 
 const Modal: React.FC<PropsForModalComponents> = ({ variant_mdl, children, show, setShow }): JSX.Element => {
   const [showStyle, setShowStyle] = React.useState<TypeForMasterStyle>(styleForModalComponent_hide);
+  const [variant_style, setSetVariant_style] = React.useState<React.CSSProperties>(allvariantsForModal.defaultStyleForModal)
 
-  /* servis meniaci variantu */
-  const variant_style = servicesChangeVariantForModal.changeVariantForModal({ variant_mdl }) || allvariantsForModal.defaultStyleForModal
 
   /* zatvaranie otvarianie */
   React.useEffect(() => {
+    /* servis meniaci variantu */
+    setSetVariant_style(servicesChangeVariantForModal.changeVariantForModal({ variant_mdl }))
+
     if (show) {
       setShowStyle(styleForModalComponent_show)
     } else {
       setShowStyle(styleForModalComponent_hide)
     };
-  }, [show]);
+  }, [show, variant_mdl]);
 
   /* zatvaranie modalu */
   const handleClickHideModal = (event: React.MouseEvent<HTMLDivElement>): void => {

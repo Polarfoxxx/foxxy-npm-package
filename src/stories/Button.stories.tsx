@@ -65,7 +65,7 @@ const meta: Meta = {
 export default meta;
 
 
-const handleClick = (e: React.MauseEvent<HTMLButtonElement>) => {
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   action("click button")();
 }
 

@@ -14,7 +14,7 @@ export const defaultVariantForOffCanvas: TypeForCSS_OffCanvas = {
     styleBody: {
         color: "black"
     },
-    styleButtonBox: {
+    styleButton_Box: {
         width: "100%"
     },
 };

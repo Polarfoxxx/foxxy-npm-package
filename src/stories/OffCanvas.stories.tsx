@@ -18,10 +18,25 @@ const meta: Meta = {
             control: { type: 'radio' },
             defaultValue: "top"
         },
+        variant_offCnv:{
+                description: 'you can choose a color variant for the component OffCanvas',
+                options: ['default', 'dark', 'white'],
+                control: { type: 'radio' },
+        },
         show: {
             description: "show/hide",
             control: "boolean",
             defaultValue: false
+        },
+        header_Tittle: {
+            description: "write the name ofCanvas",
+            control: "text",
+            defaultValue: "My titte",
+        },
+        body_content: {
+            description: "write the content ofCanvas",
+            control: "text",
+            defaultValue: "My titte",
         },
         ...ButtonComponent_stories.argTypes,
         ...FormComponent_stories.argTypes
@@ -29,7 +44,12 @@ const meta: Meta = {
     },
     args: {
         show: false,
-        position: "top"
+        position: "top",
+        header_Tittle: "My titte",
+        body_content: "My content",
+        variant_offCnv: "default",
+        ...ButtonComponent_stories.args,
+        ...FormComponent_stories.args
     }
 };
 export default meta;
@@ -37,7 +57,7 @@ export default meta;
 type Story = StoryObj<typeof OffCanvasComponent.OffCanvas | typeof ButtonComponent.Button>;
 
 const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  action("click button")();
+    action("click button")();
 };
 
 
@@ -45,10 +65,10 @@ export const variant_OffCanvas: Story = (args) => {
     return (
         <OffCanvasComponent.OffCanvas {...args}>
             <OffCanvasComponent.OffCanvasHeader>
-                scsc
+                {args.header_Tittle}
             </OffCanvasComponent.OffCanvasHeader>
             <OffCanvasComponent.OffCanvasBody>
-                cscs
+                {args.body_content}
             </OffCanvasComponent.OffCanvasBody>
             <OffCanvasComponent.OffCanvasButoonBox>
                 <ButtonComponent.ButtonBox>

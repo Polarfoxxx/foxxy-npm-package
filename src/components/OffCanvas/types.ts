@@ -14,7 +14,7 @@ export type TypeForCSS_OffCanvas = {
     styleForScreen: CSSProperties,
     styleHeader?: CSSProperties,
     styleBody?: CSSProperties,
-    styleButtonBox?: CSSProperties,
+    styleButton_Box?: CSSProperties,
 };
 
 export type TypeVariantForOffCanvas = {

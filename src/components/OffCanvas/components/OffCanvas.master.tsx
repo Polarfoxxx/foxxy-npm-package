@@ -6,7 +6,7 @@ import { PropsForOffCanvasComponents, TypeForCSS_OffCanvas } from "../types";
 import servicesForChangeVariantForOffCanvas from "../services/services.changeVariant";
 import { master_ShowStyleOffCanvas } from "../style";
 import servicePositionOffCanvas from "../services/services.position";
-
+import { allVariantOffCanvas } from "../style";
 
 const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
     variant_offCnv,
@@ -17,18 +17,20 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
 
     /* deklaracia */
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
+    const [setVariant_style, setSetVariant_style] = React.useState<TypeForCSS_OffCanvas>(allVariantOffCanvas.defaultVariantForOffCanvas)
 
-    /* servis pre meniacu sa variantu */
-    const setVariant_style = servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv }) 
 
-    /* podmienka zatvarania a ovarania offCanvas */
+    /* podmienka zatvarania a ovarania offCanvas a zmena varianty */
     React.useEffect(() => {
+        /* servis pre zmenu varianty */
+        setSetVariant_style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv }));
+
         if (show) {
             setshowCanvas(servicePositionOffCanvas.positionOffCanvas({ position, show }))
         } else {
             setshowCanvas(servicePositionOffCanvas.positionOffCanvas({ position, show }))
         }
-    }, [show]);
+    }, [show, variant_offCnv]);
 
     /* zatvaranie offCanvas */
     const handleClickHideBlock = (event: React.MouseEvent<HTMLElement>) => {
@@ -46,9 +48,11 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
                     ...setVariant_style.styleForBox,
                     ...showCanvas.styleForBox
                 }}>
-                {React.Children.map(children, (child: React.ReactElement<any>) => {
-                    return React.cloneElement(child, { setVariant_style });
-                })}
+                {
+                    React.Children.map(children, (child: React.ReactElement<any>) => {
+                        return React.cloneElement(child, { setVariant_style });
+                    })
+                }
             </div>
             <div
                 id="screenBlok"

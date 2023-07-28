@@ -15,9 +15,9 @@ const meta: Meta = {
             control: { type: 'radio' },
         },
     },
-      args: {
-         carouselItems : ["test1", "test2"]
-     }, 
+    args: {
+        carouselItems: ["test1", "test2"]
+    },
 };
 export default meta;
 
@@ -38,7 +38,6 @@ export const variant_carousel: Story = (args) => {
                         </CarouselComponent.CarouselItem>
                     ))
                 }
-
             </CarouselComponent.CarouselBox>
         </CarouselComponent.Carousel>
     );
