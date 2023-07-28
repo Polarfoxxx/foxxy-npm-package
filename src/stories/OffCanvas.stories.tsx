@@ -36,6 +36,11 @@ export default meta;
 
 type Story = StoryObj<typeof OffCanvasComponent.OffCanvas | typeof ButtonComponent.Button>;
 
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  action("click button")();
+};
+
+
 export const variant_OffCanvas: Story = (args) => {
     return (
         <OffCanvasComponent.OffCanvas {...args}>
@@ -47,7 +52,7 @@ export const variant_OffCanvas: Story = (args) => {
             </OffCanvasComponent.OffCanvasBody>
             <OffCanvasComponent.OffCanvasButoonBox>
                 <ButtonComponent.ButtonBox>
-                    <ButtonComponent.Button onClick={action("click button")} variant_btn='default' {...args} />
+                    <ButtonComponent.Button onClick={handleClick} {...args} />
                 </ButtonComponent.ButtonBox>
             </OffCanvasComponent.OffCanvasButoonBox>
         </OffCanvasComponent.OffCanvas>

@@ -65,14 +65,16 @@ const meta: Meta = {
 export default meta;
 
 
-
+const handleClick = (e: React.MauseEvent<HTMLButtonElement>) => {
+  action("click button")();
+}
 
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
 export const variant_default: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='default' {...args} />
+      <ButtonComponent.Button onClick={handleClick} variant_btn='default' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -82,7 +84,7 @@ variant_default.args = {};
 export const variant_white: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='white' {...args} />
+      <ButtonComponent.Button variant_btn='white' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -92,7 +94,7 @@ variant_white.args = {};
 export const variant_dark: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='dark' {...args} />
+      <ButtonComponent.Button variant_btn='dark' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -101,7 +103,7 @@ variant_dark.args = {};
 export const variant_funny: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='funny' {...args} />
+      <ButtonComponent.Button variant_btn='funny' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -110,7 +112,7 @@ variant_funny.args = {};
 export const variant_sun: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='sun' {...args} />
+      <ButtonComponent.Button variant_btn='sun' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
@@ -119,7 +121,7 @@ variant_sun.args = {};
 export const variant_ocean: Story = (args) => {
   return (
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button onClick={action("click button")} variant_btn='ocean' {...args} />
+      <ButtonComponent.Button variant_btn='ocean' {...args} />
     </ButtonComponent.ButtonBox>
   )
 };
