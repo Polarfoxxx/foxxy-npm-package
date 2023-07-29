@@ -11,7 +11,8 @@ export const styleMasterForOffCanvasComponent_right: TypeForCSS_OffCanvas = {
     minWidth: "300px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "start"
+    justifyContent: "start",
+    boxSizing: "border-box"
   },
   styleForScreen: {
     position: "absolute",
@@ -19,5 +20,6 @@ export const styleMasterForOffCanvasComponent_right: TypeForCSS_OffCanvas = {
     bottom: "0",
     left: "0",
     right: "0",
+    boxSizing: "border-box"
   }
 }

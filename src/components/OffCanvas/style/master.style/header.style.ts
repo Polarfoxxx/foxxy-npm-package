@@ -11,4 +11,6 @@ export const styleForHeaderOffCanvas: CSSProperties = {
     fontSize: "30px",
     fontWeight: "bold",
     borderBottom: "1px solid white",
+    boxSizing: "border-box"
+
 }

@@ -33,15 +33,15 @@ export type TypeForPositionServices = {
 
 export type PropsForOffCanvasHeader = {
     children: string,
-    variant_Style?: TypeForCSS_OffCanvas
+    variant_style?: TypeForCSS_OffCanvas
 };
 
 export type PropsForOffCanvasBody = {
     children: string,
-    variant_Style?: TypeForCSS_OffCanvas
+    variant_style?: TypeForCSS_OffCanvas
 };
 
 export type PropsForOffCanvasButtonBox = {
     children: JSX.Element | JSX.Element[],
-    variant_Style?: TypeForCSS_OffCanvas
+    variant_style?: TypeForCSS_OffCanvas
 };

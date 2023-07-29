@@ -17,13 +17,13 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
 
     /* deklaracia */
     const [showCanvas, setshowCanvas] = React.useState<TypeForCSS_OffCanvas>(master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide);
-    const [setVariant_style, setSetVariant_style] = React.useState<TypeForCSS_OffCanvas>(allVariantOffCanvas.defaultVariantForOffCanvas)
+    const [variant_style, setVariant_style] = React.useState<TypeForCSS_OffCanvas>(allVariantOffCanvas.defaultVariantForOffCanvas)
 
 
     /* podmienka zatvarania a ovarania offCanvas a zmena varianty */
     React.useEffect(() => {
         /* servis pre zmenu varianty */
-        setSetVariant_style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv }));
+        setVariant_style(servicesForChangeVariantForOffCanvas.changeVariantForOffCanvas({ variant_offCnv }));
 
         if (show) {
             setshowCanvas(servicePositionOffCanvas.positionOffCanvas({ position, show }))
@@ -32,7 +32,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
         }
     }, [show, variant_offCnv]);
 
-    /* zatvaranie offCanvas */
+    /* zatvaranie offCanvas mimo form*/
     const handleClickHideBlock = (event: React.MouseEvent<HTMLElement>) => {
         const target = event.target as HTMLDivElement;
         const eventId = target.id;
@@ -45,12 +45,12 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
             <div
                 id="offCanvasBlock"
                 style={{
-                    ...setVariant_style.styleForBox,
+                    ...variant_style.styleForBox,
                     ...showCanvas.styleForBox
                 }}>
                 {
                     React.Children.map(children, (child: React.ReactElement<any>) => {
-                        return React.cloneElement(child, { setVariant_style });
+                        return React.cloneElement(child, { variant_style });
                     })
                 }
             </div>
@@ -58,7 +58,7 @@ const OffCanvas: React.FC<PropsForOffCanvasComponents> = ({
                 id="screenBlok"
                 onClick={handleClickHideBlock}
                 style={{
-                    ...setVariant_style.styleForScreen,
+                    ...variant_style.styleForScreen,
                     ...showCanvas.styleForScreen
                 }} >
             </div>
