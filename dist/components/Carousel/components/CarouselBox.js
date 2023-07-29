@@ -24,7 +24,7 @@ var CarouselBox = function (_a) {
     var _b = react_1.default.useState({}), movement_style = _b[0], setMovement_style = _b[1];
     /* pocet obsujucich deti */
     childrenCount_REF.current = react_1.default.Children.count(children);
-    /* funkcia na zmenu indexu pohybu */
+    /* funkcia na zmenu indexu pohybu zaroven zmena css pre pohyb*/
     var handleClickChangeMovementIndex = function (event) {
         var eventType = event.target;
         var eventTargetName = eventType.className;
@@ -36,7 +36,7 @@ var CarouselBox = function (_a) {
         }
         ;
         setMovement_style({
-            right: "".concat(index_REF.current * 60, "vw")
+            right: "".concat(index_REF.current * 55, "vw")
         });
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,

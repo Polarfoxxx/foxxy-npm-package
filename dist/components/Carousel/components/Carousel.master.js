@@ -21,9 +21,12 @@ var CarouselBox_1 = __importDefault(require("./CarouselBox"));
 var style_1 = require("../style");
 var services_chancheVariant_1 = __importDefault(require("../services/services.chancheVariant"));
 var Carousel = function (_a) {
-    var children = _a.children, variant = _a.variant;
+    var children = _a.children, variant_crs = _a.variant_crs;
+    var _b = react_1.default.useState(style_1.allvariantForCarousel.defaultStyleforCarousel), variantFromCarousel = _b[0], setVariantFromCarousel = _b[1];
     /* servis pre zmenu varianty funkcia*/
-    var variantFromCarousel = services_chancheVariant_1.default.changeVariantForCarousel({ variant: variant }) || style_1.allvariantForCarousel.defaultStyleforCarousel;
+    react_1.default.useEffect(function () {
+        setVariantFromCarousel(services_chancheVariant_1.default.changeVariantForCarousel({ variant_crs: variant_crs }));
+    }, [variant_crs]);
     return (react_1.default.createElement("div", { className: "carousel", style: __assign(__assign({}, style_1.allStyleComponentsCarousel.styleCarouselMasterComponent), variantFromCarousel.varCarousel) }, react_1.default.Children.map(children, function (child) {
         return react_1.default.cloneElement(child, { variantFromCarousel: variantFromCarousel });
     })));

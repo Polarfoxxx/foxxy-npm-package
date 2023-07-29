@@ -7,5 +7,8 @@ exports.styleCarouselBox = {
     flexDirection: "row",
     position: "relative",
     backgroundColor: "transparent",
+    padding: "0",
+    margin: "0",
+    boxSizing: "border-box"
 };
 //# sourceMappingURL=carouselBox.style.js.map

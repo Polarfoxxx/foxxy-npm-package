@@ -14,6 +14,8 @@ exports.defaultVariantForOffCanvas = {
     styleBody: {
         color: "black"
     },
-    styleButtonBox: {},
+    styleButton_Box: {
+        width: "100%"
+    },
 };
 //# sourceMappingURL=defaultVarient.style.js.map

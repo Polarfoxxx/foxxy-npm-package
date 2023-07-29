@@ -32,12 +32,15 @@ var FormInputs_1 = __importDefault(require("./FormInputs"));
 var services_changeVariant_1 = __importDefault(require("../services/services.changeVariant"));
 var style_1 = require("../style");
 var Form = function (_a) {
-    var children = _a.children, variant = _a.variant, props = __rest(_a, ["children", "variant"]);
+    var children = _a.children, variant_form = _a.variant_form, formName = _a.formName, props = __rest(_a, ["children", "variant_form", "formName"]);
+    var _b = react_1.default.useState(style_1.allVariantForForm.defaultStyleForForm), formVariantStyle = _b[0], setFormVariantStyle = _b[1];
     /* servis meniaci varintu formu */
-    var formVariantStyle = services_changeVariant_1.default.changerVariantForForm({ variant: variant }) || style_1.allVariantForForm.defaultStyleForForm;
+    react_1.default.useEffect(function () {
+        setFormVariantStyle(services_changeVariant_1.default.changerVariantForForm({ variant_form: variant_form }));
+    }, [variant_form]);
     return (react_1.default.createElement("form", __assign({ className: "form" }, props, { style: __assign({}, formVariantStyle.form) }),
         react_1.default.createElement("div", { className: "body", style: formVariantStyle.formBody }, react_1.default.Children.map(children, function (child) {
-            return react_1.default.cloneElement(child, { formVariantStyle: formVariantStyle });
+            return react_1.default.cloneElement(child, { formVariantStyle: formVariantStyle, formName: formName });
         }))));
 };
 exports.FormComponent = {

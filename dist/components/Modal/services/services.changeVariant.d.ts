@@ -4,4 +4,4 @@ declare const servicesChangeVariantForModal: {
     changeVariantForModal: typeof changeVariantForModal;
 };
 export default servicesChangeVariantForModal;
-declare function changeVariantForModal({ variant }: TypeForChangeVariantforModal): CSSProperties;
+declare function changeVariantForModal({ variant_mdl }: TypeForChangeVariantforModal): CSSProperties;

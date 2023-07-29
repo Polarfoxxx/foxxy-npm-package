@@ -6,18 +6,18 @@ var servicesChangeVariantForCarousel = {
 };
 exports.default = servicesChangeVariantForCarousel;
 function changeVariantForCarousel(_a) {
-    var variant = _a.variant;
+    var variant_crs = _a.variant_crs;
     /* podmienka meniaca variantu */
-    if (variant === "white") {
+    if (variant_crs === "white") {
         return style_1.allvariantForCarousel.whiteStyleforCarousel;
     }
-    else if (variant === "dark") {
+    else if (variant_crs === "dark") {
         return style_1.allvariantForCarousel.darkStyleforCarousel;
     }
-    else if (variant === "default") {
+    else if (variant_crs === "default") {
         return style_1.allvariantForCarousel.defaultStyleforCarousel;
     }
-    else if (variant === undefined) {
+    else if (variant_crs === undefined) {
         return style_1.allvariantForCarousel.defaultStyleforCarousel;
     }
     else {

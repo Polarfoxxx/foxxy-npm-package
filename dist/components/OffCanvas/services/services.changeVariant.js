@@ -6,18 +6,18 @@ var servicesForChangeVariantForOffCanvas = {
 };
 exports.default = servicesForChangeVariantForOffCanvas;
 function changeVariantForOffCanvas(_a) {
-    var variant = _a.variant;
+    var variant_offCnv = _a.variant_offCnv;
     /* podmienky pre zmeny variant */
-    if (variant === "white") {
+    if (variant_offCnv === "white") {
         return style_1.allVariantOffCanvas.whiteVariantForOffCanvas;
     }
-    else if (variant === "dark") {
+    else if (variant_offCnv === "dark") {
         return style_1.allVariantOffCanvas.darkVariantForOffCanvas;
     }
-    else if (variant === "default") {
+    else if (variant_offCnv === "default") {
         return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
-    else if (variant === undefined) {
+    else if (variant_offCnv === undefined) {
         return style_1.allVariantOffCanvas.defaultVariantForOffCanvas;
     }
     else {

@@ -21,12 +21,13 @@ var style_1 = require("../style");
 var showAndHide_style_1 = require("../style/master.variant/showAndHide.style");
 var style_2 = require("../style");
 var Modal = function (_a) {
-    var variant = _a.variant, children = _a.children, show = _a.show, setShow = _a.setShow;
+    var variant_mdl = _a.variant_mdl, children = _a.children, show = _a.show, setShow = _a.setShow;
     var _b = react_1.default.useState(showAndHide_style_1.styleForModalComponent_hide), showStyle = _b[0], setShowStyle = _b[1];
-    /* servis meniaci variantu */
-    var variant_style = services_changeVariant_1.default.changeVariantForModal({ variant: variant }) || style_2.allvariantsForModal.defaultStyleForModal;
+    var _c = react_1.default.useState(style_2.allvariantsForModal.defaultStyleForModal), variant_style = _c[0], setSetVariant_style = _c[1];
     /* zatvaranie otvarianie */
     react_1.default.useEffect(function () {
+        /* servis meniaci variantu */
+        setSetVariant_style(services_changeVariant_1.default.changeVariantForModal({ variant_mdl: variant_mdl }));
         if (show) {
             setShowStyle(showAndHide_style_1.styleForModalComponent_show);
         }
@@ -34,7 +35,7 @@ var Modal = function (_a) {
             setShowStyle(showAndHide_style_1.styleForModalComponent_hide);
         }
         ;
-    }, [show]);
+    }, [show, variant_mdl]);
     /* zatvaranie modalu */
     var handleClickHideModal = function (event) {
         var target = event.target;

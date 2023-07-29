@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { FormComponent } from '../components/Form/components/Form.master';
 import { ButtonComponent } from '../components/Button/components/Button.master';
 declare const meta: Meta;
 export default meta;
-type Story = StoryObj<typeof ButtonComponent.Button>;
+type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
 export declare const variant_default: Story;
-export declare const variant_white: Story;
 export declare const variant_dark: Story;
 export declare const variant_funny: Story;
-export declare const variant_sun: Story;
-export declare const variant_ocean: Story;
+export declare const variant_white: Story;

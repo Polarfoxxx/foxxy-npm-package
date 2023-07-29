@@ -13,5 +13,7 @@ exports.styleCarouselButtons = {
     cursor: 'pointer',
     fontSize: '30px',
     margin: '10px',
+    padding: "0",
+    boxSizing: "border-box"
 };
 //# sourceMappingURL=button.style.js.map

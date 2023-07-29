@@ -2,10 +2,10 @@ import React, { CSSProperties } from "react";
 import { ButtonHTMLAttributes } from "react";
 export type PropsForCarouselComponents = {
     children: JSX.Element | JSX.Element[];
-    variant?: "default" | "white" | "dark";
+    variant_crs?: "default" | "white" | "dark";
 };
 export type TypeFromChangeVariantForCarousel = {
-    variant?: string;
+    variant_crs?: string;
 };
 export type PropsForCarouselButtonBox = {
     variantFromCarousel?: TypeVariantForCarouselAndButton;

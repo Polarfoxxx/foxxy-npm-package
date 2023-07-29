@@ -6,18 +6,18 @@ var servicesChangeVariantForModal = {
 };
 exports.default = servicesChangeVariantForModal;
 function changeVariantForModal(_a) {
-    var variant = _a.variant;
+    var variant_mdl = _a.variant_mdl;
     //#region block
-    if (variant === "white") {
+    if (variant_mdl === "white") {
         return style_1.allvariantsForModal.whiteStyleForModal;
     }
-    else if (variant === "dark") {
+    else if (variant_mdl === "dark") {
         return style_1.allvariantsForModal.darkStyleForModal;
     }
-    else if (variant === "default") {
+    else if (variant_mdl === "default") {
         return style_1.allvariantsForModal.defaultStyleForModal;
     }
-    else if (variant === undefined) {
+    else if (variant_mdl === undefined) {
         return style_1.allvariantsForModal.defaultStyleForModal;
     }
     else {

@@ -24,31 +24,32 @@ var style_1 = require("../style");
 var services_position_1 = __importDefault(require("../services/services.position"));
 var style_2 = require("../style");
 var OffCanvas = function (_a) {
-    var variant = _a.variant, position = _a.position, children = _a.children, show = _a.show, setShow = _a.setShow;
-    /* deklarace */
+    var variant_offCnv = _a.variant_offCnv, position = _a.position, children = _a.children, show = _a.show, setShow = _a.setShow;
+    /* deklaracia */
     var _b = react_1.default.useState(style_1.master_ShowStyleOffCanvas.showAndHide_Left.styleForOffCanvasComponent_hide), showCanvas = _b[0], setshowCanvas = _b[1];
-    /* servis pre meniacu sa variantu */
-    var setVariant_style = services_changeVariant_1.default.changeVariantForOffCanvas({ variant: variant }) || style_2.allVariantOffCanvas.defaultVariantForOffCanvas;
-    /* podmienka zatvarania a ovarania offCanvas */
+    var _c = react_1.default.useState(style_2.allVariantOffCanvas.defaultVariantForOffCanvas), variant_style = _c[0], setVariant_style = _c[1];
+    /* podmienka zatvarania a ovarania offCanvas a zmena varianty */
     react_1.default.useEffect(function () {
+        /* servis pre zmenu varianty */
+        setVariant_style(services_changeVariant_1.default.changeVariantForOffCanvas({ variant_offCnv: variant_offCnv }));
         if (show) {
             setshowCanvas(services_position_1.default.positionOffCanvas({ position: position, show: show }));
         }
         else {
             setshowCanvas(services_position_1.default.positionOffCanvas({ position: position, show: show }));
         }
-    }, [show]);
-    /* zatvaranie offCanvas */
+    }, [show, variant_offCnv]);
+    /* zatvaranie offCanvas mimo form*/
     var handleClickHideBlock = function (event) {
         var target = event.target;
         var eventId = target.id;
         eventId === "screenBlok" && setShow(false);
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign({}, setVariant_style.styleForBox), showCanvas.styleForBox) }, react_1.default.Children.map(children, function (child) {
-            return react_1.default.cloneElement(child, { setVariant_style: setVariant_style });
+        react_1.default.createElement("div", { id: "offCanvasBlock", style: __assign(__assign({}, variant_style.styleForBox), showCanvas.styleForBox) }, react_1.default.Children.map(children, function (child) {
+            return react_1.default.cloneElement(child, { variant_style: variant_style });
         })),
-        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign({}, setVariant_style.styleForScreen), showCanvas.styleForScreen) })));
+        react_1.default.createElement("div", { id: "screenBlok", onClick: handleClickHideBlock, style: __assign(__assign({}, variant_style.styleForScreen), showCanvas.styleForScreen) })));
 };
 exports.OffCanvasComponent = {
     OffCanvas: OffCanvas,

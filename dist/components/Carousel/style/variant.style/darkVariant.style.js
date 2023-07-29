@@ -4,6 +4,7 @@ exports.darkStyleforCarousel = void 0;
 exports.darkStyleforCarousel = {
     varCarousel: {
         backgroundColor: 'rgb(63, 63, 63)',
+        color: "white",
     },
     varButtons: {
         backgroundColor: 'black',

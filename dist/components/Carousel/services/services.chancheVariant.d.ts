@@ -4,4 +4,4 @@ declare const servicesChangeVariantForCarousel: {
     changeVariantForCarousel: typeof changeVariantForCarousel;
 };
 export default servicesChangeVariantForCarousel;
-declare function changeVariantForCarousel({ variant }: TypeFromChangeVariantForCarousel): TypeVariantForCarouselAndButton;
+declare function changeVariantForCarousel({ variant_crs }: TypeFromChangeVariantForCarousel): TypeVariantForCarouselAndButton;

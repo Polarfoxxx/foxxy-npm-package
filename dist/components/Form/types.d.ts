@@ -4,11 +4,12 @@ import { CSSProperties } from "react";
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: JSX.Element | JSX.Element[];
     formName?: string;
-    action?: string;
-    method?: string;
-    onSubmit?: React.FormEventHandler<HTMLFormElement>;
-    variant?: "default" | "dark" | "funny" | "white";
+    variant_form?: "default" | "dark" | "funny" | "white";
 }
+export type TypeForFormHeader = {
+    formVariantStyle?: TypeStyleForForm;
+    formName?: string;
+};
 export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
     formVariantStyle?: TypeStyleForForm;
 }
@@ -24,5 +25,5 @@ export type TypeStyleForForm = {
     formInputs: CSSProperties;
 };
 export type TypeForFormServices = {
-    variant?: "default" | "dark" | "funny" | "white";
+    variant_form?: "default" | "dark" | "funny" | "white";
 };

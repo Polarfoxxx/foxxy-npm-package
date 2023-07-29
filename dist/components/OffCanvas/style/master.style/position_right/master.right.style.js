@@ -12,7 +12,8 @@ exports.styleMasterForOffCanvasComponent_right = {
         minWidth: "300px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "start"
+        justifyContent: "start",
+        boxSizing: "border-box"
     },
     styleForScreen: {
         position: "absolute",
@@ -20,6 +21,7 @@ exports.styleMasterForOffCanvasComponent_right = {
         bottom: "0",
         left: "0",
         right: "0",
+        boxSizing: "border-box"
     }
 };
 //# sourceMappingURL=master.right.style.js.map

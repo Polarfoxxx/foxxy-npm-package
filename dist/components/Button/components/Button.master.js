@@ -30,10 +30,17 @@ var react_1 = __importDefault(require("react"));
 var services_changeVariant_1 = __importDefault(require("../services/services.changeVariant"));
 var ButtonsBox_1 = __importDefault(require("./ButtonsBox"));
 var Button = function (_a) {
-    var text = _a.text, variant = _a.variant, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm, props = __rest(_a, ["text", "variant", "border", "round", "lg", "sm"]);
+    var text = _a.text, variant_btn = _a.variant_btn, border = _a.border, round = _a.round, lg = _a.lg, sm = _a.sm, props = __rest(_a, ["text", "variant_btn", "border", "round", "lg", "sm"]);
+    var _b = react_1.default.useState({
+        variant_style: {},
+        masterStyle: {},
+        sizeElement: {}
+    }), varian_Button = _b[0], setVarian_Button = _b[1];
     /* servis pre variantu */
-    var _b = services_changeVariant_1.default.changeVariantForButtons({ variant: variant, border: border, round: round, lg: lg, sm: sm }), variant_style = _b.variant_style, masterStyle = _b.masterStyle, sizeElement = _b.sizeElement;
-    return (react_1.default.createElement("button", __assign({}, props, { style: __assign(__assign(__assign({}, variant_style), masterStyle), sizeElement) }), text));
+    react_1.default.useEffect(function () {
+        setVarian_Button(services_changeVariant_1.default.changeVariantForButtons({ variant_btn: variant_btn, border: border, round: round, lg: lg, sm: sm }));
+    }, [variant_btn, border, round, lg, sm,]);
+    return (react_1.default.createElement("button", __assign({}, props, { style: __assign(__assign(__assign({}, varian_Button.masterStyle), varian_Button.variant_style), varian_Button.sizeElement) }), text.length > 9 ? "err" : text));
 };
 exports.ButtonComponent = {
     Button: Button,

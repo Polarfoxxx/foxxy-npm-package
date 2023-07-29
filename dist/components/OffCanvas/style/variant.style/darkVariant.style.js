@@ -14,6 +14,8 @@ exports.darkVariantForOffCanvas = {
     styleBody: {
         color: "white"
     },
-    styleButtonBox: {},
+    styleButton_Box: {
+        width: "100%"
+    },
 };
 //# sourceMappingURL=darkVariant.style.js.map

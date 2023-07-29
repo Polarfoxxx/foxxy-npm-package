@@ -8,6 +8,9 @@ exports.styleCarouselButtonBox = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    position: "absolute"
+    position: "absolute",
+    padding: "0",
+    margin: "0",
+    boxSizing: "border-box"
 };
 //# sourceMappingURL=buttonBox.style.js.map

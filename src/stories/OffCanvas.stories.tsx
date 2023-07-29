@@ -55,7 +55,6 @@ type Story = StoryObj<typeof OffCanvasComponent.OffCanvas | typeof ButtonCompone
 export const variant_OffCanvas: Story = (args) => {
     
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        args.setShow(false);
         action("click button setShow FALSE")();
     };
     return (
