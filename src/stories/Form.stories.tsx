@@ -51,17 +51,15 @@ const meta: Meta = {
 };
 export default meta;
 
-
-/* funkcia pre submit */
-const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    action("submit")()
-};
-
 /* spojenie typeOF componentov*/
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button>;
 
 export const variant_default: Story = (args) => {
+    /* funkcia pre submit */
+const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    action("submit")()
+};
     const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
         <ButtonComponent.Button onClick={handleClick} type='submit' {...args} key={`button${index}`} />

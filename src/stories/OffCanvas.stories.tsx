@@ -4,8 +4,6 @@ import { OffCanvasComponent } from "../components/OffCanvas/components/OffCanvas
 import { ButtonComponent } from "../components/Button/components/Button.master";
 import { action } from '@storybook/addon-actions';
 import ButtonComponent_stories from "./Button.stories";
-import FormComponent_stories from "./Form.stories"
-
 
 const meta: Meta = {
     title: 'Example/OffCanvas',
@@ -18,10 +16,10 @@ const meta: Meta = {
             control: { type: 'radio' },
             defaultValue: "left"
         },
-        variant_offCnv:{
-                description: 'you can choose a color variant for the component OffCanvas',
-                options: ['default', 'dark', 'white'],
-                control: { type: 'radio' },
+        variant_offCnv: {
+            description: 'you can choose a color variant for the component OffCanvas',
+            options: ['default', 'dark', 'white'],
+            control: { type: 'radio' },
         },
         show: {
             description: "show/hide",
@@ -54,12 +52,12 @@ export default meta;
 
 type Story = StoryObj<typeof OffCanvasComponent.OffCanvas | typeof ButtonComponent.Button>;
 
-const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    action("click button setShow FALSE")();
-};
-
-
 export const variant_OffCanvas: Story = (args) => {
+    
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        args.setShow(false);
+        action("click button setShow FALSE")();
+    };
     return (
         <OffCanvasComponent.OffCanvas {...args}>
             <OffCanvasComponent.OffCanvasHeader>

@@ -40,15 +40,15 @@ const meta: Meta = {
 export default meta;
 
 
-const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    action("submit")()
-};
-
 /* spojenie typeOF componentov*/
 type Story = StoryObj<typeof FormComponent.Form> | StoryObj<typeof ButtonComponent.Button> | StoryObj<typeof ModalComponent.Modal>;
 
 export const variant_modals: Story = (args) => {
+    
+const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    action("submit")()
+};
     const { buttonCount = 1 } = args;
     const buttons = Array.from({ length: buttonCount }, (_, index) => (
         <ButtonComponent.Button onClick={handleClick} {...args} key={`button${index}`} />

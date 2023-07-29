@@ -65,13 +65,12 @@ const meta: Meta = {
 export default meta;
 
 
-const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  action("click button")();
-}
-
-
 type Story = StoryObj<typeof ButtonComponent.Button>;
+
 export const variant_default: Story = (args) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    action("click button")();
+  };  
   return (
     <ButtonComponent.ButtonBox>
       <ButtonComponent.Button onClick={handleClick} variant_btn='default' {...args} />
