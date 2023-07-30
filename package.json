@@ -1,8 +1,11 @@
 {
   "name": "foxxy-package",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "foxxy-package",
   "main": "dist/",
+  "author": "foxxy",
+  "license": "MIT",
+  "email": "suchovsky.michal@gmail.com",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "build": "del dist && tsc",
@@ -14,8 +17,7 @@
     "react",
     "react-toggle-button"
   ],
-  "author": "foxxy",
-  "license": "ISC",
+ 
   "devDependencies": {
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
