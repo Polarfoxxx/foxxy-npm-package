@@ -1,30 +1,22 @@
-/* 
 {
     "compilerOptions": {
-        "target": "ES2015",
-        "jsx": "react",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "allowJs": true,
-        "declaration": true, // required to generate corresponding *.d.ts files
-        "outDir": "./dist",
-        "esModuleInterop": true,
-        "strict": true,
-        "noImplicitAny": true,
+      "outDir": "./dist",
+      "module": "commonjs",
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "sourceMap": true,
+      "jsx": "react",
+      "declaration": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "allowJs": true, // Povol zpracování JavaScriptových souborů
     },
-    "exclude": [
-        "node_modules",
-    ],
-    "hooks": [
-        "copy-files" // copies *.module.css files to the dist folder
-    ],
-    "include": [
-        "src/",
-    ]
-}
- */
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+  }
+  
 
-{
+/* {
     "compilerOptions": {
       "outDir": "./dist",
       "module": "commonjs",
@@ -39,4 +31,4 @@
     "include": ["src"],
     "exclude": ["node_modules", "dist"]
   }
-  
+   */
