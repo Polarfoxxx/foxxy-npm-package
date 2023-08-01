@@ -11,9 +11,7 @@ Priklad pouzitia:
 ButtonComponent:
 
   <ButtonComponent.ButtonBox>
-
     <ButtonComponent.Button {Argumenty}/>
-
   </ButtonComponent.ButtonBox>
 
 Argumenty:
@@ -25,7 +23,5 @@ Argumenty:
 -border?: nepovinny argument, boolean,
 
 -round?: nepovinny argument, boolean,
-
 -lg?: nepovinny argument, boolean,
-
 -sm?: nepovinny argument, boolean,
