@@ -16,13 +16,20 @@ __ButtonComponent:__
 ```
 
 ### Argumenty:  
-<span style="color: red;">text:</span> __povinny argument!__ pre nazov Button. __Max 9 znakov!__  
-<span style="color: red;">variant_btn:</span> nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny, sun, ocean__  
-<span style="color: red;">border:</span> nepovinny argument, vzhlad s borderom, typ: __boolean__  
-<span style="color: red;">round:</span> nepovinny argument,vzhlad s radiusom, typ: __boolean__  
-<span style="color: red;">lg:</span> nepovinny argument,velkost komponentu, typ: __boolean__  
-<span style="color: red;">sm:</span> nepovinny argument,velkost komponentu, typ: __boolean__  
-<span style="color: red;">vsetky arg. obsahujuci element Button:</span> 
+
+| Argument       | Povinný   | Typ                          | Popis                                              |
+|----------------|-----------|------------------------------|----------------------------------------------------|
+| text           | áno       | string                       | Názov Button. Max. 9 znakov!                        |
+| variant_btn    | nie       | string                       | default, white, dark, funny, sun, ocean |
+| border         | nie       | boolean                      | Určuje, či má Button mať okraj                      |
+| round          | nie       | boolean                      | Určuje, či má Button mať zaoblené rohy              |
+| lg             | nie       | boolean                      | Určuje, či má Button byť veľký (large)              |
+| sm             | nie       | boolean                      | Určuje, či má Button byť malý (small)               |
+
+__+ vsetky arg. obsahujuci element Button pre udalosti:__   
+
+
+## Popis
 
 --- 
 __FormComponent:__  
@@ -39,7 +46,7 @@ __FormComponent:__
 ```
 
 ### Argumenty:  
-<span style="color: red;">formName:</span> __povinny argument!__ pre nazov Formulara.  
-<span style="color: red;">variant_form:</span> nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny__  
+__formName: povinny argument!__ pre nazov Formulara.  
+__variant_form:__ nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny__  
  
 --- 
