@@ -4,6 +4,13 @@ __Názov balíčka:__ foxxy-package
 __Popis:__ Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja  
 __Inštalácia:__ [npm i foxxy-package](https://www.npmjs.com/package/foxxy-package?activeTab=readme)  
 __Licencia:__ MIT  
+__Email:__ suchovsky.michal@gmail.com
+__Obsahujuce komponenty__:
+[ButtonComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Button)
+[FormComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Form)
+[ModalComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Modal)
+[OffCanvasComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/OffCanvas)
+[CarouselComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Carousel)
 
 ---
 ## Priklad pouzitia:   
@@ -29,8 +36,6 @@ __ButtonComponent:__
 __+ vsetky arg. obsahujuci element Button pre udalosti:__   
 
 
-## Popis
-
 --- 
 __FormComponent:__  
   
@@ -46,7 +51,51 @@ __FormComponent:__
 ```
 
 ### Argumenty:  
-__formName: povinny argument!__ pre nazov Formulara.  
-__variant_form:__ nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny__  
+
+| Argument       | Povinný   | Typ                          | Popis                                              |
+|----------------|-----------|------------------------------|----------------------------------------------------|
+| formName       | áno       | string                       | Názov Formulára.                                  |
+| variant_form   | nie       | string                       | default, white, dark, funny | 
+ 
+--- 
+__ModalComponent:__  
+  
+```
+function App() {
+  const [show, setShow] = React.useState(false);
+  const handleClick = (): void => {
+    setShow(!show);
+  };
+  return (
+    <div className="App">
+      <div>
+        <ButtonComponent.ButtonBox>
+          <ButtonComponent.Button text='click me' onClick={handleClick} variant_btn='dark'/>
+        </ButtonComponent.ButtonBox>
+      </div>
+  
+        <ModalComponent.Modal show={show} setShow={setShow} {Argumenty}>
+          <FormComponent.Form formName='me forrm'>
+            <FormComponent.FormHeader  />
+            <FormComponent.FormInputs />
+          <ButtonComponent.ButtonBox>
+            <ButtonComponent.Button round variant_btn='dark' text='exit' onClick={handleClick} />
+          </ButtonComponent.ButtonBox>
+          </FormComponent.Form>
+        </ModalComponent.Modal>
+    </div>
+  )
+}
+export default App
+
+```
+
+### Argumenty:  
+
+| Argument       | Povinný   | Typ                          | Popis                                              |
+|----------------|-----------|------------------------------|----------------------------------------------------|
+| variant_mdl    | nie       | string                       | default, white, dark                               |
+| show           | áno       | boolean                      | show={show}                                        | 
+| setShow        | áno       | SetStateAction               | setShow={setShow}                                  | 
  
 --- 
