@@ -1,4 +1,4 @@
-#Foxxy-package
+# Foxxy-package
 ---
 __Názov balíčka:__ foxxy-package  
 __Popis:__ Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja  
@@ -6,7 +6,7 @@ __Inštalácia:__ [npm i foxxy-package](https://www.npmjs.com/package/foxxy-pack
 __Licencia:__ MIT  
 
 ---
-##Priklad pouzitia:   
+## Priklad pouzitia:   
 __ButtonComponent:__  
 
 ```
@@ -15,14 +15,14 @@ __ButtonComponent:__
   </ButtonComponent.ButtonBox>
 ```
 
-###Argumenty:  
-__text: povinny argument!__ pre nazov Button. __Max 9 znakov!__  
-__variant_btn:__ nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny, sun, ocean__  
-__border:__ nepovinny argument, vzhlad s borderom, typ: __boolean__  
-__round:__ nepovinny argument,vzhlad s radiusom, typ: __boolean__  
-__lg:__ nepovinny argument,velkost komponentu, typ: __boolean__  
-__sm:__ nepovinny argument,velkost komponentu, typ: __boolean__  
-__vsetky arg. obsahujuci element Button:__   
+### Argumenty:  
+<span style="color: red;">text:</span> __povinny argument!__ pre nazov Button. __Max 9 znakov!__  
+<span style="color: red;">variant_btn:</span> nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny, sun, ocean__  
+<span style="color: red;">border:</span> nepovinny argument, vzhlad s borderom, typ: __boolean__  
+<span style="color: red;">round:</span> nepovinny argument,vzhlad s radiusom, typ: __boolean__  
+<span style="color: red;">lg:</span> nepovinny argument,velkost komponentu, typ: __boolean__  
+<span style="color: red;">sm:</span> nepovinny argument,velkost komponentu, typ: __boolean__  
+<span style="color: red;">vsetky arg. obsahujuci element Button:</span> 
 
 --- 
 __FormComponent:__  
@@ -38,8 +38,8 @@ __FormComponent:__
   </FormComponent.Form> 
 ```
 
-###Argumenty:
-__formName: povinny argument!__ pre nazov Formulara.  
-__variant_form:__ nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny__  
+### Argumenty:  
+<span style="color: red;">formName:</span> __povinny argument!__ pre nazov Formulara.  
+<span style="color: red;">variant_form:</span> nepovinny argument, vatianta vzhladu, typ: __default, white, dark, funny__  
  
 --- 
