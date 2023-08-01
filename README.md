@@ -1,17 +1,14 @@
 Názov balíčka: "foxxy-package"
-
 Popis: Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja.. 
-
 Inštalácia: npm i foxxy-package
-
 Licencia: MIT
-
 Priklad pouzitia:   
---------------------------------ButtonComponent----------------------------------
+
+ButtonComponent:
   <ButtonComponent.ButtonBox>
-    <ButtonComponent.Button text='click me' onClick={handleClick} variant_btn='dark'/>
+    <ButtonComponent.Button {Argumenty}/>
   </ButtonComponent.ButtonBox>
-----------------Argumenty-----------------
+Argumenty:
 -text: povinny argument! pre nazov tlacidla Button. Max 9 znakov!
 -variant_btn?: nepovinny argument, vatianta vzhladu:  "default" | "white" | "dark" | "funny" | "sun" | "ocean",
 -border?: nepovinny argument, boolean,
