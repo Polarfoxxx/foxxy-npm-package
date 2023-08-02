@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var FormHeader = function (_a) {
-    var formName = _a.formName, formVariantStyle = _a.formVariantStyle;
-    return (react_1.default.createElement("div", { className: "FormHeader", style: formVariantStyle === null || formVariantStyle === void 0 ? void 0 : formVariantStyle.formHeader }, formName));
+    var form_name = _a.form_name, formVariantStyle = _a.formVariantStyle;
+    return (react_1.default.createElement("div", { className: "FormHeader", style: formVariantStyle === null || formVariantStyle === void 0 ? void 0 : formVariantStyle.formHeader }, form_name));
 };
 exports.default = FormHeader;
 //# sourceMappingURL=FormHeader.js.map

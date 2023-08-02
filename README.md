@@ -22,11 +22,11 @@ __ButtonComponent:__
 
 ```
   <ButtonComponent.ButtonBox>
-    <ButtonComponent.Button {Argumenty}/>
+    <ButtonComponent.Button text="click" {Argumenty}/>
   </ButtonComponent.ButtonBox>
 ```
 
-### Argumenty:  
+## Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -48,16 +48,16 @@ __FormComponent:__
 ```
   
 ```
-  <FormComponent.Form {Argumenty}>
-    <FormComponent.FormHeader formName='dsadsad'/>
-    <FormComponent.FormInputs label='my input'/>
+  <FormComponent.Form form_name='my Form' {Argumenty}>
+    <FormComponent.FormHeader />
+    <FormComponent.FormInputs {Argument pre input}/>
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button text="click me"/>
+      <ButtonComponent.Button text="click me" {Argumenty pre ButtonComponent}/>
     </ButtonComponent.ButtonBox>
   </FormComponent.Form> 
 ```
 
-### Argumenty:  
+## Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -90,16 +90,16 @@ function App() {
     <div className="App">
       <div>
         <ButtonComponent.ButtonBox>
-          <ButtonComponent.Button text='click me' onClick={handleClick} variant_btn='dark'/>
+          <ButtonComponent.Button text='click me' onClick={handleClick} {Argumenty pre ButtonComponent}/>
         </ButtonComponent.ButtonBox>
       </div>
   
         <ModalComponent.Modal show={show} setShow={setShow} {Argumenty}>
-          <FormComponent.Form formName='me forrm'>
+          <FormComponent.Form formName='me form' {Argumenty pre FormComponent} >
             <FormComponent.FormHeader />
-            <FormComponent.FormInputs />
+            <FormComponent.FormInputs {Argumenty pre FormComponent (input)}/>
           <ButtonComponent.ButtonBox>
-            <ButtonComponent.Button round variant_btn='dark' text='exit' onClick={handleClick} />
+            <ButtonComponent.Button text='exit' onClick={handleClick} {Argumenty pre ButtonComponent}/>
           </ButtonComponent.ButtonBox>
           </FormComponent.Form>
         </ModalComponent.Modal>
@@ -110,7 +110,7 @@ export default App
 
 ```
 
-### Argumenty:  
+## Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -135,21 +135,20 @@ function App() {
     <div className="App">
     <div>
       <ButtonComponent.ButtonBox>
-        <ButtonComponent.Button text='click me' onClick={handleClick}>
-        </ButtonComponent.Button>
+        <ButtonComponent.Button text='click me' onClick={handleClick} {Argumenty pre ButtonComponent}/>
       </ButtonComponent.ButtonBox>
     </div>
 
-    <OffCanvasComponent.OffCanvas {Argumenty}>
-      <OffCanvasComponent.OffCanvasHeader >
+    <OffCanvasComponent.OffCanvas show={show} setShow={setShow} position="left" {Argumenty}>
+      <OffCanvasComponent.OffCanvasHeader>
         {textHeader}
-      </OffCanvasComponent.OffCanvasHeader >
-      <OffCanvasComponent.OffCanvasBody >
+      </OffCanvasComponent.OffCanvasHeader>
+      <OffCanvasComponent.OffCanvasBody>
         {textBody}
-      </OffCanvasComponent.OffCanvasBody >
+      </OffCanvasComponent.OffCanvasBody>
       <OffCanvasComponent.OffCanvasButoonBox>
         <ButtonComponent.ButtonBox>
-          <ButtonComponent.Button round variant='dark' text='exit' onClick={handleClick} />
+          <ButtonComponent.Button text='exit' onClick={handleClick} {Argumenty pre ButtonComponent}/>
         </ButtonComponent.ButtonBox>
       </OffCanvasComponent.OffCanvasButoonBox>
     </OffCanvasComponent.OffCanvas>
@@ -160,7 +159,7 @@ export default App
 
 ```
 
-### Argumenty:  
+## Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -196,7 +195,7 @@ import { CarouselComponent } from 'foxxy-package';
       </CarouselComponent.Carousel>
 ```
 
-### Argumenty:  
+## Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
