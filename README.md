@@ -40,7 +40,7 @@ __+ vsetky arg. obsahujuci element Button pre udalosti:__
 __FormComponent:__  
   
 ```
- <FormComponent.Form {Argumenty}>
+  <FormComponent.Form {Argumenty}>
     <FormComponent.FormHeader formName='dsadsad'/>
     <FormComponent.FormInputs label='my input'/>
     <FormComponent.FormInputs label='my input'/>
@@ -141,7 +141,7 @@ export default App
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
 | variant_offCnv | nie       | string                       | default, white, dark                               |
-| position       | nie       | string                       | left, top, right                                   |
+| position       | áno       | string                       | left, top, right                                   |
 | show           | áno       | boolean                      | show={show}                                        | 
 | setShow        | áno       | SetStateAction               | setShow={setShow}                                  | 
 
@@ -174,7 +174,7 @@ __CarouselsComponent:__
 |----------------|-----------|------------------------------|----------------------------------------------------|
 | variant_crs    | nie       | string                       | default, white, dark                               |
 
-__Prodavanie poloziek do CarouselComponentu:__  
+__Pridavanie poloziek do CarouselComponentu:__  
 ```
   <CarouselComponent.CarouselItem>
       {elemnet type: string}
