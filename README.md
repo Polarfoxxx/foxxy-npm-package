@@ -2,7 +2,7 @@
 ---
 __Názov balíčka:__ foxxy-package  
 __Popis:__ Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja  
-__Inštalácia:__ [npm i foxxy-package](https://www.npmjs.com/package/foxxy-package?activeTab=readme)  
+__Inštalácia:__ [npm i foxxy-package]()  
 __Licencia:__ MIT  
 __Email:__ suchovsky.michal@gmail.com  
 __Obsahujuce komponenty__:
@@ -17,6 +17,10 @@ __Obsahujuce komponenty__:
 __ButtonComponent:__  
 
 ```
+  import { ButtonComponent } from 'foxxy-package';  
+```
+
+```
   <ButtonComponent.ButtonBox>
     <ButtonComponent.Button {Argumenty}/>
   </ButtonComponent.ButtonBox>
@@ -26,26 +30,29 @@ __ButtonComponent:__
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
-| text           | áno       | string                       | Názov Button. Max. 9 znakov!                        |
-| variant_btn    | nie       | string                       | default, white, dark, funny, sun, ocean |
-| border         | nie       | boolean                      | Určuje, či má Button mať okraj                      |
-| round          | nie       | boolean                      | Určuje, či má Button mať zaoblené rohy              |
-| lg             | nie       | boolean                      | Určuje, či má Button byť veľký (large)              |
-| sm             | nie       | boolean                      | Určuje, či má Button byť malý (small)               |
+| text           | áno       | string                       | Názov Button. Max. 9 znakov!                       |
+| variant_btn    | nie       | string                       | default, white, dark, funny, sun, ocean            |
+| border         | nie       | boolean                      | Určuje, či má Button mať okraj                     |
+| round          | nie       | boolean                      | Určuje, či má Button mať zaoblené rohy             |
+| lg             | nie       | boolean                      | Určuje, či má Button byť veľký (large)             |
+| sm             | nie       | boolean                      | Určuje, či má Button byť malý (small)              |
 
 __+ vsetky arg. obsahujuci element Button pre udalosti:__   
 
 
 --- 
 __FormComponent:__  
+
+```
+  import { ButtonComponent, FormComponent } from 'foxxy-package';  
+```
   
 ```
   <FormComponent.Form {Argumenty}>
     <FormComponent.FormHeader formName='dsadsad'/>
     <FormComponent.FormInputs label='my input'/>
-    <FormComponent.FormInputs label='my input'/>
     <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button  />
+      <ButtonComponent.Button text="click me"/>
     </ButtonComponent.ButtonBox>
   </FormComponent.Form> 
 ```
@@ -54,12 +61,25 @@ __FormComponent:__
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
-| formName       | áno       | string                       | Názov Formulára.                                  |
-| variant_form   | nie       | string                       | default, white, dark, funny | 
- 
+| form_name      | áno       | string                       | Názov Formulára.                                   |
+| variant_form   | nie       | string                       | default, white, dark, funny                        | 
+
+__+ vsetky arg. obsahujuci element Form pre udalosti:__   
+
+__Argument pre inputs ( <FormComponent.FormInputs label='my input' /> )__
+
+| Argument       | Povinný   | Typ                           | Popis                                             |
+|----------------|-----------|------------------------------ |---------------------------------------------------|
+| label          | nie       | string                        | Label pre input                                   |
+
 --- 
+
 __ModalComponent:__  
   
+```
+import { ButtonComponent, FormComponent, ModalComponent } from 'foxxy-package';  
+```
+
 ```
 function App() {
   const [show, setShow] = React.useState(false);
@@ -101,6 +121,10 @@ export default App
 --- 
 __OffCanvasComponent:__  
   
+```
+import { ButtonComponent, OffCanvasComponent } from 'foxxy-package';  
+```
+
 ```
 function App() {
   const [show, setShow] = React.useState(false);
@@ -151,6 +175,10 @@ __textBody:__ Vlozte content OffCanvas,  __typ: string__
 --- 
 
 __CarouselsComponent:__  
+
+```
+import { CarouselComponent } from 'foxxy-package';  
+```  
   
 ```
       <CarouselComponent.Carousel {Argumenty}>

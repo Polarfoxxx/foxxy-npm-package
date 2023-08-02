@@ -9,7 +9,7 @@
       "declaration": true,
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
-      "allowJs": true, // Povol zpracování JavaScriptových souborů
+      "allowJs": true,
     },
     "include": ["src"],
     "exclude": ["node_modules", "dist"]

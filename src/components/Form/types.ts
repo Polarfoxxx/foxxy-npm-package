@@ -5,13 +5,13 @@ import { CSSProperties } from "react";
 /* Props pre element form */
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: JSX.Element | JSX.Element[],
-    formName?: string,
+    form_name?: string,
     variant_form?: "default" | "dark" | "funny" | "white"
 };
 
 export type TypeForFormHeader = {
     formVariantStyle?: TypeStyleForForm,
-    formName?: string
+    form_name?: string
 };
 
 /* Props pre element inputs */
