@@ -5,7 +5,7 @@ __Popis:__ Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja
 __Inštalácia:__ [npm i foxxy-package]()  
 __Licencia:__ MIT  
 __Email:__ suchovsky.michal@gmail.com  
-__Obsahujuce komponenty__:
+__Obsahujuce komponenty__:  
 [ButtonComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Button)  
 [FormComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Form)  
 [ModalComponent](https://github.com/Polarfoxxx/foxxy-npm-package/tree/npm_public/src/components/Modal)  
@@ -14,7 +14,7 @@ __Obsahujuce komponenty__:
 
 ---
 ## Priklad pouzitia:   
-__ButtonComponent:__  
+### ButtonComponent:
 
 ```
   import { ButtonComponent } from 'foxxy-package';  
@@ -26,7 +26,7 @@ __ButtonComponent:__
   </ButtonComponent.ButtonBox>
 ```
 
-## Argumenty:  
+#### Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -41,7 +41,7 @@ __+ vsetky arg. obsahujuci element Button pre udalosti:__
 
 
 --- 
-__FormComponent:__  
+### FormComponent:  
 
 ```
   import { ButtonComponent, FormComponent } from 'foxxy-package';  
@@ -57,7 +57,7 @@ __FormComponent:__
   </FormComponent.Form> 
 ```
 
-## Argumenty:  
+#### Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -74,7 +74,7 @@ __Argument pre inputs ( <FormComponent.FormInputs label='my input' /> )__
 
 --- 
 
-__ModalComponent:__  
+### ModalComponent:  
   
 ```
 import { ButtonComponent, FormComponent, ModalComponent } from 'foxxy-package';  
@@ -110,7 +110,7 @@ export default App
 
 ```
 
-## Argumenty:  
+#### Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -119,7 +119,7 @@ export default App
 | setShow        | áno       | SetStateAction               | setShow={setShow}                                  | 
  
 --- 
-__OffCanvasComponent:__  
+### OffCanvasComponent:  
   
 ```
 import { ButtonComponent, OffCanvasComponent } from 'foxxy-package';  
@@ -133,25 +133,25 @@ function App() {
   };
   return (
     <div className="App">
-    <div>
-      <ButtonComponent.ButtonBox>
-        <ButtonComponent.Button text='click me' onClick={handleClick} {Argumenty pre ButtonComponent}/>
-      </ButtonComponent.ButtonBox>
-    </div>
-
-    <OffCanvasComponent.OffCanvas show={show} setShow={setShow} position="left" {Argumenty}>
-      <OffCanvasComponent.OffCanvasHeader>
-        {textHeader}
-      </OffCanvasComponent.OffCanvasHeader>
-      <OffCanvasComponent.OffCanvasBody>
-        {textBody}
-      </OffCanvasComponent.OffCanvasBody>
-      <OffCanvasComponent.OffCanvasButoonBox>
+      <div>
         <ButtonComponent.ButtonBox>
-          <ButtonComponent.Button text='exit' onClick={handleClick} {Argumenty pre ButtonComponent}/>
+          <ButtonComponent.Button text='click me' onClick={handleClick} {Argumenty pre ButtonComponent}/>
         </ButtonComponent.ButtonBox>
-      </OffCanvasComponent.OffCanvasButoonBox>
-    </OffCanvasComponent.OffCanvas>
+      </div>
+
+      <OffCanvasComponent.OffCanvas show={show} setShow={setShow} position="left" {Argumenty}>
+        <OffCanvasComponent.OffCanvasHeader>
+          {textHeader}
+        </OffCanvasComponent.OffCanvasHeader>
+        <OffCanvasComponent.OffCanvasBody>
+          {textBody}
+        </OffCanvasComponent.OffCanvasBody>
+        <OffCanvasComponent.OffCanvasButoonBox>
+          <ButtonComponent.ButtonBox>
+            <ButtonComponent.Button text='exit' onClick={handleClick} {Argumenty pre ButtonComponent}/>
+          </ButtonComponent.ButtonBox>
+        </OffCanvasComponent.OffCanvasButoonBox>
+      </OffCanvasComponent.OffCanvas>
     </div>
   )
 }
@@ -159,7 +159,7 @@ export default App
 
 ```
 
-## Argumenty:  
+#### Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
@@ -173,7 +173,7 @@ __textBody:__ Vlozte content OffCanvas,  __typ: string__
  
 --- 
 
-__CarouselsComponent:__  
+### CarouselsComponent:  
 
 ```
 import { CarouselComponent } from 'foxxy-package';  
@@ -195,7 +195,7 @@ import { CarouselComponent } from 'foxxy-package';
       </CarouselComponent.Carousel>
 ```
 
-## Argumenty:  
+#### Argumenty:  
 
 | Argument       | Povinný   | Typ                          | Popis                                              |
 |----------------|-----------|------------------------------|----------------------------------------------------|
