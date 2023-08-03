@@ -9,9 +9,12 @@ export const styleMasterButtonDrop: React.CSSProperties = {
     backgroundSize: "100%",
     backgroundRepeat: "no-repeat",
     cursor: "pointer",
-    fontSize: "18px",
+    fontSize: "17px",
     border: "none",
-    overflow: "visible", // Povolíme prekračovanie hraníc
+    overflow: "visible",
     color: "white",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    textDecoration: "none",
+    wordWrap: "break-word",
+    boxSizing: "border-box",
 }

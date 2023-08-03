@@ -5,6 +5,7 @@ import { masterStyle_forDropdown } from "../style";
 import DropdownBox from "./DropdownBox";
 import DropdownItems from "./DropdownItems";
 import servicesShowAndHide_dropdown from "../services/showAndHide.services";
+import servicesChangeVariantDropDwn from "../services/changeVariant.services";
 
 const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_drop, drop_text }): JSX.Element => {
     const [show, setShow] = React.useState<boolean>(true);
@@ -22,6 +23,10 @@ const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_dro
         box.style.backgroundColor = mouseOver ? "#625E61" : "#767175";
     };
 
+    /* servis pre variantu */
+    React.useEffect(() => {
+        servicesChangeVariantDropDwn.changeVariantDropDwn<PropsForDropdownComponents["variant_drop"]>(variant_drop)
+    }, [variant_drop])
 
     return (
         <div
@@ -35,7 +40,9 @@ const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_dro
                 onMouseOut={(e) => boxMouseHandler(e, false)}
                 onClick={handleClick}
                 style={masterStyle_forDropdown.styleMasterButtonDrop}>
-                {drop_text}
+                {
+                    drop_text.length > 18 ? "err" : drop_text
+                }
             </button>
             {React.Children.map(children, (child: React.ReactElement<any>) => {
                 return React.cloneElement(child, {});

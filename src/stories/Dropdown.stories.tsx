@@ -8,6 +8,9 @@ const meta: Meta = {
     component: DropdownComponent.Dropdopwn,
     tags: ['autodocs'],
     argTypes: {
+        variant_drop: {
+            control: { type: 'text' },
+        },
         drop_text: {
             control: { type: 'text' },
         },
@@ -16,6 +19,7 @@ const meta: Meta = {
         }
     },
     args: {
+        variant_drop: "default",
         drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate"
     }

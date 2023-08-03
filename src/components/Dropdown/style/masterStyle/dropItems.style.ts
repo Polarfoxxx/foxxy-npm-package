@@ -11,6 +11,3 @@ export const styleMasterDropItem: React.CSSProperties = {
     boxSizing: "border-box"
 };
 
-export const styleDropItem_Hover: React.CSSProperties = {
-    backgroundColor: "red"
-}
