@@ -19,7 +19,7 @@ const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_dro
     /* hover effect */
     const boxMouseHandler = (e: React.MouseEvent<HTMLButtonElement>, mouseOver: boolean): void => {
         const box = e.currentTarget as HTMLButtonElement;
-        box.style.backgroundColor = mouseOver ? "red" : "transparent";
+        box.style.backgroundColor = mouseOver ? "red" : "#D4D2D4";
     };
 
 

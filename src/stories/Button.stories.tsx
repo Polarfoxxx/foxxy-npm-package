@@ -4,7 +4,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 const meta: Meta = {
-  title: 'Example/Button',
+  title: 'FoxxyComp/Button',
   component: ButtonComponent.Button,
   tags: ['autodocs'],
   argTypes: {

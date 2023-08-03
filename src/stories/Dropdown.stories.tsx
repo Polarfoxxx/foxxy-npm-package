@@ -4,7 +4,7 @@ import { DropdownComponent } from "../components/Dropdown/components/Dropdown.ma
 
 
 const meta: Meta = {
-    title: 'Example/DropdownComponent',
+    title: 'FoxxyComp/Dropdown',
     component: DropdownComponent.Dropdopwn,
     tags: ['autodocs'],
     argTypes: {

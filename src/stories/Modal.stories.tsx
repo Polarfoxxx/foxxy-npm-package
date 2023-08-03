@@ -10,7 +10,7 @@ import { action } from '@storybook/addon-actions';
 
 
 const meta: Meta = {
-    title: 'Example/Modal',
+    title: 'FoxxyComp/Modal',
     component: ModalComponent.Modal,
     tags: ['autodocs'],
     argTypes: {

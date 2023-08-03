@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import ButtonComponent_stories from "./Button.stories";
 
 const meta: Meta = {
-    title: 'Example/OffCanvas',
+    title: 'FoxxyComp/OffCanvas',
     component: OffCanvasComponent.OffCanvas,
     tags: ['autodocs'],
     argTypes: {

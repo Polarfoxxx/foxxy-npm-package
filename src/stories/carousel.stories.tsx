@@ -5,7 +5,7 @@ import { CarouselComponent } from "../components/Carousel/components/Carousel.ma
 
 
 const meta: Meta = {
-    title: 'Example/Carousel',
+    title: 'FoxxyComp/Carousel',
     component: CarouselComponent.Carousel,
     tags: ['autodocs'],
     argTypes: {
