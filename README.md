@@ -2,7 +2,7 @@
 ---
 __Názov balíčka:__ foxxy-package  
 __Popis:__ Tento balicek obsahuje zakladne komponenty pre vyvoj frontend vyvoja  
-__Inštalácia:__ [npm i foxxy-package]()  
+__Inštalácia:__ [npm i foxxy-package](https://www.npmjs.com/package/foxxy-package)  
 __Licencia:__ MIT  
 __Email:__ suchovsky.michal@gmail.com  
 __Obsahujuce komponenty__:  

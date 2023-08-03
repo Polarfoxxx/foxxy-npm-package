@@ -21,5 +21,5 @@ export type TypeShowAndHide_dropdown = {
 };
 
 export type TypeServicesShowAndHide = {
-    show_hide: boolean
+    show: boolean
 }
