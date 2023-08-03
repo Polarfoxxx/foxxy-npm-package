@@ -8,7 +8,7 @@ const DropdownItems: React.FC<PropsForDropItemsComponents> = ({ href, name_link 
     /* hover effect */
     const boxMouseHandler = (e: React.MouseEvent<HTMLDivElement>, mouseOver: boolean): void => {
         const box = e.currentTarget as HTMLDivElement;
-        box.style.backgroundColor = mouseOver ? "red" : "transparent";
+        box.style.backgroundColor = mouseOver ? "#E9E8E9" : "transparent";
     };
 
 
