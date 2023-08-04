@@ -9,7 +9,9 @@ const meta: Meta = {
     tags: ['autodocs'],
     argTypes: {
         variant_drop: {
-            control: { type: 'text' },
+            description: 'you can choose a color variant for the component Dropdown',
+            options: ['default', 'dark', 'white'],
+            control: { type: 'radio' },
         },
         drop_text: {
             control: { type: 'text' },
@@ -33,13 +35,11 @@ export const variant_Dropdown: Story = (args) => {
     return (
         <DropdownComponent.Dropdopwn {...args}>
             <DropdownComponent.DropdownBox>
-                <DropdownComponent.DropdownItems name_link="dddfdgsdsddfdssssssdddsfdfdfsdddd" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkTwo" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args}/>
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args}/>
+                <DropdownComponent.DropdownItems name_link="dddfdgsdsddfdssssssdddsfdfdfsdddd" {...args} />
+                <DropdownComponent.DropdownItems name_link="linkTwo" {...args} />
+                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
+                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
+                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
             </DropdownComponent.DropdownBox>
         </DropdownComponent.Dropdopwn>
     );

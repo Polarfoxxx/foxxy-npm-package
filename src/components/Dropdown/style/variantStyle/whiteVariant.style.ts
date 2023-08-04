@@ -1,11 +1,11 @@
 import { TypeVariantStyle_dropdown } from "../../types"
 
-export const dropDefVariant: TypeVariantStyle_dropdown = {
+export const dropWhiteVariant: TypeVariantStyle_dropdown = {
     dropBtn: {
-        color: "white"
+
     },
     dropdown: {
-        backgroundColor: "rgb(196, 223, 223)"
+        backgroundColor: "rgb(248, 246, 244)"
     },
     dropBox: {
         color: "black"

@@ -14,7 +14,11 @@ export const masterStyle_forDropdown = {
 
 
 import { dropDefVariant } from "./variantStyle/defaultVariant.style";
+import { dropDarkVariant } from "./variantStyle/darkVariant.style";
+import { dropWhiteVariant } from "./variantStyle/whiteVariant.style";
 
 export const variantStyle_forDropdown = {
-    dropDefVariant
+    dropDefVariant,
+    dropDarkVariant,
+    dropWhiteVariant
 }

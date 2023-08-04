@@ -13,11 +13,11 @@ function changeVariantDropDwn<T>(props: T): TypeVariantStyle_dropdown {
 
     if (variant_drop === "default") {
         return variantStyle_forDropdown.dropDefVariant
-    }else if(variant_drop === "white") {
-return
-    }else if(variant_drop === "dark") {
-return
-    }else if(variant_drop === undefined) {
-return
+    } else if (variant_drop === "white") {
+        return variantStyle_forDropdown.dropWhiteVariant
+    } else if (variant_drop === "dark") {
+        return variantStyle_forDropdown.dropDarkVariant
+    } else if (variant_drop === undefined) {
+        return variantStyle_forDropdown.dropDefVariant
     };
 };

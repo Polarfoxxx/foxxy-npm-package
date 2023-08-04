@@ -3,7 +3,7 @@ import React from "react";
 import { PropsForDropItemsComponents } from "../types";
 import { masterStyle_forDropdown } from "../style";
 
-const DropdownItems: React.FC<PropsForDropItemsComponents> = ({ href, name_link }): JSX.Element => {
+const DropdownItems: React.FC<PropsForDropItemsComponents> = ({ href, name_link, variant_CSS }): JSX.Element => {
 
     /* hover effect */
     const boxMouseHandler = (e: React.MouseEvent<HTMLDivElement>, mouseOver: boolean): void => {
@@ -17,7 +17,10 @@ const DropdownItems: React.FC<PropsForDropItemsComponents> = ({ href, name_link 
             onMouseOver={(e) => boxMouseHandler(e, true)}
             onMouseOut={(e) => boxMouseHandler(e, false)}>
             <a
-                style={{ ...masterStyle_forDropdown.styleMasterDropItem }}
+                style={{
+                    ...masterStyle_forDropdown.styleMasterDropItem,
+                    ...variant_CSS.dropItem
+                }}
                 href={href}>
                 {
                     name_link.length > 34 ? "err" : name_link

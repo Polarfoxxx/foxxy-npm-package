@@ -8,11 +8,14 @@ export type PropsForDropdownComponents = {
 
 export type PropsForDropBoxComponents = {
     children: JSX.Element | JSX.Element[],
+    variant_CSS?: TypeVariantStyle_dropdown,
+
 };
 
 export type PropsForDropItemsComponents = {
     href: string,
-    name_link: string
+    name_link: string,
+    variant_CSS?: TypeVariantStyle_dropdown,
 };
 
 export type TypeShowAndHide_dropdown = {
@@ -25,6 +28,7 @@ export type TypeServicesShowAndHide = {
 };
 
 export type TypeVariantStyle_dropdown = {
+    dropBtn: React.CSSProperties,
     dropdown: React.CSSProperties,
     dropBox: React.CSSProperties,
     dropItem: React.CSSProperties,

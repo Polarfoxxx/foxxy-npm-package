@@ -35,7 +35,7 @@ const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_dro
             style={{
                 ...show_CSS,
                 ...masterStyle_forDropdown.styleMasterDropdown,
-                ...variant_CSS
+                ...variant_CSS.dropdown
             }}>
             <button
                 onMouseOver={(e) => boxMouseHandler(e, true)}
@@ -43,14 +43,17 @@ const Dropdopwn: React.FC<PropsForDropdownComponents> = ({ children, variant_dro
                 onClick={handleClick}
                 style={{
                     ...masterStyle_forDropdown.styleMasterButtonDrop,
-                    }}>
+                    ...variant_CSS.dropBtn
+                }}>
                 {
                     drop_text.length > 18 ? "err" : drop_text
                 }
             </button>
-            {React.Children.map(children, (child: React.ReactElement<any>) => {
-                return React.cloneElement(child, {variant_CSS});
-            })}
+            {
+                React.Children.map(children, (child: React.ReactElement<any>) => {
+                    return React.cloneElement(child, { variant_CSS });
+                })
+            }
         </div>
     )
 };
