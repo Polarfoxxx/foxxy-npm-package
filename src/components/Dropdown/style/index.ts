@@ -11,3 +11,10 @@ export const masterStyle_forDropdown = {
     styleMasterDropItem,
     styleMasterButtonDrop,
 };
+
+
+import { dropDefVariant } from "./variantStyle/defaultVariant.style";
+
+export const variantStyle_forDropdown = {
+    dropDefVariant
+}

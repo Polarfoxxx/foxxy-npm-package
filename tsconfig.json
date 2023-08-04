@@ -11,7 +11,7 @@
       "esModuleInterop": true,
       "allowJs": true,
     },
-    "include": ["src"],
+    "include": ["src","img"],
     "exclude": ["node_modules", "dist"]
   }
   

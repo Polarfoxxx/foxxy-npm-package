@@ -3,7 +3,7 @@ import React from "react";
 export const styleMasterButtonDrop: React.CSSProperties = {
     width: "100%",
     height: "40px",
-    backgroundColor: "#767175",
+    backgroundColor: "rgba(5, 5, 5, 0.263)",
     backgroundImage: "url('img/arrowDropdown.png')",
     backgroundPosition: "40px 70%",
     backgroundSize: "100%",

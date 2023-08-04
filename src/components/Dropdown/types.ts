@@ -22,4 +22,10 @@ export type TypeShowAndHide_dropdown = {
 
 export type TypeServicesShowAndHide = {
     show: boolean
-}
+};
+
+export type TypeVariantStyle_dropdown = {
+    dropdown: React.CSSProperties,
+    dropBox: React.CSSProperties,
+    dropItem: React.CSSProperties,
+};
