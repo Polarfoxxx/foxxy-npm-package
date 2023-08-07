@@ -19,7 +19,7 @@ var Button_master_1 = require("../components/Button/components/Button.master");
 var react_1 = __importDefault(require("react"));
 var addon_actions_1 = require("@storybook/addon-actions");
 var meta = {
-    title: 'Example/Button',
+    title: 'FoxxyComp/Button',
     component: Button_master_1.ButtonComponent.Button,
     tags: ['autodocs'],
     argTypes: {

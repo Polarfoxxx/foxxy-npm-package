@@ -23,7 +23,7 @@ var Button_stories_1 = __importDefault(require("./Button.stories"));
 var Form_stories_1 = __importDefault(require("./Form.stories"));
 var addon_actions_1 = require("@storybook/addon-actions");
 var meta = {
-    title: 'Example/Modal',
+    title: 'FoxxyComp/Modal',
     component: Modal_master_1.ModalComponent.Modal,
     tags: ['autodocs'],
     argTypes: __assign(__assign({ variant_mdl: {

@@ -14,14 +14,25 @@ const meta: Meta = {
             control: { type: 'radio' },
         },
         drop_text: {
+            description: 'Dropdown name max 18',
             control: { type: 'text' },
         },
+        dropCount: {
+            description: "number of items components",
+            control: { type: 'number', min: 1, max: 15 },
+            defaultValue: 1,
+        },
         href: {
+            control: { type: 'text' },
+        },
+        name_link: {
+            description: 'link name max 34',
             control: { type: 'text' },
         }
     },
     args: {
         variant_drop: "default",
+        name_link: "my link",
         drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate"
     }
@@ -32,14 +43,14 @@ type Story = StoryObj<typeof DropdownComponent.Dropdopwn>;
 
 export const variant_Dropdown: Story = (args) => {
 
+    const { dropCount = 1 } = args;
+    const dropItems = Array.from({ length: dropCount }, (_, index) => (
+        <DropdownComponent.DropdownItems {...args} key={`items${index}`} />
+    ));
     return (
         <DropdownComponent.Dropdopwn {...args}>
             <DropdownComponent.DropdownBox>
-                <DropdownComponent.DropdownItems name_link="dddfdgsdsddfdssssssdddsfdfdfsdddd" {...args} />
-                <DropdownComponent.DropdownItems name_link="linkTwo" {...args} />
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
-                <DropdownComponent.DropdownItems name_link="linkThre" {...args} />
+                {dropItems}
             </DropdownComponent.DropdownBox>
         </DropdownComponent.Dropdopwn>
     );

@@ -9,10 +9,8 @@
       "declaration": true,
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
-      "allowJs": true,
+      "allowJs": true
     },
-    "include": ["src","img"],
+    "include": ["src", "img"],
     "exclude": ["node_modules", "dist"]
   }
-  
-

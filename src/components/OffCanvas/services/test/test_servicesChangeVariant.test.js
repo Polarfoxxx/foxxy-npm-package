@@ -13,7 +13,7 @@ describe("test services change variant", () => {
             styleForScreen: expect.any(Object),
             styleHeader: expect.any(Object),
             styleBody: expect.any(Object),
-            styleButtonBox: expect.any(Object),
+            styleButton_Box: expect.any(Object),
         });
     });
 

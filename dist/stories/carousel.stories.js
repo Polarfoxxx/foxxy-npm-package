@@ -18,7 +18,7 @@ exports.variant_carousel = void 0;
 var react_1 = __importDefault(require("react"));
 var Carousel_master_1 = require("../components/Carousel/components/Carousel.master");
 var meta = {
-    title: 'Example/Carousel',
+    title: 'FoxxyComp/Carousel',
     component: Carousel_master_1.CarouselComponent.Carousel,
     tags: ['autodocs'],
     argTypes: {
@@ -39,4 +39,4 @@ var variant_carousel = function (args) {
 };
 exports.variant_carousel = variant_carousel;
 exports.variant_carousel.args = {};
-//# sourceMappingURL=carousel.stories.js.map
+//# sourceMappingURL=Carousel.stories.js.map

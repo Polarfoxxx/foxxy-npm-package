@@ -22,7 +22,7 @@ var Button_master_1 = require("../components/Button/components/Button.master");
 var Button_stories_1 = __importDefault(require("./Button.stories"));
 var addon_actions_1 = require("@storybook/addon-actions");
 var meta = {
-    title: 'Example/Form',
+    title: 'FoxxyComp/Form',
     component: Form_master_1.FormComponent.Form,
     tags: ['autodocs'],
     argTypes: __assign({ formName: {
@@ -48,7 +48,7 @@ var meta = {
             control: { type: 'number', min: 1, max: 5 },
             defaultValue: 1,
         } }, Button_stories_1.default.argTypes),
-    args: __assign({ formName: 'me form', label: "", placeholder: "me input" }, Button_stories_1.default.args),
+    args: __assign({ form_name: 'me form', label: "", placeholder: "me input" }, Button_stories_1.default.args),
 };
 exports.default = meta;
 var variant_default = function (args) {

@@ -21,7 +21,7 @@ var Button_master_1 = require("../components/Button/components/Button.master");
 var addon_actions_1 = require("@storybook/addon-actions");
 var Button_stories_1 = __importDefault(require("./Button.stories"));
 var meta = {
-    title: 'Example/OffCanvas',
+    title: 'FoxxyComp/OffCanvas',
     component: OffCanvas_master_1.OffCanvasComponent.OffCanvas,
     tags: ['autodocs'],
     argTypes: __assign({ position: {

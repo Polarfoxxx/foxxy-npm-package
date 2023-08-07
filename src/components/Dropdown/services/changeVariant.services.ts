@@ -19,5 +19,5 @@ function changeVariantDropDwn<T>(props: T): TypeVariantStyle_dropdown {
         return variantStyle_forDropdown.dropDarkVariant
     } else if (variant_drop === undefined) {
         return variantStyle_forDropdown.dropDefVariant
-    };
+    } else { return variantStyle_forDropdown.dropDefVariant }
 };
