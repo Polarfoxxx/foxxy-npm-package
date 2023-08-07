@@ -209,3 +209,36 @@ __Pridavanie poloziek do CarouselComponentu:__
 ```  
 
 --- 
+
+### DropdownComponent:  
+
+```
+import { DropdownComponent } from 'foxxy-package';  
+```  
+  
+```
+    <DropdownComponent.Dropdopwn {Argumenty}>
+        <DropdownComponent.DropdownBox>
+            <DropdownComponent.DropdownItems {Argument items}/>
+        </DropdownComponent.DropdownBox>
+    </DropdownComponent.Dropdopwn>
+```
+
+#### Argumenty:  
+
+| Argument       | Povinný   | Typ                          | Popis                                              |
+|----------------|-----------|------------------------------|----------------------------------------------------|
+| variant_drop   | nie       | string                       | default, white, dark                               |
+| drop_text      | ano       | string                       | nazov dropdown                                     |
+|                |           |                              |                                                    |
+| Argument items | Povinný   | Typ                          | Popis                                              |
+|----------------|-----------|------------------------------|----------------------------------------------------|
+| href           | ano       | string                       | link pre items                                     |
+| name_link      | ano       | string                       | nazov items                                        |
+
+__Pridavanie poloziek do CarouselComponentu:__  
+```
+    <DropdownComponent.DropdownItems {Argument items} />   
+```  
+
+--- 
