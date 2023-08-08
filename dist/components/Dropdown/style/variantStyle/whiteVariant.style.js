@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dropWhiteVariant = void 0;
 exports.dropWhiteVariant = {
-    dropBtn: {},
+    dropBtn: {
+        color: "red"
+    },
     dropdown: {
         backgroundColor: "rgb(248, 246, 244)"
     },

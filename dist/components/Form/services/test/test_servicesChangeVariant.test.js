@@ -9,13 +9,13 @@ describe("test form component", function () {
     test("testing undefindent variants", function () {
         var variant_form = undefined;
         var CSS_Variant = style_1.allVariantForForm.defaultStyleForForm;
-        var services = services_changeVariant_1.default.changerVariantForForm({ variant: variant });
+        var services = services_changeVariant_1.default.changerVariantForForm({ variant_form: variant_form });
         expect(services).toEqual(expect.objectContaining(CSS_Variant));
     });
     test("testing white variants", function () {
         var variant_form = "white";
         var CSS_Variant = style_1.allVariantForForm.whiteStyleForForm;
-        var services = services_changeVariant_1.default.changerVariantForForm({ variant: variant });
+        var services = services_changeVariant_1.default.changerVariantForForm({ variant_form: variant_form });
         expect(services).toEqual(expect.objectContaining(CSS_Variant));
     });
 });

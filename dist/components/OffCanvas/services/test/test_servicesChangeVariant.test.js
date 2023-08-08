@@ -14,7 +14,7 @@ describe("test services change variant", function () {
             styleForScreen: expect.any(Object),
             styleHeader: expect.any(Object),
             styleBody: expect.any(Object),
-            styleButtonBox: expect.any(Object),
+            styleButton_Box: expect.any(Object),
         });
     });
     test("false variant", function () {

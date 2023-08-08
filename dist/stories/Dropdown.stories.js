@@ -28,27 +28,35 @@ var meta = {
             control: { type: 'radio' },
         },
         drop_text: {
+            description: 'Dropdown name max 18',
             control: { type: 'text' },
         },
+        dropCount: {
+            description: "number of items components",
+            control: { type: 'number', min: 1, max: 15 },
+            defaultValue: 1,
+        },
         href: {
+            control: { type: 'text' },
+        },
+        name_link: {
+            description: 'link name max 34',
             control: { type: 'text' },
         }
     },
     args: {
         variant_drop: "default",
+        name_link: "my link",
         drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate"
     }
 };
 exports.default = meta;
 var variant_Dropdown = function (args) {
+    var _a = args.dropCount, dropCount = _a === void 0 ? 1 : _a;
+    var dropItems = Array.from({ length: dropCount }, function (_, index) { return (react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({}, args, { key: "items".concat(index) }))); });
     return (react_1.default.createElement(Dropdown_master_1.DropdownComponent.Dropdopwn, __assign({}, args),
-        react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownBox, null,
-            react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({ name_link: "dddfdgsdsddfdssssssdddsfdfdfsdddd" }, args)),
-            react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({ name_link: "linkTwo" }, args)),
-            react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({ name_link: "linkThre" }, args)),
-            react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({ name_link: "linkThre" }, args)),
-            react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownItems, __assign({ name_link: "linkThre" }, args)))));
+        react_1.default.createElement(Dropdown_master_1.DropdownComponent.DropdownBox, null, dropItems)));
 };
 exports.variant_Dropdown = variant_Dropdown;
 exports.variant_Dropdown.args = {};

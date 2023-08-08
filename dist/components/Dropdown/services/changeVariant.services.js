@@ -19,7 +19,9 @@ function changeVariantDropDwn(props) {
     else if (variant_drop === undefined) {
         return style_1.variantStyle_forDropdown.dropDefVariant;
     }
-    ;
+    else {
+        return style_1.variantStyle_forDropdown.dropDefVariant;
+    }
 }
 ;
 //# sourceMappingURL=changeVariant.services.js.map

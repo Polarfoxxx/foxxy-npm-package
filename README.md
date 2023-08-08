@@ -236,7 +236,7 @@ import { DropdownComponent } from 'foxxy-package';
 | href           | ano       | string                       | link pre items                                     |
 | name_link      | ano       | string                       | nazov items                                        |
 
-__Pridavanie poloziek do CarouselComponentu:__  
+__Pridavanie poloziek do DropdownComponentu:__  
 ```
     <DropdownComponent.DropdownItems {Argument items} />   
 ```  
