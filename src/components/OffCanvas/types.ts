@@ -37,7 +37,7 @@ export type PropsForOffCanvasHeader = {
 };
 
 export type PropsForOffCanvasBody = {
-    children: string,
+    children: string | JSX.Element | number | undefined
     variant_style?: TypeForCSS_OffCanvas
 };
 

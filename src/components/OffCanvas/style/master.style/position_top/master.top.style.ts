@@ -8,7 +8,7 @@ export const styleMasterForOffCanvasComponent_top: TypeForCSS_OffCanvas = {
     top: "0",
     left: "0",
     position: "fixed",
-    zIndex: "5",
+    zIndex: "10000",
     display: "flex",
     flexDirection: "column",
     justifyContent: "start",
@@ -20,6 +20,7 @@ export const styleMasterForOffCanvasComponent_top: TypeForCSS_OffCanvas = {
     bottom: "0",
     left: "0",
     right: "0",
-    boxSizing: "border-box"
-  }
+    boxSizing: "border-box",
+    zIndex: "9999",
+  },
 }
