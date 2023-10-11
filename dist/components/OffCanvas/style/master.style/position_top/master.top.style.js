@@ -9,7 +9,7 @@ exports.styleMasterForOffCanvasComponent_top = {
         top: "0",
         left: "0",
         position: "fixed",
-        zIndex: "5",
+        zIndex: "10000",
         display: "flex",
         flexDirection: "column",
         justifyContent: "start",
@@ -21,7 +21,8 @@ exports.styleMasterForOffCanvasComponent_top = {
         bottom: "0",
         left: "0",
         right: "0",
-        boxSizing: "border-box"
-    }
+        boxSizing: "border-box",
+        zIndex: "9999",
+    },
 };
 //# sourceMappingURL=master.top.style.js.map

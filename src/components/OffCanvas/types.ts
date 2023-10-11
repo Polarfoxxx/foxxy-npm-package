@@ -29,7 +29,7 @@ export type TypeshowAndHide = {
 export type TypeForPositionServices = {
     position: string,
     show: boolean
-}; 
+};
 
 export type PropsForOffCanvasHeader = {
     children: string,
@@ -37,7 +37,7 @@ export type PropsForOffCanvasHeader = {
 };
 
 export type PropsForOffCanvasBody = {
-    children: string | JSX.Element | number | undefined
+    children: JSX.Element | JSX.Element[],
     variant_style?: TypeForCSS_OffCanvas
 };
 
