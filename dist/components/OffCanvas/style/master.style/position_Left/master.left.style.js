@@ -8,7 +8,7 @@ exports.styleMasterForOffCanvasComponent_left = {
         top: "0",
         bottom: "0",
         position: "fixed",
-        zIndex: "10000",
+        zIndex: "1000000",
         minWidth: "300px",
         display: "flex",
         flexDirection: "column",
@@ -16,13 +16,13 @@ exports.styleMasterForOffCanvasComponent_left = {
         boxSizing: "border-box",
     },
     styleForScreen: {
-        position: "absolute",
+        position: "fixed",
         top: "0",
         bottom: "0",
         left: "0",
         right: "0",
         boxSizing: "border-box",
-        zIndex: "9999"
+        zIndex: "999999"
     }
 };
 //# sourceMappingURL=master.left.style.js.map

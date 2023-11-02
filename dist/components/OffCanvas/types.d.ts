@@ -29,7 +29,7 @@ export type PropsForOffCanvasHeader = {
     variant_style?: TypeForCSS_OffCanvas;
 };
 export type PropsForOffCanvasBody = {
-    children: JSX.Element | JSX.Element[];
+    children: JSX.Element | JSX.Element[] | string | number | undefined;
     variant_style?: TypeForCSS_OffCanvas;
 };
 export type PropsForOffCanvasButtonBox = {
