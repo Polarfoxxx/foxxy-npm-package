@@ -1,0 +1,26 @@
+/* Spoločné štýly pre všetky veľkosti tlačidiel */
+.primaryButton {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding: 5px 8px; /* predvolená hodnota pre medium */
+}
+
+/* Špecifické štýly pre veľkosti */
+.primaryButton.lg {
+    background-color: rgb(118, 26, 192);
+    padding: 10px 13px;
+}
+
+.primaryButton.medium {
+    background-color: aquamarine;
+}
+
+/* Border a zaoblené rohy */
+.primaryButton.border {
+    border: 1px solid white;
+}
+
+.primaryButton.round {
+    border-radius: 20px;
+}

@@ -9,31 +9,36 @@ const servicesChangeVariantForButtons = {
 export default servicesChangeVariantForButtons;
 
 
-
 function changeVariantForButtons({ variant_btn, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
-    /* deklaracia */
     let sizeElement: CSSProperties = {};
     let variant_style: CSSProperties = allVariantStyleForButton.defaultStyle.defStyle;
     let impStyleName: TypeButtonStyle = allVariantStyleForButton.defaultStyle;
 
-    /* farebna varianta */
-    if (variant_btn === "white") {
-        impStyleName = allVariantStyleForButton.whiteStyle
-    } else if (variant_btn === "dark") {
-        impStyleName = allVariantStyleForButton.darkStyle
-    } else if (variant_btn === "funny") {
-        impStyleName = allVariantStyleForButton.funnyStyle
-    } else if (variant_btn === "sun") {
-        impStyleName = allVariantStyleForButton.sunStyle
-    } else if (variant_btn === "ocean") {
-        impStyleName = allVariantStyleForButton.oceanStyle
-    } else if (variant_btn === "default") {
-        impStyleName = allVariantStyleForButton.defaultStyle
-    } else if (variant_btn === undefined) {
-        impStyleName = allVariantStyleForButton.defaultStyle
-    } else {
-        impStyleName = allVariantStyleForButton.defaultStyle
-    };
+    //? color variant 
+    switch (variant_btn) {
+        case "white":
+            impStyleName = allVariantStyleForButton.whiteStyle;
+            break;
+        case "dark":
+            impStyleName = allVariantStyleForButton.darkStyle;
+            break;
+        case "funny":
+            impStyleName = allVariantStyleForButton.funnyStyle;
+            break;
+        case "sun":
+            impStyleName = allVariantStyleForButton.sunStyle;
+            break;
+        case "ocean":
+            impStyleName = allVariantStyleForButton.oceanStyle;
+            break;
+        case "default":
+        case undefined:
+            impStyleName = allVariantStyleForButton.defaultStyle;
+            break;
+        default:
+            impStyleName = allVariantStyleForButton.defaultStyle;
+    }
+
 
     /* vyber border varianty a radiusu*/
     variant_style = border ?

@@ -3,36 +3,50 @@ import servicesChangeVariantForButtons from "../services/services.changeVariant"
 import { TypeButtonsIntrinsicAttributes } from "../types";
 import ButtonBox from "./ButtonsBox";
 import { TypeReturnStyleForElement } from "../types";
+import "../styles/variant/primaryButton_style.css";
+import "../styles/variant/secondaryButton_style.css";
+import "../styles/variant/alertButton_style.css";
 
-const Button: React.FC<TypeButtonsIntrinsicAttributes> = ({
+function Button({
   text,
-  variant_btn,
-  border,
-  round,
+  variant_btn = "primaryButton",
+  withoutBorder,
+  radiusBorder,
   lg,
   sm,
-  ...props
-}): JSX.Element => {
+  ...props }: TypeButtonsIntrinsicAttributes
+): JSX.Element {
 
-  const [varian_Button, setVarian_Button] = React.useState<TypeReturnStyleForElement>({
-    variant_style: {},
-    masterStyle: {},
-    sizeElement: {}
-  });
+  const [selectStyleType, setSelectStyleType] = React.useState("");
 
-  /* servis pre variantu */
   React.useEffect(() => {
-    setVarian_Button(servicesChangeVariantForButtons.changeVariantForButtons({ variant_btn, border, round, lg, sm }))
-  }, [variant_btn, border, round, lg, sm,])
+    let variant_Style_className: string = "";
+    //? Podmienka pre veľkosť (lg alebo sm)
+    if (lg) {
+      variant_Style_className = `${variant_btn} lg`;
+    } else if (sm) {
+      variant_Style_className = `${variant_btn} sm`;
+    } else {
+      variant_Style_className = `${variant_btn} medium`;
+    };
+    //? Podmienka pre border
+    if (withoutBorder) {
+      variant_Style_className = `${variant_Style_className} border`;
+    }
+    //? Podmienka pre zaoblený border
+    if (radiusBorder) {
+      variant_Style_className = `${variant_Style_className} round`;
+    };
+
+    setSelectStyleType(variant_Style_className);
+  }, [variant_btn, withoutBorder, radiusBorder, lg, sm])
 
 
   return (
     <button
-      {...props}
-      style={{ ...varian_Button.masterStyle, ...varian_Button.variant_style, ...varian_Button.sizeElement }}>
-      {
-        text.length > 9 ? "err" : text
-      }
+      className={selectStyleType}
+      {...props}>
+      {text}
     </button>
   );
 };

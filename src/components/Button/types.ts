@@ -3,17 +3,17 @@ import { CSSProperties } from "react";
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
-  variant_btn?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
-  border?: boolean,
-  round?: boolean,
+  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton",
+  withoutBorder?: boolean,
+  radiusBorder?: boolean,
   lg?: boolean,
   sm?: boolean,
 };
 
 export type TypeForStyleFunction = {
-  variant_btn?: "default" | "white" | "dark" | "funny" | "sun" | "ocean",
-  border?: boolean,
-  round?: boolean,
+  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton",
+  withoutBorder?: boolean,
+  radiusBorder?: boolean,
   lg?: boolean,
   sm?: boolean
 };
