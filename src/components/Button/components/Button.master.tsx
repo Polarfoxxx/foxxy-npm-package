@@ -1,23 +1,27 @@
 import React from "react";
-import servicesChangeVariantForButtons from "../services/services.changeVariant";
 import { TypeButtonsIntrinsicAttributes } from "../types";
 import ButtonBox from "./ButtonsBox";
-import { TypeReturnStyleForElement } from "../types";
-import "../styles/variant/primaryButton_style.css";
-import "../styles/variant/secondaryButton_style.css";
-import "../styles/variant/alertButton_style.css";
+import "../styles/primaryButton_style.css";
+import "../styles/secondaryButton_style.css";
+import "../styles/alertButton_style.css";
 
 function Button({
   text,
   variant_btn = "primaryButton",
-  withoutBorder,
-  radiusBorder,
-  lg,
-  sm,
+  withoutBorder = false,
+  radiusBorder = false,
+  lg = false,
+  sm = false,
+  customBackGrColor,
+  customTextColor,
   ...props }: TypeButtonsIntrinsicAttributes
 ): JSX.Element {
 
   const [selectStyleType, setSelectStyleType] = React.useState("");
+  const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
+    backgroundColor: "",
+    color: ""
+  });
 
   React.useEffect(() => {
     let variant_Style_className: string = "";
@@ -39,11 +43,19 @@ function Button({
     };
 
     setSelectStyleType(variant_Style_className);
-  }, [variant_btn, withoutBorder, radiusBorder, lg, sm])
+  }, [variant_btn, withoutBorder, radiusBorder, lg, sm]);
 
+  //? useeffect pre custom style
+  React.useEffect(() => {
+    setCustomStyle({
+      backgroundColor: customBackGrColor,
+      color: customTextColor
+    });
+  }, [customBackGrColor, customTextColor]);
 
   return (
     <button
+      style={{ ...customStyle }}
       className={selectStyleType}
       {...props}>
       {text}
@@ -54,4 +66,4 @@ function Button({
 export const ButtonComponent = {
   Button,
   ButtonBox
-}
+};

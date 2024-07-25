@@ -8,6 +8,8 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
   radiusBorder?: boolean,
   lg?: boolean,
   sm?: boolean,
+  customBackGrColor?: string,
+  customTextColor?: string,
 };
 
 export type TypeForStyleFunction = {

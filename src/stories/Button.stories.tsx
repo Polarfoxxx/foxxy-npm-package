@@ -7,6 +7,9 @@ const meta: Meta = {
   title: 'FoxxyComponents/Button',
   component: ButtonComponent.Button,
   args: { onClick: fn(), },
+  parameters: {
+    layout: 'centered',
+  },
   argTypes: {
     text: {
       control: "text",
@@ -14,7 +17,7 @@ const meta: Meta = {
     },
     variant_btn: {
       description: "you can choose a color variant for the component button",
-      options: ["primaryButton" , "secondaryButton" , "alertButton"],
+      options: ["primaryButton", "secondaryButton", "alertButton"],
       control: { type: 'radio' },
       table: {
         defaultValue: { summary: "default" }
@@ -39,11 +42,18 @@ const meta: Meta = {
 
     },
     sm: {
-      description: "small",
+      description: "smaller",
       control: "boolean",
       defaultValue: false,
-
     },
+    customBackGrColor: {
+      description: "Set custom background color for element",
+      control: "color"
+    },
+    customTextColor: {
+      description: "Set custom text color for element",
+      control: "color",
+    }
   },
 };
 export default meta;
@@ -52,9 +62,9 @@ type Story = StoryObj<typeof ButtonComponent.Button>;
 export const VariantDefault: Story = {
   args: {
     variant_btn: "primaryButton",
-    text: "click mexy mmmmmm",
-    withoutBorder: true,
-    radiusBorder: true,
+    text: "click my button",
+    withoutBorder: false,
+    radiusBorder: false,
     lg: false,
     sm: false,
   },
