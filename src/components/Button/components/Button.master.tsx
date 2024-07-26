@@ -1,14 +1,19 @@
 import React from "react";
 import { TypeButtonsIntrinsicAttributes } from "../types";
+import { servicesChangeVariantForButtons } from "../services";
 import ButtonBox from "./ButtonsBox";
+import "../styles/root_style.css";
 import "../styles/primaryButton_style.css";
 import "../styles/secondaryButton_style.css";
 import "../styles/alertButton_style.css";
+import "../styles/successButton_style.css";
+import "../styles/nightButton_style.css";
+import "../styles/darkButton_style.css";
 
 function Button({
   text,
   variant_btn = "primaryButton",
-  withoutBorder = false,
+  withBorder = false,
   radiusBorder = false,
   lg = false,
   sm = false,
@@ -23,29 +28,12 @@ function Button({
     color: ""
   });
 
+  //? useeffect pre style................................
   React.useEffect(() => {
-    let variant_Style_className: string = "";
-    //? Podmienka pre veľkosť (lg alebo sm)
-    if (lg) {
-      variant_Style_className = `${variant_btn} lg`;
-    } else if (sm) {
-      variant_Style_className = `${variant_btn} sm`;
-    } else {
-      variant_Style_className = `${variant_btn} medium`;
-    };
-    //? Podmienka pre border
-    if (withoutBorder) {
-      variant_Style_className = `${variant_Style_className} border`;
-    }
-    //? Podmienka pre zaoblený border
-    if (radiusBorder) {
-      variant_Style_className = `${variant_Style_className} round`;
-    };
+    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForButtons({ variant_btn, withBorder, radiusBorder, lg, sm }));
+  }, [variant_btn, withBorder, radiusBorder, lg, sm]);
 
-    setSelectStyleType(variant_Style_className);
-  }, [variant_btn, withoutBorder, radiusBorder, lg, sm]);
-
-  //? useeffect pre custom style
+  //? useeffect pre custom style.........................
   React.useEffect(() => {
     setCustomStyle({
       backgroundColor: customBackGrColor,
@@ -63,7 +51,7 @@ function Button({
   );
 };
 
-export const ButtonComponent = {
+export default {
   Button,
   ButtonBox
 };

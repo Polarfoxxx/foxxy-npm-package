@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ButtonComponent } from '../components/Button/components/Button.master';
+import { ButtonComponent } from '../components/Button/components';
 import React from 'react';
 import { fn } from '@storybook/test';
 
@@ -17,13 +17,13 @@ const meta: Meta = {
     },
     variant_btn: {
       description: "you can choose a color variant for the component button",
-      options: ["primaryButton", "secondaryButton", "alertButton"],
+      options: ["primaryButton", "secondaryButton", "alertButton", "successButton", "darkButton", "nightButton"],
       control: { type: 'radio' },
       table: {
         defaultValue: { summary: "default" }
       }
     },
-    withoutBorder: {
+    withBorder: {
       control: "boolean",
       description: "border change",
       defaultValue: false,
@@ -59,11 +59,11 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
-export const VariantDefault: Story = {
+export const VariantButton: Story = {
   args: {
     variant_btn: "primaryButton",
     text: "click my button",
-    withoutBorder: false,
+    withBorder: false,
     radiusBorder: false,
     lg: false,
     sm: false,

@@ -1,61 +1,33 @@
-import { CSSProperties } from 'react';
-import { masterStyle } from '../styles/size.style/master.style';
-import { TypeButtonStyle, TypeForStyleFunction, TypeReturnStyleForElement } from '../types';
-import { allVariantStyleForButton, allSizeButtonElement } from '../styles';
+import { TypeForStyleFunction } from '../types';
 
 const servicesChangeVariantForButtons = {
     changeVariantForButtons
 };
 export default servicesChangeVariantForButtons;
 
+function changeVariantForButtons({
+    variant_btn,
+    withBorder,
+    radiusBorder,
+    lg,
+    sm }: TypeForStyleFunction): string {
 
-function changeVariantForButtons({ variant_btn, border, round, lg, sm }: TypeForStyleFunction): TypeReturnStyleForElement {
-    let sizeElement: CSSProperties = {};
-    let variant_style: CSSProperties = allVariantStyleForButton.defaultStyle.defStyle;
-    let impStyleName: TypeButtonStyle = allVariantStyleForButton.defaultStyle;
-
-    //? color variant 
-    switch (variant_btn) {
-        case "white":
-            impStyleName = allVariantStyleForButton.whiteStyle;
-            break;
-        case "dark":
-            impStyleName = allVariantStyleForButton.darkStyle;
-            break;
-        case "funny":
-            impStyleName = allVariantStyleForButton.funnyStyle;
-            break;
-        case "sun":
-            impStyleName = allVariantStyleForButton.sunStyle;
-            break;
-        case "ocean":
-            impStyleName = allVariantStyleForButton.oceanStyle;
-            break;
-        case "default":
-        case undefined:
-            impStyleName = allVariantStyleForButton.defaultStyle;
-            break;
-        default:
-            impStyleName = allVariantStyleForButton.defaultStyle;
-    }
-
-
-    /* vyber border varianty a radiusu*/
-    variant_style = border ?
-        (round ? impStyleName.borderRadiusStyle : impStyleName.borderStyle) :
-        (round ? impStyleName.radiusStyle : impStyleName.defStyle);
-
-    /*  vyber velkosti */
-    if (lg || sm) {
-        sizeElement = lg ? allSizeButtonElement.largeSize : allSizeButtonElement.smallSize
+    let variant_Style_className: string = "";
+    //? Podmienka pre veľkosť (lg alebo sm)
+    if (lg) {
+        variant_Style_className = `${variant_btn} lg`;
+    } else if (sm) {
+        variant_Style_className = `${variant_btn} sm`;
+    } else {
+        variant_Style_className = `${variant_btn} medium`;
     };
-
-
-    return (
-        {
-            masterStyle,
-            variant_style,
-            sizeElement
-        }
-    )
-}
+    //? Podmienka pre border
+    if (withBorder) {
+        variant_Style_className = `${variant_Style_className} border`;
+    }
+    //? Podmienka pre zaoblený border
+    if (radiusBorder) {
+        variant_Style_className = `${variant_Style_className} round`;
+    };
+    return variant_Style_className;
+};

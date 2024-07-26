@@ -3,6 +3,7 @@
     align-items: center;
     appearance: none;
     border: 0;
+    background-color: rgba(68, 88, 190, 1);
     border-radius: 6px;
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     box-sizing: border-box;
@@ -16,7 +17,7 @@
     list-style: none;
     overflow: hidden;
     position: relative;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     transition: box-shadow .15s, transform .15s;
     touch-action: manipulation;
@@ -27,22 +28,23 @@
 
 /* Špecifické štýly pre veľkosti --------------------------*/
 .primaryButton.lg {
-    padding: 10px 13px;
+    padding: var(--largeSizeButton);
+    font-size: var(--fontSizeLarge); 
 }
 
 .primaryButton.medium {
-    padding: 5px 8px;
-
+    padding: var(--mediumSizeButton); 
+    font-size: var(--fontSizeMedium); 
 }
 
 .primaryButton.sm {
-    padding: 3px 5px;
-
+    padding: var(--smallSizeButton); 
+    font-size: var(--fontSizeSmall); 
 }
 
 /* Border a rádius ------------------------------------*/
 .primaryButton.border {
-    border: 1px solid white;
+    border: 2px solid rgb(5, 19, 223);
 }
 
 .primaryButton.round {
@@ -51,7 +53,7 @@
 
 /* pseudo effect ----------------------------------------*/
 .primaryButton:focus {
-    box-shadow: #696969 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #666666 0 -3px 0 inset;
+    box-shadow: #5c5858 0 0 0 1.5px inset, rgba(192, 192, 192, 0.4) 0 2px 4px, rgba(198, 198, 199, 0.3) 0 7px 13px -3px, #c5c5c5 0 -3px 0 inset;
 }
 
 .primaryButton:hover {
@@ -62,4 +64,5 @@
 .primaryButton:active {
     box-shadow: #cacaca 0 3px 7px inset;
     transform: translateY(2px);
+    border: 1px solid rgb(177, 177, 177);
 }
