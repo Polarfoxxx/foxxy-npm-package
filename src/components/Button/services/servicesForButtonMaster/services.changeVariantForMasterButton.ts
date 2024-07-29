@@ -1,16 +1,16 @@
-import { TypeForStyleFunction } from '../types';
+import { TypeFor_services_Style_buttonMaster } from "../../types";
 
 const servicesChangeVariantForButtons = {
-    changeVariantForButtons
+    changeVariantForMasterButton
 };
 export default servicesChangeVariantForButtons;
 
-function changeVariantForButtons({
+function changeVariantForMasterButton({
     variant_btn,
     withBorder,
     radiusBorder,
     lg,
-    sm }: TypeForStyleFunction): string {
+    sm }: TypeFor_services_Style_buttonMaster): string {
 
     let variant_Style_className: string = "";
     //? Podmienka pre veľkosť (lg alebo sm)

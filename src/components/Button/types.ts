@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes } from "react";
-import { CSSProperties } from "react";
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
@@ -11,19 +10,23 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
   customBackGrColor?: string,
   customTextColor?: string,
 };
+export type TypeForButtonBox = {
+  children: JSX.Element | JSX.Element[],
+  buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
+  width_buttonBox?: string,
+  height_buttonBox?: string
+};
 
-export type TypeForStyleFunction = {
+/* services-------------------------------------------------- */
+export type TypeFor_services_Style_buttonMaster = {
   variant_btn?: "primaryButton" | "secondaryButton" | "alertButton" | "successButton" | "darkButton" | "nightButton",
   withBorder?: boolean,
   radiusBorder?: boolean,
   lg?: boolean,
   sm?: boolean
 };
-
-
-export type TypeForButtonBox = {
-  children: JSX.Element | JSX.Element[],
-  buttonBox_variant?: string,
-  width_buttonBox?: string,
-  height_buttonBox?: string
+export type TypeFor_services_Style_buttonBox = {
+  buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
 };
+
+

@@ -3,12 +3,12 @@ import { TypeButtonsIntrinsicAttributes } from "../types";
 import { servicesChangeVariantForButtons } from "../services";
 import ButtonBox from "./ButtonsBox";
 import "../styles/root_style.css";
-import "../styles/primaryButton_style.css";
-import "../styles/secondaryButton_style.css";
-import "../styles/alertButton_style.css";
-import "../styles/successButton_style.css";
-import "../styles/nightButton_style.css";
-import "../styles/darkButton_style.css";
+import "../styles/buttonMaster/primaryButton_style.css";
+import "../styles/buttonMaster/secondaryButton_style.css";
+import "../styles/buttonMaster/alertButton_style.css";
+import "../styles/buttonMaster/successButton_style.css";
+import "../styles/buttonMaster/nightButton_style.css";
+import "../styles/buttonMaster/darkButton_style.css";
 
 function Button({
   text,
@@ -28,12 +28,12 @@ function Button({
     color: ""
   });
 
-  //? useeffect pre style................................
+  //? useeffect for style................................
   React.useEffect(() => {
-    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForButtons({ variant_btn, withBorder, radiusBorder, lg, sm }));
+    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
   }, [variant_btn, withBorder, radiusBorder, lg, sm]);
 
-  //? useeffect pre custom style.........................
+  //? useeffect for custom style.........................
   React.useEffect(() => {
     setCustomStyle({
       backgroundColor: customBackGrColor,
@@ -46,7 +46,9 @@ function Button({
       style={{ ...customStyle }}
       className={selectStyleType}
       {...props}>
-      {text}
+      {
+        text
+      }
     </button>
   );
 };
