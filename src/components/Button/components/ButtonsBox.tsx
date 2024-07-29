@@ -1,14 +1,21 @@
 import React from "react";
 import { TypeForButtonBox } from "../types";
 
+function ButtonBox({ children,
+    buttonBox_variant,
+    width_buttonBox,
+    height_buttonBox }: TypeForButtonBox) {
 
-const ButtonBox: React.FC<TypeForButtonBox> = ({ children }) => {
+    const [selectStyleType, setSelectStyleType] = React.useState("");
+
+
     return (
-        <div >
+        <div>
             {children}
         </div>
 
     )
 };
 
-export default ButtonBox
+export default ButtonBox;
+

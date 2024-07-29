@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button/components';
+import {ButtonBox} from '../components/Button/components';
 import React from 'react';
 import { fn } from '@storybook/test';
 
 const meta: Meta = {
-  title: 'FoxxyComponents/Button',
+  title: 'FoxxyComponents/ButtonBox',
   component: ButtonComponent.Button,
   args: { onClick: fn(), },
   parameters: {

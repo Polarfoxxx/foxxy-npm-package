@@ -22,5 +22,8 @@ export type TypeForStyleFunction = {
 
 
 export type TypeForButtonBox = {
-  children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[],
+  buttonBox_variant?: string,
+  width_buttonBox?: string,
+  height_buttonBox?: string
 };
