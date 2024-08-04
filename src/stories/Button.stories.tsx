@@ -70,11 +70,13 @@ export const VariantButton: Story = {
     sm: false,
   },
 
-  render: (args) => (
-    <ButtonComponent.ButtonBox>
-      <ButtonComponent.Button {...args} />
-    </ButtonComponent.ButtonBox>
-  )
+  render: (args) => {
+    return (
+      <ButtonComponent.ButtonBox>
+        <ButtonComponent.Button {...args} />
+      </ButtonComponent.ButtonBox>
+    )
+  }
 };
 
 

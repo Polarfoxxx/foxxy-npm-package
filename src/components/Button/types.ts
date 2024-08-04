@@ -1,4 +1,5 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, HTMLAttributes } from "react";
+
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
@@ -10,11 +11,13 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
   customBackGrColor?: string,
   customTextColor?: string,
 };
-export type TypeForButtonBox = {
+export interface TypeForButtonBox extends HTMLAttributes<HTMLDivElement> {
   children: JSX.Element | JSX.Element[],
   buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
   width_buttonBox?: string,
-  height_buttonBox?: string
+  height_buttonBox?: string,
+  numberOfButtons?: number
+  layout_Buttonts?: "column" | "row"
 };
 
 /* services-------------------------------------------------- */

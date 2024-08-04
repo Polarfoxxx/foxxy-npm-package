@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button/components';
-import { ButtonBox } from '../components/Button/components';
 import React from 'react';
 import { fn } from '@storybook/test';
 
 const meta: Meta = {
     title: 'FoxxyComponents/ButtonBox',
-    component: ButtonComponent.Button,
-    subcomponents: { ButtonBox },
+    component: ButtonComponent.ButtonBox,
     args: { onClick: fn(), },
     parameters: {
         layout: 'centered',
@@ -51,13 +49,22 @@ const meta: Meta = {
             description: "you can choose a height for the component buttonBox",
             control: { type: 'text' }
         },
+        numberOfButtons: {
+            description: "number of buttons in the button box",
+            control: { type: 'number', min: 1, max: 10 },
+            defaultValue: 1,
+        },
+        layout_Buttonts: {
+            description: "layout buttons components in buttom box",
+            control: { type: 'radio' },
+            options: ["column", "row"],
+        }
     }
 };
 export default meta;
 
-type Story = StoryObj<React.ComponentProps<typeof ButtonComponent.Button> & React.ComponentProps<typeof ButtonBox>>;
-
-export const VariantButton: Story = {
+type Story = StoryObj<React.ComponentProps<typeof ButtonComponent.Button> & React.ComponentProps<typeof ButtonComponent.ButtonBox>>;
+export const VariantButtonBox: Story = {
     args: {
         variant_btn: "primaryButton",
         text: "click my button",
@@ -68,14 +75,18 @@ export const VariantButton: Story = {
         buttonBox_variant: "primaryButtonBox",
         width_buttonBox: "200px",
         height_buttonBox: "100px",
+        numberOfButtons: 1,
+        layout_Buttonts: "row"
     },
 
-    render: (args) => (
-        <ButtonBox
-            buttonBox_variant={args.buttonBox_variant}
-            width_buttonBox={args.width_buttonBox}
-            height_buttonBox={args.height_buttonBox}>
+    render: (args) => {
+        const [numButtons, setNumButtons] = React.useState<number>();
+        React.useEffect(() => {
+            setNumButtons(args.numberOfButtons)
+        }, [args.numberOfButtons])
+        const buttons = [...Array(numButtons)].map((_, i) => (
             <ButtonComponent.Button
+                key={i}
                 variant_btn={args.variant_btn}
                 text={args.text}
                 withBorder={args.withBorder}
@@ -84,6 +95,19 @@ export const VariantButton: Story = {
                 sm={args.sm}
                 onClick={args.onClick}
             />
-        </ButtonBox>
-    )
+        ));
+
+
+        return (
+            <ButtonComponent.ButtonBox
+                buttonBox_variant={args.buttonBox_variant}
+                width_buttonBox={args.width_buttonBox}
+                height_buttonBox={args.height_buttonBox}
+                layout_Buttonts = {args.layout_Buttonts}>
+                {
+                    buttons
+                }
+            </ButtonComponent.ButtonBox>
+        );
+    }
 };

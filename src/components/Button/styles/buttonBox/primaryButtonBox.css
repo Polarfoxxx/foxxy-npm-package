@@ -1,0 +1,10 @@
+.primaryButtonBox{
+    width: auto;
+    height: auto;
+    background-color: aquamarine;
+    padding: 10px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
