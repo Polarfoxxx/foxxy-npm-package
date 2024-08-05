@@ -17,7 +17,9 @@ export interface TypeForButtonBox extends HTMLAttributes<HTMLDivElement> {
   width_buttonBox?: string,
   height_buttonBox?: string,
   numberOfButtons?: number
-  layout_Buttonts?: "column" | "row"
+  layout_Buttonts?: "column" | "row",
+  gap_Buttons?: string,
+  background_Box?: string
 };
 
 /* services-------------------------------------------------- */

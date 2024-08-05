@@ -3,6 +3,8 @@ import { TypeForButtonBox } from "../types";
 import { servicesChangeVariantForButtonsBox } from "../services";
 import "../styles/root_style.css";
 import "../styles/buttonBox/primaryButtonBox.css";
+import "../styles/buttonBox/secondaryButtonBox.css";
+import "../styles/buttonBox/alertButtonBox.css";
 
 function ButtonBox({
     children,
@@ -10,13 +12,17 @@ function ButtonBox({
     width_buttonBox,
     height_buttonBox,
     layout_Buttonts,
+    gap_Buttons,
+    background_Box,
     ...props }: TypeForButtonBox) {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [sizeButtonBox, setSizeButtonBox] = React.useState<React.CSSProperties>({
         width: "0",
         height: "0",
-        flexDirection: "row"
+        flexDirection: "row",
+        gap: "0",
+        backgroundColor: "transparent"
     });
 
     //? useeffect for style................................
@@ -29,9 +35,11 @@ function ButtonBox({
         setSizeButtonBox({
             width: width_buttonBox,
             height: height_buttonBox,
-            flexDirection: layout_Buttonts
+            flexDirection: layout_Buttonts,
+            gap: gap_Buttons,
+            backgroundColor: background_Box
         })
-    }, [width_buttonBox, height_buttonBox,layout_Buttonts]);
+    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, background_Box]);
 
 
 

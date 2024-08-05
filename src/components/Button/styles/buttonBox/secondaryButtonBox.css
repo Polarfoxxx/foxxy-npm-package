@@ -1,8 +1,9 @@
-.primaryButtonBox{
+.secondaryButtonBox{
     width: auto;
     height: auto;
     padding: 10px;
     display:  flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
 }

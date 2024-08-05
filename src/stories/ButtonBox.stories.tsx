@@ -6,6 +6,7 @@ import { fn } from '@storybook/test';
 const meta: Meta = {
     title: 'FoxxyComponents/ButtonBox',
     component: ButtonComponent.ButtonBox,
+    subcomponents: ButtonComponent,
     args: { onClick: fn(), },
     parameters: {
         layout: 'centered',
@@ -38,7 +39,7 @@ const meta: Meta = {
         },
         buttonBox_variant: {
             description: "you can choose a variant for the component buttonBox",
-            options: ["primaryButtonBox", "secundaryButtonBox", "alertButtonBox"],
+            options: ["primaryButtonBox", "secondaryButtonBox", "alertButtonBox"],
             control: { type: 'radio' }
         },
         width_buttonBox: {
@@ -58,6 +59,16 @@ const meta: Meta = {
             description: "layout buttons components in buttom box",
             control: { type: 'radio' },
             options: ["column", "row"],
+        },
+        gap_Buttons: {
+            description: "gap buttons components in buttom box",
+            control: { type: 'number', min: 1, max: 30 },
+            defaultValue: 1,
+        },
+        background_Box: {
+            description: "change a backgroundColor in box",
+            control: { type: 'color' },
+            defaultValue: "transparent",
         }
     }
 };
@@ -76,7 +87,9 @@ export const VariantButtonBox: Story = {
         width_buttonBox: "200px",
         height_buttonBox: "100px",
         numberOfButtons: 1,
-        layout_Buttonts: "row"
+        layout_Buttonts: "row",
+        gap_Buttons: "5px",
+        background_Box: "transparent"
     },
 
     render: (args) => {
@@ -103,7 +116,9 @@ export const VariantButtonBox: Story = {
                 buttonBox_variant={args.buttonBox_variant}
                 width_buttonBox={args.width_buttonBox}
                 height_buttonBox={args.height_buttonBox}
-                layout_Buttonts = {args.layout_Buttonts}>
+                layout_Buttonts={args.layout_Buttonts}
+                gap_Buttons={args.gap_Buttons}
+                background_Box={args.background_Box}>
                 {
                     buttons
                 }
