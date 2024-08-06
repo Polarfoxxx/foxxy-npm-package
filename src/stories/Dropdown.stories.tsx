@@ -2,14 +2,12 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { DropdownComponent } from "../components/Dropdown/components/Dropdown.master";
 
-
 const meta: Meta = {
-    title: 'FoxxyComp/Dropdown',
-    component: DropdownComponent.Dropdopwn,
-    tags: ['autodocs'],
+    title: 'FoxxyComponents/Dropdown',
+    component: DropdownComponent.Dropdown, // Corrected from Dropdopwn to Dropdown
     argTypes: {
         variant_drop: {
-            description: 'you can choose a color variant for the component Dropdown',
+            description: 'You can choose a color variant for the component Dropdown',
             options: ['default', 'dark', 'white'],
             control: { type: 'radio' },
         },
@@ -18,7 +16,7 @@ const meta: Meta = {
             control: { type: 'text' },
         },
         dropCount: {
-            description: "number of items components",
+            description: "Number of item components",
             control: { type: 'number', min: 1, max: 15 },
             defaultValue: 1,
         },
@@ -26,34 +24,46 @@ const meta: Meta = {
             control: { type: 'text' },
         },
         name_link: {
-            description: 'link name max 34',
+            description: 'Link name max 34',
             control: { type: 'text' },
-        }
+        },
     },
+};
+
+export default meta;
+
+type Story = StoryObj<React.ComponentProps<typeof DropdownComponent.Dropdown> & React.ComponentProps<typeof DropdownComponent.DropdownItems>>;
+
+export const Variant_Dropdown: Story = {
     args: {
         variant_drop: "default",
         name_link: "my link",
         drop_text: "dropdown",
-        href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate"
+        href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
+        dropCount: 1
+    },
+
+    render: (args) => {
+        const [numdropItem, setNumdropItem] = React.useState<number>();
+
+        React.useEffect(() => {
+            setNumdropItem(args.dropCount)
+        }, [args.dropCount]);
+
+        const dropItems = [...Array(numdropItem)].map((_, i) => (
+            <DropdownComponent.DropdownItems
+                key={i}
+                href={args.href}
+                name_link={args.name_link}
+            />
+        ));
+
+        return (
+            <DropdownComponent.Dropdown {...args}>
+                <DropdownComponent.DropdownBox>
+                    {dropItems}
+                </DropdownComponent.DropdownBox>
+            </DropdownComponent.Dropdown>
+        );
     }
-}
-export default meta;
-
-type Story = StoryObj<typeof DropdownComponent.Dropdopwn>;
-
-export const variant_Dropdown: Story = (args) => {
-
-    const { dropCount = 1 } = args;
-    const dropItems = Array.from({ length: dropCount }, (_, index) => (
-        <DropdownComponent.DropdownItems {...args} key={`items${index}`} />
-    ));
-    return (
-        <DropdownComponent.Dropdopwn {...args}>
-            <DropdownComponent.DropdownBox>
-                {dropItems}
-            </DropdownComponent.DropdownBox>
-        </DropdownComponent.Dropdopwn>
-    );
 };
-
-variant_Dropdown.args = {}

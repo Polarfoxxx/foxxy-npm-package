@@ -19,8 +19,7 @@ function Button({
   sm = false,
   customBackGrColor,
   customTextColor,
-  ...props }: TypeButtonsIntrinsicAttributes
-): JSX.Element {
+  ...props }: TypeButtonsIntrinsicAttributes): JSX.Element {
 
   const [selectStyleType, setSelectStyleType] = React.useState("");
   const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({

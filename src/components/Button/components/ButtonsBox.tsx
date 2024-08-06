@@ -14,7 +14,7 @@ function ButtonBox({
     layout_Buttonts,
     gap_Buttons,
     background_Box,
-    ...props }: TypeForButtonBox) {
+    ...props }: TypeForButtonBox): JSX.Element {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [sizeButtonBox, setSizeButtonBox] = React.useState<React.CSSProperties>({

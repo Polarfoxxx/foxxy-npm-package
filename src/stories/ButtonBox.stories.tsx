@@ -94,9 +94,11 @@ export const VariantButtonBox: Story = {
 
     render: (args) => {
         const [numButtons, setNumButtons] = React.useState<number>();
+       
         React.useEffect(() => {
             setNumButtons(args.numberOfButtons)
-        }, [args.numberOfButtons])
+        }, [args.numberOfButtons]);
+        
         const buttons = [...Array(numButtons)].map((_, i) => (
             <ButtonComponent.Button
                 key={i}

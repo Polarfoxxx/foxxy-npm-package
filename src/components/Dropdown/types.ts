@@ -4,6 +4,7 @@ export type PropsForDropdownComponents = {
     children: JSX.Element | JSX.Element[],
     drop_text: string
     variant_drop?: "default" | "white" | "dark",
+    dropCount?: number
 };
 
 export type PropsForDropBoxComponents = {
