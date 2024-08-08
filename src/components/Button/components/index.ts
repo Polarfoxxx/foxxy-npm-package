@@ -1,7 +1,7 @@
-export {
-    default as ButtonComponent
-} from "./Button.master"
+import Button from "./Button.master";
+import ButtonBox from "./ButtonsBox";
 
-export {
-    default as ButtonBox
-} from "./ButtonsBox"
+export const ButtonComponent = {
+    Button,
+    ButtonBox
+};

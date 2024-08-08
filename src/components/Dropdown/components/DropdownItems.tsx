@@ -1,22 +1,20 @@
 
 import React from "react";
 import { PropsForDropItemsComponents } from "../types";
+import "../style/dropDownItem"
 
-const DropdownItems: React.FC<PropsForDropItemsComponents> = ({ 
-    href, 
+function DropdownItems({
+    href,
     name_link,
-     variant_CSS }): JSX.Element => {
+    selectStyleType
+}: PropsForDropItemsComponents): JSX.Element {
 
     return (
         <div>
             <a
-                style={{
-        
-                }}
+                className={`${selectStyleType} dropItem`}
                 href={href}>
-                {
-                    name_link
-                }
+                {name_link}
             </a>
         </div>
     )

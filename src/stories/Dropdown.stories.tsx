@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { DropdownComponent } from "../components/Dropdown/components/Dropdown.master";
+import { DropdownComponent } from "../components/Dropdown";
 
 const meta: Meta = {
     title: 'FoxxyComponents/Dropdown',
@@ -18,7 +18,7 @@ const meta: Meta = {
         dropCount: {
             description: "Number of item components",
             control: { type: 'number', min: 1, max: 15 },
-            defaultValue: 1,
+            defaultValue: 3,
         },
         href: {
             control: { type: 'text' },
@@ -33,14 +33,13 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<React.ComponentProps<typeof DropdownComponent.Dropdown> & React.ComponentProps<typeof DropdownComponent.DropdownItems>>;
-
 export const Variant_Dropdown: Story = {
     args: {
-        variant_drop: "default",
+        variant_drop: "primary",
         name_link: "my link",
         drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
-        dropCount: 1
+        dropCount: 3
     },
 
     render: (args) => {
@@ -58,11 +57,12 @@ export const Variant_Dropdown: Story = {
             />
         ));
 
+
         return (
             <DropdownComponent.Dropdown {...args}>
-                <DropdownComponent.DropdownBox>
+                <DropdownComponent.DropdopwnContent>
                     {dropItems}
-                </DropdownComponent.DropdownBox>
+                </DropdownComponent.DropdopwnContent>
             </DropdownComponent.Dropdown>
         );
     }

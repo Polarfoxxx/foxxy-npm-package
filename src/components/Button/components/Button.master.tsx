@@ -19,7 +19,8 @@ function Button({
   sm = false,
   customBackGrColor,
   customTextColor,
-  ...props }: TypeButtonsIntrinsicAttributes): JSX.Element {
+  ...props 
+}: TypeButtonsIntrinsicAttributes): JSX.Element {
 
   const [selectStyleType, setSelectStyleType] = React.useState("");
   const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
@@ -45,14 +46,9 @@ function Button({
       style={{ ...customStyle }}
       className={selectStyleType}
       {...props}>
-      {
-        text
-      }
+      { text}
     </button>
   );
 };
 
-export default {
-  Button,
-  ButtonBox
-};
+export default Button;
