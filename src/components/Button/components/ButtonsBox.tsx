@@ -27,7 +27,7 @@ function ButtonBox({
 
     //? useeffect for style................................
     React.useEffect(() => {
-        setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant }))
+            setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant }))
     }, [buttonBox_variant]);
 
     //? useeffect for setting width and height................................

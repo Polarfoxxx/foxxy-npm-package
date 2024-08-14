@@ -30,7 +30,7 @@ function Button({
 
   //? useeffect for style................................
   React.useEffect(() => {
-    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
+      setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
   }, [variant_btn, withBorder, radiusBorder, lg, sm]);
 
   //? useeffect for custom style.........................
