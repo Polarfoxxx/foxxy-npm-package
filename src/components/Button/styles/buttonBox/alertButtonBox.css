@@ -5,6 +5,5 @@
     display:  flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(100, 3, 3);
-    border-radius: 5px;
+    border: 5px solid rgb(100, 3, 3);
 }

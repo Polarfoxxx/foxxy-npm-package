@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'foxxy_package_style.css', // Výstupný CSS súbor
+      filename: 'foxxy_package_dis.css', // Výstupný CSS súbor
     }),
   ],
   resolve: {
