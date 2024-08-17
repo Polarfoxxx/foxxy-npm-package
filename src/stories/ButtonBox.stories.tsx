@@ -6,7 +6,6 @@ import { fn } from '@storybook/test';
 const meta: Meta = {
     title: 'FoxxyComponents/ButtonBox',
     component: ButtonComponent.ButtonBox,
-    subcomponents: ButtonComponent,
     args: { onClick: fn(), },
     parameters: {
         layout: 'centered',
@@ -69,6 +68,11 @@ const meta: Meta = {
             description: "change a backgroundColor in box",
             control: { type: 'color' },
             defaultValue: "transparent",
+        },
+        rounded: {
+            description: "change a bordeer radius in box",
+            control: { type: 'text' },
+            defaultValue: "0",
         }
     }
 };
@@ -120,6 +124,7 @@ export const VariantButtonBox: Story = {
                 height_buttonBox={args.height_buttonBox}
                 layout_Buttonts={args.layout_Buttonts}
                 gap_Buttons={args.gap_Buttons}
+                rounded={args.rounded}
                 background_Box={args.background_Box}>
                 {
                     buttons

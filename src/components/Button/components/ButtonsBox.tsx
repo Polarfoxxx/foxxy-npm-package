@@ -8,11 +8,12 @@ import "../styles/buttonBox/alertButtonBox.css";
 
 function ButtonBox({
     children,
-    buttonBox_variant,
+    buttonBox_variant = "primaryButtonBox",
     width_buttonBox,
     height_buttonBox,
     layout_Buttonts,
     gap_Buttons,
+    rounded,
     background_Box,
     ...props }: TypeForButtonBox): JSX.Element {
 
@@ -22,7 +23,8 @@ function ButtonBox({
         height: "0",
         flexDirection: "row",
         gap: "0",
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        borderRadius: "0"
     });
 
     //? useeffect for style................................
@@ -37,9 +39,10 @@ function ButtonBox({
             height: height_buttonBox,
             flexDirection: layout_Buttonts,
             gap: gap_Buttons,
-            backgroundColor: background_Box
+            backgroundColor: background_Box,
+            borderRadius: rounded
         })
-    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, background_Box]);
+    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, background_Box, rounded]);
 
 
 
