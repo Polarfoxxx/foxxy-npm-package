@@ -1,9 +1,9 @@
 .secondaryButtonBox{
     width: auto;
     height: auto;
-    padding: 10px;
     display:  flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(140, 140, 140, 0.274);
+    padding: 10px;
 }

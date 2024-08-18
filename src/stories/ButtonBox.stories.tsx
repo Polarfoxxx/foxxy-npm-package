@@ -13,7 +13,7 @@ const meta: Meta = {
     argTypes: {
         variant_btn: {
             description: "you can choose a variant for the component button",
-            options: ["primaryButton", "secondaryButton", "alertButton"],
+            options: ["primaryButton", "secondaryButton", "alertButton", "successButton", "darkButton", "nightButton"],
             control: { type: 'radio' }
         },
         text: {
@@ -41,6 +41,14 @@ const meta: Meta = {
             options: ["primaryButtonBox", "secondaryButtonBox", "alertButtonBox"],
             control: { type: 'radio' }
         },
+        customBackGrColor: {
+            description: "Set custom background color for element",
+            control: { type: 'color' },
+        },
+        customTextColor: {
+            description: "Set custom text color for element",
+            control: { type: 'color' },
+        },
         width_buttonBox: {
             description: "you can choose a width for the component buttonBox",
             control: { type: 'text' }
@@ -64,10 +72,9 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 30 },
             defaultValue: 1,
         },
-        background_Box: {
+        custom_background_Box: {
             description: "change a backgroundColor in box",
             control: { type: 'color' },
-            defaultValue: "transparent",
         },
         rounded: {
             description: "change a bordeer radius in box",
@@ -88,21 +95,24 @@ export const VariantButtonBox: Story = {
         lg: false,
         sm: false,
         buttonBox_variant: "primaryButtonBox",
-        width_buttonBox: "200px",
-        height_buttonBox: "100px",
+        width_buttonBox: "auto",
+        height_buttonBox: "auto",
         numberOfButtons: 1,
         layout_Buttonts: "row",
         gap_Buttons: "5px",
-        background_Box: "transparent"
+        custom_background_Box: "",
+        customBackGrColor: "",
+        customTextColor:""
+
     },
 
     render: (args) => {
         const [numButtons, setNumButtons] = React.useState<number>();
-       
+
         React.useEffect(() => {
             setNumButtons(args.numberOfButtons)
         }, [args.numberOfButtons]);
-        
+
         const buttons = [...Array(numButtons)].map((_, i) => (
             <ButtonComponent.Button
                 key={i}
@@ -113,6 +123,8 @@ export const VariantButtonBox: Story = {
                 lg={args.lg}
                 sm={args.sm}
                 onClick={args.onClick}
+                customBackGrColor={args.customBackGrColor}
+                customTextColor={args.customTextColor}
             />
         ));
 
@@ -125,7 +137,7 @@ export const VariantButtonBox: Story = {
                 layout_Buttonts={args.layout_Buttonts}
                 gap_Buttons={args.gap_Buttons}
                 rounded={args.rounded}
-                background_Box={args.background_Box}>
+                custom_background_Box={args.custom_background_Box}>
                 {
                     buttons
                 }

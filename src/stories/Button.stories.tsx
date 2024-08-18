@@ -24,35 +24,35 @@ const meta: Meta = {
       }
     },
     withBorder: {
-      control: "boolean",
+      control: { type: 'boolean' },
       description: "border change",
       defaultValue: false,
 
     },
     radiusBorder: {
       description: "rounded edges",
-      control: "boolean",
+      control: { type: 'boolean' },
       defaultValue: false,
 
     },
     lg: {
       description: "bigger",
-      control: "boolean",
+      control: { type: 'boolean' },
       defaultValue: false,
 
     },
     sm: {
       description: "smaller",
-      control: "boolean",
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     customBackGrColor: {
       description: "Set custom background color for element",
-      control: "color"
+      control: { type: 'color' },
     },
     customTextColor: {
       description: "Set custom text color for element",
-      control: "color",
+      control: { type: 'color' },
     },
 
   },

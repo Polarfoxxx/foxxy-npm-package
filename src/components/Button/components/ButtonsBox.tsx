@@ -14,16 +14,19 @@ function ButtonBox({
     layout_Buttonts,
     gap_Buttons,
     rounded,
-    background_Box,
+    custom_background_Box,
+    customBackGrColor,
+  customTextColor,
     ...props }: TypeForButtonBox): JSX.Element {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [sizeButtonBox, setSizeButtonBox] = React.useState<React.CSSProperties>({
-        width: "0",
-        height: "0",
+        width: "auto",
+        padding: "10px",
+        height: "auto",
         flexDirection: "row",
         gap: "0",
-        backgroundColor: "transparent",
+        backgroundColor: "",
         borderRadius: "0"
     });
 
@@ -39,10 +42,10 @@ function ButtonBox({
             height: height_buttonBox,
             flexDirection: layout_Buttonts,
             gap: gap_Buttons,
-            backgroundColor: background_Box,
+            backgroundColor: custom_background_Box,
             borderRadius: rounded
         })
-    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, background_Box, rounded]);
+    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, custom_background_Box, rounded]);
 
 
 

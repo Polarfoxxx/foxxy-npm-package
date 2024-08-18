@@ -1,9 +1,9 @@
 .primaryButtonBox{
     width: auto;
     height: auto;
-    padding: 10px;
     display:  flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent
+    background-color: transparent;
+    padding: 10px;
 }

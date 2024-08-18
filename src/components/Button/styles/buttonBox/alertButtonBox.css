@@ -1,9 +1,10 @@
 .alertButtonBox{
     width: auto;
     height: auto;
-    padding: 10px;
     display:  flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid rgb(100, 3, 3);
+    background-color: rgba(132, 80, 80, 0.404);
+    padding: 10px;
+    border: 1px solid rgb(215, 38, 38);
 }
