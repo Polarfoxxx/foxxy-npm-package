@@ -14,15 +14,13 @@ export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTM
 export interface TypeForButtonBox extends HTMLAttributes<HTMLDivElement> {
   children: JSX.Element | JSX.Element[],
   buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
-  width_buttonBox?: string,
-  height_buttonBox?: string,
   numberOfButtons?: number
   layout_Buttonts?: "column" | "row",
-  gap_Buttons?: string,
+  custom_width_buttonBox?: string,
+  custom_height_buttonBox?: string,
+  custom_gap_Buttons?: string,
   custom_background_Box?: string,
-  rounded?: string,
-  customBackGrColor?: string,
-  customTextColor?: string
+  custom_rounded?: string,
 };
 
 /* services-------------------------------------------------- */
@@ -35,6 +33,7 @@ export type TypeFor_services_Style_buttonMaster = {
 };
 export type TypeFor_services_Style_buttonBox = {
   buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
+  layout_Buttonts? : "column" | "row"
 };
 
 

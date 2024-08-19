@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paddingButton: 3px 9px;
+    --fontSizeLarge: 20px;
+    --fontSizeMedium: 15px;
+    --fontSizeSmall: 13px;
+}

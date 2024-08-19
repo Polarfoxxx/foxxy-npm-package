@@ -7,3 +7,10 @@
     background-color: transparent;
     padding: 10px;
 }
+
+.primaryButtonBox.column {
+    flex-direction: column;
+}
+.primaryButtonBox.row {
+    flex-direction: row
+}

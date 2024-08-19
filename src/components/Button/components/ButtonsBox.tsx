@@ -9,54 +9,45 @@ import "../styles/buttonBox/alertButtonBox.css";
 function ButtonBox({
     children,
     buttonBox_variant = "primaryButtonBox",
-    width_buttonBox,
-    height_buttonBox,
-    layout_Buttonts,
-    gap_Buttons,
-    rounded,
+    layout_Buttonts = "row",
+    custom_width_buttonBox,
+    custom_height_buttonBox,
+    custom_gap_Buttons,
+    custom_rounded,
     custom_background_Box,
-    customBackGrColor,
-  customTextColor,
     ...props }: TypeForButtonBox): JSX.Element {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
-    const [sizeButtonBox, setSizeButtonBox] = React.useState<React.CSSProperties>({
-        width: "auto",
-        padding: "10px",
-        height: "auto",
-        flexDirection: "row",
-        gap: "0",
+    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
         backgroundColor: "",
-        borderRadius: "0"
+        borderRadius: "",
+        gap: ""
     });
 
     //? useeffect for style................................
     React.useEffect(() => {
-            setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant }))
-    }, [buttonBox_variant]);
+        setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant, layout_Buttonts }))
+    }, [buttonBox_variant, layout_Buttonts]);
 
     //? useeffect for setting width and height................................
     React.useEffect(() => {
-        setSizeButtonBox({
-            width: width_buttonBox,
-            height: height_buttonBox,
-            flexDirection: layout_Buttonts,
-            gap: gap_Buttons,
+        setCustomStyle({
+            width: custom_width_buttonBox,
+            height: custom_height_buttonBox,
+            gap: custom_gap_Buttons,
             backgroundColor: custom_background_Box,
-            borderRadius: rounded
+            borderRadius: custom_rounded
         })
-    }, [width_buttonBox, height_buttonBox, layout_Buttonts, gap_Buttons, custom_background_Box, rounded]);
+    }, [custom_width_buttonBox, custom_height_buttonBox, custom_gap_Buttons, custom_background_Box, custom_rounded]);
 
 
 
     return (
         <div
-            style={{ ...sizeButtonBox }}
+            style={{ ...customStyle }}
             className={selectStyleType}
             {...props}>
-            {
-                children
-            }
+            {children}
         </div>
 
     )

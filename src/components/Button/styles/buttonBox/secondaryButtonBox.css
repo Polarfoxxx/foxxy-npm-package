@@ -7,3 +7,10 @@
     background-color: rgba(140, 140, 140, 0.274);
     padding: 10px;
 }
+
+.secondaryButtonBox.column {
+    flex-direction: column;
+}
+.secondaryButtonBox.row {
+    flex-direction: row
+}

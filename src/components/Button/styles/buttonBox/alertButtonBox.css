@@ -1,10 +1,17 @@
-.alertButtonBox{
+.alertButtonBox {
     width: auto;
     height: auto;
-    display:  flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(132, 80, 80, 0.404);
     padding: 10px;
     border: 1px solid rgb(215, 38, 38);
+}
+
+.alertButtonBox.column {
+    flex-direction: column;
+}
+.alertButtonBox.row {
+    flex-direction: row
 }

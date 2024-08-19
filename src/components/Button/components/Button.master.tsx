@@ -19,7 +19,7 @@ function Button({
   sm = false,
   customBackGrColor,
   customTextColor,
-  ...props 
+  ...props
 }: TypeButtonsIntrinsicAttributes): JSX.Element {
 
   const [selectStyleType, setSelectStyleType] = React.useState("");
@@ -30,7 +30,7 @@ function Button({
 
   //? useeffect for style................................
   React.useEffect(() => {
-      setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
+    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
   }, [variant_btn, withBorder, radiusBorder, lg, sm]);
 
   //? useeffect for custom style.........................
@@ -46,7 +46,7 @@ function Button({
       style={{ ...customStyle }}
       className={selectStyleType}
       {...props}>
-      { text}
+      {text}
     </button>
   );
 };

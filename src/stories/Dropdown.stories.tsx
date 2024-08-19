@@ -8,7 +8,7 @@ const meta: Meta = {
     argTypes: {
         variant_drop: {
             description: 'You can choose a color variant for the component Dropdown',
-            options: ['default', 'dark', 'white'],
+            options: ["primaryDropdown" , "secondaryDropdown" , "alertDropdown"],
             control: { type: 'radio' },
         },
         drop_text: {
@@ -35,7 +35,7 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof DropdownComponent.Dropdown> & React.ComponentProps<typeof DropdownComponent.DropdownItems>>;
 export const Variant_Dropdown: Story = {
     args: {
-        variant_drop: "primary",
+        variant_dropdown: "primaryDropdown",
         name_link: "my link",
         drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",

@@ -4,16 +4,17 @@ import React from "react";
 export type PropsForDropdownComponents = {
     children: JSX.Element | JSX.Element[],
     drop_text: string
-    variant_drop?: "primary" | "secondary" | "alert",
+    variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown",
     lg?: boolean,
     sm?: boolean,
     dropCount?: number
+    custom_background_color_dropdown?: string
 };
 
 export type PropsForDropBoxComponents = {
     children: JSX.Element | JSX.Element[],
     selectStyleType?: string,
-
+    show?: boolean
 };
 
 export type PropsForDropItemsComponents = {
@@ -24,7 +25,7 @@ export type PropsForDropItemsComponents = {
 
 //? type for services.................................
 export type Type_for_DropdownChangeVariant_services = {
-    variant_drop: string,
+    variant_dropdown: string,
     lg: boolean
     sm: boolean
 };

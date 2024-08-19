@@ -41,6 +41,11 @@ const meta: Meta = {
             options: ["primaryButtonBox", "secondaryButtonBox", "alertButtonBox"],
             control: { type: 'radio' }
         },
+        layout_Buttonts: {
+            description: "layout buttons in buttom box",
+            control: { type: 'radio' },
+            options: ["column", "row"],
+        },
         customBackGrColor: {
             description: "Set custom background color for element",
             control: { type: 'color' },
@@ -49,11 +54,11 @@ const meta: Meta = {
             description: "Set custom text color for element",
             control: { type: 'color' },
         },
-        width_buttonBox: {
+        custom_width_buttonBox: {
             description: "you can choose a width for the component buttonBox",
             control: { type: 'text' }
         },
-        height_buttonBox: {
+        custom_height_buttonBox: {
             description: "you can choose a height for the component buttonBox",
             control: { type: 'text' }
         },
@@ -62,21 +67,16 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 10 },
             defaultValue: 1,
         },
-        layout_Buttonts: {
-            description: "layout buttons components in buttom box",
-            control: { type: 'radio' },
-            options: ["column", "row"],
-        },
-        gap_Buttons: {
+        custom_gap_Buttons: {
             description: "gap buttons components in buttom box",
-            control: { type: 'number', min: 1, max: 30 },
+            control: { type: 'text' },
             defaultValue: 1,
         },
         custom_background_Box: {
             description: "change a backgroundColor in box",
             control: { type: 'color' },
         },
-        rounded: {
+        custom_rounded: {
             description: "change a bordeer radius in box",
             control: { type: 'text' },
             defaultValue: "0",
@@ -94,16 +94,18 @@ export const VariantButtonBox: Story = {
         radiusBorder: false,
         lg: false,
         sm: false,
-        buttonBox_variant: "primaryButtonBox",
-        width_buttonBox: "auto",
-        height_buttonBox: "auto",
-        numberOfButtons: 1,
-        layout_Buttonts: "row",
-        gap_Buttons: "5px",
-        custom_background_Box: "",
         customBackGrColor: "",
-        customTextColor:""
+        customTextColor: "",
 
+        buttonBox_variant: "primaryButtonBox",
+        layout_Buttonts: "row",
+        custom_width_buttonBox: "auto",
+        custom_height_buttonBox: "auto",
+        custom_gap_Buttons: "5px",
+        custom_background_Box: "",
+        custom_rounded: "",
+
+        numberOfButtons: 1,
     },
 
     render: (args) => {
@@ -132,11 +134,11 @@ export const VariantButtonBox: Story = {
         return (
             <ButtonComponent.ButtonBox
                 buttonBox_variant={args.buttonBox_variant}
-                width_buttonBox={args.width_buttonBox}
-                height_buttonBox={args.height_buttonBox}
+                custom_width_buttonBox={args.custom_width_buttonBox}
+                custom_height_buttonBox={args.custom_height_buttonBox}
                 layout_Buttonts={args.layout_Buttonts}
-                gap_Buttons={args.gap_Buttons}
-                rounded={args.rounded}
+                custom_gap_Buttons={args.custom_gap_Buttons}
+                custom_rounded={args.custom_rounded}
                 custom_background_Box={args.custom_background_Box}>
                 {
                     buttons
