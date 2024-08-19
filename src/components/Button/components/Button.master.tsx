@@ -1,8 +1,7 @@
 import React from "react";
 import { TypeButtonsIntrinsicAttributes } from "../types";
 import { servicesChangeVariantForButtons } from "../services";
-import ButtonBox from "./ButtonsBox";
-import "../styles/root_style.css";
+import "../styles/button_root_style.css";
 import "../styles/buttonMaster/primaryButton_style.css";
 import "../styles/buttonMaster/secondaryButton_style.css";
 import "../styles/buttonMaster/alertButton_style.css";

@@ -1,34 +1,36 @@
-import React, { useRef, useEffect } from "react";
-import { PropsForDropBoxComponents } from "../types";
+import React from "react";
+import { PropsForDropBoxComponents ,ChildProps_child_dropdownItems} from "../types";
+import "../style/dropDown_root_style.css";
 import "../style/dropDownContent/primaryDropDownContent.css";
 
 function DropdownContent({
     children,
     selectStyleType,
-    show
+    show ,
+    custom_showAndHidden_time,
+    
 }: PropsForDropBoxComponents): JSX.Element {
-    const contentRef = useRef<HTMLDivElement>(null);
+    const contentRef = React.useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const contentElement = contentRef.current;
-
         if (contentElement) {
             if (show) {
-                // Dynamicky nastaviť maxHeight na aktuálnu výšku obsahu
                 contentElement.style.maxHeight = `${contentElement.scrollHeight}px`;
+                contentElement.style.transition = `${custom_showAndHidden_time}s`;
             } else {
-                // Nastaviť maxHeight na 0 pri skrytí
-                contentElement.style.maxHeight = "0";
-            }
-        }
+                contentElement.style.maxHeight = "0px";
+                contentElement.style.transition = `${custom_showAndHidden_time}s`;
+            };
+        };
     }, [show]);
 
     return (
         <div
             ref={contentRef}
-            className={`${selectStyleType} dropContent ${show ? "show" : "hidden"}`}>
+            className={`${selectStyleType} dropContent`}>
             {
-                React.Children.map(children, (child: React.ReactElement<any>) => {
+                React.Children.map(children, (child: React.ReactElement<ChildProps_child_dropdownItems>) => {
                     return React.cloneElement(child, { selectStyleType });
                 })
             }

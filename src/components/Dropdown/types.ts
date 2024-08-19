@@ -3,18 +3,20 @@ import React from "react";
 //? types for only components.........................
 export type PropsForDropdownComponents = {
     children: JSX.Element | JSX.Element[],
-    drop_text: string
+    dropdown_name: string
     variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown",
     lg?: boolean,
     sm?: boolean,
-    dropCount?: number
-    custom_background_color_dropdown?: string
+    dropCount?: number,
+    custom_background_color_dropdown?: string,
+    custom_showAndHidden_time?: number
 };
 
 export type PropsForDropBoxComponents = {
     children: JSX.Element | JSX.Element[],
     selectStyleType?: string,
-    show?: boolean
+    show?: boolean,
+    custom_showAndHidden_time?: number,
 };
 
 export type PropsForDropItemsComponents = {
@@ -22,6 +24,18 @@ export type PropsForDropItemsComponents = {
     name_link: string,
     selectStyleType?: string,
 };
+
+//? type for children components.................................
+export type  ChildProps_child_dropdownContent = {
+    selectStyleType: string;
+    show: boolean;
+    custom_showAndHidden_time: number;
+};
+
+export type  ChildProps_child_dropdownItems = {
+    selectStyleType: string;
+};
+
 
 //? type for services.................................
 export type Type_for_DropdownChangeVariant_services = {

@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paddingButton: 3px 9px;
+    --fontSizeLarge: 20px;
+    --fontSizeMedium: 15px;
+    --fontSizeSmall: 13px;
+}
+
+.dropDownMaster{
+    background-color: brown;
+}
+
+
+.dropContent {
+    margin-top: 5px;
+    max-width: max-content;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: rgba(79, 79, 92, 0.507);
+}
+
+
