@@ -9,7 +9,8 @@ export default servicesChangeVariantDropDwn;
 function changeVariantDropDwn({
     variant_dropdown,
     lg,
-    sm
+    sm,
+    border
 }: Type_for_DropdownChangeVariant_services): string {
 
     let variant_Style_className: string = "";
@@ -21,6 +22,9 @@ function changeVariantDropDwn({
     } else {
         variant_Style_className = `${variant_dropdown} medium`;
     };
-    
-    return variant_Style_className
+
+    if (border) {
+        return `${variant_Style_className} border`
+    } else
+        return variant_Style_className
 };

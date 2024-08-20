@@ -4,15 +4,55 @@ import { DropdownComponent } from "../components/Dropdown";
 
 const meta: Meta = {
     title: 'FoxxyComponents/Dropdown',
-    component: DropdownComponent.Dropdown, // Corrected from Dropdopwn to Dropdown
+    component: DropdownComponent.Dropdown,
     argTypes: {
-        variant_drop: {
+        variant_dropdown: {
             description: 'You can choose a color variant for the component Dropdown',
-            options: ["primaryDropdown" , "secondaryDropdown" , "alertDropdown"],
+            options: ["primaryDropdown", "secondaryDropdown", "alertDropdown"],
             control: { type: 'radio' },
         },
-        drop_text: {
+        dropdown_name: {
             description: 'Dropdown name max 18',
+            control: { type: 'text' },
+        },
+        lg: {
+            description: 'the large component',
+            control: { type: 'boolean' },
+        },
+        sm: {
+            description: 'the small component',
+            control: { type: 'boolean' },
+        },
+        border: {
+            description: 'the component width border variant',
+            control: { type: 'boolean' },
+        },
+
+        custom_background_color_dropdown: {
+            description: 'custom change color',
+            control: { type: 'color' },
+        },
+        custom_showAndHidden_time: {
+            description: 'custom change show and hidden time',
+            control: { type: 'number' }, // Opravený typ na number
+        },
+        custom_rouded: {
+            description: 'custom change border radius',
+            control: { type: 'text' },
+        },
+        custom_textColor_for_dropdown:{
+            description: 'custom change text color',
+            control: { type: 'color' },
+        },
+        href: {
+            control: { type: 'text' },
+        },
+        custom_textColor_forItem:{
+            description: 'custom change text color in item components',
+            control: { type: 'color' },
+        },
+        name_link: {
+            description: 'Link name max 34',
             control: { type: 'text' },
         },
         dropCount: {
@@ -20,25 +60,30 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 15 },
             defaultValue: 3,
         },
-        href: {
-            control: { type: 'text' },
-        },
-        name_link: {
-            description: 'Link name max 34',
-            control: { type: 'text' },
-        },
     },
 };
 
 export default meta;
 
-type Story = StoryObj<React.ComponentProps<typeof DropdownComponent.Dropdown> & React.ComponentProps<typeof DropdownComponent.DropdownItems>>;
+type Story = StoryObj<
+    React.ComponentProps<typeof DropdownComponent.Dropdown> &
+    React.ComponentProps<typeof DropdownComponent.DropdownItems> &
+    React.ComponentProps<typeof DropdownComponent.DropdownContent>>; // Opravený názov
+
 export const Variant_Dropdown: Story = {
     args: {
         variant_dropdown: "primaryDropdown",
+        lg: false,
+        sm: false,
+        border: false,
+        dropdown_name: "dropdown",
+        custom_background_color_dropdown: "",
+        custom_showAndHidden_time: 0.4,
+        custom_rouded: "",
+        custom_textColor_for_dropdown: "",
         name_link: "my link",
-        drop_text: "dropdown",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
+        custom_textColor_forItem: "",
         dropCount: 3
     },
 
@@ -46,7 +91,7 @@ export const Variant_Dropdown: Story = {
         const [numdropItem, setNumdropItem] = React.useState<number>();
 
         React.useEffect(() => {
-            setNumdropItem(args.dropCount)
+            setNumdropItem(args.dropCount);
         }, [args.dropCount]);
 
         const dropItems = [...Array(numdropItem)].map((_, i) => (
@@ -54,15 +99,24 @@ export const Variant_Dropdown: Story = {
                 key={i}
                 href={args.href}
                 name_link={args.name_link}
+                custom_textColor_forItem={args.custom_textColor_forItem}
             />
         ));
 
-
         return (
-            <DropdownComponent.Dropdown {...args}>
-                <DropdownComponent.DropdopwnContent>
+            <DropdownComponent.Dropdown
+                variant_dropdown={args.variant_dropdown}
+                lg={args.lg}
+                sm={args.sm}
+                border={args.border}
+                dropdown_name={args.dropdown_name}
+                custom_background_color_dropdown={args.custom_background_color_dropdown}
+                custom_showAndHidden_time={args.custom_showAndHidden_time}
+                custom_rouded={args.custom_rouded}
+                custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                <DropdownComponent.DropdownContent> 
                     {dropItems}
-                </DropdownComponent.DropdopwnContent>
+                </DropdownComponent.DropdownContent> 
             </DropdownComponent.Dropdown>
         );
     }

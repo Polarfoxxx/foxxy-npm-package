@@ -7,9 +7,12 @@ export type PropsForDropdownComponents = {
     variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown",
     lg?: boolean,
     sm?: boolean,
+    border?: boolean,
     dropCount?: number,
     custom_background_color_dropdown?: string,
-    custom_showAndHidden_time?: number
+    custom_showAndHidden_time?: number,
+    custom_rouded?:string,
+    custom_textColor_for_dropdown?: string
 };
 
 export type PropsForDropBoxComponents = {
@@ -23,6 +26,7 @@ export type PropsForDropItemsComponents = {
     href: string,
     name_link: string,
     selectStyleType?: string,
+    custom_textColor_forItem? : string
 };
 
 //? type for children components.................................
@@ -40,8 +44,9 @@ export type  ChildProps_child_dropdownItems = {
 //? type for services.................................
 export type Type_for_DropdownChangeVariant_services = {
     variant_dropdown: string,
-    lg: boolean
-    sm: boolean
+    lg: boolean,
+    sm: boolean,
+    border: boolean
 };
 
 export type TypeVariantStyle_dropdown = {

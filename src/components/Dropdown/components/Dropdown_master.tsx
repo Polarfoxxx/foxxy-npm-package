@@ -1,6 +1,6 @@
 
 import React from "react";
-import { PropsForDropdownComponents,ChildProps_child_dropdownContent } from "../types";
+import { PropsForDropdownComponents, ChildProps_child_dropdownContent } from "../types";
 import servicesChangeVariantDropDwn from "../services/changeVariant.services";
 import "../style/dropDown_root_style.css";
 import "../style/dropDownMaster/primaryDropDownMaster.css";
@@ -12,48 +12,68 @@ function Dropdown({
     variant_dropdown = "primaryDropdown",
     lg = false,
     sm = false,
+    border = false,
     dropdown_name = "My dropdown",
     custom_background_color_dropdown,
-    custom_showAndHidden_time = 1
+    custom_showAndHidden_time = 0.4,
+    custom_rouded,
+    custom_textColor_for_dropdown,
 }: PropsForDropdownComponents): JSX.Element {
     const [show, setShow] = React.useState(false);
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
-        backgroundColor: ""
-    })
+        backgroundColor: "",
+        borderRadius: "",
+        color: ""
+    });
+    const dropdownRef = React.useRef<HTMLDivElement>(null);
 
     //? funkcia zatvarania a otvaranie................................
     const handleClick = (e: React.MouseEvent<HTMLElement>): void => {
         setShow(!show);
     };
+    //? Funkcia pre kontrolu kliknutia mimo dropdownu
+    const handleClickOutside = (event: MouseEvent): void => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setShow(false);
+        }
+    };
+    //? Pridanie event listeneru na kliknutie mimo dropdownu...............
+    React.useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     //? servis pre variantu............................................
     React.useEffect(() => {
-        setSelectStyleType(servicesChangeVariantDropDwn.changeVariantDropDwn({ variant_dropdown, lg, sm }));
-    }, [variant_dropdown, lg, sm]);
+        setSelectStyleType(servicesChangeVariantDropDwn.changeVariantDropDwn({ variant_dropdown, lg, sm, border }));
+    }, [variant_dropdown, lg, sm, border]);
 
     //? servis pre custom style............................................
     React.useEffect(() => {
         setCustomStyle({
-            backgroundColor: custom_background_color_dropdown
+            backgroundColor: custom_background_color_dropdown,
+            borderRadius: custom_rouded,
+            color: custom_textColor_for_dropdown
         });
-    }, [variant_dropdown, lg, sm]);
+    }, [custom_background_color_dropdown, custom_rouded, custom_textColor_for_dropdown]);
 
-   
+
     return (
         <div
+            ref={dropdownRef}
             className="dropDownBox">
             <a
-                style={{
-                    ...customStyle
-                }}
+                style={{ ...customStyle }}
                 className={`${selectStyleType} dropDownMaster`}
                 onClick={handleClick}>
                 {dropdown_name}
             </a>
             {
                 React.Children.map(children, (child: React.ReactElement<ChildProps_child_dropdownContent>) => {
-                    return React.cloneElement(child, { selectStyleType, show,custom_showAndHidden_time});
+                    return React.cloneElement(child, { selectStyleType, show, custom_showAndHidden_time });
                 })
             }
         </div>
