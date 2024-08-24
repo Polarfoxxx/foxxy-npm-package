@@ -6,6 +6,10 @@ import "../style/dropDown_root_style.css";
 import "../style/dropDownMaster/primaryDropDownMaster.css";
 import "../style/dropDownMaster/secondaryDropDownMaster.css";
 import "../style/dropDownMaster/alertDropDownMaster.css";
+import "../style/dropDownMaster/successDropDownMaster.css";
+import "../style/dropDownMaster/darkDropDownMaster.css";
+import "../style/dropDownMaster/nightDropDownMaster.css";
+import arrowDropdown from "../../../asset/arrowDropdown.png"
 
 function Dropdown({
     children,
@@ -70,6 +74,7 @@ function Dropdown({
                 className={`${selectStyleType} dropDownMaster`}
                 onClick={handleClick}>
                 {dropdown_name}
+                <img src={arrowDropdown} alt="arrow" />
             </a>
             {
                 React.Children.map(children, (child: React.ReactElement<ChildProps_child_dropdownContent>) => {

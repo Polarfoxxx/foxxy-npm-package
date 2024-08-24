@@ -4,7 +4,7 @@ import React from "react";
 export type PropsForDropdownComponents = {
     children: JSX.Element | JSX.Element[],
     dropdown_name: string
-    variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown",
+    variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown" |  "successDropdown" | "darkDropdown" | "nightDropdown",
     lg?: boolean,
     sm?: boolean,
     border?: boolean,

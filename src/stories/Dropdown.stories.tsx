@@ -8,7 +8,7 @@ const meta: Meta = {
     argTypes: {
         variant_dropdown: {
             description: 'You can choose a color variant for the component Dropdown',
-            options: ["primaryDropdown", "secondaryDropdown", "alertDropdown"],
+            options: ["primaryDropdown", "secondaryDropdown", "alertDropdown", "successDropdown", "darkDropdown", "nightDropdown"],
             control: { type: 'radio' },
         },
         dropdown_name: {

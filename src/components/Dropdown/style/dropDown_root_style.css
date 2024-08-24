@@ -5,10 +5,10 @@
 }
 
 :root {
-    --paddingButton: 3px 9px;
+    --paddingButton: 5px 12px;
     --fontSizeLarge: 20px;
-    --fontSizeMedium: 15px;
-    --fontSizeSmall: 13px;
+    --fontSizeMedium: 18px;
+    --fontSizeSmall: 15px;
 }
 
 .dropDownBox{
@@ -18,18 +18,50 @@
     flex-direction: column;
     align-items: center;
 }
-
+/* ------------------------------------------------------ */
 .dropDownMaster{
-    background-color: brown;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px;
+    cursor: pointer;
+
+}
+.dropDownMaster > img{
+    width: 25px;
 }
 
+.dropDownMaster:hover{
+    background-color: rgba(0, 0, 0, 0.418);
+}
+/* Špecifické štýly pre veľkosti */
+.dropDownMaster.lg {
+    padding: var(--paddingButton);
+    font-size: var(--fontSizeLarge);
+}
+
+.dropDownMaster.medium {
+    padding: var(--paddingButton);
+    font-size: var(--fontSizeMedium);
+}
+
+.dropDownMaster.sm {
+    padding: var(--paddingButton);
+    font-size: var(--fontSizeSmall);
+}
+/* ------------------------------------------------------ */
 
 .dropContent {
     margin-top: 5px;
-    max-width: max-content;
+    width: 100%;
     max-height: 0px;
     overflow: hidden;
     background-color: rgba(79, 79, 92, 0.507);
+    padding:0 5px;
 }
+/* ------------------------------------------------------ */
 
 

@@ -25,6 +25,13 @@ module.exports = {
           'css-loader',
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource', // Zabezpečí, že obrázky sa presunú do výstupnej zložky
+        generator: {
+          filename: 'asset/[name].[hash][ext]', // Uloží obrázky do 'dist/assets/'
+        },
+      },
     ],
   },
   plugins: [

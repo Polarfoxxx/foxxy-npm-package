@@ -1,21 +1,6 @@
-.primaryDropdown.dropDownMaster {
-    cursor: pointer;
+.primaryDropdown {
+background-color: azure;
 }
 
 
-/* Špecifické štýly pre veľkosti --------------------------*/
-.primaryDropdown.dropDownMaster.lg {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeLarge);
-}
-
-.primaryDropdown.dropDownMaster.medium {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeMedium);
-}
-
-.primaryDropdown.dropDownMaster.sm {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeSmall);
-}
 
