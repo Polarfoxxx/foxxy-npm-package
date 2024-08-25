@@ -9,7 +9,9 @@ import "../style/dropDownMaster/alertDropDownMaster.css";
 import "../style/dropDownMaster/successDropDownMaster.css";
 import "../style/dropDownMaster/darkDropDownMaster.css";
 import "../style/dropDownMaster/nightDropDownMaster.css";
-import arrowDropdown from "../../../asset/arrowDropdown.png"
+import arrowDropdown from "@assets/arrowDropdown.png";
+
+
 
 function Dropdown({
     children,

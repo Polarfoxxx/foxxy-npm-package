@@ -13,11 +13,11 @@
     "moduleResolution": "node",
     "strict": true,
     "types": ["node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+    }
   },
-  "include": [
-    "src/",
-    "src/**/*.module.css" // include css files while building the project using tsc
-],
+  "include": ["src/", "src/**/*.module.css", "images.d.ts"],
   "exclude": ["node_modules", "dist", "src/stories"]
 }
-

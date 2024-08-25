@@ -26,22 +26,32 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource', // Zabezpečí, že obrázky sa presunú do výstupnej zložky
-        generator: {
-          filename: 'asset/[name].[hash][ext]', // Uloží obrázky do 'dist/assets/'
-        },
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[hash].[ext]',
+              context: 'src',
+              outputPath: 'assets/', // Výstupný priečinok pre obrázky
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'foxxy_package_dis.css', // Výstupný CSS súbor
+      filename: 'foxxy_package_dis.css',
     }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
     modules: ['node_modules'],
+    alias: {
+      '@assets': path.resolve(__dirname, './src/assets'),
+      // Prípadne ďalšie aliasy...
+    },
   },
   externals: {
     react: 'react',
