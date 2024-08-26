@@ -16,8 +16,9 @@
     "baseUrl": "./src",
     "paths": {
       "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"]
     }
   },
-  "include": ["src/", "src/**/*.module.css", "images.d.ts"],
+  "include": ["src/", "src/**/*.module.css", "src/images.d.ts"],
   "exclude": ["node_modules", "dist", "src/stories"]
 }

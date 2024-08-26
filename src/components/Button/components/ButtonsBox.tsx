@@ -1,6 +1,7 @@
 import React from "react";
 import { TypeForButtonBox } from "../types";
 import { servicesChangeVariantForButtonsBox } from "../services";
+import "@components/global_root.css";
 import "../styles/button_root_style.css";
 import "../styles/buttonBox/primaryButtonBox.css";
 import "../styles/buttonBox/secondaryButtonBox.css";

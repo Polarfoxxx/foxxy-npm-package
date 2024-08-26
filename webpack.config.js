@@ -10,6 +10,7 @@ module.exports = {
     library: 'foxxy_package',
     libraryTarget: 'umd',
     clean: true,
+    publicPath: '/', // Uistite sa, že cesta je správna
   },
   module: {
     rules: [
@@ -26,14 +27,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[hash].[ext]',
-              context: 'src',
-              outputPath: 'assets/', // Výstupný priečinok pre obrázky
+              name: '[path][name].[ext]',
             },
           },
         ],
@@ -50,7 +49,8 @@ module.exports = {
     modules: ['node_modules'],
     alias: {
       '@assets': path.resolve(__dirname, './src/assets'),
-      // Prípadne ďalšie aliasy...
+      '@components': path.resolve(__dirname, './src/components'), 
+
     },
   },
   externals: {

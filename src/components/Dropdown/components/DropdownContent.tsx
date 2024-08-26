@@ -1,5 +1,6 @@
 import React from "react";
 import { PropsForDropBoxComponents ,ChildProps_child_dropdownItems} from "../types";
+import "@components/global_root.css";
 import "../style/dropDown_root_style.css";
 import "../style/dropDownContent/primaryDropDownContent.css";
 

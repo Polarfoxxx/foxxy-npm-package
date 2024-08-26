@@ -1,6 +1,7 @@
-.primaryDropdown {
-background-color: azure;
+.primaryDropdown.dropDownMaster {
+    background-color: var(--primaryColorBackground);
+    color: antiquewhite;
 }
-
-
-
+.primaryDropdown.dropDownMaster > img {
+    color: aliceblue;
+}

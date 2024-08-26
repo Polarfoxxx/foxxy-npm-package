@@ -1,14 +1,9 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 :root {
-    --paddingButton: 5px 12px;
-    --fontSizeLarge: 20px;
-    --fontSizeMedium: 18px;
-    --fontSizeSmall: 15px;
+    --paddingButton: 6px 16px;
+    --fontSizeLarge: 55px;
+    --fontSizeMedium: 22px;
+    --fontSizeSmall: 19px;
 }
 
 .dropDownBox{
@@ -28,10 +23,8 @@
     gap: 7px;
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px;
     cursor: pointer;
+    border-radius: 3px;
 
-}
-.dropDownMaster > img{
-    width: 25px;
 }
 
 .dropDownMaster:hover{

@@ -2,6 +2,7 @@
 import React from "react";
 import { PropsForDropdownComponents, ChildProps_child_dropdownContent } from "../types";
 import servicesChangeVariantDropDwn from "../services/changeVariant.services";
+import "@components/global_root.css";
 import "../style/dropDown_root_style.css";
 import "../style/dropDownMaster/primaryDropDownMaster.css";
 import "../style/dropDownMaster/secondaryDropDownMaster.css";
@@ -76,7 +77,6 @@ function Dropdown({
                 className={`${selectStyleType} dropDownMaster`}
                 onClick={handleClick}>
                 {dropdown_name}
-                <img src={arrowDropdown} alt="arrow" />
             </a>
             {
                 React.Children.map(children, (child: React.ReactElement<ChildProps_child_dropdownContent>) => {

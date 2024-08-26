@@ -1,6 +1,7 @@
 
 import React from "react";
 import { PropsForDropItemsComponents } from "../types";
+import "@components/global_root.css";
 import "../style/dropDown_root_style.css";
 
 function DropdownItems({

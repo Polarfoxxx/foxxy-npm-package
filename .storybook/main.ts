@@ -22,6 +22,7 @@ const config: StorybookConfig = {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       "@assets": path.resolve(__dirname, "../src/assets"), // Uistite sa, že cesta je správna
+      "@components": path.resolve(__dirname, "../src/components"), 
     };
 
     return config;
