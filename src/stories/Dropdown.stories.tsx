@@ -104,6 +104,21 @@ export const Variant_Dropdown: Story = {
         ));
 
         return (
+            <div>
+  <DropdownComponent.Dropdown
+                variant_dropdown={args.variant_dropdown}
+                lg={args.lg}
+                sm={args.sm}
+                border={args.border}
+                dropdown_name={args.dropdown_name}
+                custom_background_color_dropdown={args.custom_background_color_dropdown}
+                custom_showAndHidden_time={args.custom_showAndHidden_time}
+                custom_rouded={args.custom_rouded}
+                custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                <DropdownComponent.DropdownContent> 
+                    {dropItems}
+                </DropdownComponent.DropdownContent> 
+            </DropdownComponent.Dropdown>
             <DropdownComponent.Dropdown
                 variant_dropdown={args.variant_dropdown}
                 lg={args.lg}
@@ -118,6 +133,8 @@ export const Variant_Dropdown: Story = {
                     {dropItems}
                 </DropdownComponent.DropdownContent> 
             </DropdownComponent.Dropdown>
+            </div>
+          
         );
     }
 };

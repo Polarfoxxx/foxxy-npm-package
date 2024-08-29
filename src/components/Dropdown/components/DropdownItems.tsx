@@ -3,6 +3,12 @@ import React from "react";
 import { PropsForDropItemsComponents } from "../types";
 import "@components/global_root.css";
 import "../style/dropDown_root_style.css";
+import "../style/dropDownItem/alertDropDownItem.css";
+import "../style/dropDownItem/darkDropDownItem.css";
+import "../style/dropDownItem/nightDropDownItem.css";
+import "../style/dropDownItem/primaryDropDownItem.css";
+import "../style/dropDownItem/secondaryDropDownitem.css";
+import "../style/dropDownItem/successDropDownItem.css";
 
 function DropdownItems({
     href,
@@ -14,19 +20,19 @@ function DropdownItems({
         color: ""
     });
 
-       //? servis pre custom style............................................
-       React.useEffect(() => {
+    //? servis pre custom style............................................
+    React.useEffect(() => {
         setCustomStyle({
             color: custom_textColor_forItem
         });
     }, [custom_textColor_forItem]);
 
-    
+
     return (
-        <div>
+        <div
+            style={{ ...customStyle }}
+            className={`${selectStyleType} dropItem`}>
             <a
-            style={{...customStyle}}
-                className={`${selectStyleType} dropItem`}
                 href={href}>
                 {name_link}
             </a>

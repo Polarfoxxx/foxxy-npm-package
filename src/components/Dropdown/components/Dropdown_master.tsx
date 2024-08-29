@@ -12,8 +12,6 @@ import "../style/dropDownMaster/darkDropDownMaster.css";
 import "../style/dropDownMaster/nightDropDownMaster.css";
 import arrowDropdown from "@assets/arrowDropdown.png";
 
-
-
 function Dropdown({
     children,
     variant_dropdown = "primaryDropdown",

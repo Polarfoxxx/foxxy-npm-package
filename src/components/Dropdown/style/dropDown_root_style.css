@@ -1,20 +1,18 @@
-
 :root {
-    --paddingButton: 6px 16px;
-    --fontSizeLarge: 55px;
-    --fontSizeMedium: 22px;
-    --fontSizeSmall: 19px;
+    --paddingDropdown: 4px 13px;
 }
 
-.dropDownBox{
-    width: max-content;
+.dropDownBox {
+    width: auto;
     height: max-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    position: relative;
 }
-/* ------------------------------------------------------ */
-.dropDownMaster{
+
+/* Master------------------------------------------------------ */
+.dropDownMaster {
     width: auto;
     display: flex;
     flex-direction: row;
@@ -24,37 +22,46 @@
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px;
     cursor: pointer;
     border-radius: 3px;
+    margin: 3px;
+    position: relative;
 
 }
 
-.dropDownMaster:hover{
-    background-color: rgba(0, 0, 0, 0.418);
-}
 /* Špecifické štýly pre veľkosti */
 .dropDownMaster.lg {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeLarge);
+    padding: var(--paddingDropdown);
+    font-size: 23px;
 }
 
 .dropDownMaster.medium {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeMedium);
+    padding: var(--paddingDropdown);
+    font-size: 18px
 }
 
 .dropDownMaster.sm {
-    padding: var(--paddingButton);
-    font-size: var(--fontSizeSmall);
+    padding: var(--paddingDropdown);
+    font-size: 15px;
 }
-/* ------------------------------------------------------ */
+
+/* Content------------------------------------------------------ */
 
 .dropContent {
     margin-top: 5px;
-    width: 100%;
-    max-height: 0px;
+    width: max-content;
     overflow: hidden;
-    background-color: rgba(79, 79, 92, 0.507);
-    padding:0 5px;
+    z-index: 9999999;
+    position: absolute;
+    top: 88%;
+    border-radius: 5px;
 }
-/* ------------------------------------------------------ */
 
-
+/* Item------------------------------------------------------ */
+.dropItem {
+    font-size: 18px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    margin: 2px;
+}

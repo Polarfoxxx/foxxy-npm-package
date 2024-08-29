@@ -1,3 +1,12 @@
 .secondaryDropdown.dropDownMaster {
-    background-color: var(--secondaryColorBackground)
+    background-color: var(--secondaryColorBackground);
+    color: antiquewhite;
+}
+.secondaryDropdown.dropDownMaster:hover{
+    background-color: blueviolet;
+}
+
+/* border ---------------------------*/
+.secondaryDropdown.dropDownMaster.border {
+    border: 1px solid rgb(180, 180, 180);
 }

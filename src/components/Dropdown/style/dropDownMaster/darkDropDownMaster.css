@@ -1,3 +1,15 @@
 .darkDropdown.dropDownMaster {
-    background-color: var(--darkColorBackground)
+    background-color: var(--darkColorBackground);
+    color: antiquewhite;
+}
+
+.darkDropdown.dropDownMaster:hover{
+    background-color: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+}
+
+
+/* border ---------------------------*/
+.darkDropdown.dropDownMaster.border {
+    border: 1px solid rgb(180, 180, 180);
 }
