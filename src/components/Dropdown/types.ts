@@ -8,7 +8,6 @@ export type PropsForDropdownComponents = {
     lg?: boolean,
     sm?: boolean,
     border?: boolean,
-    dropCount?: number,
     custom_background_color_dropdown?: string,
     custom_showAndHidden_time?: number,
     custom_rouded?:string,

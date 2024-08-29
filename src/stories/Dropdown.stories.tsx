@@ -40,14 +40,14 @@ const meta: Meta = {
             description: 'custom change border radius',
             control: { type: 'text' },
         },
-        custom_textColor_for_dropdown:{
+        custom_textColor_for_dropdown: {
             description: 'custom change text color',
             control: { type: 'color' },
         },
         href: {
             control: { type: 'text' },
         },
-        custom_textColor_forItem:{
+        custom_textColor_forItem: {
             description: 'custom change text color in item components',
             control: { type: 'color' },
         },
@@ -60,15 +60,26 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 15 },
             defaultValue: 3,
         },
+        layout: {
+            control: { type: "radio" },
+            options: ["row", "column"]
+        }
     },
 };
 
 export default meta;
 
-type Story = StoryObj<
+type DropdownStoryArgs = Omit<
     React.ComponentProps<typeof DropdownComponent.Dropdown> &
     React.ComponentProps<typeof DropdownComponent.DropdownItems> &
-    React.ComponentProps<typeof DropdownComponent.DropdownContent>>; // Opravený názov
+    React.ComponentProps<typeof DropdownComponent.DropdownContent>,
+    'layout' & "dropCount"
+> & {
+    layout: "row", "column";
+    dropCount: number
+};
+
+type Story = StoryObj<DropdownStoryArgs>;
 
 export const Variant_Dropdown: Story = {
     args: {
@@ -84,7 +95,8 @@ export const Variant_Dropdown: Story = {
         name_link: "my link",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
         custom_textColor_forItem: "",
-        dropCount: 3
+        dropCount: 3,
+        layout: "row"
     },
 
     render: (args) => {
@@ -104,37 +116,37 @@ export const Variant_Dropdown: Story = {
         ));
 
         return (
-            <div>
-  <DropdownComponent.Dropdown
-                variant_dropdown={args.variant_dropdown}
-                lg={args.lg}
-                sm={args.sm}
-                border={args.border}
-                dropdown_name={args.dropdown_name}
-                custom_background_color_dropdown={args.custom_background_color_dropdown}
-                custom_showAndHidden_time={args.custom_showAndHidden_time}
-                custom_rouded={args.custom_rouded}
-                custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
-                <DropdownComponent.DropdownContent> 
-                    {dropItems}
-                </DropdownComponent.DropdownContent> 
-            </DropdownComponent.Dropdown>
-            <DropdownComponent.Dropdown
-                variant_dropdown={args.variant_dropdown}
-                lg={args.lg}
-                sm={args.sm}
-                border={args.border}
-                dropdown_name={args.dropdown_name}
-                custom_background_color_dropdown={args.custom_background_color_dropdown}
-                custom_showAndHidden_time={args.custom_showAndHidden_time}
-                custom_rouded={args.custom_rouded}
-                custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
-                <DropdownComponent.DropdownContent> 
-                    {dropItems}
-                </DropdownComponent.DropdownContent> 
-            </DropdownComponent.Dropdown>
+            <div style={{ display: "flex", flexDirection: `${args.layout}` }}>
+                <DropdownComponent.Dropdown
+                    variant_dropdown={args.variant_dropdown}
+                    lg={args.lg}
+                    sm={args.sm}
+                    border={args.border}
+                    dropdown_name={args.dropdown_name}
+                    custom_background_color_dropdown={args.custom_background_color_dropdown}
+                    custom_showAndHidden_time={args.custom_showAndHidden_time}
+                    custom_rouded={args.custom_rouded}
+                    custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                    <DropdownComponent.DropdownContent>
+                        {dropItems}
+                    </DropdownComponent.DropdownContent>
+                </DropdownComponent.Dropdown>
+                <DropdownComponent.Dropdown
+                    variant_dropdown={args.variant_dropdown}
+                    lg={args.lg}
+                    sm={args.sm}
+                    border={args.border}
+                    dropdown_name={args.dropdown_name}
+                    custom_background_color_dropdown={args.custom_background_color_dropdown}
+                    custom_showAndHidden_time={args.custom_showAndHidden_time}
+                    custom_rouded={args.custom_rouded}
+                    custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                    <DropdownComponent.DropdownContent>
+                        {dropItems}
+                    </DropdownComponent.DropdownContent>
+                </DropdownComponent.Dropdown>
             </div>
-          
+
         );
     }
 };

@@ -85,7 +85,16 @@ const meta: Meta = {
 };
 export default meta;
 
-type Story = StoryObj<React.ComponentProps<typeof ButtonComponent.Button> & React.ComponentProps<typeof ButtonComponent.ButtonBox>>;
+type ButtonBoxStoryArgs = Omit<
+    React.ComponentProps<typeof ButtonComponent.Button> &
+    React.ComponentProps<typeof ButtonComponent.ButtonBox>,
+    'numberOfButtons'
+> & {
+    numberOfButtons: number;
+};
+
+type Story = StoryObj<ButtonBoxStoryArgs>;
+
 export const VariantButtonBox: Story = {
     args: {
         variant_btn: "primaryButton",
@@ -104,7 +113,6 @@ export const VariantButtonBox: Story = {
         custom_gap_Buttons: "5px",
         custom_background_Box: "",
         custom_rounded: "",
-
         numberOfButtons: 1,
     },
 
