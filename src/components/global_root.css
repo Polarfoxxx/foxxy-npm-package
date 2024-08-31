@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primaryColorBackground: rgb(40, 63, 180);
     --secondaryColorBackground: rgba(104, 69, 191, 1);
     --alertColorBackground: rgba(176, 25, 25, 1);

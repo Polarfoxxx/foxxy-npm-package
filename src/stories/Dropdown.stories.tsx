@@ -73,7 +73,6 @@ const meta: Meta = {
         }
     },
 };
-
 export default meta;
 
 type DropdownStoryArgs = Omit<

@@ -1,6 +1,6 @@
 .successDropdown.dropDownMaster {
     background-color: var(--successColorBackground);
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
 }
 
 .successDropdown.dropDownMaster:hover{
