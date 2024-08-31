@@ -3,6 +3,11 @@ import { PropsForDropBoxComponents ,ChildProps_child_dropdownItems} from "../typ
 import "@components/global_root.css";
 import "../style/dropDown_root_style.css";
 import "../style/dropDownContent/primaryDropDownContent.css";
+import "../style/dropDownContent/secondaryDropDownContent.css";
+import "../style/dropDownContent/alertDropDownContent.css";
+import "../style/dropDownContent/successDropDownContent.css";
+import "../style/dropDownContent/nightDropDownContent.css";
+import "../style/dropDownContent/darkDropDownContent.css";
 
 function DropdownContent({
     children,

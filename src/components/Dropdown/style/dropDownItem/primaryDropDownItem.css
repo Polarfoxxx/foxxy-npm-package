@@ -1,14 +1,13 @@
-.primaryDropdown.dropItem{
+.primaryDropdown.dropItem {
     min-width: 100%;
     min-height: 30px;
-  
+
 }
 
-.primaryDropdown.dropItem:hover{
+.primaryDropdown.dropItem:hover {
     background-color: rgba(32, 32, 32, 0.425);
 }
 
-.primaryDropdown.dropItem > a {
-    text-decoration: none;
+.primaryDropdown.dropItem>a {
     color: black;
 }

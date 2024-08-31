@@ -1,0 +1,13 @@
+.alertDropdown.dropItem {
+    min-width: 100%;
+    min-height: 30px;
+
+}
+
+.alertDropdown.dropItem:hover {
+    background-color: rgba(190, 190, 190, 0.425);
+}
+
+.alertDropdown.dropItem>a {
+    color: black;
+}

@@ -1,0 +1,13 @@
+.nightDropdown.dropItem {
+    min-width: 100%;
+    min-height: 30px;
+
+}
+
+.nightDropdown.dropItem:hover {
+    background-color: rgba(32, 32, 32, 0.425);
+}
+
+.nightDropdown.dropItem>a {
+    color: rgb(233, 233, 233);
+}

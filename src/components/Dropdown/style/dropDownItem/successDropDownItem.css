@@ -1,0 +1,13 @@
+.successDropdown.dropItem {
+    min-width: 100%;
+    min-height: 30px;
+
+}
+
+.successDropdown.dropItem:hover {
+    background-color: rgba(32, 32, 32, 0.425);
+}
+
+.successDropdown.dropItem>a {
+    color: black;
+}

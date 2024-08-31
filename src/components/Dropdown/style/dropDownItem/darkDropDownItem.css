@@ -1,0 +1,13 @@
+.darkDropdown.dropItem {
+    min-width: 100%;
+    min-height: 30px;
+
+}
+
+.darkDropdown.dropItem:hover {
+    background-color: rgba(194, 194, 194, 0.425);
+}
+
+.darkDropdown.dropItem>a {
+    color: rgb(209, 209, 209);
+}

@@ -59,9 +59,15 @@
 .dropItem {
     font-size: 18px;
     width: auto;
+    min-width: 50px;
     display: flex;
     align-items: center;
     justify-content: left;
     padding: 5px;
     margin: 2px;
+}
+
+.dropItem>a {
+    text-decoration: none;
+    min-width: 90px;
 }
