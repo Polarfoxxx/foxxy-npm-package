@@ -1,6 +1,4 @@
 import * as React from "react";
-import { TypeInputsIntrinsicAttributes } from "../types";
-import { TypeLabelIntrinsicAttributes } from "../types";
 
 type TypeMasterFromInputsAndLabel = TypeInputsIntrinsicAttributes & TypeLabelIntrinsicAttributes
 
@@ -12,7 +10,7 @@ const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
 }): JSX.Element => {
 
     return (
-        <>
+        <div>
             <label
                 style={formVariantStyle?.formLabel}
                 htmlFor="inputs">
@@ -23,7 +21,7 @@ const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
                 style={formVariantStyle?.formInputs}
                 id="inputs"
             />
-        </>
+        </div>
     )
 }
 

@@ -1,40 +1,25 @@
 import { FormHTMLAttributes } from "react"
-import { InputHTMLAttributes } from "react"
-import { CSSProperties } from "react";
 
-/* Props pre element form */
+//? types for only components.........................
 export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormElement> {
     children: JSX.Element | JSX.Element[],
     form_name?: string,
-    variant_form?: "default" | "dark" | "funny" | "white"
+    variant_form?: "primaryForm" | "secondaryForm" | "alertForm" | "successForm" | "darkForm" | "nightForm",
+    border?: boolean,
+    lg?: boolean,
+    sm?: boolean,
+    custom_background?: string,
+    custom_text_color?: string,
+    custom_rouded?: string,
+    custom_padding?: string,
+    custom_width?: string,
+    custom_height?: string,
 };
 
-export type TypeForFormHeader = {
-    formVariantStyle?: TypeStyleForForm,
-    form_name?: string
+//? type for children components.................................
+export type ChildProps_child_FormContent = {
+    selectStyleType: string;
+    form_name: string;
 };
 
-/* Props pre element inputs */
-export interface TypeInputsIntrinsicAttributes extends InputHTMLAttributes<HTMLInputElement> {
-    formVariantStyle?: TypeStyleForForm
-};
 
-/* Props pre element label */
-export type TypeLabelIntrinsicAttributes = {
-    label?: string,
-    formVariantStyle?: TypeStyleForForm
-};
-
-/* typ pre style */
-export type TypeStyleForForm = {
-    form: CSSProperties,
-    formHeader: CSSProperties,
-    formBody:CSSProperties,
-    formLabel:CSSProperties,
-    formInputs: CSSProperties,
-}
-
-/* Props pre sevice */
-export type TypeForFormServices = {
-    variant_form?: "default" | "dark" | "funny" | "white"
-}
