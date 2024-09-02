@@ -1,24 +1,23 @@
-import * as React from "react";
+import React from "react";
+import { Type__for_InputsAndLabel } from "../types";
 
-type TypeMasterFromInputsAndLabel = TypeInputsIntrinsicAttributes & TypeLabelIntrinsicAttributes
-
-const FormInputs: React.FC<TypeMasterFromInputsAndLabel> = ({
-    formVariantStyle,
-    label,
+function FormInputs({
+    selectStyleType,
+    label_name,
     ...props
-
-}): JSX.Element => {
+}: Type__for_InputsAndLabel): JSX.Element {
 
     return (
         <div>
             <label
-                style={formVariantStyle?.formLabel}
-                htmlFor="inputs">
-                {label}
+                className={`${selectStyleType} formLabel`}
+                htmlFor="inputs"
+                {...props}>
+                {label_name}
             </label>
             <input
                 {...props}
-                style={formVariantStyle?.formInputs}
+                className={`${selectStyleType} formInput`}
                 id="inputs"
             />
         </div>

@@ -1,6 +1,4 @@
-
-import { allVariantForForm } from "../style";
-import { TypeForFormServices, TypeStyleForForm } from "../types";
+import { Type_for_formChange_variant } from "../types";
 
 const servicesChangeVariantForFrom = {
     changerVariantForForm
@@ -8,20 +6,26 @@ const servicesChangeVariantForFrom = {
 export default servicesChangeVariantForFrom;
 
 
-function changerVariantForForm({ variant_form }: TypeForFormServices): TypeStyleForForm {
+function changerVariantForForm({
+    variant_form,
+    border,
+    lg,
+    sm
+}: Type_for_formChange_variant): string {
 
     /* funkcia meniaca variantu */
-    if (variant_form === "dark") {
-        return allVariantForForm.darkStyleForForm
-    } else if (variant_form === "funny") {
-        return allVariantForForm.funnyStyleForForm
-    } else if (variant_form === "white") {
-        return allVariantForForm.whiteStyleForForm
-    } else if (variant_form === "default") {
-        return allVariantForForm.defaultStyleForForm
-    } else if (variant_form === undefined) {
-        return allVariantForForm.defaultStyleForForm
+    let variant_Style_className: string = "";
+    //? Podmienka pre veľkosť (lg alebo sm)
+    if (lg) {
+        variant_Style_className = `${variant_form} lg`;
+    } else if (sm) {
+        variant_Style_className = `${variant_form} sm`;
     } else {
-        return allVariantForForm.defaultStyleForForm
+        variant_Style_className = `${variant_form} medium`;
     };
+
+    if (border) {
+        return `${variant_Style_className} border`
+    } else
+        return variant_Style_className
 };

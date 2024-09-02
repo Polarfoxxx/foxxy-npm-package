@@ -1,7 +1,7 @@
 // import the FormComponent and the ButtonComponent
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { FormComponent } from '../components/Form/components/Form.master';
+import { FormComponent } from '../components/Form/components';
 import { ButtonComponent } from '../components/Button';
 import ButtonComponent_stories from "./Button.stories";
 import { action } from '@storybook/addon-actions';

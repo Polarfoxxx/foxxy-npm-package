@@ -1,10 +1,13 @@
 import React from "react";
-import { TypeForFormHeader } from "../types";
+import { Type_for_formHeader } from "../types";
 
-const FormHeader: React.FC<TypeForFormHeader> = ({ form_name, formVariantStyle }): JSX.Element => {
+function FormHeader({
+    form_name,
+    selectStyleType
+}: Type_for_formHeader): JSX.Element {
 
     return (
-        <div className="FormHeader" style={formVariantStyle?.formHeader}>
+        <div className={`${selectStyleType} headerForm`}>
             {form_name}
         </div>
     )

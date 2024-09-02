@@ -26,7 +26,7 @@ function Form({
         width: "",
         height: "",
     });
-    //? servis meniaci varintu formu.......................................
+    //? servis meniaci variantu form.......................................
     React.useEffect(() => {
         setSelectStyleType(servicesChangeVariantForFrom.changerVariantForForm({ variant_form, border, lg, sm }))
     }, [variant_form, border, lg, sm]);
