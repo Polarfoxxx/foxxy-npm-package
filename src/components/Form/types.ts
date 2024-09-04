@@ -6,27 +6,25 @@ export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormE
     children: JSX.Element | JSX.Element[],
     form_name?: string,
     variant_form?: "primaryForm" | "secondaryForm" | "alertForm" | "successForm" | "darkForm" | "nightForm",
-    border?: boolean,
-    lg?: boolean,
-    sm?: boolean,
-    custom_background?: string,
-    custom_text_color?: string,
-    custom_rouded?: string,
-    custom_padding?: string,
-    custom_width?: string,
-    custom_height?: string,
+    form_border?: boolean,
+    custom_background_form?: string,
+    custom_text_color_form?: string,
+    custom_rouded_form?: string,
+    custom_padding_form?: string,
+    custom_width_form?: string,
+    custom_height_form?: string,
 };
 
 export type Type_for_formHeader = {
     form_name?: string,
-    selectStyleType: string
+    selectStyleType?: string
 };
 
 export type Type__for_InputsAndLabel =
     InputHTMLAttributes<HTMLInputElement> &
     LabelHTMLAttributes<HTMLLabelElement> & {
-        selectStyleType: string;
-        label_name: string
+        selectStyleType?: string;
+        label_name_form?: string
     };
 
 //? type for children components.................................
@@ -39,7 +37,5 @@ export type ChildProps_child_FormContent = {
 //? type for variant servis....................................
 export type Type_for_formChange_variant = {
     variant_form: string;
-    border: boolean;
-    lg: boolean;
-    sm: boolean;
+    form_border: boolean;
 };

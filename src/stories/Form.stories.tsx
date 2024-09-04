@@ -3,7 +3,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FormComponent } from '../components/Form/components';
 import { ButtonComponent } from '../components/Button';
-import ButtonComponent_stories from "./Button.stories";
+import buttonBoxComponent_stories from "./ButtonBox.stories"
 import { action } from '@storybook/addon-actions';
 
 const meta: Meta = {
@@ -17,35 +17,60 @@ const meta: Meta = {
         ),
     ],
     argTypes: {
+
+        variant_form: {
+            description: 'you can choose a color variant for the component Form',
+            options: ["primaryForm", "secondaryForm", "alertForm", "successForm", "darkForm", "nightForm"],
+            control: { type: 'radio' },
+        },
         formName: {
-            description: 'choose the name of the Form',
+            description: 'set the name or tittle of the Form',
             control: 'text',
             defaultValue: 'my form',
         },
-        variant_form: {
-            description: 'you can choose a color variant for the component Form',
-            options: ['default', 'dark', 'funny', 'white'],
-            control: { type: 'radio' },
+        form_border: {
+            description: 'set the name or tittle of the Form',
+            control: { type: 'boolean' },
         },
-        label: {
-            description: "the name of the input",
-            control: "text",
-        },
+
         placeholder: {
             description: "the placeholder of the input",
             control: "text",
         },
-        buttonCount: {
-            description: "number of button components",
-            control: { type: 'number', min: 1, max: 5 },
-            defaultValue: 1,
+
+        custom_background_form: {
+            control: { type: 'color' },
         },
-        inputCount: {
+        custom_text_color_form: {
+            control: { type: 'color' },
+        },
+        custom_rouded_form: {
+            control: { type: 'text' },
+        },
+        custom_padding_form: {
+            control: { type: 'text' },
+        },
+        custom_width_form: {
+            control: { type: 'text' },
+        },
+        custom_height_form: {
+            control: { type: 'text' },
+        },
+        label_name: {
+            description: "the name of the input",
+            control: "text",
+        },
+        inputs_Count: {
             description: "number of input components",
             control: { type: 'number', min: 1, max: 5 },
             defaultValue: 1,
         },
-        ...ButtonComponent_stories.argTypes
+        buttons_Count: {
+            description: "number of buttons in the button box",
+            control: { type: 'number', min: 1, max: 10 },
+            defaultValue: 1,
+        },
+        ...buttonBoxComponent_stories.argTypes
     },
 };
 export default meta;
@@ -53,55 +78,69 @@ export default meta;
 /* spojenie typeOF componentov*/
 type FormStoryArgs = Omit<
     React.ComponentProps<typeof FormComponent.Form> &
+    React.ComponentProps<typeof FormComponent.FormHeader> &
+    React.ComponentProps<typeof FormComponent.FormInputs> &
+    React.ComponentProps<typeof ButtonComponent.ButtonBox> &
     React.ComponentProps<typeof ButtonComponent.Button>,
-    "">
+    "inputs_count" & "buttons_Count"> & {
+        inputs_Count: number,
+        buttons_Count: number
+    };
 
 type Story = StoryObj<FormStoryArgs>;
 
-
-
 export const Variant_Form: Story = {
     args: {
-        variant_dropdown: "primaryDropdown",
-        lg: false,
-        sm: false,
-        border: false,
-        dropdown_name: "dropdown",
-        custom_background_color_dropdown: "",
-        custom_showAndHidden_time: 0.4,
-        custom_rouded: "",
-        custom_textColor_for_dropdown: "",
-        name_link: "my link",
-        href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
-        custom_textColor_forItem: "",
-        dropCount: 3,
-        layout: "row"
+        variant_form: "primaryForm",
+        form_name: "dropdown",
+        form_border: false,
+        custom_background_form: "",
+        custom_text_color_form: "",
+        custom_rouded_form: "",
+        custom_padding_form: "",
+        custom_width_form: "",
+        custom_height_form: "",
+
+        label_name_form: "mylabel",
+
+        ...buttonBoxComponent_stories.args,
+
+        inputs_Count: 1,
+        buttons_Count: 1
+
     },
-    render: {
-        /* funkcia pre submit */
+
+    render: (args) => {
         const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
             action("submit")()
         };
-        const { buttonCount = 1 } = args;
-        const buttons = Array.from({ length: buttonCount }, (_, index) => (
-            <ButtonComponent.Button onClick={handleClick} type='submit' {...args} key={`button${index}`} />
-        ));
-        const { inputCount = 1 } = args;
-        const inputs = Array.from({ length: inputCount }, (_, index) => (
-            <FormComponent.FormInputs {...args} key={`Form${index}`} />
+        const [numInputItem, setNumInputItem] = React.useState<number>(1);
+        const [numButtonItem, setNumButtonItem] = React.useState<number>(1);
+
+        React.useEffect(() => {
+            setNumInputItem(args.inputs_Count);
+            setNumButtonItem(args.buttons_Count)
+        }, [args.inputs_Count, args.buttons_Count]);
+
+        const inputItems = [...Array(numInputItem)].map((_, i) => (
+            <FormComponent.FormInputs {...args} />
         ));
 
-        return(
-    <FormComponent.Form onSubmit={ handleClick } variant='default' { ...args }>
-    <FormComponent.FormHeader />
-{ inputs }
-<ButtonComponent.ButtonBox>
-    {buttons}
-</ButtonComponent.ButtonBox>
-    </FormComponent.Form >
-);
+        const buttonsItems = [...Array(numButtonItem)].map((_, i) => (
+            <ButtonComponent.Button {...args} />
+        ));
+
+        return (
+            <FormComponent.Form onSubmit={handleClick} {...args}>
+                <FormComponent.FormHeader />
+                <>
+                    {...inputItems}
+                </>
+                <ButtonComponent.ButtonBox {...args}>
+                    {...buttonsItems}
+                </ButtonComponent.ButtonBox>
+            </FormComponent.Form>
+        );
     }
-  
 };
-

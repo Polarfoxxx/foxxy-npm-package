@@ -60,6 +60,7 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<typeof ButtonComponent.Button>;
+
 export const VariantButton: Story = {
   args: {
     variant_btn: "primaryButton",
@@ -72,9 +73,7 @@ export const VariantButton: Story = {
 
   render: (args) => {
     return (
-      <ButtonComponent.ButtonBox>
         <ButtonComponent.Button {...args} />
-      </ButtonComponent.ButtonBox>
     )
   }
 };

@@ -79,11 +79,10 @@ type DropdownStoryArgs = Omit<
     React.ComponentProps<typeof DropdownComponent.Dropdown> &
     React.ComponentProps<typeof DropdownComponent.DropdownItems> &
     React.ComponentProps<typeof DropdownComponent.DropdownContent>,
-    'layout' & "dropCount"
-> & {
-    layout: "row", "column";
-    dropCount: number
-};
+    'layout' & "dropCount"> & {
+        layout: "row", "column";
+        dropCount: number
+    };
 
 type Story = StoryObj<DropdownStoryArgs>;
 
@@ -115,41 +114,20 @@ export const Variant_Dropdown: Story = {
         const dropItems = [...Array(numdropItem)].map((_, i) => (
             <DropdownComponent.DropdownItems
                 key={i}
-                href={args.href}
-                name_link={args.name_link}
-                custom_textColor_forItem={args.custom_textColor_forItem}
-            />
+                {...args} />
         ));
 
         return (
             <div>
                 <div style={{ display: "flex", flexDirection: `${args.layout}` }}>
-                    <DropdownComponent.Dropdown
-                        variant_dropdown={args.variant_dropdown}
-                        lg={args.lg}
-                        sm={args.sm}
-                        border={args.border}
-                        dropdown_name={args.dropdown_name}
-                        custom_background_color_dropdown={args.custom_background_color_dropdown}
-                        custom_showAndHidden_time={args.custom_showAndHidden_time}
-                        custom_rouded={args.custom_rouded}
-                        custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                    <DropdownComponent.Dropdown {...args}>
                         <DropdownComponent.DropdownContent>
-                            {dropItems}
+                            {...dropItems}
                         </DropdownComponent.DropdownContent>
                     </DropdownComponent.Dropdown>
-                    <DropdownComponent.Dropdown
-                        variant_dropdown={args.variant_dropdown}
-                        lg={args.lg}
-                        sm={args.sm}
-                        border={args.border}
-                        dropdown_name={args.dropdown_name}
-                        custom_background_color_dropdown={args.custom_background_color_dropdown}
-                        custom_showAndHidden_time={args.custom_showAndHidden_time}
-                        custom_rouded={args.custom_rouded}
-                        custom_textColor_for_dropdown={args.custom_textColor_for_dropdown}>
+                    <DropdownComponent.Dropdown {...args}>
                         <DropdownComponent.DropdownContent>
-                            {dropItems}
+                            {...dropItems}
                         </DropdownComponent.DropdownContent>
                     </DropdownComponent.Dropdown>
                 </div>

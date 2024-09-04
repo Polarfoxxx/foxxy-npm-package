@@ -6,15 +6,13 @@ function Form({
     children,
     variant_form = "primaryForm",
     form_name = "",
-    border = false,
-    lg = false,
-    sm = false,
-    custom_background,
-    custom_text_color,
-    custom_rouded,
-    custom_padding,
-    custom_width,
-    custom_height,
+    form_border = false,
+    custom_background_form,
+    custom_text_color_form,
+    custom_rouded_form,
+    custom_padding_form,
+    custom_width_form,
+    custom_height_form,
     ...props
 }: TypeForIntrinsicAttributes): JSX.Element {
     const [selectStyleType, setSelectStyleType] = React.useState("");
@@ -28,21 +26,27 @@ function Form({
     });
     //? servis meniaci variantu form.......................................
     React.useEffect(() => {
-        setSelectStyleType(servicesChangeVariantForFrom.changerVariantForForm({ variant_form, border, lg, sm }))
-    }, [variant_form, border, lg, sm]);
+        setSelectStyleType(servicesChangeVariantForFrom.changerVariantForForm({ variant_form, form_border }))
+    }, [variant_form, form_border]);
 
 
     //? servis pre custom style............................................
     React.useEffect(() => {
         setCustomStyle({
-            backgroundColor: custom_background,
-            color: custom_text_color,
-            borderRadius: custom_rouded,
-            padding: custom_padding,
-            width: custom_width,
-            height: custom_height,
+            backgroundColor: custom_background_form,
+            color: custom_text_color_form,
+            borderRadius: custom_rouded_form,
+            padding: custom_padding_form,
+            width: custom_width_form,
+            height: custom_height_form,
         });
-    }, [custom_background, custom_text_color, custom_rouded, custom_padding, custom_width, custom_height,]);
+    }, [custom_background_form,
+        custom_text_color_form,
+        custom_rouded_form,
+        custom_padding_form,
+        custom_width_form,
+        custom_height_form
+    ]);
 
     return (
         <form

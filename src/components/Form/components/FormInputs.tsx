@@ -3,7 +3,7 @@ import { Type__for_InputsAndLabel } from "../types";
 
 function FormInputs({
     selectStyleType,
-    label_name,
+    label_name_form,
     ...props
 }: Type__for_InputsAndLabel): JSX.Element {
 
@@ -13,13 +13,12 @@ function FormInputs({
                 className={`${selectStyleType} formLabel`}
                 htmlFor="inputs"
                 {...props}>
-                {label_name}
+                {label_name_form}
             </label>
             <input
                 {...props}
                 className={`${selectStyleType} formInput`}
-                id="inputs"
-            />
+                id="inputs"/>
         </div>
     )
 }

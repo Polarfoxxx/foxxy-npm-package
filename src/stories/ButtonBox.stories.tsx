@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonComponent } from '../components/Button';
+import buttonComponent_stories from "./Button.stories"
 import React from 'react';
 import { fn } from '@storybook/test';
 
@@ -11,31 +12,6 @@ const meta: Meta = {
         layout: 'centered',
     },
     argTypes: {
-        variant_btn: {
-            description: "you can choose a variant for the component button",
-            options: ["primaryButton", "secondaryButton", "alertButton", "successButton", "darkButton", "nightButton"],
-            control: { type: 'radio' }
-        },
-        text: {
-            description: "button text",
-            control: { type: 'text' }
-        },
-        withBorder: {
-            description: "button border",
-            control: { type: 'boolean' }
-        },
-        radiusBorder: {
-            description: "button border radius",
-            control: { type: 'boolean' }
-        },
-        lg: {
-            description: "large button",
-            control: { type: 'boolean' }
-        },
-        sm: {
-            description: "small button",
-            control: { type: 'boolean' }
-        },
         buttonBox_variant: {
             description: "you can choose a variant for the component buttonBox",
             options: ["primaryButtonBox", "secondaryButtonBox", "alertButtonBox"],
@@ -62,7 +38,7 @@ const meta: Meta = {
             description: "you can choose a height for the component buttonBox",
             control: { type: 'text' }
         },
-        numberOfButtons: {
+        buttons_Count: {
             description: "number of buttons in the button box",
             control: { type: 'number', min: 1, max: 10 },
             defaultValue: 1,
@@ -80,7 +56,8 @@ const meta: Meta = {
             description: "change a bordeer radius in box",
             control: { type: 'text' },
             defaultValue: "0",
-        }
+        },
+        ...buttonComponent_stories.argTypes
     }
 };
 export default meta;
@@ -90,7 +67,7 @@ type ButtonBoxStoryArgs = Omit<
     React.ComponentProps<typeof ButtonComponent.ButtonBox>,
     'numberOfButtons'
 > & {
-    numberOfButtons: number;
+    buttons_Count: number;
 };
 
 type Story = StoryObj<ButtonBoxStoryArgs>;
@@ -106,51 +83,25 @@ export const VariantButtonBox: Story = {
         customBackGrColor: "",
         customTextColor: "",
 
-        buttonBox_variant: "primaryButtonBox",
-        layout_Buttonts: "row",
-        custom_width_buttonBox: "auto",
-        custom_height_buttonBox: "auto",
-        custom_gap_Buttons: "5px",
-        custom_background_Box: "",
-        custom_rounded: "",
-        numberOfButtons: 1,
+        ...buttonComponent_stories.args,
+      
+        buttons_Count: 1,
     },
 
     render: (args) => {
         const [numButtons, setNumButtons] = React.useState<number>();
 
         React.useEffect(() => {
-            setNumButtons(args.numberOfButtons)
-        }, [args.numberOfButtons]);
+            setNumButtons(args.buttons_Count)
+        }, [args.buttons_Count]);
 
         const buttons = [...Array(numButtons)].map((_, i) => (
-            <ButtonComponent.Button
-                key={i}
-                variant_btn={args.variant_btn}
-                text={args.text}
-                withBorder={args.withBorder}
-                radiusBorder={args.radiusBorder}
-                lg={args.lg}
-                sm={args.sm}
-                onClick={args.onClick}
-                customBackGrColor={args.customBackGrColor}
-                customTextColor={args.customTextColor}
-            />
+            <ButtonComponent.Button {...args} />
         ));
 
-
         return (
-            <ButtonComponent.ButtonBox
-                buttonBox_variant={args.buttonBox_variant}
-                custom_width_buttonBox={args.custom_width_buttonBox}
-                custom_height_buttonBox={args.custom_height_buttonBox}
-                layout_Buttonts={args.layout_Buttonts}
-                custom_gap_Buttons={args.custom_gap_Buttons}
-                custom_rounded={args.custom_rounded}
-                custom_background_Box={args.custom_background_Box}>
-                {
-                    buttons
-                }
+            <ButtonComponent.ButtonBox {...args}>
+                {buttons}
             </ButtonComponent.ButtonBox>
         );
     }
