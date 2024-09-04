@@ -22,14 +22,6 @@ const meta: Meta = {
             control: { type: 'radio' },
             options: ["column", "row"],
         },
-        customBackGrColor: {
-            description: "Set custom background color for element",
-            control: { type: 'color' },
-        },
-        customTextColor: {
-            description: "Set custom text color for element",
-            control: { type: 'color' },
-        },
         custom_width_buttonBox: {
             description: "you can choose a width for the component buttonBox",
             control: { type: 'text' }
@@ -38,24 +30,24 @@ const meta: Meta = {
             description: "you can choose a height for the component buttonBox",
             control: { type: 'text' }
         },
-        buttons_Count: {
-            description: "number of buttons in the button box",
-            control: { type: 'number', min: 1, max: 10 },
-            defaultValue: 1,
-        },
         custom_gap_Buttons: {
             description: "gap buttons components in buttom box",
             control: { type: 'text' },
             defaultValue: 1,
         },
-        custom_background_Box: {
-            description: "change a backgroundColor in box",
-            control: { type: 'color' },
-        },
-        custom_rounded: {
+        custom_rounded_buttonBox: {
             description: "change a bordeer radius in box",
             control: { type: 'text' },
             defaultValue: "0",
+        },
+        custom_background_buttonBox: {
+            description: "change a backgroundColor in box",
+            control: { type: 'color' },
+        },
+        buttons_Count: {
+            description: "number of buttons in the button box",
+            control: { type: 'number', min: 1, max: 10 },
+            defaultValue: 1,
         },
         ...buttonComponent_stories.argTypes
     }
@@ -74,17 +66,16 @@ type Story = StoryObj<ButtonBoxStoryArgs>;
 
 export const VariantButtonBox: Story = {
     args: {
-        variant_btn: "primaryButton",
-        text: "click my button",
-        withBorder: false,
-        radiusBorder: false,
-        lg: false,
-        sm: false,
-        customBackGrColor: "",
-        customTextColor: "",
+        buttonBox_variant: "primaryButtonBox",
+        layout_Buttonts: "row",
+        custom_width_buttonBox: "",
+        custom_height_buttonBox: "",
+        custom_gap_Buttons: "",
+        custom_rounded_buttonBox: "",
+        custom_background_buttonBox: "",
 
         ...buttonComponent_stories.args,
-      
+
         buttons_Count: 1,
     },
 

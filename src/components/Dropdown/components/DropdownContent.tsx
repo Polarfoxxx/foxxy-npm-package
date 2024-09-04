@@ -14,8 +14,8 @@ function DropdownContent({
     selectStyleType,
     show ,
     custom_showAndHidden_time,
-    
 }: PropsForDropBoxComponents): JSX.Element {
+    
     const contentRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {

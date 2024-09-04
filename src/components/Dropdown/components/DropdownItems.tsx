@@ -16,6 +16,7 @@ function DropdownItems({
     selectStyleType,
     custom_textColor_forItem
 }: PropsForDropItemsComponents): JSX.Element {
+    
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
         color: ""
     });

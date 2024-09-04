@@ -11,7 +11,7 @@ const meta: Meta = {
     layout: 'centered',
   },
   argTypes: {
-    text: {
+    button_text: {
       control: "text",
       description: "text in button",
     },
@@ -23,34 +23,34 @@ const meta: Meta = {
         defaultValue: { summary: "default" }
       }
     },
-    withBorder: {
+    withBorder_button: {
       control: { type: 'boolean' },
       description: "border change",
       defaultValue: false,
 
     },
-    radiusBorder: {
+    radiusBorder_button: {
       description: "rounded edges",
       control: { type: 'boolean' },
       defaultValue: false,
 
     },
-    lg: {
+    lg_button: {
       description: "bigger",
       control: { type: 'boolean' },
       defaultValue: false,
 
     },
-    sm: {
+    sm_button: {
       description: "smaller",
       control: { type: 'boolean' },
       defaultValue: false,
     },
-    customBackGrColor: {
+    customBackGrColor_button: {
       description: "Set custom background color for element",
       control: { type: 'color' },
     },
-    customTextColor: {
+    customTextColor_button: {
       description: "Set custom text color for element",
       control: { type: 'color' },
     },
@@ -64,11 +64,11 @@ type Story = StoryObj<typeof ButtonComponent.Button>;
 export const VariantButton: Story = {
   args: {
     variant_btn: "primaryButton",
-    text: "click my button",
-    withBorder: false,
-    radiusBorder: false,
-    lg: false,
-    sm: false,
+    button_text: "click my button",
+    withBorder_button: false,
+    radiusBorder_button: false,
+    lg_button: false,
+    sm_button: false,
   },
 
   render: (args) => {

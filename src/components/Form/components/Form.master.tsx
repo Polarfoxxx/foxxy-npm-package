@@ -15,6 +15,7 @@ function Form({
     custom_height_form,
     ...props
 }: TypeForIntrinsicAttributes): JSX.Element {
+    
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
         backgroundColor: "",

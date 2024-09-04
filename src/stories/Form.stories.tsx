@@ -17,7 +17,6 @@ const meta: Meta = {
         ),
     ],
     argTypes: {
-
         variant_form: {
             description: 'you can choose a color variant for the component Form',
             options: ["primaryForm", "secondaryForm", "alertForm", "successForm", "darkForm", "nightForm"],
@@ -101,7 +100,7 @@ export const Variant_Form: Story = {
         custom_width_form: "",
         custom_height_form: "",
 
-        label_name_form: "mylabel",
+        label_name_form: "",
 
         ...buttonBoxComponent_stories.args,
 
@@ -123,10 +122,11 @@ export const Variant_Form: Story = {
             setNumButtonItem(args.buttons_Count)
         }, [args.inputs_Count, args.buttons_Count]);
 
+        //? array for inputs count..........................
         const inputItems = [...Array(numInputItem)].map((_, i) => (
             <FormComponent.FormInputs {...args} />
         ));
-
+        //? array for buttons count.........................
         const buttonsItems = [...Array(numButtonItem)].map((_, i) => (
             <ButtonComponent.Button {...args} />
         ));

@@ -11,14 +11,14 @@ import "../styles/buttonMaster/nightButton_style.css";
 import "../styles/buttonMaster/darkButton_style.css";
 
 function Button({
-  text,
+  button_text,
   variant_btn = "primaryButton",
-  withBorder = false,
-  radiusBorder = false,
-  lg = false,
-  sm = false,
-  customBackGrColor,
-  customTextColor,
+  withBorder_button = false,
+  radiusBorder_button = false,
+  lg_button = false,
+  sm_button = false,
+  customBackGrColor_button,
+  customTextColor_button,
   ...props
 }: TypeButtonsIntrinsicAttributes): JSX.Element {
 
@@ -30,23 +30,31 @@ function Button({
 
   //? useeffect for style................................
   React.useEffect(() => {
-    setSelectStyleType(servicesChangeVariantForButtons.changeVariantForMasterButton({ variant_btn, withBorder, radiusBorder, lg, sm }));
-  }, [variant_btn, withBorder, radiusBorder, lg, sm]);
+    setSelectStyleType(
+      servicesChangeVariantForButtons.changeVariantForMasterButton({
+        variant_btn,
+        withBorder_button,
+        radiusBorder_button,
+        lg_button,
+        sm_button
+      })
+    );
+  }, [variant_btn, withBorder_button, radiusBorder_button, lg_button, sm_button]);
 
   //? useeffect for custom style.........................
   React.useEffect(() => {
     setCustomStyle({
-      backgroundColor: customBackGrColor,
-      color: customTextColor
+      backgroundColor: customBackGrColor_button,
+      color: customTextColor_button
     });
-  }, [customBackGrColor, customTextColor]);
+  }, [customBackGrColor_button, customTextColor_button]);
 
   return (
     <button
       style={{ ...customStyle }}
       className={selectStyleType}
       {...props}>
-      {text}
+      {button_text}
     </button>
   );
 };

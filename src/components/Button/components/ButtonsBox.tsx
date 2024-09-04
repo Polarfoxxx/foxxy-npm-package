@@ -14,9 +14,10 @@ function ButtonBox({
     custom_width_buttonBox,
     custom_height_buttonBox,
     custom_gap_Buttons,
-    custom_rounded,
-    custom_background_Box,
-    ...props }: TypeForButtonBox): JSX.Element {
+    custom_rounded_buttonBox,
+    custom_background_buttonBox,
+    ...props
+}: TypeForButtonBox): JSX.Element {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
@@ -25,7 +26,7 @@ function ButtonBox({
         gap: ""
     });
 
-    //? useeffect for style................................
+    //? useeffect for style.................................................
     React.useEffect(() => {
         setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant, layout_Buttonts }))
     }, [buttonBox_variant, layout_Buttonts]);
@@ -36,10 +37,15 @@ function ButtonBox({
             width: custom_width_buttonBox,
             height: custom_height_buttonBox,
             gap: custom_gap_Buttons,
-            backgroundColor: custom_background_Box,
-            borderRadius: custom_rounded
+            backgroundColor: custom_background_buttonBox,
+            borderRadius: custom_rounded_buttonBox
         })
-    }, [custom_width_buttonBox, custom_height_buttonBox, custom_gap_Buttons, custom_background_Box, custom_rounded]);
+    }, [custom_width_buttonBox,
+        custom_height_buttonBox,
+        custom_gap_Buttons,
+        custom_background_buttonBox,
+        custom_rounded_buttonBox
+    ]);
 
 
 
