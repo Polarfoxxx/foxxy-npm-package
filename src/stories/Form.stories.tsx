@@ -17,12 +17,13 @@ const meta: Meta = {
         ),
     ],
     argTypes: {
+        //? arg for form component..............
         variant_form: {
             description: 'you can choose a color variant for the component Form',
             options: ["primaryForm", "secondaryForm", "alertForm", "successForm", "darkForm", "nightForm"],
             control: { type: 'radio' },
         },
-        formName: {
+        form_Name: {
             description: 'set the name or tittle of the Form',
             control: 'text',
             defaultValue: 'my form',
@@ -31,12 +32,6 @@ const meta: Meta = {
             description: 'set the name or tittle of the Form',
             control: { type: 'boolean' },
         },
-
-        placeholder: {
-            description: "the placeholder of the input",
-            control: "text",
-        },
-
         custom_background_form: {
             control: { type: 'color' },
         },
@@ -44,10 +39,24 @@ const meta: Meta = {
             control: { type: 'color' },
         },
         custom_rouded_form: {
-            control: { type: 'text' },
+            description: "set the border radius for form component",
+            defaultValue: 0,
+            control: {
+                type: 'range',
+                min: 1,
+                max: 100,
+                step: 1,
+            },
         },
         custom_padding_form: {
-            control: { type: 'text' },
+            description: "set the padding for form component",
+            defaultValue: 5,
+            control: {
+                type: 'range',
+                min: 5,
+                max: 100,
+                step: 1,
+            },
         },
         custom_width_form: {
             control: { type: 'text' },
@@ -55,10 +64,44 @@ const meta: Meta = {
         custom_height_form: {
             control: { type: 'text' },
         },
-        label_name: {
-            description: "the name of the input",
-            control: "text",
+        custom_gap_input: {
+            description: "set the gap between components inside form",
+            defaultValue: 5,
+            control: {
+                type: 'range',
+                min: 5,
+                max: 100,
+                step: 1,
+            },
         },
+        //? arg for input component..............
+        placeholder: {
+            description: "the placeholder of the input",
+            control: { type: 'text' },
+        },
+        label_name_form: {
+            description: "the name of the input",
+            control: { type: 'text' },
+        },
+        text_align_in_Input: {
+            description: "side writing in input",
+            control: { type: 'radio' },
+            options: ["left", "center", "right"],
+        },
+        custom_rouded_in_Input: {
+            description: "the radius input",
+            control: { type: 'text' },
+        },
+        text_align_label: {
+            description: "side writing in label for inmput",
+            control: { type: 'radio' },
+            options: ["left", "center", "right"],
+        },
+
+        //? arg for button component............
+        ...buttonBoxComponent_stories.argTypes,
+
+        //? count..............................
         inputs_Count: {
             description: "number of input components",
             control: { type: 'number', min: 1, max: 5 },
@@ -69,12 +112,11 @@ const meta: Meta = {
             control: { type: 'number', min: 1, max: 10 },
             defaultValue: 1,
         },
-        ...buttonBoxComponent_stories.argTypes
     },
 };
 export default meta;
 
-/* spojenie typeOF componentov*/
+//? spojenie typeOF componentov..........................
 type FormStoryArgs = Omit<
     React.ComponentProps<typeof FormComponent.Form> &
     React.ComponentProps<typeof FormComponent.FormHeader> &
@@ -90,20 +132,27 @@ type Story = StoryObj<FormStoryArgs>;
 
 export const Variant_Form: Story = {
     args: {
+        //? arg for form component..............
         variant_form: "primaryForm",
         form_name: "dropdown",
         form_border: false,
         custom_background_form: "",
         custom_text_color_form: "",
-        custom_rouded_form: "",
-        custom_padding_form: "",
+        custom_rouded_form: 0,
+        custom_padding_form: 5,
         custom_width_form: "",
         custom_height_form: "",
-
+        custom_gap_input: 0,
+        //? arg for input component.............
+        placeholder: "my placeholder",
         label_name_form: "",
-
+        text_align_in_Input: "center",
+        custom_rouded_in_Input: "",
+        text_align_label: "center",
+        //? arg for button component............
         ...buttonBoxComponent_stories.args,
-
+        button_text: "my button",
+        //? count...............................
         inputs_Count: 1,
         buttons_Count: 1
 

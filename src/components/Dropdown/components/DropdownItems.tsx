@@ -21,7 +21,7 @@ function DropdownItems({
         color: ""
     });
 
-    //? servis pre custom style............................................
+    //? custom style............................................
     React.useEffect(() => {
         setCustomStyle({
             color: custom_textColor_forItem

@@ -1,0 +1,38 @@
+/* Master------------------------------------------------------ */
+.masterForm {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: rgba(99, 110, 212, 0.521);
+    display: flex;
+    flex-direction: column;
+}
+
+/* header------------------------------------------------------ */
+.headerForm {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin: 3px;
+}
+
+/* Input and label-------------------------------------------- */
+.label_and_input_box {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+
+}
+
+.label_and_input_box>input {
+    width: 100%;
+    height: 27px;
+}
+.label_and_input_box>label{
+    width: 100%;
+    height: auto;
+}

@@ -14,4 +14,4 @@ function FormHeader({
 }
 
 
-export default FormHeader
+export default FormHeader;

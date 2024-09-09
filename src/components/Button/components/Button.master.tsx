@@ -41,7 +41,7 @@ function Button({
     );
   }, [variant_btn, withBorder_button, radiusBorder_button, lg_button, sm_button]);
 
-  //? useeffect for custom style.........................
+  //? custom style.........................´.................
   React.useEffect(() => {
     setCustomStyle({
       backgroundColor: customBackGrColor_button,

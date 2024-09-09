@@ -12,7 +12,7 @@ const meta: Meta = {
   },
   argTypes: {
     button_text: {
-      control: "text",
+      control:  { type: 'text' },
       description: "text in button",
     },
     variant_btn: {

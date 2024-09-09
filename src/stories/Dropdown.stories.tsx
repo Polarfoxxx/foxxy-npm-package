@@ -13,6 +13,7 @@ const meta: Meta = {
         ),
     ],
     argTypes: {
+        //? arg for dropdown component.............
         variant_dropdown: {
             description: 'You can choose a color variant for the component Dropdown',
             options: ["primaryDropdown", "secondaryDropdown", "alertDropdown", "successDropdown", "darkDropdown", "nightDropdown"],
@@ -22,15 +23,15 @@ const meta: Meta = {
             description: 'Dropdown name max 18',
             control: { type: 'text' },
         },
-        lg: {
+        lg_dropdown: {
             description: 'the large component',
             control: { type: 'boolean' },
         },
-        sm: {
+        sm_dropdown: {
             description: 'the small component',
             control: { type: 'boolean' },
         },
-        border: {
+        border_dropdown: {
             description: 'the component width border variant',
             control: { type: 'boolean' },
         },
@@ -43,7 +44,7 @@ const meta: Meta = {
             description: 'custom change show and hidden time',
             control: { type: 'number' }, // Opravený typ na number
         },
-        custom_rouded: {
+        custom_rouded_dropdown: {
             description: 'custom change border radius',
             control: { type: 'text' },
         },
@@ -62,11 +63,13 @@ const meta: Meta = {
             description: 'Link name max 34',
             control: { type: 'text' },
         },
+        //? count...........................
         dropCount: {
             description: "Number of item components",
             control: { type: 'number', min: 1, max: 15 },
             defaultValue: 3,
         },
+        //? stories arg.....................
         layout: {
             control: { type: "radio" },
             options: ["row", "column"]
@@ -88,19 +91,22 @@ type Story = StoryObj<DropdownStoryArgs>;
 
 export const Variant_Dropdown: Story = {
     args: {
+        //? arg for dropdown component...........
         variant_dropdown: "primaryDropdown",
-        lg: false,
-        sm: false,
-        border: false,
+        lg_dropdown: false,
+        sm_dropdown: false,
+        border_dropdown: false,
         dropdown_name: "dropdown",
         custom_background_color_dropdown: "",
         custom_showAndHidden_time: 0.4,
-        custom_rouded: "",
+        custom_rouded_dropdown: "",
         custom_textColor_for_dropdown: "",
         name_link: "my link",
         href: "https://translate.google.com/?hl=sk&sl=en&tl=sk&text=Your%20npm_public%20branch%20isn%27t%20protected&op=translate",
         custom_textColor_forItem: "",
+        //? count................................
         dropCount: 3,
+        //? stories arg..........................
         layout: "row"
     },
 

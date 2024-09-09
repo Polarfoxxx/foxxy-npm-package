@@ -1,4 +1,3 @@
-import { string } from "prop-types";
 import { FormHTMLAttributes, InputHTMLAttributes, LabelHTMLAttributes } from "react";
 
 //? types for only components.........................
@@ -9,10 +8,11 @@ export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormE
     form_border?: boolean,
     custom_background_form?: string,
     custom_text_color_form?: string,
-    custom_rouded_form?: string,
-    custom_padding_form?: string,
+    custom_rouded_form?: number,
+    custom_padding_form?: number,
     custom_width_form?: string,
     custom_height_form?: string,
+    custom_gap_input?: number
 };
 
 export type Type_for_formHeader = {
@@ -24,7 +24,10 @@ export type Type__for_InputsAndLabel =
     InputHTMLAttributes<HTMLInputElement> &
     LabelHTMLAttributes<HTMLLabelElement> & {
         selectStyleType?: string;
-        label_name_form?: string
+        label_name_form?: string;
+        text_align_in_Input?: "left" | "center" | "right" | undefined;
+        custom_rouded_in_Input?: string;
+        text_align_label?: "left" | "center" | "right" | undefined;
     };
 
 //? type for children components.................................

@@ -23,7 +23,7 @@ function ButtonBox({
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
         backgroundColor: "",
         borderRadius: "",
-        gap: ""
+        gap: "5px"
     });
 
     //? useeffect for style.................................................
@@ -31,7 +31,7 @@ function ButtonBox({
         setSelectStyleType(servicesChangeVariantForButtonsBox.changeVariantForButtonBox({ buttonBox_variant, layout_Buttonts }))
     }, [buttonBox_variant, layout_Buttonts]);
 
-    //? useeffect for setting width and height................................
+    //? custom style....................................................
     React.useEffect(() => {
         setCustomStyle({
             width: custom_width_buttonBox,

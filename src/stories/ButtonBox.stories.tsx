@@ -12,6 +12,7 @@ const meta: Meta = {
         layout: 'centered',
     },
     argTypes: {
+        //? arg for buttonBox component......................
         buttonBox_variant: {
             description: "you can choose a variant for the component buttonBox",
             options: ["primaryButtonBox", "secondaryButtonBox", "alertButtonBox"],
@@ -33,7 +34,7 @@ const meta: Meta = {
         custom_gap_Buttons: {
             description: "gap buttons components in buttom box",
             control: { type: 'text' },
-            defaultValue: 1,
+            defaultValue: "5px",
         },
         custom_rounded_buttonBox: {
             description: "change a bordeer radius in box",
@@ -44,11 +45,13 @@ const meta: Meta = {
             description: "change a backgroundColor in box",
             control: { type: 'color' },
         },
+        //? count.......................................
         buttons_Count: {
             description: "number of buttons in the button box",
             control: { type: 'number', min: 1, max: 10 },
             defaultValue: 1,
         },
+        //? arg for master button component.............
         ...buttonComponent_stories.argTypes
     }
 };
@@ -66,16 +69,17 @@ type Story = StoryObj<ButtonBoxStoryArgs>;
 
 export const VariantButtonBox: Story = {
     args: {
+        //? arg for buttonBox component...........
         buttonBox_variant: "primaryButtonBox",
         layout_Buttonts: "row",
         custom_width_buttonBox: "",
         custom_height_buttonBox: "",
-        custom_gap_Buttons: "",
+        custom_gap_Buttons: "5px",
         custom_rounded_buttonBox: "",
         custom_background_buttonBox: "",
-
+        //? arg for master button component......
         ...buttonComponent_stories.args,
-
+        //? count................................
         buttons_Count: 1,
     },
 

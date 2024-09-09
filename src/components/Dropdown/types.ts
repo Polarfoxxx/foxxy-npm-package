@@ -1,16 +1,16 @@
-import React from "react";
+
 
 //? types for only components.........................
 export type PropsForDropdownComponents = {
     children: JSX.Element | JSX.Element[],
     dropdown_name: string
     variant_dropdown?: "primaryDropdown" | "secondaryDropdown" | "alertDropdown" |  "successDropdown" | "darkDropdown" | "nightDropdown",
-    lg?: boolean,
-    sm?: boolean,
-    border?: boolean,
+    lg_dropdown?: boolean,
+    sm_dropdown?: boolean,
+    border_dropdown?: boolean,
     custom_background_color_dropdown?: string,
     custom_showAndHidden_time?: number,
-    custom_rouded?:string,
+    custom_rouded_dropdown?:string,
     custom_textColor_for_dropdown?: string
 };
 
@@ -43,14 +43,8 @@ export type  ChildProps_child_dropdownItems = {
 //? type for services.................................
 export type Type_for_DropdownChangeVariant_services = {
     variant_dropdown:  "primaryDropdown" | "secondaryDropdown" | "alertDropdown" |  "successDropdown" | "darkDropdown" | "nightDropdown",
-    lg: boolean,
-    sm: boolean,
-    border: boolean
+    lg_dropdown: boolean,
+    sm_dropdown: boolean,
+    border_dropdown: boolean
 };
 
-export type TypeVariantStyle_dropdown = {
-    dropBtn: React.CSSProperties,
-    dropdown: React.CSSProperties,
-    dropBox: React.CSSProperties,
-    dropItem: React.CSSProperties,
-};
