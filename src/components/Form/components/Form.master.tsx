@@ -3,6 +3,12 @@ import { TypeForIntrinsicAttributes, ChildProps_child_FormContent } from "../typ
 import servicesChangeVariantForFrom from "../services/services.changeVariant";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
+import "../style/formMaster/primaryFormMaster.css";
+import "../style/formMaster/secondaryFormMaster.css";
+import "../style/formMaster/alertFormMaster.css";
+import "../style/formMaster/successFormMaster.css";
+import "../style/formMaster/darkFormMaster.css";
+import "../style/formMaster/nightFormMaster.css";
 
 function Form({
     children,
@@ -13,8 +19,8 @@ function Form({
     custom_text_color_form = "black",
     custom_rouded_form = 0,
     custom_padding_form = 5,
-    custom_width_form = "200px",
-    custom_height_form = "100px",
+    custom_width_form = "350px",
+    custom_height_form = "auto",
     custom_gap_input = 5,
     ...props
 }: TypeForIntrinsicAttributes): JSX.Element {

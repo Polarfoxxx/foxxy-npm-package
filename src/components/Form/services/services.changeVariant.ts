@@ -1,31 +1,32 @@
-import { Type_for_formChange_variant } from "../types";
+import { Type_for_formChange_variant, Type_for_formChange_variantfor_input } from "../types";
 
 const servicesChangeVariantForFrom = {
-    changerVariantForForm
-}
+    changerVariantForForm,
+    changerVariantForInputForm
+};
 export default servicesChangeVariantForFrom;
 
-
+//? function changing a variant for master form.............
 function changerVariantForForm({
     variant_form,
-    border,
-    lg,
-    sm
+    form_border,
 }: Type_for_formChange_variant): string {
 
-    /* funkcia meniaca variantu */
-    let variant_Style_className: string = "";
-    //? Podmienka pre veľkosť (lg alebo sm)
-    if (lg) {
-        variant_Style_className = `${variant_form} lg`;
-    } else if (sm) {
-        variant_Style_className = `${variant_form} sm`;
-    } else {
-        variant_Style_className = `${variant_form} medium`;
-    };
-
-    if (border) {
-        return `${variant_Style_className} border`
+    if (form_border) {
+        return `${variant_form} border`
     } else
-        return variant_Style_className
+        return variant_form
 };
+
+
+//? function changing a variant only for input form.............
+function changerVariantForInputForm({
+    oneBorder_input
+}: Type_for_formChange_variantfor_input): string {
+
+    if (oneBorder_input) {
+        return `oneLine`
+    } else
+        return ""
+};
+

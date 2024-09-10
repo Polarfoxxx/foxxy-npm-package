@@ -1,43 +1,58 @@
 import React from "react";
 import { Type__for_InputsAndLabel } from "../types";
+import servicesChangeVariantForFrom from "../services/services.changeVariant";
+import "@components/global_root.css";
+import "../style/form_root_style.css";
+
 
 function FormInputs({
     selectStyleType,
-    label_name_form,
-    text_align_in_Input,
-    custom_rouded_in_Input,
-    text_align_label,
+    label_name_form = "",
+    text_align_in_Input = "left",
+    custom_rouded_in_Input = 0,
+    text_align_label = "left",
+    oneBorder_input = false,
     ...props
 }: Type__for_InputsAndLabel): JSX.Element {
+    const [customStyle_for_input, setCustomStyle_for_input] = React.useState<React.CSSProperties>({});
+    const [customStyle_for_label, setCustomStyle_for_label] = React.useState<React.CSSProperties>({});
+    const [variant_StyleFor_input, setVariant_StyleFor_input] = React.useState("");
 
-    const [customStyle_for_input, setCustomStyle_for_input] = React.useState<React.CSSProperties>({
-        textAlign: "center",
-        borderRadius: ""
-    });
-    const [customStyle_for_label, setCustomStyle_for_label] = React.useState<React.CSSProperties>({
 
-    })
-
+    //? change input variant...............................
+    React.useEffect(() => {
+        setVariant_StyleFor_input(
+            servicesChangeVariantForFrom.changerVariantForInputForm({ oneBorder_input })
+        )
+    }, [
+        oneBorder_input
+    ]);
 
     //? custom style input............................................
     React.useEffect(() => {
         setCustomStyle_for_input({
             textAlign: text_align_in_Input,
-            borderRadius: custom_rouded_in_Input
+            borderRadius: `${custom_rouded_in_Input}px`
         });
-    }, [text_align_in_Input, custom_rouded_in_Input]);
+    }, [
+        text_align_in_Input,
+        custom_rouded_in_Input
+    ]);
 
     //? custom style label............................................
     React.useEffect(() => {
         setCustomStyle_for_label({
             textAlign: text_align_label,
         });
-    }, [text_align_label]);
+    }, [
+        text_align_label
+    ]);
 
 
     return (
-        <div className="label_and_input_box"
-        style={customStyle_for_label}>
+        <div
+            className="label_and_input_box"
+            style={customStyle_for_label}>
             <label
                 className={`${selectStyleType} formLabel`}
                 htmlFor="inputs"
@@ -46,7 +61,7 @@ function FormInputs({
             </label>
             <input
                 {...props}
-                className={`${selectStyleType} formInput`}
+                className={`${selectStyleType} formInput ${variant_StyleFor_input}`}
                 style={customStyle_for_input}
                 id="inputs" />
         </div>

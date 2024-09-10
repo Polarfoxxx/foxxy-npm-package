@@ -1,5 +1,7 @@
 import React from "react";
 import { Type_for_formHeader } from "../types";
+import "@components/global_root.css";
+import "../style/form_root_style.css";
 
 function FormHeader({
     form_name,
@@ -8,10 +10,10 @@ function FormHeader({
 
     return (
         <div className={`${selectStyleType} headerForm`}>
-            {form_name}
+            <h3>{form_name}</h3>            
         </div>
-    )
-}
+    );
+};
 
 
 export default FormHeader;

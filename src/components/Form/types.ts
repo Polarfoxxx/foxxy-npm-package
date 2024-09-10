@@ -26,8 +26,9 @@ export type Type__for_InputsAndLabel =
         selectStyleType?: string;
         label_name_form?: string;
         text_align_in_Input?: "left" | "center" | "right" | undefined;
-        custom_rouded_in_Input?: string;
+        custom_rouded_in_Input?: number;
         text_align_label?: "left" | "center" | "right" | undefined;
+        oneBorder_input?: boolean
     };
 
 //? type for children components.................................
@@ -41,4 +42,8 @@ export type ChildProps_child_FormContent = {
 export type Type_for_formChange_variant = {
     variant_form: string;
     form_border: boolean;
+};
+
+export type Type_for_formChange_variantfor_input = {
+    oneBorder_input: boolean;
 };

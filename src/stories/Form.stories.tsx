@@ -11,7 +11,7 @@ const meta: Meta = {
     component: FormComponent.Form,
     decorators: [
         (Story) => (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '100vh', paddingTop: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '100vh', paddingTop: '20px'}}>
                 <Story />
             </div>
         ),
@@ -90,14 +90,23 @@ const meta: Meta = {
         },
         custom_rouded_in_Input: {
             description: "the radius input",
-            control: { type: 'text' },
+            defaultValue: 0,
+            control: {
+                type: 'range',
+                min: 0,
+                max: 100,
+                step: 1,
+            },
         },
         text_align_label: {
             description: "side writing in label for inmput",
             control: { type: 'radio' },
             options: ["left", "center", "right"],
         },
-
+        oneBorder_input: {
+            description: 'change form input variant',
+            control: { type: 'boolean' },
+        },
         //? arg for button component............
         ...buttonBoxComponent_stories.argTypes,
 
@@ -134,21 +143,22 @@ export const Variant_Form: Story = {
     args: {
         //? arg for form component..............
         variant_form: "primaryForm",
-        form_name: "dropdown",
+        form_name: "my form",
         form_border: false,
         custom_background_form: "",
         custom_text_color_form: "",
         custom_rouded_form: 0,
         custom_padding_form: 5,
-        custom_width_form: "",
-        custom_height_form: "",
+        custom_width_form: "350px",
+        custom_height_form: "auto",
         custom_gap_input: 0,
         //? arg for input component.............
         placeholder: "my placeholder",
-        label_name_form: "",
+        label_name_form: "my label",
         text_align_in_Input: "center",
-        custom_rouded_in_Input: "",
+        custom_rouded_in_Input: 0,
         text_align_label: "center",
+        oneBorder_input: false,
         //? arg for button component............
         ...buttonBoxComponent_stories.args,
         button_text: "my button",
