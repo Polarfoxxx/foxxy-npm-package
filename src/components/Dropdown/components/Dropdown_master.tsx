@@ -21,8 +21,8 @@ function Dropdown({
     dropdown_name = "My dropdown",
     custom_background_color_dropdown,
     custom_showAndHidden_time = 0.4,
-    custom_rouded_dropdown,
-    custom_textColor_for_dropdown,
+    custom_rouded_dropdown = "0px",
+    custom_textColor_for_dropdown = "",
 }: PropsForDropdownComponents): JSX.Element {
 
     const [show, setShow] = React.useState(false);

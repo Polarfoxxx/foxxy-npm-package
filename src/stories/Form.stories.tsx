@@ -11,7 +11,7 @@ const meta: Meta = {
     component: FormComponent.Form,
     decorators: [
         (Story) => (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '100vh', paddingTop: '20px'}}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '100vh', paddingTop: '20px' }}>
                 <Story />
             </div>
         ),
@@ -183,21 +183,20 @@ export const Variant_Form: Story = {
 
         //? array for inputs count..........................
         const inputItems = [...Array(numInputItem)].map((_, i) => (
-            <FormComponent.FormInputs {...args} />
+            <FormComponent.FormInputs key={i} {...args} />
         ));
+
         //? array for buttons count.........................
         const buttonsItems = [...Array(numButtonItem)].map((_, i) => (
-            <ButtonComponent.Button {...args} />
+            <ButtonComponent.Button key={i} {...args} />
         ));
 
         return (
             <FormComponent.Form onSubmit={handleClick} {...args}>
-                <FormComponent.FormHeader />
-                <>
-                    {...inputItems}
-                </>
+                <FormComponent.FormHeader {...args} />
+                {inputItems}
                 <ButtonComponent.ButtonBox {...args}>
-                    {...buttonsItems}
+                    {buttonsItems}
                 </ButtonComponent.ButtonBox>
             </FormComponent.Form>
         );

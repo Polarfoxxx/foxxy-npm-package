@@ -11,20 +11,16 @@ function ButtonBox({
     children,
     buttonBox_variant = "primaryButtonBox",
     layout_Buttonts = "row",
-    custom_width_buttonBox,
-    custom_height_buttonBox,
-    custom_gap_Buttons,
-    custom_rounded_buttonBox,
-    custom_background_buttonBox,
+    custom_width_buttonBox = "auto",
+    custom_height_buttonBox = "auto",
+    custom_gap_Buttons = "5px",
+    custom_rounded_buttonBox = "0px",
+    custom_background_buttonBox = "",
     ...props
 }: TypeForButtonBox): JSX.Element {
 
     const [selectStyleType, setSelectStyleType] = React.useState("");
-    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
-        backgroundColor: "",
-        borderRadius: "",
-        gap: "5px"
-    });
+    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({});
 
     //? useeffect for style.................................................
     React.useEffect(() => {

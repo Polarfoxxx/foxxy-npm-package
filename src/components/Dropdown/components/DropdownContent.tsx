@@ -12,10 +12,9 @@ import "../style/dropDownContent/darkDropDownContent.css";
 function DropdownContent({
     children,
     selectStyleType,
-    show ,
+    show,
     custom_showAndHidden_time,
 }: PropsForDropBoxComponents): JSX.Element {
-    
     const contentRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {

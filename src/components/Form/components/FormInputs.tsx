@@ -1,12 +1,13 @@
 import React from "react";
 import { Type__for_InputsAndLabel } from "../types";
-import servicesChangeVariantForFrom from "../services/services.changeVariant";
+import servicesChangeVariantForForm from "../services/services.changeVariant";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
+import "../style/formInput/alertFormInput.css";
 
 
 function FormInputs({
-    selectStyleType,
+    selectStyleType = "primaryForm",
     label_name_form = "",
     text_align_in_Input = "left",
     custom_rouded_in_Input = 0,
@@ -21,14 +22,14 @@ function FormInputs({
 
     //? change input variant...............................
     React.useEffect(() => {
-        setVariant_StyleFor_input(
-            servicesChangeVariantForFrom.changerVariantForInputForm({ oneBorder_input })
-        )
+        selectStyleType &&
+        setVariant_StyleFor_input(servicesChangeVariantForForm.changerVariantForInputForm({ selectStyleType, oneBorder_input }));
     }, [
+        selectStyleType,
         oneBorder_input
     ]);
 
-    //? custom style input............................................
+    //? custom style input.................................
     React.useEffect(() => {
         setCustomStyle_for_input({
             textAlign: text_align_in_Input,
@@ -57,11 +58,11 @@ function FormInputs({
                 className={`${selectStyleType} formLabel`}
                 htmlFor="inputs"
                 {...props}>
-                {label_name_form}
+                {variant_StyleFor_input}
             </label>
             <input
                 {...props}
-                className={`${selectStyleType} formInput ${variant_StyleFor_input}`}
+                className={`${variant_StyleFor_input} formInput `}
                 style={customStyle_for_input}
                 id="inputs" />
         </div>

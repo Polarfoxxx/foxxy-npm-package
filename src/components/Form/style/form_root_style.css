@@ -11,7 +11,7 @@
 .headerForm {
     width: 100%;
     height: auto;
-    font-size: 18px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,18 +28,28 @@
     flex-direction: column;
 }
 
+/* input.... */
 .label_and_input_box>input {
     width: 100%;
     height: 30px;
     padding: 0 5px;
     font-size: 15px;
 }
-.label_and_input_box.oneLine {
-   background-color: aquamarine;
+
+.label_and_input_box .oneLine {
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
 }
 
+.label_and_input_box .oneLine:focus {
+    outline: none;
+}
+
+/* label.... */
 .label_and_input_box>label {
     width: 100%;
     height: auto;
     padding: 0 10px;
+    font-weight: bolder;
 }

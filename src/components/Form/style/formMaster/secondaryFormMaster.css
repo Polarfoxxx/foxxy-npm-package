@@ -1,3 +1,5 @@
 .secondaryForm.masterForm{
-    background-color: rgba(123, 125, 145, 0.404);
+    background-color: rgba(80, 85, 148, 0.404);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid rgb(187, 187, 187);
 }

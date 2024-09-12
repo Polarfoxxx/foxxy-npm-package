@@ -1,10 +1,10 @@
 import { Type_for_formChange_variant, Type_for_formChange_variantfor_input } from "../types";
 
-const servicesChangeVariantForFrom = {
+const servicesChangeVariantForForm = {
     changerVariantForForm,
     changerVariantForInputForm
 };
-export default servicesChangeVariantForFrom;
+export default servicesChangeVariantForForm;
 
 //? function changing a variant for master form.............
 function changerVariantForForm({
@@ -21,12 +21,13 @@ function changerVariantForForm({
 
 //? function changing a variant only for input form.............
 function changerVariantForInputForm({
+    selectStyleType,
     oneBorder_input
 }: Type_for_formChange_variantfor_input): string {
 
     if (oneBorder_input) {
-        return `oneLine`
+        return `${selectStyleType} oneLine`
     } else
-        return ""
+        return `${selectStyleType}`
 };
 

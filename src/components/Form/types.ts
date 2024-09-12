@@ -17,13 +17,13 @@ export interface TypeForIntrinsicAttributes extends FormHTMLAttributes<HTMLFormE
 
 export type Type_for_formHeader = {
     form_name?: string,
-    selectStyleType?: string
+    selectStyleType?:  "primaryForm" | "secondaryForm" | "alertForm" | "successForm" | "darkForm" | "nightForm",
 };
 
 export type Type__for_InputsAndLabel =
     InputHTMLAttributes<HTMLInputElement> &
     LabelHTMLAttributes<HTMLLabelElement> & {
-        selectStyleType?: string;
+        selectStyleType?:  "primaryForm" | "secondaryForm" | "alertForm" | "successForm" | "darkForm" | "nightForm";
         label_name_form?: string;
         text_align_in_Input?: "left" | "center" | "right" | undefined;
         custom_rouded_in_Input?: number;
@@ -33,7 +33,7 @@ export type Type__for_InputsAndLabel =
 
 //? type for children components.................................
 export type ChildProps_child_FormContent = {
-    selectStyleType: string;
+    selectStyleType: string,
     form_name: string;
 };
 
@@ -45,5 +45,6 @@ export type Type_for_formChange_variant = {
 };
 
 export type Type_for_formChange_variantfor_input = {
+    selectStyleType:  "primaryForm" | "secondaryForm" | "alertForm" | "successForm" | "darkForm" | "nightForm",
     oneBorder_input: boolean;
 };

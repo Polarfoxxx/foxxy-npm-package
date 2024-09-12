@@ -12,14 +12,11 @@ import "../style/dropDownItem/successDropDownItem.css";
 
 function DropdownItems({
     href,
-    name_link,
+    name_link = "my link",
     selectStyleType,
-    custom_textColor_forItem
+    custom_textColor_forItem = "",
 }: PropsForDropItemsComponents): JSX.Element {
-    
-    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
-        color: ""
-    });
+    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({});
 
     //? custom style............................................
     React.useEffect(() => {
