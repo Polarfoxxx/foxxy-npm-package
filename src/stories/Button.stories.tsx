@@ -12,12 +12,12 @@ const meta: Meta = {
   },
   argTypes: {
     button_text: {
-      control:  { type: 'text' },
+      control: { type: 'text' },
       description: "text in button",
     },
     variant_btn: {
       description: "you can choose a color variant for the component button",
-      options: ["primaryButton", "secondaryButton", "alertButton", "successButton", "darkButton", "nightButton"],
+      options: ["primaryButton", "secondaryButton", "alertButton", "successButton", "darkButton", "nightButton", "lightButton"],
       control: { type: 'radio' },
       table: {
         defaultValue: { summary: "default" }
@@ -73,7 +73,7 @@ export const VariantButton: Story = {
 
   render: (args) => {
     return (
-        <ButtonComponent.Button {...args} />
+      <ButtonComponent.Button {...args} />
     )
   }
 };

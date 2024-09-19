@@ -9,6 +9,7 @@ import "../styles/buttonMaster/alertButton_style.css";
 import "../styles/buttonMaster/successButton_style.css";
 import "../styles/buttonMaster/nightButton_style.css";
 import "../styles/buttonMaster/darkButton_style.css";
+import "../styles/buttonMaster/lightButton_style.css";
 
 function Button({
   button_text,

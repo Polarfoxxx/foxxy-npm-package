@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, HTMLAttributes } from "react";
 
 export interface TypeButtonsIntrinsicAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   button_text: string,
-  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton" | "successButton" | "darkButton" | "nightButton",
+  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton" | "successButton" | "darkButton" | "nightButton" | "lightButton",
   withBorder_button?: boolean,
   radiusBorder_button?: boolean,
   lg_button?: boolean,
@@ -24,7 +24,7 @@ export interface TypeForButtonBox extends HTMLAttributes<HTMLDivElement> {
 
 /* services-------------------------------------------------- */
 export type TypeFor_services_Style_buttonMaster = {
-  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton" | "successButton" | "darkButton" | "nightButton",
+  variant_btn?: "primaryButton" | "secondaryButton" | "alertButton" | "successButton" | "darkButton" | "nightButton" | "lightButton",
   withBorder_button?: boolean,
   radiusBorder_button?: boolean,
   lg_button?: boolean,
@@ -32,7 +32,7 @@ export type TypeFor_services_Style_buttonMaster = {
 };
 export type TypeFor_services_Style_buttonBox = {
   buttonBox_variant?: "primaryButtonBox" | "secundaryButtonBox" | "alertButtonBox",
-  layout_Buttonts? : "column" | "row"
+  layout_Buttonts?: "column" | "row"
 };
 
 

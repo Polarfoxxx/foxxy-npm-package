@@ -10,7 +10,7 @@ function FormInputs({
     selectStyleType = "primaryForm",
     label_name_form = "",
     text_align_in_Input = "left",
-    custom_rouded_in_Input = 0,
+    custom_rouded_in_Input = 5,
     text_align_label = "left",
     oneBorder_input = false,
     ...props
@@ -58,7 +58,7 @@ function FormInputs({
                 className={`${selectStyleType} formLabel`}
                 htmlFor="inputs"
                 {...props}>
-                {variant_StyleFor_input}
+                {label_name_form}
             </label>
             <input
                 {...props}

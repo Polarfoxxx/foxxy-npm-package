@@ -1,11 +1,8 @@
 .alertForm .formLabel {
-    color: rgb(107, 46, 156);
+    color: rgb(189, 189, 189);
 }
 
 .alertForm .formInput {
-    border-bottom: 1px solid white;
-    background-color: rgb(206, 139, 15);
-    font-size: 55px;
-    color: darkgreen;
+   background-color: rgb(204, 204, 204);
 }
 

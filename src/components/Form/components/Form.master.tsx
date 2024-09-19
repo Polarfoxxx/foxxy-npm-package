@@ -17,11 +17,11 @@ function Form({
     form_border = false,
     custom_background_form = "",
     custom_text_color_form = "black",
-    custom_rouded_form = 0,
-    custom_padding_form = 5,
+    custom_rouded_form = 15,
+    custom_padding_form = 10,
     custom_width_form = "350px",
     custom_height_form = "auto",
-    custom_gap_input = 5,
+    custom_gap_input = 7,
     ...props
 }: TypeForIntrinsicAttributes): JSX.Element {
     const [selectStyleType, setSelectStyleType] = React.useState("");
