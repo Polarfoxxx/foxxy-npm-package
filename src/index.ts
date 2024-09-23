@@ -1,3 +1,6 @@
-export { ButtonComponent } from "./components";
-export { DropdownComponent } from "./components";
+export {
+    ButtonComponent,
+    DropdownComponent,
+    FormComponent
+} from "./components";
 

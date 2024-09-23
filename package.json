@@ -1,6 +1,6 @@
 {
   "name": "foxxy-package",
-  "version": "1.3.0",
+  "version": "1.3.4",
   "description": "foxxy-package",
   "main": "dist/index.js",
   "author": "foxxy",

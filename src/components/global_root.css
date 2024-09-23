@@ -4,12 +4,44 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primaryColorBackground: rgb(40, 63, 180);
-    --secondaryColorBackground: rgba(104, 69, 191, 1);
-    --alertColorBackground: rgba(176, 25, 25, 1);
-    --successColorBackground: rgba(17, 155, 43, 1);
-    --nightColorBackground: rgba(67, 57, 87, 1);
-    --darkColorBackground: rgba(20, 20, 20, 1);
-    --lightColorBackground: rgb(245, 245, 245);
+@property --primaryColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(40, 63, 180);
+}
+
+@property --secondaryColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(104, 69, 191, 1);
+}
+
+@property --alertColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(176, 25, 25, 1);
+}
+
+@property --successColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(17, 155, 43, 1);
+}
+
+@property --nightColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(67, 57, 87, 1);
+}
+
+@property --darkColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(20, 20, 20, 1);
+}
+
+@property --lightColorBackground {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(245, 245, 245);
 }
