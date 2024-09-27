@@ -23,7 +23,10 @@ function FormInputs({
     //? change input variant...............................
     React.useEffect(() => {
         selectStyleType &&
-        setVariant_StyleFor_input(servicesChangeVariantForForm.changerVariantForInputForm({ selectStyleType, oneBorder_input }));
+            setVariant_StyleFor_input(servicesChangeVariantForForm.changerVariantForInputForm({
+                selectStyleType,
+                oneBorder_input
+            }));
     }, [
         selectStyleType,
         oneBorder_input

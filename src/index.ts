@@ -1,6 +1,7 @@
 export {
     ButtonComponent,
     DropdownComponent,
-    FormComponent
+    FormComponent,
+    InvenctoryComponent
 } from "./components";
 

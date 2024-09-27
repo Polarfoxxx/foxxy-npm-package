@@ -27,11 +27,7 @@ function Dropdown({
 
     const [show, setShow] = React.useState(false);
     const [selectStyleType, setSelectStyleType] = React.useState("");
-    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>({
-        backgroundColor: "",
-        borderRadius: "",
-        color: ""
-    });
+    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>();
     const dropdownRef = React.useRef<HTMLDivElement>(null);
 
     //? funkcia zatvarania a otvaranie................................

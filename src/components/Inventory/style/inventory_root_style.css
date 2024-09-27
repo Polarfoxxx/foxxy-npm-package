@@ -1,0 +1,39 @@
+/* Master------------------------------------------------------ */
+.masterInventory {
+
+}
+
+/* list------------------------------------------------------ */
+.inventoryList{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: rgb(21, 34, 212);
+padding: 15px;
+gap: 10px;
+}
+
+.inventoryList .inventoryList_items{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px;
+    gap: 10px;
+
+}
+
+.inventoryList .inventoryList_items .invGroup {
+    min-width: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
