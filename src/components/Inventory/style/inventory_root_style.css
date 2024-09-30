@@ -1,21 +1,19 @@
 /* Master------------------------------------------------------ */
-.masterInventory {
-
-}
+.masterInventory {}
 
 /* list------------------------------------------------------ */
-.inventoryList{
-width: 100%;
-height: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-background-color: rgb(21, 34, 212);
-padding: 15px;
-gap: 10px;
+.inventoryList {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(21, 34, 212);
+    padding: 15px;
+    gap: 10px;
 }
 
-.inventoryList .inventoryList_items{
+.inventoryList .inventoryList_items {
     width: 100%;
     height: auto;
     display: flex;
@@ -35,5 +33,5 @@ gap: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }

@@ -2,9 +2,19 @@
 .masterForm {
     width: auto;
     height: auto;
-    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.masterForm .master_childrenBox {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* header------------------------------------------------------ */
@@ -17,6 +27,20 @@
     align-items: center;
     padding: 3px;
     margin: 3px;
+}
+
+/* leftSideInfo------------------------------------------------------ */
+.leftSideInfo {
+    width: 180px;
+    min-height: 100%;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    border-right: 2px solid white;
 }
 
 /* Input and label-------------------------------------------- */
@@ -38,8 +62,6 @@
 
 .label_and_input_box .oneLine {
     border: none;
-    border-bottom: 1px solid black;
-    background-color: transparent;
 }
 
 .label_and_input_box .oneLine:focus {

@@ -3,11 +3,16 @@ import { Type__for_InputsAndLabel } from "../types";
 import servicesChangeVariantForForm from "../services/services.changeVariant";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
+import "../style/formInput/primaryFormInput.css";
+import "../style/formInput/secondaryFormInput.css";
 import "../style/formInput/alertFormInput.css";
+import "../style/formInput/successFormInput.css";
+import "../style/formInput/darkFormInput.css";
+import "../style/formInput/nightFormInput.css";
 
 
 function FormInputs({
-    selectStyleType = "primaryForm",
+    selectStyleType,
     label_name_form = "",
     text_align_in_Input = "left",
     custom_rouded_in_Input = 5,
@@ -52,6 +57,7 @@ function FormInputs({
         text_align_label
     ]);
 
+console.log(variant_StyleFor_input);
 
     return (
         <div

@@ -1,0 +1,22 @@
+.secondaryForm.formLabel {
+    color: rgb(255, 255, 255);
+}
+
+.secondaryForm.formInput {
+    background-color: rgb(241, 241, 241);
+    color: black;
+}
+
+.secondaryForm.formInput::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.secondaryForm.oneLine.formInput {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.secondaryForm.oneLine.formInput::placeholder {
+    color: white;
+}

@@ -28,10 +28,7 @@ const meta: Meta = {
             control: 'text',
             defaultValue: 'my form',
         },
-        form_border: {
-            description: 'set the name or tittle of the Form',
-            control: { type: 'boolean' },
-        },
+
         custom_background_form: {
             control: { type: 'color' },
         },
@@ -74,6 +71,31 @@ const meta: Meta = {
                 step: 1,
             },
         },
+        //? arg for header component..............
+        variant_formheader: {
+            options: ["none", "underLine", "boldHeader", "underLineBold"],
+            description: "change formHeader type",
+            control: { type: 'radio' },
+        },
+        //? arg for leftSide component..............
+        form_side_info: {
+            description: 'add info box left side',
+            control: { type: 'boolean' },
+        },
+        leftSideInfoText: {
+            description: 'text in left side component',
+            control: { type: 'text' },
+        },
+        custom_leftSide_layout: {
+            description: "left side layout",
+            defaultValue: 0,
+            control: {
+                type: 'range',
+                min: 5,
+                max: 50,
+                step: 1,
+            }
+        },
         //? arg for input component..............
         placeholder: {
             description: "the placeholder of the input",
@@ -94,7 +116,7 @@ const meta: Meta = {
             control: {
                 type: 'range',
                 min: 0,
-                max: 100,
+                max: 50,
                 step: 1,
             },
         },
@@ -114,7 +136,7 @@ const meta: Meta = {
         inputs_Count: {
             description: "number of input components",
             control: { type: 'number', min: 1, max: 5 },
-            defaultValue: 1,
+            defaultValue: 2,
         },
         buttons_Count: {
             description: "number of buttons in the button box",
@@ -144,14 +166,19 @@ export const Variant_Form: Story = {
         //? arg for form component..............
         variant_form: "primaryForm",
         form_name: "my form",
-        form_border: false,
         custom_background_form: "",
         custom_text_color_form: "",
         custom_rouded_form: 10,
         custom_padding_form: 10,
-        custom_width_form: "350px",
+        custom_width_form: "450px",
         custom_height_form: "auto",
         custom_gap_input: 7,
+        //? arg for header component.............
+        variant_formheader: "none",
+        //? arg for leftSide component...........
+        form_side_info: false,
+        leftSideInfoText: "left side",
+        custom_leftSide_layout: 5,
         //? arg for input component.............
         placeholder: "my placeholder",
         label_name_form: "my label",
@@ -163,7 +190,7 @@ export const Variant_Form: Story = {
         ...buttonBoxComponent_stories.args,
         button_text: "my button",
         //? count...............................
-        inputs_Count: 1,
+        inputs_Count: 2,
         buttons_Count: 1
 
     },

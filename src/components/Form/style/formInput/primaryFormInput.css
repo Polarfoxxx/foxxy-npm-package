@@ -1,0 +1,16 @@
+.primaryForm.formLabel {
+    color: rgb(0, 0, 0);
+}
+
+.primaryForm.formInput {
+    background-color: rgb(241, 241, 241);
+    color: black;
+}
+.primaryForm.formInput::placeholder{
+    color: black;
+}
+.primaryForm.oneLine.formInput {
+    background-color: transparent;
+    color: black;
+    border-bottom: 1px solid black;
+}

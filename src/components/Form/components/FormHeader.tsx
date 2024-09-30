@@ -1,16 +1,28 @@
 import React from "react";
 import { Type_for_formHeader } from "../types";
+import servicesChangeVariantForForm from "../services/services.changeVariant";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
+import "../style/formHeader/underlineFormHeader.css"
+import "../style/formHeader/boldFormHeader.css"
 
 function FormHeader({
     form_name,
+    variant_formheader = "none",
     selectStyleType
 }: Type_for_formHeader): JSX.Element {
 
+    const [selectStyleHeader, setSelectStyleHeader] = React.useState("");
+
+
+    React.useEffect(() => {
+        setSelectStyleHeader(servicesChangeVariantForForm.changerVariantForHeaderForm({ variant_formheader }))
+    }, [variant_formheader]);
+
+
     return (
-        <div className={`${selectStyleType} headerForm`}>
-            <h3>{form_name}</h3>            
+        <div className={`${selectStyleType} headerForm ${selectStyleHeader}`}>
+            <p>{form_name}</p>
         </div>
     );
 };
