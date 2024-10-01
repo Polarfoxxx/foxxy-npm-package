@@ -1,0 +1,19 @@
+.primaryForm.headerForm {
+    background-color: transparent;
+}
+
+/* with under line---------------------------------- */
+.primaryForm.headerForm.underLine {
+    border-bottom: 2px solid rgb(0, 15, 228);
+}
+
+/* with bold text---------------------------------- */
+.primaryForm.headerForm.boldHeader {
+    font-weight: bold;
+}
+
+/* with bold text---------------------------------- */
+.primaryForm.headerForm.underLine.boldHeader {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(0, 15, 228);
+}

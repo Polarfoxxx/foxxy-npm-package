@@ -8,13 +8,12 @@ import servicesChangeVariantForFrom from "../services/services.changeVariant";
 import FormLeftSideInfo from "./FormLeftSideInfo";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
-import "../style/formMaster/primaryFormMaster.css";
-import "../style/formMaster/secondaryFormMaster.css";
-import "../style/formMaster/alertFormMaster.css";
-import "../style/formMaster/successFormMaster.css";
-import "../style/formMaster/darkFormMaster.css";
-import "../style/formMaster/nightFormMaster.css";
-
+import "../style/primaryStyle/masterPrimaryStyle.css";
+import "../style/secondaryStyle/masterSecondaryStyle.css";
+import "../style/alertStyle/masterAlertStyle.css";
+import "../style/successStyle/masterSuccessStyle.css";
+import "../style/darkStyle/masterDarkStyle.css";
+import "../style/nightStyle/masterNightStyle.css";
 
 
 function Form({
@@ -57,10 +56,10 @@ function Form({
                 borderRadius: `${custom_rouded_form}px`,
                 width: custom_width_form,
                 height: custom_height_form,
-                gap: `${custom_gap_input}px`,
             },
             master_childrenBox: {
                 padding: `${custom_padding_form / 6}px ${custom_padding_form}px`,
+                gap: `${custom_gap_input}px`,
             },
             leftSide_box: {
                 paddingTop: `${custom_leftSide_layout}%`

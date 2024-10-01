@@ -3,12 +3,12 @@ import { Type__for_InputsAndLabel } from "../types";
 import servicesChangeVariantForForm from "../services/services.changeVariant";
 import "@components/global_root.css";
 import "../style/form_root_style.css";
-import "../style/formInput/primaryFormInput.css";
-import "../style/formInput/secondaryFormInput.css";
-import "../style/formInput/alertFormInput.css";
-import "../style/formInput/successFormInput.css";
-import "../style/formInput/darkFormInput.css";
-import "../style/formInput/nightFormInput.css";
+import "../style/primaryStyle/masterPrimaryStyle.css";
+import "../style/secondaryStyle/masterSecondaryStyle.css";
+import "../style/alertStyle/masterAlertStyle.css";
+import "../style/successStyle/masterSuccessStyle.css";
+import "../style/darkStyle/masterDarkStyle.css";
+import "../style/nightStyle/masterNightStyle.css";
 
 
 function FormInputs({

@@ -1,0 +1,28 @@
+.alertForm.formLabel {
+    color: rgb(0, 0, 0);
+}
+
+/* input element normal------------------------ */
+.alertForm.formInput {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.alertForm.formInput::placeholder {
+    color: black;
+    opacity: 60%;
+}
+
+/* input element one line---------------------- */
+.alertForm.oneLine.formInput {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.alertForm.oneLine.formInput::placeholder {
+    color: black;
+    opacity: 60%;
+}

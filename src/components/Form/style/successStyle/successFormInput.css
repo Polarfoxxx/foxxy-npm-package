@@ -1,0 +1,28 @@
+.successForm.formLabel {
+    color: rgb(0, 0, 0);
+}
+
+/* input element normal------------------------ */
+.successForm.formInput {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.successForm.formInput::placeholder {
+    color: black;
+    opacity: 60%;
+}
+
+/* input element one line---------------------- */
+.successForm.oneLine.formInput {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.successForm.oneLine.formInput::placeholder {
+    color: black;
+    opacity: 60%;
+}

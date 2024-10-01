@@ -21,7 +21,7 @@
 .headerForm {
     width: 100%;
     height: auto;
-    font-size: 20px;
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
     margin: 3px;
 }
 
-/* leftSideInfo------------------------------------------------------ */
+/* leftSideInfo------------------------------------------------ */
 .leftSideInfo {
     width: 180px;
     min-height: 100%;

@@ -1,0 +1,19 @@
+.alertForm.headerForm {
+    background-color: transparent;
+}
+
+/* with under line---------------------------------- */
+.alertForm.headerForm.underLine {
+    border-bottom: 2px solid rgb(0, 15, 228);
+}
+
+/* with bold text---------------------------------- */
+.alertForm.headerForm.boldHeader {
+    font-weight: bold;
+}
+
+/* with bold text---------------------------------- */
+.alertForm.headerForm.underLine.boldHeader {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(0, 15, 228);
+}
