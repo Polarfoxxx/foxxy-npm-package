@@ -1,10 +1,11 @@
 .darkForm.headerForm {
     background-color: transparent;
+    color: white;
 }
 
 /* with under line---------------------------------- */
 .darkForm.headerForm.underLine {
-    border-bottom: 2px solid rgb(0, 15, 228);
+    border-bottom: 2px solid rgb(245, 245, 245);
 }
 
 /* with bold text---------------------------------- */
@@ -15,5 +16,5 @@
 /* with bold text---------------------------------- */
 .darkForm.headerForm.underLine.boldHeader {
     font-weight: bold;
-    border-bottom: 2px solid rgb(0, 15, 228);
+    border-bottom: 2px solid rgb(245, 245, 245);
 }

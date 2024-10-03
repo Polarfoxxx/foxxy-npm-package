@@ -4,7 +4,7 @@
 
 /* with under line---------------------------------- */
 .successForm.headerForm.underLine {
-    border-bottom: 2px solid rgb(0, 15, 228);
+    border-bottom: 2px solid rgb(54, 54, 54);
 }
 
 /* with bold text---------------------------------- */
@@ -15,5 +15,5 @@
 /* with bold text---------------------------------- */
 .successForm.headerForm.underLine.boldHeader {
     font-weight: bold;
-    border-bottom: 2px solid rgb(0, 15, 228);
+    border-bottom: 2px solid rgb(54, 54, 54);
 }
