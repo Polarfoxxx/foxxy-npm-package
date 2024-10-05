@@ -1,6 +1,7 @@
 import React from "react";
 import "@components/global_root.css";
 import "../style/inventory_root_style.css";
+import "../style/index.css";
 
 
 export type Type_for_InventoryList<T> = {
@@ -10,9 +11,9 @@ export type Type_for_InventoryList<T> = {
     group_second?: [string, string];
     group_third?: [string, string];
     group_fourth?: [string, string];
-    handleClick_first?: () => void;
-    handleClick_second?: () => void;
-    handleClick_third?: () => void;
+    handle_master_Click: (item: Type_for_groupFor_LIST) => void;
+    handleClick_second?: (item: Type_for_groupFor_LIST) => void;
+    handleClick_third?: (item: Type_for_groupFor_LIST) => void;
 };
 
 export type Type_for_groupFor_LIST = {
@@ -33,7 +34,7 @@ function InventoryList<T>({
     group_second,
     group_third,
     group_fourth,
-    handleClick_first,
+    handle_master_Click,
     handleClick_second,
     handleClick_third,
 }: Type_for_InventoryList<T>): JSX.Element {
@@ -58,7 +59,13 @@ function InventoryList<T>({
         });
 
         setGroupFor_LIST(updatedList);
-    }, [data_list, group_first, group_second, group_third, group_fourth]);
+    }, [
+        data_list,
+        group_first,
+        group_second,
+        group_third,
+        group_fourth
+    ]);
 
     return (
 
@@ -67,9 +74,12 @@ function InventoryList<T>({
             {
                 groupFor_LIST.map((item, key) =>
                     <div
+
                         className={`${selectStyleType} inventoryList_items`}
                         key={key}>
-                        <div className={`${selectStyleType} inventoryList_items_groupFirst invGroup`}>
+                        <div
+                            onClick={() => handle_master_Click(item)}
+                            className={`${selectStyleType} inventoryList_items_groupFirst invGroup`}>
                             <div>
                                 {item.tittle_group_first}
                             </div>
@@ -77,7 +87,9 @@ function InventoryList<T>({
                                 {item.value_group_first}
                             </div>
                         </div>
-                        <div className={`${selectStyleType} inventoryList_items_groupSecond invGroup`}>
+                        <div
+                            onClick={() => handle_master_Click(item)}
+                            className={`${selectStyleType} inventoryList_items_groupSecond invGroup`}>
                             <div>
                                 {item.tittle_group_second}
                             </div>
@@ -85,7 +97,9 @@ function InventoryList<T>({
                                 {item.value_group_second}
                             </div>
                         </div>
-                        <div className={`${selectStyleType} inventoryList_items_groupThird invGroup`}>
+                        <div
+                            onClick={() => handle_master_Click(item)}
+                            className={`${selectStyleType} inventoryList_items_groupThird invGroup`}>
                             <div>
                                 {item.tittle_group_third}
                             </div>
@@ -93,12 +107,32 @@ function InventoryList<T>({
                                 {item.value_group_third}
                             </div>
                         </div>
-                        <div className={`${selectStyleType} inventoryList_items_groupFourth invGroup`}>
+                        <div
+                            onClick={() => handle_master_Click(item)}
+                            className={`${selectStyleType} inventoryList_items_groupFourth invGroup`}>
                             <div>
                                 {item.tittle_group_fourth}
                             </div>
                             <div>
                                 {item.value_group_fourth}
+                            </div>
+                        </div>
+                        <div className={`${selectStyleType} inventoryList_items_groupFourth buttonGroup`}>
+                            <div>
+                                {
+                                    handleClick_second &&
+                                    <button onClick={() => handleClick_second(item)}>
+                                        click
+                                    </button>
+                                }
+                            </div>
+                            <div>
+                                {
+                                    handleClick_third &&
+                                    <button onClick={() => handleClick_third(item)}>
+                                        delete
+                                    </button>
+                                }
                             </div>
                         </div>
                     </div>

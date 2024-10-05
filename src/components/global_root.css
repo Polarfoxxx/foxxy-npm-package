@@ -7,19 +7,19 @@
 @property --primaryColorBackground {
     syntax: "<color>";
     inherits: false;
-    initial-value: rgb(40, 63, 180);
+    initial-value: rgb(52, 102, 209);
 }
 
 @property --secondaryColorBackground {
     syntax: "<color>";
     inherits: false;
-    initial-value: rgba(104, 69, 191, 1);
+    initial-value: rgb(104, 68, 196);
 }
 
 @property --alertColorBackground {
     syntax: "<color>";
     inherits: false;
-    initial-value: rgba(176, 25, 25, 1);
+    initial-value: rgb(151, 36, 36);
 }
 
 @property --successColorBackground {
@@ -31,13 +31,13 @@
 @property --nightColorBackground {
     syntax: "<color>";
     inherits: false;
-    initial-value: rgba(67, 57, 87, 1);
+    initial-value: rgb(48, 50, 73);
 }
 
 @property --darkColorBackground {
     syntax: "<color>";
     inherits: false;
-    initial-value: rgba(20, 20, 20, 1);
+    initial-value: rgb(44, 41, 41);
 }
 
 @property --lightColorBackground {

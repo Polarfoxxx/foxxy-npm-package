@@ -1,5 +1,5 @@
 .primaryForm.formLabel {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 /* input element normal------------------------ */
@@ -17,12 +17,12 @@
 /* input element one line---------------------- */
 .primaryForm.oneLine.formInput {
     background-color: transparent;
-    color: black;
+    color: rgb(255, 255, 255);
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(202, 202, 202);
 }
 
 .primaryForm.oneLine.formInput::placeholder {
-    color: black;
+    color: rgb(255, 255, 255);
     opacity: 60%;
 }

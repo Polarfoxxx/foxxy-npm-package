@@ -1,0 +1,9 @@
+/* inventory element master------------------------ */
+.primaryInvenctory.masterInventory {
+    background-color: var(--primaryColorBackground);
+}
+
+/* inventory element master border------------------------ */
+.primaryInvenctory.border.masterInventory {
+border: 1px solid black;
+}
