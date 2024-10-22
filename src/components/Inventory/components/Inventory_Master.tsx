@@ -4,11 +4,15 @@ import "@components/global_root.css";
 import servicesChangeVariantForInventory from "../services/services_changeVariantForInventory";
 import "../style/index.css";
 
+export type ChildProps_child_InventoryContent = {
+    selectStyleType: string;
+};
 
 export type Type_for_InventoryMaster = {
     children: JSX.Element[];
     variant_Invenctory?: "primaryInvenctory" | "secondaryInvenctory" | "alertInvenctory" | "successInvenctory" | "darkInvenctory" | "nightInvenctory",
     withBorder?: false,
+    max_heightInventory?: string,
     custom_bg_colorInventory?: string,
     custom_rouded_Inventory?: number
 };
@@ -20,7 +24,6 @@ function InventoryMaster({
     custom_bg_colorInventory,
     custom_rouded_Inventory,
 }: Type_for_InventoryMaster): JSX.Element {
-
     const [selectStyleType, setSelectStyleType] = React.useState("");
     const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>();
 
@@ -40,17 +43,16 @@ function InventoryMaster({
         });
     }, [
         custom_bg_colorInventory,
-        custom_rouded_Inventory
-    ])
+        custom_rouded_Inventory,
+    ]);
 
 
     return (
-
         <div
             className={`${selectStyleType} masterInventory`}
             style={{ ...customStyle }}>
             {
-                React.Children.map(children, (child: React.ReactElement<any>) => {
+                React.Children.map(children, (child: React.ReactElement<ChildProps_child_InventoryContent>) => {
                     return React.cloneElement(child, { selectStyleType });
                 })
             }

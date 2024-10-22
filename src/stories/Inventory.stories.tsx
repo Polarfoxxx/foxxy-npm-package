@@ -87,6 +87,12 @@ export const Variant_Invenctory: Story = {
                 job: "dentist",
                 hobies: "walking"
             },
+            {
+                name: "buk",
+                age: 7,
+                job: "pupuo",
+                hobies: "pc"
+            },
         ],
         group_first: ["Názov", "name"],
         group_second: ["Vek", "age"],

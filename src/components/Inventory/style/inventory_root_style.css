@@ -5,27 +5,31 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
+    gap: 10px;
+    overflow: hidden;
 }
 
 /* header---------------------------------------------------- */
 .inventoryHeader {
     width: 100%;
-    height: 55px;
+    min-height: 55px;
 }
 
 
 /* list------------------------------------------------------ */
 .inventoryList {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     padding: 15px;
     gap: 10px;
-    cursor: pointer;
+    overflow-y: scroll;
 }
-
+.inventoryList::-webkit-scrollbar {
+    display: none;
+  }
 .inventoryList .inventoryList_items {
     width: 100%;
     height: auto;
@@ -35,7 +39,7 @@
     align-items: center;
     padding: 5px;
     gap: 10px;
-
+    border: 1px solid black;
 }
 
 .inventoryList .inventoryList_items .invGroup {

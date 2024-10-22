@@ -6,6 +6,7 @@ import "../style/index.css";
 
 export type Type_for_InventoryList<T> = {
     selectStyleType?: string;
+    max_heightInventory?: string;
     data_list: T[];
     group_first: [string, string];
     group_second?: [string, string];
@@ -29,6 +30,7 @@ export type Type_for_groupFor_LIST = {
 
 function InventoryList<T>({
     selectStyleType,
+    max_heightInventory = "200px",
     data_list,
     group_first,
     group_second,
@@ -38,7 +40,7 @@ function InventoryList<T>({
     handleClick_second,
     handleClick_third,
 }: Type_for_InventoryList<T>): JSX.Element {
-
+    const [customStyle, setCustomStyle] = React.useState<React.CSSProperties>();
     const [groupFor_LIST, setGroupFor_LIST] = React.useState<Type_for_groupFor_LIST[]>([]);
 
     React.useEffect(() => {
@@ -57,7 +59,6 @@ function InventoryList<T>({
                 value_group_fourth: group_fourth && String(item[group_fourth[1] as keyof T]),
             };
         });
-
         setGroupFor_LIST(updatedList);
     }, [
         data_list,
@@ -67,9 +68,16 @@ function InventoryList<T>({
         group_fourth
     ]);
 
-    return (
 
+    React.useEffect(() => {
+        setCustomStyle({
+            maxHeight: max_heightInventory
+        })
+    }, [max_heightInventory])
+
+    return (
         <div
+            style={{ ...customStyle }}
             className={`${selectStyleType} inventoryList`}>
             {
                 groupFor_LIST.map((item, key) =>
