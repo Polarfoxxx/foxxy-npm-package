@@ -221,7 +221,7 @@ export const Variant_Form: Story = {
         return (
             <FormComponent.Form onSubmit={handleClick} {...args}>
                 <FormComponent.FormHeader {...args} />
-                {inputItems}
+                {...inputItems}
                 <ButtonComponent.ButtonBox {...args}>
                     {buttonsItems}
                 </ButtonComponent.ButtonBox>

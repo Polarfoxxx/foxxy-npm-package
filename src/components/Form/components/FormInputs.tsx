@@ -60,7 +60,6 @@ console.log(variant_StyleFor_input);
             style={customStyle_for_label}>
             <label
                 className={`${selectStyleType} formLabel`}
-                htmlFor="inputs"
                 {...props}>
                 {label_name_form}
             </label>
@@ -68,7 +67,7 @@ console.log(variant_StyleFor_input);
                 {...props}
                 className={`${variant_StyleFor_input} formInput `}
                 style={customStyle_for_input}
-                id="inputs" />
+                 />
         </div>
     )
 }
